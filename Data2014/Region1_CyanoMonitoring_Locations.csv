@@ -1,0 +1,140 @@
+Order,State,Organization,WB_Name,SiteID,Comments,Latitude,Longitude
+1,CT,Connecticut DEEP,Gardner Lake,18718,GRD-M,41.501,-72.221
+2,CT,Connecticut DEEP,Housatonic River (Kettletown),18713,KTLT-M,41.424144,-73.206937
+3,CT,Connecticut DEEP,Lake Waramaug,18716,LKW-M,41.707665,-73.382964
+4,CT,Connecticut DEEP,Lower Bolton Lake,18475,LB-M,41.798303,-72.428591
+5,CT,Connecticut DEEP,Mount Tom Pond,18715,MTT-M,41.697709,-73.28029
+6,CT,Connecticut DEEP,Pattaconk Reservoir,18714,PR-M,41.409081,-72.52544
+7,CT,Connecticut DEEP,Squantz Pond,18717,SQPD-M,41.512,-73.4765
+8,MA,Charles River Watershed Association,Charles River,MA72-08,CRWA Site #1: SP (MIT Sailing Pavilion),42.358519,-71.087433
+9,MA,Charles River Watershed Association,Charles River,MA72-08,CRWA Site #2: BROAD (Broad Canal @ CRCK Kendall Sq.),42.362866,-71.081652
+10,MA,Charles River Watershed Association,Charles River,MA72-08,CRWA Site #3: CB (Community Boating),42.358755,-71.073377
+11,MA,Charles River Watershed Association,Charles River,MA70-02 ,CRWA Site #4: ND (Charles River Dam),42.36936,-71.061925
+12,MA,Massachusetts Department of Environmental Protection,"West Monponsett Pond, 4th Avenue Beach",,Exact Location Unknown-Lat. Lon. For Lake Centroid,42.006588,-70.846327
+13,MA,Massachusetts Department of Environmental Protection,"West Monponsett Pond, Ocean Avenue Beach, Hansen",,Exact Location Unknown-Lat. Lon. For Lake Centroid,42.006588,-70.846327
+14,MA,Massachusetts Department of Environmental Protection,"West Monponsett Pond, State Public Access Boat Ramp, Halifax",,Exact Location Unknown-Lat. Lon. For Lake Centroid,42.006588,-70.846327
+15,MA,UNH Center for Freshwater Biology,Lake Attitash,LA-deep,,42.849044,-70.982824
+16,ME,Cobbosee Watershed Dist & Maine DEP.,Cochnewagon,3814,"Near shore algal scum, one site, one visit",44.23015,-70.044666
+17,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Androscoggin Lake,3836,"One station; multiple sites, one visit",44.32493,-70.07557
+18,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,China Lake,5448,"Prob. Lk., multiple stations , multiple sites; multiple visits & sites for station 3",44.47017,-69.5147
+19,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Clary Lake,5382,"One station; one set readings from 4 meter core, one visit",44.12864,-69.33141
+20,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Cobbosseecontee Lake,5236,"Prob. Lk; one station, mulitple sites, one visit",44.25178,-69.94338
+21,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Conroy Lake,1018,"One station; one set readings from 3 meter core, one visit",46.289409,-67.876154
+22,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Crowell Pond,5200,"Prob. Lk; one station, mulitple sites, one visit",44.59347,-70.03781
+23,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,East Pond,5349,"Prob. Lk.; One station, multiple sites & multiple visits",44.60994,-69.83443
+24,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Echo Lake (Mt.Vernon),5814,"Prob. Lk; one station, mulitple sites, one visit",44.43636,-70.02946
+25,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Echo Lake (Presque Isle),1776,"One station; one set readings from 0 meter grab, one visit",46.615817,-68.005058
+26,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Fischer Lake,1808,"One station; one set readings from 0 meter grab, one visit",46.711588,-67.809076
+27,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Georges Pond,4406,"One station; one set readings from 6 meter core, one visit",44.61508,-68.24401
+28,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Great East Lake,3922,"One station (3); one set readings from 0 meter grab, one visit",43.576778,-70.925924
+29,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Great Pond,5274,"Prob. Lk; one station, mulitple sites, one visit",44.54428,-69.85432
+30,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Highland Lake (Windham),3734,"One station; one set readings from 5 meter core, one visit",43.77696,-70.3586
+31,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Locke Pond,5202,"Prob. Lk; one station, mulitple sites, one visit",44.57793,-70.11862
+32,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Long Pond (Jefferson),5444,"Prob. Lk; one station, mulitple sites, one visit",44.28969,-69.5158
+33,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Lovejoy Pond (Albion),5176,"Prob. Lk.; One station, multiple sites & multiple visits",44.51928,-69.47005
+34,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Lovejoy Pond (Fayette),5664,"Prob. Lk; one station, mulitple sites, one visit",44.3948,-70.02478
+35,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Narrows Ponds,98,"Prob. Lk; one station, mulitple sites, one visit",44.31111,-69.93934
+36,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,North Pond,5344,"Prob. Lk.; One station, multiple sites & multiple visits",44.62954,-69.83572
+37,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Parker Pond,5186,"Prob. Lk; one station, mulitple sites, one visit",44.5022,-70.0237
+38,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Pattee Pond,5458,"Prob. Lk; one station, mulitple sites, one visit",44.53237,-69.56047
+39,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Pocasset Lake,3824,"Prob. Lk; one station, mulitple sites, one visit",44.3636188,-70.05964
+40,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Sabattus Pond,3796,One station; multiple sites & multiple visits,44.15677,-70.10172
+41,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Salmon Lake (aka Ellis P),5352,"Prob. Lk.; One station, multiple sites & multiple visits",44.52142,-69.78561
+42,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Sebasticook Lake,2264,One station; multiple sites & multiple visits,44.86749,-69.23308
+43,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Threecornered Pond,5424,"Prob. Lk; one station, mulitple sites, one visit",44.34729,-69.64148
+44,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Threemile Pond,5416,"Prob. Lk.; One station, multiple sites & multiple visits",44.3677,-69.60821
+45,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Torsey Pond,5307,"Prob. Lk; one station, mulitple sites, one visit",44.4288,-69.97908
+46,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Unity Pond,5172,One station; multiple sites & multiple visits,44.6313,-69.33743
+47,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Webber Pond,5408,One station; multiple sites & multiple visits,44.4016,-69.66631
+48,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Wilson,3832,"Prob. Lk; one station, mulitple sites, one visit",44.28256,-70.04433
+49,ME,Maine Dept. of Env. Prot. - Lake Assess. Sect.,Woodbury Pond,5290,"Prob. Lk; one station, mulitple sites, one visit",44.19467,-69.9501
+50,ME,UNH Center for Freshwater Biology,Highland Lake,HL-deep,,44.086969,-70.743766
+51,NH,NH DES,DUBLIN POND,NHLAK802010202-05,,42.904269,-72.072383
+52,NH,NH DES,HUNKINS POND,NHLAK700020201-02,,43.504194,-71.5595
+53,NH,NH DES,Lake Kanesatka,NHLAK700020105-02,,43.727584,-71.45834
+54,NH,NH DES,OTTERNICK POND,NHLAK700061206-02,,42.772744,-71.425831
+55,NH,NH DES,Robinson Pond,NHLAK700061203-06-02,,42.799945,-71.381614
+56,NH,NH DES,SHOWELL POND,NHLAK600030802-04,,42.908,-71.176194
+57,NH,NH DES,SILVER LAKE,NHLAK700061001-02-02,,42.76075,-71.595639
+58,NH,NH DES,TOWER HILL POND,NHLAK700060701-04,,43.04,-71.371778
+59,NH,NH DES,WEBSTER LAKE,NHLAK700010804-02-03,,43.458833,-71.679558
+60,NH,NH DES-VLAP,ARMINGTON LAKE,NHLAK801040201-01,,43.958389,-71.9692
+61,NH,NH DES-VLAP,AYERS POND,NHLAK600030607-01,,43.256,-71.0433
+62,NH,NH DES-VLAP,BEARCAMP POND,NHLAK600020601-01-01,,43.814583,-71.3689
+63,NH,NH DES-VLAP,BIG ISLAND POND ,NHLAK700061101-01-01,,42.866,-71.211389
+64,NH,NH DES-VLAP,CANAAN STREET LAKE,NHLAK801060101-01-01,,43.664194,-72.0339
+65,NH,NH DES-VLAP,Clement Pond ,NHLAK700030505-01,,43.2165,-71.766389
+66,NH,NH DES-VLAP,Eastman Pond ,NHLAK801060401-06,,43.518283,-72.1151
+67,NH,NH DES-VLAP,French Pond,NHLAK700030504-02-01,,43.192722,-71.775972
+68,NH,NH DES-VLAP,Granite Lake ,NHLAK802010201-05,,43.020972,-72.141361
+69,NH,NH DES-VLAP,HALFMOON LAKE,NHLAK700060402-03,,43.391083,-71.227694
+70,NH,NH DES-VLAP,Lake Gardner,NHLAK801030506-01,,44.1634,-72.009
+71,NH,NH DES-VLAP,LAKE SKATUTAKEE,NHLAK700030103-08,,42.936528,-72.070194
+72,NH,NH DES-VLAP,Lees Pond,NHLAK700020103-05,,43.7380667,-71.3964667
+73,NH,NH DES-VLAP,Little Sunapee Lake,NHLAK801060402-04-01,,43.433083,-72.0118
+74,NH,NH DES-VLAP,LONG POND,NHLAK700061205-02-01,,42.698694,-71.3671
+75,NH,NH DES-VLAP,LOWER BEECH POND,NHLAK600020701-02,,43.672189,-71.207289
+76,NH,NH DES-VLAP,LOWER DANFORTH POND,NHLAK600020803-01-01,,43.820083,-71.1038
+77,NH,NH DES-VLAP,MASCOMA LAKE,NHLAK801060105-04-01,,43.627889,-72.1503
+78,NH,NH DES-VLAP,NUBANUSIT LAKE,NHLAK700030103-07,,42.986258,-72.057692
+79,NH,NH DES-VLAP,Ossipee Lake,NHLAK600020802-04-01,,43.7795,-71.1386
+80,NH,NH DES-VLAP,Phillips Pond,NHLAK600030802-03-02,,42.923905,-71.187255
+81,NH,NH DES-VLAP,Rockybound Pond,NHLAK801060404-01,,43.446417,-72.145056
+82,NH,NH DES-VLAP,Sand Pond ,NHLAK802010101-08,,43.1838,-72.1668
+83,NH,NH DES-VLAP,Sebbins Pond ,NHLAK700060804-02,,42.928083,-71.478278
+84,NH,NH DES-VLAP,SILVER LAKE,NHLAK802010202-09,,42.961194,-72.14
+85,NH,NH DES-VLAP,SUNAPEE LAKE,NHLAK801060402-05-01,,43.406083,-72.0426
+86,NH,NH DES-VLAP,TARLETON LAKE,NHLAK801040201-03,,43.977,-71.963278
+87,NH,NH DES-VLAP,Thorndike Pond ,NHLAK700030102-01-01,,42.86461,-72.055078
+88,NH,NH DES-VLAP,Wicwas Lake ,NHLAK700020201-04,,43.620083,-71.5519
+89,NH,UNH Center for Freshwater Biology,Baboosic Lake,BL-deep,,42.883531,-71.577089
+90,NH,UNH Center for Freshwater Biology,Christine Lake,CL-deep,,44.630366,-71.406078
+91,NH,UNH Center for Freshwater Biology,Lovell Lake,LL-deep,,43.543928,-71.012252
+92,NH,UNH Center for Freshwater Biology,Nippo Lake,NL-deep,,43.222912,-71.081729
+93,NH,UNH Center for Freshwater Biology,Pine River Pond,PR-deep,,43.628191,-71.027485
+94,NH,UNH Center for Freshwater Biology,Willand Pond,WP-deep,,43.228081,-70.887625
+95,NH,UNH Center for Freshwater Biology,York Pond,YP-deep,,44.502894,-71.337447
+96,RI,URI Watershed Watch ,Asa Pond,RI0010045L-02,Accessable via South Kingstown Tri-Pond Nature Center,41.458954,-71.512679
+97,RI,URI Watershed Watch ,Chapman Pond,RI0008039L-01,Fishing access / boat ramp off of Town Landfill Rd,41.380384,-71.795259
+98,RI,URI Watershed Watch ,Pasquisett Pond,RI0008039L-06,,41.426961,-71.631367
+99,RI,URI Watershed Watch ,Warwick Pond,RI0007024L-02,,41.7228,-71.412906
+100,RI ,URI Watershed Watch ,Blackamore Pond,RI0006018L-06,,41.774109,-71.44689
+101,RI ,URI Watershed Watch ,Melville Pond - upper,RI0007029L-01,In the Melville Recreational Area,41.583778,-71.272747
+102,RI ,URI Watershed Watch ,Randall Pond,RI0006018L-04,,41.788765,-71.468889
+103,RI ,URI Watershed Watch ,Yawgoo Pond,RI0008039L-15,,41.510569,-71.57166
+104,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  Alburgh,,Location Source = BGA Reports2009-2011,44.99258,-73.21397
+105,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  CarryBay,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.83307,-73.291
+106,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  ChapmanBay,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,45.00847,-73.21187
+107,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  CityBay,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.81037,-73.28703
+108,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  DonaldsonPoint,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.99248,-73.1762
+109,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  HighgateCliffs,,Location Source = BGA Reports2009-2011,45.00823333,-73.09961667
+110,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  HighgateSprings,,Location Source = BGA Reports2009-2011,44.99176667,-73.11338333
+111,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  HighgateSpringsShipyard,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.9795,-73.10768
+112,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  HighRocks,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,45.00495,-73.09155
+113,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  KingslandBay,,Location Source = EricHowe20121008,44.234715,-73.300871
+114,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  Larrabee'sPoint,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,43.8558,-73.376319
+115,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  LongPoint,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.25531,-73.2772
+116,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  MaquamBay,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.92083,-73.16075
+117,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  NorthBeach,,Location Source = BGA Reports2009-2011,44.49014,-73.23756
+118,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  NorthHero,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.92078,-73.2402
+119,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  PelotsBay,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.82547,-73.29757
+120,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  RedRocksBeach,,Location Source = BGA Reports2009-2011,44.44189,-73.22444
+121,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  RockRiverAccess,,Location Source = BGA Reports2009-2011,44.98854,-73.08819
+122,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  Rte78Access,,Location Source = BGA Reports2009-2011,44.96796667,-73.22111667
+123,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  StAlbansBayPark,,Location Source = LCC BGA Monitoring 2009 Final Report.doc,44.8073,-73.1403
+124,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  StAlbansBoatLaunch,,Location Source = BGA Reports2009-2011,44.79424,-73.17227
+125,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_02,,Location Source = BGA Reports2009-2011,43.71483333,-73.383
+126,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_04,,Location Source = BGA Reports2009-2011,43.95166667,-73.40783333
+127,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_07,,Location Source = BGA Reports2009-2011,44.126,-73.41283333
+128,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_09,,Location Source = BGA Reports2009-2011,44.24216667,-73.32916667
+129,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_16,,Location Source = BGA Reports2009-2011,44.42583333,-73.232
+130,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_19,,Location Source = BGA Reports2009-2011,44.471,-73.29916667
+131,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_21,,Location Source = BGA Reports2009-2011,44.47483333,-73.23166667
+132,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_25,,Location Source = BGA Reports2009-2011,44.582,-73.28116667
+133,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_33,,Location Source = BGA Reports2009-2011,44.70116667,-73.41816667
+134,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_34,,Location Source = BGA Reports2009-2011,44.70816667,-73.22683333
+135,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_36,,Location Source = BGA Reports2009-2011,44.75616667,-73.355
+136,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_40,,Location Source = BGA Reports2009-2011,44.78533333,-73.16216667
+137,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_46,,Location Source = BGA Reports2009-2011,44.94833333,-73.34
+138,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_50,,Location Source = BGA Reports2009-2011,45.01333333,-73.17383333
+139,VT,Vt DEC & Lake Champlain Committee,Lake Champlain:  VTDEC_51,,Location Source = BGA Reports2009-2011,45.04166667,-73.12966667
