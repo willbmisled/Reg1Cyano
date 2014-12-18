@@ -13,14 +13,14 @@ use these command instead of the knit icon if you want the data and work loaded 
   knit('Data2014.rmd')
 -->
 Introduction:
+-------------------------
 During the summer of 2014 the New England states initiated a monitoring program for cyanobacteria in lakes.  Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division. 
 
 The task now is to collate all the data into a standardized format.  Below are the data processing steps used and some questions to be resolved for each data contributor.
 
-A simple excel template for data entry is available here: 
+A simple excel template for data entry is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true
 
-This document is available here: 
--------------------------
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md
 
 New Hampshire
 -------------------------
@@ -101,7 +101,7 @@ NH<-read.csv("NHDES_RAW.csv") #read the data
 Questions for Sonya:
 
 * The locations are in tab "List_Frame_1" and the Data are in the data tab.  Both sets of data appear to be linked by the first column ("#" or "Sample #").  It appears that a some of the lines are out of order (i.e., 2 & 3 and 83 & 84).  This is not a problem I just adjusted them.  Is this okay?
-* In the data tab there are 2 entries for Sample#=42.  The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but he second (DESStationID=BROOSSD) is.  To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD).  Is this okay?
+* In the data tab there are 2 entries for Sample#=42.  The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is.  To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD).  Is this okay?
 * For Sample#=135 the DES Station ID is "TOWCAN-GEN
 " in the Data tab and "TOWCND-GEN" in the List_Frame_1 tab.  Which is correct?
 * Could you verify the units for the Beagle readings.  You have mg/l but others report ug/l.
@@ -125,7 +125,7 @@ Questions for Tracy:
 * Where were the samples taken?  Shoreside? or Within Lake?
 * What depth were the samples taken at?
 * How were the samples taken?  Grab samples? Whole Water Samples? Integrated Tube Samples?
-* I have some but not all of the Latitude and Longitudes for the lakes.  Please check the file CTDEEP_Locations.csv and verify the locations and fill in missing values.
+* I have some but not all of the Latitude and Longitudes for the lakes.  Please check the file CTDEEP_Locations.csv and verify the locations (I can send a map of the locations if you wish) and fill in missing values. 
 
 ```{r CTDEEP, include=FALSE, echo=FALSE, cache=FALSE} 
 CT<-read.csv("CTDEEP.csv") #read the data
@@ -159,7 +159,7 @@ Questions for Angela:
 * For parameter what do: "channel 1 hi", "channel 1 lo", and channel 2 lo" represent?
 * Where were the samples taken?  Shoreside? or Within Lake?  I'm assuming that the 1m depth samples are Shoreside and the 3m or greater depth samples are within lake but would like to verify.
 * What are the units for fluorometer readings?
-* For sample state VTDEC reports the conditions shown in the table below.  What information is important?  For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken. You can also use flags to indicate readings that need to be checked with the details in the comments field.
+* For the "sample state" VTDEC reports the conditions shown in the table below.  What information is important?  For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken. You can also use flags to indicate readings that need to be checked with the details in the comments field.
 * Please check the file VTDEC_Locations.csv.  I have some of the locations but not all.  The locations I have were gleaned from the lake Champlain reports.  In some cases I used Google Earth to get the locations from the descriptions so I don't have a lot of confidence in the locations.  Can you verify the locations (I can send a map of the locations if you wish) and help me with the ones that are missing?
 
 **sample state**|**Frozen**|**Filtered**|**Flag**|**Comment**
@@ -189,7 +189,7 @@ Charles River Watershed Association
 
 Questions for Elisabeth
 
-* Where all samples collected with the integrated tube sampler?
+* Were all samples collected with the integrated tube sampler?
 * What were the units for the fluorometer readings?  RFU? ug/l?
 
 
