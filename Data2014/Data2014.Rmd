@@ -73,6 +73,7 @@ New Hampshire
     - Chlorophyll_mg/l_Beagle_Frozen_Filtered	
     - Phycocyanin_RFU_Turner_Frozen_Filtered	
     - Chlorophyll_RFU_Turner_Frozen_Filtered
+* NOTE: the Beagle units are ug/l not mg/l.  This is corrected below in the final version.
 * Table NHDES_RAW from Cyano2014_NH.xlsx saved as NHDES_RAW.csv
     - Date parsed to Year Month Day
 * NHDES_RAW.csv read into R (code in the .rmd document) and the compound value fields parsed.  
@@ -88,23 +89,28 @@ NH<-read.csv("NHDES_RAW.csv") #read the data
       a<-unlist(strsplit(names(NH)[i],'_')) #get the column name
       b<-NH_T #open the blank template then fill in the field below
         b$Parameter<-ifelse(a[1]=='Phycocyanin','Phycocyanin','Chlorophyll')
-        b$Units<-ifelse(a[2]=='RFU','RFU','mg/l')
+        b$Units<-ifelse(a[2]=='RFU','RFU',paste('\u03BC','g/l',sep=''))
         b$Fluorometer<-ifelse(a[3]=='Beagle','Beagle','Turner')
         b$Frozen<-ifelse(a[4]=='Frozen','TRUE','FALSE')
         b$Filtered<-ifelse(a[5]=='Filtered','TRUE','FALSE')
         b$Value<-NH[,i]
       NHDES<-rbind(NHDES,b) #add data to data.frame
+      NHDES[NHDES$SiteID=="TOWCAN-GEN","SiteID"]<-'TOWCND-GEN'
     }
   write.table(NHDES, file='NHDES.csv',row.names=F,sep=',') #write to csv
 
 ```
-Questions for Sonya:
+Questions for Sonya: all have been answered and the data updated.
 
 * The locations are in tab "List_Frame_1" and the Data are in the data tab.  Both sets of data appear to be linked by the first column ("#" or "Sample #").  It appears that a some of the lines are out of order (i.e., 2 & 3 and 83 & 84).  This is not a problem I just adjusted them.  Is this okay?
+    - Okay
 * In the data tab there are 2 entries for Sample#=42.  The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is.  To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD).  Is this okay?
+    - Okay
 * For Sample#=135 the DES Station ID is "TOWCAN-GEN
 " in the Data tab and "TOWCND-GEN" in the List_Frame_1 tab.  Which is correct?
+    - TOWCND-GEN: this is corrected above
 * Could you verify the units for the Beagle readings.  You have mg/l but others report ug/l.
+    - Should be ug/l-corrected above.
 
 
 Connecticut
@@ -187,10 +193,13 @@ Charles River Watershed Association
 * Parsed dates and times
 * data saved as CWRA.csv
 
-Questions for Elisabeth
+Questions for Elisabeth-all question answered and the data updated.
 
 * Were all samples collected with the integrated tube sampler?
-* What were the units for the fluorometer readings?  RFU? ug/l?
+    - Yes
+* What were the units for the fluorometer readings?  RFU? µg/L?
+    - µg/L
+
 
 
 

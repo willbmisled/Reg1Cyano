@@ -1,281 +1,281 @@
 Order,YourName,Organization,SiteID,WaterbodyName,State,SiteLocation,SampleYear,SampleMonth,SampleDay,NameOfSamplers,WeatherConditions,SampleLocation,SampleMethod,Depth,Latitude,Longitude,SampleHour,SampleMinutes,Filtered,Frozen,Parameter,Value,Units,Rep,Fluorometer,AnalysisYear,AnalysisMonth,AnalysisDay,AnalysisHour,AnalysisMinutes,GPSType,Photos,Flag,Comments
-1,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,NO,No,Phycocyanin,25.94,,,Beagle,2014,7,3,10,47,Magellan,No,,
-2,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,YES,No,Phycocyanin,1,,,Beagle,2014,7,3,10,47,Magellan,No,,
-3,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,NO,No,Phycocyanin,170.45,,,Beagle,2014,7,3,11,20,Magellan,No,,
-4,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,YES,No,Phycocyanin,0.55,,,Beagle,2014,7,3,11,20,Magellan,No,,
-5,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,NO,No,Phycocyanin,2.58,,,Beagle,2014,7,10,14,22,Magellan,No,,
-6,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,10,14,22,Magellan,No,,
-7,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,NO,No,Phycocyanin,0.1,,,Beagle,2014,7,10,14,37,Magellan,No,,
-8,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,10,14,37,Magellan,No,,
-9,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,NO,No,Phycocyanin,6.82,,,Beagle,2014,7,10,15,9,Magellan,No,,
-10,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,10,15,9,Magellan,No,,
-11,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,NO,No,Phycocyanin,8.41,,,Beagle,2014,7,10,15,52,Magellan,No,,
-12,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,YES,No,Phycocyanin,0.55,,,Beagle,2014,7,10,15,52,Magellan,No,,
-13,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,NO,No,Phycocyanin,0.1,,,Beagle,2014,7,17,11,9,Magellan,No,,
-14,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,17,11,9,Magellan,No,,
-15,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,NO,No,Phycocyanin,9.47,,,Beagle,2014,7,17,11,44,Magellan,No,,
-16,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,YES,No,Phycocyanin,5.23,,,Beagle,2014,7,17,11,44,Magellan,No,,
-17,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,NO,No,Phycocyanin,18.22,,,Beagle,2014,7,17,12,12,Magellan,No,,
-18,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,YES,No,Phycocyanin,6.82,,,Beagle,2014,7,17,12,12,Magellan,No,,
-19,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,NO,No,Phycocyanin,6.29,,,Beagle,2014,7,17,12,39,Magellan,No,,
-20,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,17,12,39,Magellan,No,,
-21,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,,1,42.358755,-71.073377,0,0,NO,No,Phycocyanin,6.82,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-22,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,,1,42.358755,-71.073377,0,0,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-23,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,NO,No,Phycocyanin,8.94,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-24,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-25,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,,1,42.362866,-71.081652,0,0,NO,No,Phycocyanin,6.82,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-26,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,,1,42.362866,-71.081652,0,0,YES,No,Phycocyanin,3.64,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-27,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,24,,,SS1,,1,42.36936,-71.061925,0,0,NO,No,Phycocyanin,14.11,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-28,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,24,,,SS1,,1,42.36936,-71.061925,0,0,YES,No,Phycocyanin,1,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-29,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,NO,No,Phycocyanin,9.47,,,Beagle,2014,7,31,10,47,Magellan,No,,
-30,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,31,10,47,Magellan,No,,
-31,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,,1,42.358755,-71.073377,11,10,NO,No,Phycocyanin,19.25,,,Beagle,2014,7,31,11,10,Magellan,No,,
-32,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,,1,42.358755,-71.073377,11,10,YES,No,Phycocyanin,3.64,,,Beagle,2014,7,31,11,10,Magellan,No,,
-33,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,,1,42.358519,-71.087433,11,52,NO,No,Phycocyanin,21.31,,,Beagle,2014,7,31,11,52,Magellan,No,,
-34,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,,1,42.358519,-71.087433,11,52,YES,No,Phycocyanin,2.05,,,Beagle,2014,7,31,11,52,Magellan,No,,
-35,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,31,,,SS1,,1,42.36936,-71.061925,12,12,NO,No,Phycocyanin,13.6,,,Beagle,2014,7,31,12,12,Magellan,No,,
-36,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,31,,,SS1,,1,42.36936,-71.061925,12,12,YES,No,Phycocyanin,0.1,,,Beagle,2014,7,31,12,12,Magellan,No,,
-37,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,,1,42.362866,-71.081652,13,42,NO,No,Phycocyanin,6.82,,,Beagle,2014,8,7,13,42,Magellan,No,,
-38,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,,1,42.362866,-71.081652,13,42,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,7,13,42,Magellan,No,,
-39,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,NO,No,Phycocyanin,5.23,,,Beagle,2014,8,7,14,15,Magellan,No,,
-40,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,YES,No,Phycocyanin,0.55,,,Beagle,2014,8,7,14,15,Magellan,No,,
-41,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,,1,42.358755,-71.073377,14,42,NO,No,Phycocyanin,5.23,,,Beagle,2014,8,7,14,42,Magellan,No,,
-42,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,,1,42.358755,-71.073377,14,42,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,7,14,42,Magellan,No,,
-43,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,,1,42.358519,-71.087433,15,20,NO,No,Phycocyanin,5.76,,,Beagle,2014,8,7,15,20,Magellan,No,,
-44,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,,1,42.358519,-71.087433,15,20,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,7,15,20,Magellan,No,,
-45,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,,1,42.362866,-71.081652,10,51,NO,No,Phycocyanin,0.1,,,Beagle,2014,8,14,10,51,Magellan,No,,
-46,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,,1,42.362866,-71.081652,10,51,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,14,10,51,Magellan,No,,
-47,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,14,,,SS1,,1,42.36936,-71.061925,11,21,NO,No,Phycocyanin,10.51,,,Beagle,2014,8,14,11,21,Magellan,No,,
-48,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,14,,,SS1,,1,42.36936,-71.061925,11,21,YES,No,Phycocyanin,1,,,Beagle,2014,8,14,11,21,Magellan,No,,
-49,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,NO,No,Phycocyanin,6.29,,,Beagle,2014,8,14,11,43,Magellan,No,,
-50,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,YES,No,Phycocyanin,7.88,,,Beagle,2014,8,14,11,43,Magellan,No,,
-51,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,,1,42.358519,-71.087433,12,12,NO,No,Phycocyanin,5.76,,,Beagle,2014,8,14,12,12,Magellan,No,,
-52,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,,1,42.358519,-71.087433,12,12,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,14,12,12,Magellan,No,,
-53,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,NO,No,Phycocyanin,13.08,,,Beagle,2014,8,21,13,54,Magellan,No,,
-54,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,21,13,54,Magellan,No,,
-55,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,,1,42.362866,-71.081652,14,32,NO,No,Phycocyanin,23.37,,,Beagle,2014,8,21,14,32,Magellan,No,,
-56,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,,1,42.362866,-71.081652,14,32,YES,No,Phycocyanin,5.23,,,Beagle,2014,8,21,14,32,Magellan,No,,
-57,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,21,,,SS1,,1,42.36936,-71.061925,14,54,NO,No,Phycocyanin,7.88,,,Beagle,2014,8,21,14,54,Magellan,No,,
-58,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,21,,,SS1,,1,42.36936,-71.061925,14,54,YES,No,Phycocyanin,2.05,,,Beagle,2014,8,21,14,54,Magellan,No,,
-59,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,,1,42.358755,-71.073377,15,22,NO,No,Phycocyanin,8.41,,,Beagle,2014,8,21,15,22,Magellan,No,,
-60,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,,1,42.358755,-71.073377,15,22,YES,No,Phycocyanin,0.1,,,Beagle,2014,8,21,15,22,Magellan,No,,
-61,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,,1,42.358755,-71.073377,13,15,NO,No,Phycocyanin,17.2,,,Beagle,2014,8,28,13,15,Magellan,No,,
-62,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,,1,42.358755,-71.073377,13,15,YES,No,Phycocyanin,5.76,,,Beagle,2014,8,28,13,15,Magellan,No,,
-63,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,NO,No,Phycocyanin,28.51,,,Beagle,2014,8,28,14,0,Magellan,No,,
-64,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,YES,No,Phycocyanin,3.11,,,Beagle,2014,8,28,14,0,Magellan,No,,
-65,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,,1,42.358519,-71.087433,14,20,NO,No,Phycocyanin,19.25,,,Beagle,2014,8,28,14,20,Magellan,No,,
-66,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,,1,42.358519,-71.087433,14,20,YES,No,Phycocyanin,4.17,,,Beagle,2014,8,28,14,20,Magellan,No,,
-67,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,28,,,SS1,,1,42.36936,-71.061925,15,0,NO,No,Phycocyanin,22.34,,,Beagle,2014,8,28,15,0,Magellan,No,,
-68,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,28,,,SS1,,1,42.36936,-71.061925,15,0,YES,No,Phycocyanin,2.05,,,Beagle,2014,8,28,15,0,Magellan,No,,
-69,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,,1,42.358755,-71.073377,12,25,NO,No,Phycocyanin,24.4,,,Beagle,2014,9,4,12,25,Magellan,No,,
-70,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,,1,42.358755,-71.073377,12,25,YES,No,Phycocyanin,2.58,,,Beagle,2014,9,4,12,25,Magellan,No,,
-71,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,,1,42.362866,-71.081652,13,0,NO,No,Phycocyanin,21.31,,,Beagle,2014,9,4,13,0,Magellan,No,,
-72,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,,1,42.362866,-71.081652,13,0,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,4,13,0,Magellan,No,,
-73,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,,1,42.358519,-71.087433,13,30,NO,No,Phycocyanin,24.91,,,Beagle,2014,9,4,13,30,Magellan,No,,
-74,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,,1,42.358519,-71.087433,13,30,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,4,13,30,Magellan,No,,
-75,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,NO,No,Phycocyanin,17.71,,,Beagle,2014,9,4,14,0,Magellan,No,,
-76,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,4,14,0,Magellan,No,,
-77,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,,1,42.358519,-71.087433,13,4,NO,No,Phycocyanin,33.65,,,Beagle,2014,9,11,13,4,Magellan,No,,
-78,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,,1,42.358519,-71.087433,13,4,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,11,13,4,Magellan,No,,
-79,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,,1,42.362866,-71.081652,13,35,NO,No,Phycocyanin,38.28,,,Beagle,2014,9,11,13,35,Magellan,No,,
-80,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,,1,42.362866,-71.081652,13,35,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,11,13,35,Magellan,No,,
-81,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,11,,,SS1,,1,42.36936,-71.061925,14,28,NO,No,Phycocyanin,38.28,,,Beagle,2014,9,11,14,28,Magellan,No,,
-82,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,11,,,SS1,,1,42.36936,-71.061925,14,28,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,11,14,28,Magellan,No,,
-83,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,NO,No,Phycocyanin,39.31,,,Beagle,2014,9,11,14,45,Magellan,No,,
-84,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,YES,No,Phycocyanin,4.17,,,Beagle,2014,9,11,14,45,Magellan,No,,
-85,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,NO,No,Phycocyanin,28,,,Beagle,2014,9,18,13,0,Magellan,No,,
-86,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,18,13,0,Magellan,No,,
-87,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,,1,42.362866,-71.081652,13,30,NO,No,Phycocyanin,24.91,,,Beagle,2014,9,18,13,30,Magellan,No,,
-88,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,,1,42.362866,-71.081652,13,30,YES,No,Phycocyanin,0.1,,,Beagle,2014,9,18,13,30,Magellan,No,,
-89,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,18,,,SS1,,1,42.36936,-71.061925,14,40,NO,No,Phycocyanin,10.51,,,Beagle,2014,9,18,14,40,Magellan,No,,
-90,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,18,,,SS1,,1,42.36936,-71.061925,14,40,YES,No,Phycocyanin,4.17,,,Beagle,2014,9,18,14,40,Magellan,No,,
-91,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,,1,42.358755,-71.073377,12,30,NO,No,Phycocyanin,31.08,,,Beagle,2014,9,18,12,30,Magellan,No,,
-92,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,,1,42.358755,-71.073377,12,30,YES,No,Phycocyanin,5.23,,,Beagle,2014,9,18,12,30,Magellan,No,,
-93,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,NO,No,Phycocyanin,9.47,,,Beagle,2014,10,2,13,20,Magellan,No,,
-94,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,YES,No,Phycocyanin,3.11,,,Beagle,2014,10,2,13,20,Magellan,No,,
-95,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,10,2,,,SS1,,1,42.36936,-71.061925,14,35,NO,No,Phycocyanin,12.57,,,Beagle,2014,10,2,14,35,Magellan,No,,
-96,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,10,2,,,SS1,,1,42.36936,-71.061925,14,35,YES,No,Phycocyanin,6.82,,,Beagle,2014,10,2,14,35,Magellan,No,,
-97,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,,1,42.358755,-71.073377,12,35,NO,No,Phycocyanin,18.22,,,Beagle,2014,10,2,12,35,Magellan,No,,
-98,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,,1,42.358755,-71.073377,12,35,YES,No,Phycocyanin,2.05,,,Beagle,2014,10,2,12,35,Magellan,No,,
-99,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,,1,42.358519,-71.087433,12,55,NO,No,Phycocyanin,23.88,,,Beagle,2014,10,2,12,55,Magellan,No,,
-100,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,,1,42.358519,-71.087433,12,55,YES,No,Phycocyanin,4.7,,,Beagle,2014,10,2,12,55,Magellan,No,,
-101,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,NO,No,Chlorophyll,5.06,,,Beagle,2014,7,3,10,47,Magellan,No,,
-102,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,YES,No,Chlorophyll,2.32,,,Beagle,2014,7,3,10,47,Magellan,No,,
-103,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,NO,No,Chlorophyll,4.98,,,Beagle,2014,7,3,11,20,Magellan,No,,
-104,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,YES,No,Chlorophyll,2.29,,,Beagle,2014,7,3,11,20,Magellan,No,,
-105,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,NO,No,Chlorophyll,4.14,,,Beagle,2014,7,10,14,22,Magellan,No,,
-106,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,YES,No,Chlorophyll,2,,,Beagle,2014,7,10,14,22,Magellan,No,,
-107,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,NO,No,Chlorophyll,2.29,,,Beagle,2014,7,10,14,37,Magellan,No,,
-108,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,YES,No,Chlorophyll,2.75,,,Beagle,2014,7,10,14,37,Magellan,No,,
-109,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,NO,No,Chlorophyll,5.9,,,Beagle,2014,7,10,15,9,Magellan,No,,
-110,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,YES,No,Chlorophyll,2.38,,,Beagle,2014,7,10,15,9,Magellan,No,,
-111,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,NO,No,Chlorophyll,4.63,,,Beagle,2014,7,10,15,52,Magellan,No,,
-112,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,YES,No,Chlorophyll,2.35,,,Beagle,2014,7,10,15,52,Magellan,No,,
-113,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,NO,No,Chlorophyll,2.96,,,Beagle,2014,7,17,11,9,Magellan,No,,
-114,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,YES,No,Chlorophyll,1.92,,,Beagle,2014,7,17,11,9,Magellan,No,,
-115,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,NO,No,Chlorophyll,3.65,,,Beagle,2014,7,17,11,44,Magellan,No,,
-116,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,YES,No,Chlorophyll,1.86,,,Beagle,2014,7,17,11,44,Magellan,No,,
-117,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,NO,No,Chlorophyll,2.93,,,Beagle,2014,7,17,12,12,Magellan,No,,
-118,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,YES,No,Chlorophyll,2.29,,,Beagle,2014,7,17,12,12,Magellan,No,,
-119,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,NO,No,Chlorophyll,2.87,,,Beagle,2014,7,17,12,39,Magellan,No,,
-120,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,YES,No,Chlorophyll,2.26,,,Beagle,2014,7,17,12,39,Magellan,No,,
-121,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,,1,42.358755,-71.073377,0,0,NO,No,Chlorophyll,2.73,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-122,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,,1,42.358755,-71.073377,0,0,YES,No,Chlorophyll,1.77,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-123,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,NO,No,Chlorophyll,3.07,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-124,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,YES,No,Chlorophyll,1.92,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-125,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,,1,42.362866,-71.081652,0,0,NO,No,Chlorophyll,3.71,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-126,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,,1,42.362866,-71.081652,0,0,YES,No,Chlorophyll,1.98,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-127,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,24,,,SS1,,1,42.36936,-71.061925,0,0,NO,No,Chlorophyll,3.79,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-128,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,24,,,SS1,,1,42.36936,-71.061925,0,0,YES,No,Chlorophyll,2,,,Beagle,2014,7,24,0,0,Magellan,No,,Sample collection time not available
-129,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,NO,No,Chlorophyll,4.02,,,Beagle,2014,7,31,10,47,Magellan,No,,
-130,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,YES,No,Chlorophyll,1.83,,,Beagle,2014,7,31,10,47,Magellan,No,,
-131,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,,1,42.358755,-71.073377,11,10,NO,No,Chlorophyll,4.11,,,Beagle,2014,7,31,11,10,Magellan,No,,
-132,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,,1,42.358755,-71.073377,11,10,YES,No,Chlorophyll,1.92,,,Beagle,2014,7,31,11,10,Magellan,No,,
-133,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,,1,42.358519,-71.087433,11,52,NO,No,Chlorophyll,5.81,,,Beagle,2014,7,31,11,52,Magellan,No,,
-134,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,,1,42.358519,-71.087433,11,52,YES,No,Chlorophyll,1.95,,,Beagle,2014,7,31,11,52,Magellan,No,,
-135,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,31,,,SS1,,1,42.36936,-71.061925,12,12,NO,No,Chlorophyll,4.51,,,Beagle,2014,7,31,12,12,Magellan,No,,
-136,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,31,,,SS1,,1,42.36936,-71.061925,12,12,YES,No,Chlorophyll,1.86,,,Beagle,2014,7,31,12,12,Magellan,No,,
-137,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,,1,42.362866,-71.081652,13,42,NO,No,Chlorophyll,6.36,,,Beagle,2014,8,7,13,42,Magellan,No,,
-138,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,,1,42.362866,-71.081652,13,42,YES,No,Chlorophyll,1.8,,,Beagle,2014,8,7,13,42,Magellan,No,,
-139,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,NO,No,Chlorophyll,4.77,,,Beagle,2014,8,7,14,15,Magellan,No,,
-140,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,YES,No,Chlorophyll,4.49,,,Beagle,2014,8,7,14,15,Magellan,No,,
-141,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,,1,42.358755,-71.073377,14,42,NO,No,Chlorophyll,4.02,,,Beagle,2014,8,7,14,42,Magellan,No,,
-142,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,,1,42.358755,-71.073377,14,42,YES,No,Chlorophyll,1.86,,,Beagle,2014,8,7,14,42,Magellan,No,,
-143,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,,1,42.358519,-71.087433,15,20,NO,No,Chlorophyll,5.12,,,Beagle,2014,8,7,15,20,Magellan,No,,
-144,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,,1,42.358519,-71.087433,15,20,YES,No,Chlorophyll,1.72,,,Beagle,2014,8,7,15,20,Magellan,No,,
-145,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,,1,42.362866,-71.081652,10,51,NO,No,Chlorophyll,5.15,,,Beagle,2014,8,14,10,51,Magellan,No,,
-146,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,,1,42.362866,-71.081652,10,51,YES,No,Chlorophyll,2.58,,,Beagle,2014,8,14,10,51,Magellan,No,,
-147,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,14,,,SS1,,1,42.36936,-71.061925,11,21,NO,No,Chlorophyll,2.78,,,Beagle,2014,8,14,11,21,Magellan,No,,
-148,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,14,,,SS1,,1,42.36936,-71.061925,11,21,YES,No,Chlorophyll,2.38,,,Beagle,2014,8,14,11,21,Magellan,No,,
-149,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,NO,No,Chlorophyll,4.14,,,Beagle,2014,8,14,11,43,Magellan,No,,
-150,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,YES,No,Chlorophyll,3.94,,,Beagle,2014,8,14,11,43,Magellan,No,,
-151,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,,1,42.358519,-71.087433,12,12,NO,No,Chlorophyll,7.4,,,Beagle,2014,8,14,12,12,Magellan,No,,
-152,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,,1,42.358519,-71.087433,12,12,YES,No,Chlorophyll,1.75,,,Beagle,2014,8,14,12,12,Magellan,No,,
-153,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,NO,No,Chlorophyll,3.62,,,Beagle,2014,8,21,13,54,Magellan,No,,
-154,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,YES,No,Chlorophyll,1.6,,,Beagle,2014,8,21,13,54,Magellan,No,,
-155,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,,1,42.362866,-71.081652,14,32,NO,No,Chlorophyll,4.28,,,Beagle,2014,8,21,14,32,Magellan,No,,
-156,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,,1,42.362866,-71.081652,14,32,YES,No,Chlorophyll,1.51,,,Beagle,2014,8,21,14,32,Magellan,No,,
-157,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,21,,,SS1,,1,42.36936,-71.061925,14,54,NO,No,Chlorophyll,3.42,,,Beagle,2014,8,21,14,54,Magellan,No,,
-158,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,21,,,SS1,,1,42.36936,-71.061925,14,54,YES,No,Chlorophyll,2,,,Beagle,2014,8,21,14,54,Magellan,No,,
-159,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,,1,42.358755,-71.073377,15,22,NO,No,Chlorophyll,6.82,,,Beagle,2014,8,21,15,22,Magellan,No,,
-160,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,,1,42.358755,-71.073377,15,22,YES,No,Chlorophyll,1.8,,,Beagle,2014,8,21,15,22,Magellan,No,,
-161,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,,1,42.358755,-71.073377,13,15,NO,No,Chlorophyll,2.99,,,Beagle,2014,8,28,13,15,Magellan,No,,
-162,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,,1,42.358755,-71.073377,13,15,YES,No,Chlorophyll,2.06,,,Beagle,2014,8,28,13,15,Magellan,No,,
-163,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,NO,No,Chlorophyll,3.33,,,Beagle,2014,8,28,14,0,Magellan,No,,
-164,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,YES,No,Chlorophyll,1.89,,,Beagle,2014,8,28,14,0,Magellan,No,,
-165,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,,1,42.358519,-71.087433,14,20,NO,No,Chlorophyll,3.1,,,Beagle,2014,8,28,14,20,Magellan,No,,
-166,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,,1,42.358519,-71.087433,14,20,YES,No,Chlorophyll,2.12,,,Beagle,2014,8,28,14,20,Magellan,No,,
-167,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,28,,,SS1,,1,42.36936,-71.061925,15,0,NO,No,Chlorophyll,2.84,,,Beagle,2014,8,28,15,0,Magellan,No,,
-168,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,28,,,SS1,,1,42.36936,-71.061925,15,0,YES,No,Chlorophyll,1.8,,,Beagle,2014,8,28,15,0,Magellan,No,,
-169,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,,1,42.358755,-71.073377,12,25,NO,No,Chlorophyll,2.44,,,Beagle,2014,9,4,12,25,Magellan,No,,
-170,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,,1,42.358755,-71.073377,12,25,YES,No,Chlorophyll,1.8,,,Beagle,2014,9,4,12,25,Magellan,No,,
-171,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,,1,42.362866,-71.081652,13,0,NO,No,Chlorophyll,4.02,,,Beagle,2014,9,4,13,0,Magellan,No,,
-172,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,,1,42.362866,-71.081652,13,0,YES,No,Chlorophyll,1.66,,,Beagle,2014,9,4,13,0,Magellan,No,,
-173,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,,1,42.358519,-71.087433,13,30,NO,No,Chlorophyll,2.67,,,Beagle,2014,9,4,13,30,Magellan,No,,
-174,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,,1,42.358519,-71.087433,13,30,YES,No,Chlorophyll,1.63,,,Beagle,2014,9,4,13,30,Magellan,No,,
-175,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,NO,No,Chlorophyll,2.78,,,Beagle,2014,9,4,14,0,Magellan,No,,
-176,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,YES,No,Chlorophyll,1.66,,,Beagle,2014,9,4,14,0,Magellan,No,,
-177,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,,1,42.358519,-71.087433,13,4,NO,No,Chlorophyll,3.79,,,Beagle,2014,9,11,13,4,Magellan,No,,
-178,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,,1,42.358519,-71.087433,13,4,YES,No,Chlorophyll,1.37,,,Beagle,2014,9,11,13,4,Magellan,No,,
-179,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,,1,42.362866,-71.081652,13,35,NO,No,Chlorophyll,5.15,,,Beagle,2014,9,11,13,35,Magellan,No,,
-180,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,,1,42.362866,-71.081652,13,35,YES,No,Chlorophyll,1.46,,,Beagle,2014,9,11,13,35,Magellan,No,,
-181,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,11,,,SS1,,1,42.36936,-71.061925,14,28,NO,No,Chlorophyll,4.86,,,Beagle,2014,9,11,14,28,Magellan,No,,
-182,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,11,,,SS1,,1,42.36936,-71.061925,14,28,YES,No,Chlorophyll,2.06,,,Beagle,2014,9,11,14,28,Magellan,No,,
-183,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,NO,No,Chlorophyll,3.27,,,Beagle,2014,9,11,14,45,Magellan,No,,
-184,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,YES,No,Chlorophyll,1.72,,,Beagle,2014,9,11,14,45,Magellan,No,,
-185,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,NO,No,Chlorophyll,2.93,,,Beagle,2014,9,18,13,0,Magellan,No,,
-186,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,YES,No,Chlorophyll,1.72,,,Beagle,2014,9,18,13,0,Magellan,No,,
-187,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,,1,42.362866,-71.081652,13,30,NO,No,Chlorophyll,2.81,,,Beagle,2014,9,18,13,30,Magellan,No,,
-188,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,,1,42.362866,-71.081652,13,30,YES,No,Chlorophyll,1.54,,,Beagle,2014,9,18,13,30,Magellan,No,,
-189,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,18,,,SS1,,1,42.36936,-71.061925,14,40,NO,No,Chlorophyll,3.04,,,Beagle,2014,9,18,14,40,Magellan,No,,
-190,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,18,,,SS1,,1,42.36936,-71.061925,14,40,YES,No,Chlorophyll,1.92,,,Beagle,2014,9,18,14,40,Magellan,No,,
-191,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,,1,42.358755,-71.073377,12,30,NO,No,Chlorophyll,2.61,,,Beagle,2014,9,18,12,30,Magellan,No,,
-192,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,,1,42.358755,-71.073377,12,30,YES,No,Chlorophyll,1.57,,,Beagle,2014,9,18,12,30,Magellan,No,,
-193,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,NO,No,Chlorophyll,2.15,,,Beagle,2014,10,2,13,20,Magellan,No,,
-194,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,YES,No,Chlorophyll,1.28,,,Beagle,2014,10,2,13,20,Magellan,No,,
-195,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,10,2,,,SS1,,1,42.36936,-71.061925,14,35,NO,No,Chlorophyll,2.96,,,Beagle,2014,10,2,14,35,Magellan,No,,
-196,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,10,2,,,SS1,,1,42.36936,-71.061925,14,35,YES,No,Chlorophyll,1.4,,,Beagle,2014,10,2,14,35,Magellan,No,,
-197,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,,1,42.358755,-71.073377,12,35,NO,No,Chlorophyll,2.9,,,Beagle,2014,10,2,12,35,Magellan,No,,
-198,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,,1,42.358755,-71.073377,12,35,YES,No,Chlorophyll,1.46,,,Beagle,2014,10,2,12,35,Magellan,No,,
-199,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,,1,42.358519,-71.087433,12,55,NO,No,Chlorophyll,3.79,,,Beagle,2014,10,2,12,55,Magellan,No,,
-200,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,,1,42.358519,-71.087433,12,55,YES,No,Chlorophyll,1.34,,,Beagle,2014,10,2,12,55,Magellan,No,,
-201,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,NO,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-202,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,YES,Yes,Phycocyanin,2.58,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-203,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,NO,Yes,Phycocyanin,4.7,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-204,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,YES,Yes,Phycocyanin,0.1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-205,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,NO,Yes,Phycocyanin,0.55,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-206,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,YES,Yes,Phycocyanin,5.23,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-207,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,NO,Yes,Phycocyanin,3.64,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-208,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,YES,Yes,Phycocyanin,1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-209,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,NO,Yes,Phycocyanin,0.1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-210,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,YES,Yes,Phycocyanin,0.1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-211,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,NO,Yes,Phycocyanin,2.05,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-212,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,YES,Yes,Phycocyanin,5.23,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-213,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,NO,Yes,Phycocyanin,1.52,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-214,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,YES,Yes,Phycocyanin,7.88,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-215,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,NO,Yes,Phycocyanin,4.7,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-216,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,YES,Yes,Phycocyanin,1.52,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-217,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,NO,Yes,Phycocyanin,1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-218,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,YES,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-219,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,NO,Yes,Phycocyanin,4.7,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-220,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,YES,Yes,Phycocyanin,4.17,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-221,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,NO,Yes,Phycocyanin,2.05,,,Beagle,2014,12,11,0,0,Magellan,No,,Sample collection time not available
-222,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,YES,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Sample collection time not available
-223,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,NO,Yes,Phycocyanin,1.52,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-224,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,YES,Yes,Phycocyanin,2.58,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-225,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,NO,Yes,Phycocyanin,5.23,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-226,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,YES,Yes,Phycocyanin,1,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-227,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,NO,Yes,Phycocyanin,5.76,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-228,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,YES,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-229,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,NO,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-230,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,YES,Yes,Phycocyanin,2.58,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-231,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,NO,Yes,Phycocyanin,7.35,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-232,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,YES,Yes,Phycocyanin,2.58,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-233,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,NO,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-234,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,YES,Yes,Phycocyanin,4.7,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-235,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,NO,Yes,Phycocyanin,5.23,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-236,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,YES,Yes,Phycocyanin,0.55,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-237,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,NO,Yes,Phycocyanin,4.7,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-238,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,YES,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-239,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,NO,Yes,Phycocyanin,3.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-240,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,YES,Yes,Phycocyanin,1.52,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-241,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,,1,42.362866,-71.081652,10,47,YES,Yes,Chlorophyll,2.47,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-242,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,NO,Yes,Chlorophyll,2.18,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-243,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,3,,,SS1,,1,42.36936,-71.061925,11,20,YES,Yes,Chlorophyll,2.99,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-244,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,NO,Yes,Chlorophyll,2.03,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-245,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,,1,42.358755,-71.073377,14,22,YES,Yes,Chlorophyll,2.26,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-246,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,NO,Yes,Chlorophyll,2.15,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-247,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,,1,42.358519,-71.087433,14,37,YES,Yes,Chlorophyll,2.47,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-248,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,NO,Yes,Chlorophyll,2.18,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-249,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,,1,42.362866,-71.081652,15,9,YES,Yes,Chlorophyll,2.26,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-250,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,NO,Yes,Chlorophyll,2.06,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-251,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,10,,,SS1,,1,42.36936,-71.061925,15,52,YES,Yes,Chlorophyll,2.26,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-252,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,NO,Yes,Chlorophyll,2.44,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-253,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,,1,42.362866,-71.081652,11,9,YES,Yes,Chlorophyll,2.12,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-254,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,NO,Yes,Chlorophyll,1.89,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-255,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,7,17,,,SS1,,1,42.36936,-71.061925,11,44,YES,Yes,Chlorophyll,2.15,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-256,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,NO,Yes,Chlorophyll,1.92,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-257,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,,1,42.358755,-71.073377,12,12,YES,Yes,Chlorophyll,2.03,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-258,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,NO,Yes,Chlorophyll,1.98,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-259,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,,1,42.358519,-71.087433,12,39,YES,Yes,Chlorophyll,2.09,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-260,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,,1,42.358755,-71.073377,0,0,NO,Yes,Chlorophyll,2.18,,,Beagle,2014,12,11,0,0,Magellan,No,,Sample collection time not available
-261,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,,1,42.358519,-71.087433,0,0,YES,Yes,Chlorophyll,1.54,,,Beagle,2014,12,11,0,0,Magellan,No,,Sample collection time not available
-262,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,,1,42.362866,-71.081652,0,0,NO,Yes,Chlorophyll,1.54,,,Beagle,2014,12,11,0,0,Magellan,No,,Sample collection time not available
-263,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,,1,42.362866,-71.081652,10,47,YES,Yes,Chlorophyll,1.75,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-264,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,,1,42.358755,-71.073377,11,10,NO,Yes,Chlorophyll,1.51,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-265,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,8,7,,,SS1,,1,42.36936,-71.061925,14,15,YES,Yes,Chlorophyll,1.95,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-266,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,,1,42.358755,-71.073377,14,42,NO,Yes,Chlorophyll,1.86,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-267,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,,1,42.358755,-71.073377,11,43,YES,Yes,Chlorophyll,1.98,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-268,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,,1,42.358519,-71.087433,12,12,NO,Yes,Chlorophyll,1.66,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-269,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,,1,42.358519,-71.087433,13,54,YES,Yes,Chlorophyll,2.26,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-270,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,,1,42.362866,-71.081652,14,32,NO,Yes,Chlorophyll,1.6,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-271,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,,1,42.362866,-71.081652,14,0,YES,Yes,Chlorophyll,1.69,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-272,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,,1,42.358519,-71.087433,14,20,NO,Yes,Chlorophyll,1.46,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-273,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,9,4,,,SS1,,1,42.36936,-71.061925,14,0,YES,Yes,Chlorophyll,1.49,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-274,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,,1,42.358519,-71.087433,13,4,NO,Yes,Chlorophyll,1.25,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-275,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,,1,42.358755,-71.073377,14,45,YES,Yes,Chlorophyll,1.46,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-276,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,NO,Yes,Chlorophyll,1.11,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-277,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,,1,42.358519,-71.087433,13,0,YES,Yes,Chlorophyll,1.63,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-278,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,,1,42.362866,-71.081652,13,30,NO,Yes,Chlorophyll,1.14,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-279,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,,1,42.362866,-71.081652,13,20,YES,Yes,Chlorophyll,1.66,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
-280,Elisabeth Cianciola,CRWA,MA70-02˜,Charles River,MA,ND,2014,10,2,,,SS1,,1,42.36936,-71.061925,14,35,NO,Yes,Chlorophyll,1.25,,,Beagle,2014,12,11,0,0,Magellan,No,,Analysis time not available for frozen samples
+1,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,FALSE,Phycocyanin,25.94,µg/L,,Beagle,2014,7,3,10,47,Magellan,FALSE,,
+2,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,FALSE,Phycocyanin,1,µg/L,,Beagle,2014,7,3,10,47,Magellan,FALSE,,
+3,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,FALSE,FALSE,Phycocyanin,170.45,µg/L,,Beagle,2014,7,3,11,20,Magellan,FALSE,,
+4,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,TRUE,FALSE,Phycocyanin,0.55,µg/L,,Beagle,2014,7,3,11,20,Magellan,FALSE,,
+5,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,FALSE,FALSE,Phycocyanin,2.58,µg/L,,Beagle,2014,7,10,14,22,Magellan,FALSE,,
+6,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,10,14,22,Magellan,FALSE,,
+7,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,FALSE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,10,14,37,Magellan,FALSE,,
+8,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,10,14,37,Magellan,FALSE,,
+9,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,FALSE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,7,10,15,9,Magellan,FALSE,,
+10,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,10,15,9,Magellan,FALSE,,
+11,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,FALSE,FALSE,Phycocyanin,8.41,µg/L,,Beagle,2014,7,10,15,52,Magellan,FALSE,,
+12,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,TRUE,FALSE,Phycocyanin,0.55,µg/L,,Beagle,2014,7,10,15,52,Magellan,FALSE,,
+13,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,FALSE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,17,11,9,Magellan,FALSE,,
+14,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,17,11,9,Magellan,FALSE,,
+15,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,FALSE,FALSE,Phycocyanin,9.47,µg/L,,Beagle,2014,7,17,11,44,Magellan,FALSE,,
+16,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,TRUE,FALSE,Phycocyanin,5.23,µg/L,,Beagle,2014,7,17,11,44,Magellan,FALSE,,
+17,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,FALSE,FALSE,Phycocyanin,18.22,µg/L,,Beagle,2014,7,17,12,12,Magellan,FALSE,,
+18,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,TRUE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,7,17,12,12,Magellan,FALSE,,
+19,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,FALSE,FALSE,Phycocyanin,6.29,µg/L,,Beagle,2014,7,17,12,39,Magellan,FALSE,,
+20,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,17,12,39,Magellan,FALSE,,
+21,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,Integrated,1,42.358755,-71.073377,0,0,FALSE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+22,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,Integrated,1,42.358755,-71.073377,0,0,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+23,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,FALSE,FALSE,Phycocyanin,8.94,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+24,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+25,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,Integrated,1,42.362866,-71.081652,0,0,FALSE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+26,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,Integrated,1,42.362866,-71.081652,0,0,TRUE,FALSE,Phycocyanin,3.64,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+27,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,24,,,SS1,Integrated,1,42.36936,-71.061925,0,0,FALSE,FALSE,Phycocyanin,14.11,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+28,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,24,,,SS1,Integrated,1,42.36936,-71.061925,0,0,TRUE,FALSE,Phycocyanin,1,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+29,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,FALSE,Phycocyanin,9.47,µg/L,,Beagle,2014,7,31,10,47,Magellan,FALSE,,
+30,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,31,10,47,Magellan,FALSE,,
+31,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,Integrated,1,42.358755,-71.073377,11,10,FALSE,FALSE,Phycocyanin,19.25,µg/L,,Beagle,2014,7,31,11,10,Magellan,FALSE,,
+32,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,Integrated,1,42.358755,-71.073377,11,10,TRUE,FALSE,Phycocyanin,3.64,µg/L,,Beagle,2014,7,31,11,10,Magellan,FALSE,,
+33,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,Integrated,1,42.358519,-71.087433,11,52,FALSE,FALSE,Phycocyanin,21.31,µg/L,,Beagle,2014,7,31,11,52,Magellan,FALSE,,
+34,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,Integrated,1,42.358519,-71.087433,11,52,TRUE,FALSE,Phycocyanin,2.05,µg/L,,Beagle,2014,7,31,11,52,Magellan,FALSE,,
+35,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,31,,,SS1,Integrated,1,42.36936,-71.061925,12,12,FALSE,FALSE,Phycocyanin,13.6,µg/L,,Beagle,2014,7,31,12,12,Magellan,FALSE,,
+36,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,31,,,SS1,Integrated,1,42.36936,-71.061925,12,12,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,7,31,12,12,Magellan,FALSE,,
+37,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,Integrated,1,42.362866,-71.081652,13,42,FALSE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,8,7,13,42,Magellan,FALSE,,
+38,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,Integrated,1,42.362866,-71.081652,13,42,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,7,13,42,Magellan,FALSE,,
+39,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,FALSE,FALSE,Phycocyanin,5.23,µg/L,,Beagle,2014,8,7,14,15,Magellan,FALSE,,
+40,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,TRUE,FALSE,Phycocyanin,0.55,µg/L,,Beagle,2014,8,7,14,15,Magellan,FALSE,,
+41,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,Integrated,1,42.358755,-71.073377,14,42,FALSE,FALSE,Phycocyanin,5.23,µg/L,,Beagle,2014,8,7,14,42,Magellan,FALSE,,
+42,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,Integrated,1,42.358755,-71.073377,14,42,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,7,14,42,Magellan,FALSE,,
+43,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,Integrated,1,42.358519,-71.087433,15,20,FALSE,FALSE,Phycocyanin,5.76,µg/L,,Beagle,2014,8,7,15,20,Magellan,FALSE,,
+44,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,Integrated,1,42.358519,-71.087433,15,20,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,7,15,20,Magellan,FALSE,,
+45,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,Integrated,1,42.362866,-71.081652,10,51,FALSE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,14,10,51,Magellan,FALSE,,
+46,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,Integrated,1,42.362866,-71.081652,10,51,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,14,10,51,Magellan,FALSE,,
+47,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,14,,,SS1,Integrated,1,42.36936,-71.061925,11,21,FALSE,FALSE,Phycocyanin,10.51,µg/L,,Beagle,2014,8,14,11,21,Magellan,FALSE,,
+48,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,14,,,SS1,Integrated,1,42.36936,-71.061925,11,21,TRUE,FALSE,Phycocyanin,1,µg/L,,Beagle,2014,8,14,11,21,Magellan,FALSE,,
+49,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,FALSE,FALSE,Phycocyanin,6.29,µg/L,,Beagle,2014,8,14,11,43,Magellan,FALSE,,
+50,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,TRUE,FALSE,Phycocyanin,7.88,µg/L,,Beagle,2014,8,14,11,43,Magellan,FALSE,,
+51,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,Integrated,1,42.358519,-71.087433,12,12,FALSE,FALSE,Phycocyanin,5.76,µg/L,,Beagle,2014,8,14,12,12,Magellan,FALSE,,
+52,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,Integrated,1,42.358519,-71.087433,12,12,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,14,12,12,Magellan,FALSE,,
+53,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,FALSE,FALSE,Phycocyanin,13.08,µg/L,,Beagle,2014,8,21,13,54,Magellan,FALSE,,
+54,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,21,13,54,Magellan,FALSE,,
+55,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,Integrated,1,42.362866,-71.081652,14,32,FALSE,FALSE,Phycocyanin,23.37,µg/L,,Beagle,2014,8,21,14,32,Magellan,FALSE,,
+56,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,Integrated,1,42.362866,-71.081652,14,32,TRUE,FALSE,Phycocyanin,5.23,µg/L,,Beagle,2014,8,21,14,32,Magellan,FALSE,,
+57,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,21,,,SS1,Integrated,1,42.36936,-71.061925,14,54,FALSE,FALSE,Phycocyanin,7.88,µg/L,,Beagle,2014,8,21,14,54,Magellan,FALSE,,
+58,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,21,,,SS1,Integrated,1,42.36936,-71.061925,14,54,TRUE,FALSE,Phycocyanin,2.05,µg/L,,Beagle,2014,8,21,14,54,Magellan,FALSE,,
+59,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,Integrated,1,42.358755,-71.073377,15,22,FALSE,FALSE,Phycocyanin,8.41,µg/L,,Beagle,2014,8,21,15,22,Magellan,FALSE,,
+60,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,Integrated,1,42.358755,-71.073377,15,22,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,8,21,15,22,Magellan,FALSE,,
+61,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,Integrated,1,42.358755,-71.073377,13,15,FALSE,FALSE,Phycocyanin,17.2,µg/L,,Beagle,2014,8,28,13,15,Magellan,FALSE,,
+62,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,Integrated,1,42.358755,-71.073377,13,15,TRUE,FALSE,Phycocyanin,5.76,µg/L,,Beagle,2014,8,28,13,15,Magellan,FALSE,,
+63,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,FALSE,FALSE,Phycocyanin,28.51,µg/L,,Beagle,2014,8,28,14,0,Magellan,FALSE,,
+64,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,TRUE,FALSE,Phycocyanin,3.11,µg/L,,Beagle,2014,8,28,14,0,Magellan,FALSE,,
+65,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,Integrated,1,42.358519,-71.087433,14,20,FALSE,FALSE,Phycocyanin,19.25,µg/L,,Beagle,2014,8,28,14,20,Magellan,FALSE,,
+66,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,Integrated,1,42.358519,-71.087433,14,20,TRUE,FALSE,Phycocyanin,4.17,µg/L,,Beagle,2014,8,28,14,20,Magellan,FALSE,,
+67,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,28,,,SS1,Integrated,1,42.36936,-71.061925,15,0,FALSE,FALSE,Phycocyanin,22.34,µg/L,,Beagle,2014,8,28,15,0,Magellan,FALSE,,
+68,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,28,,,SS1,Integrated,1,42.36936,-71.061925,15,0,TRUE,FALSE,Phycocyanin,2.05,µg/L,,Beagle,2014,8,28,15,0,Magellan,FALSE,,
+69,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,Integrated,1,42.358755,-71.073377,12,25,FALSE,FALSE,Phycocyanin,24.4,µg/L,,Beagle,2014,9,4,12,25,Magellan,FALSE,,
+70,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,Integrated,1,42.358755,-71.073377,12,25,TRUE,FALSE,Phycocyanin,2.58,µg/L,,Beagle,2014,9,4,12,25,Magellan,FALSE,,
+71,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,Integrated,1,42.362866,-71.081652,13,0,FALSE,FALSE,Phycocyanin,21.31,µg/L,,Beagle,2014,9,4,13,0,Magellan,FALSE,,
+72,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,Integrated,1,42.362866,-71.081652,13,0,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,4,13,0,Magellan,FALSE,,
+73,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,Integrated,1,42.358519,-71.087433,13,30,FALSE,FALSE,Phycocyanin,24.91,µg/L,,Beagle,2014,9,4,13,30,Magellan,FALSE,,
+74,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,Integrated,1,42.358519,-71.087433,13,30,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,4,13,30,Magellan,FALSE,,
+75,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,FALSE,FALSE,Phycocyanin,17.71,µg/L,,Beagle,2014,9,4,14,0,Magellan,FALSE,,
+76,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,4,14,0,Magellan,FALSE,,
+77,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,Integrated,1,42.358519,-71.087433,13,4,FALSE,FALSE,Phycocyanin,33.65,µg/L,,Beagle,2014,9,11,13,4,Magellan,FALSE,,
+78,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,Integrated,1,42.358519,-71.087433,13,4,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,11,13,4,Magellan,FALSE,,
+79,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,Integrated,1,42.362866,-71.081652,13,35,FALSE,FALSE,Phycocyanin,38.28,µg/L,,Beagle,2014,9,11,13,35,Magellan,FALSE,,
+80,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,Integrated,1,42.362866,-71.081652,13,35,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,11,13,35,Magellan,FALSE,,
+81,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,11,,,SS1,Integrated,1,42.36936,-71.061925,14,28,FALSE,FALSE,Phycocyanin,38.28,µg/L,,Beagle,2014,9,11,14,28,Magellan,FALSE,,
+82,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,11,,,SS1,Integrated,1,42.36936,-71.061925,14,28,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,11,14,28,Magellan,FALSE,,
+83,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,FALSE,FALSE,Phycocyanin,39.31,µg/L,,Beagle,2014,9,11,14,45,Magellan,FALSE,,
+84,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,TRUE,FALSE,Phycocyanin,4.17,µg/L,,Beagle,2014,9,11,14,45,Magellan,FALSE,,
+85,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,FALSE,FALSE,Phycocyanin,28,µg/L,,Beagle,2014,9,18,13,0,Magellan,FALSE,,
+86,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,18,13,0,Magellan,FALSE,,
+87,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,Integrated,1,42.362866,-71.081652,13,30,FALSE,FALSE,Phycocyanin,24.91,µg/L,,Beagle,2014,9,18,13,30,Magellan,FALSE,,
+88,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,Integrated,1,42.362866,-71.081652,13,30,TRUE,FALSE,Phycocyanin,0.1,µg/L,,Beagle,2014,9,18,13,30,Magellan,FALSE,,
+89,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,18,,,SS1,Integrated,1,42.36936,-71.061925,14,40,FALSE,FALSE,Phycocyanin,10.51,µg/L,,Beagle,2014,9,18,14,40,Magellan,FALSE,,
+90,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,18,,,SS1,Integrated,1,42.36936,-71.061925,14,40,TRUE,FALSE,Phycocyanin,4.17,µg/L,,Beagle,2014,9,18,14,40,Magellan,FALSE,,
+91,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,Integrated,1,42.358755,-71.073377,12,30,FALSE,FALSE,Phycocyanin,31.08,µg/L,,Beagle,2014,9,18,12,30,Magellan,FALSE,,
+92,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,Integrated,1,42.358755,-71.073377,12,30,TRUE,FALSE,Phycocyanin,5.23,µg/L,,Beagle,2014,9,18,12,30,Magellan,FALSE,,
+93,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,FALSE,FALSE,Phycocyanin,9.47,µg/L,,Beagle,2014,10,2,13,20,Magellan,FALSE,,
+94,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,TRUE,FALSE,Phycocyanin,3.11,µg/L,,Beagle,2014,10,2,13,20,Magellan,FALSE,,
+95,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,10,2,,,SS1,Integrated,1,42.36936,-71.061925,14,35,FALSE,FALSE,Phycocyanin,12.57,µg/L,,Beagle,2014,10,2,14,35,Magellan,FALSE,,
+96,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,10,2,,,SS1,Integrated,1,42.36936,-71.061925,14,35,TRUE,FALSE,Phycocyanin,6.82,µg/L,,Beagle,2014,10,2,14,35,Magellan,FALSE,,
+97,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,Integrated,1,42.358755,-71.073377,12,35,FALSE,FALSE,Phycocyanin,18.22,µg/L,,Beagle,2014,10,2,12,35,Magellan,FALSE,,
+98,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,Integrated,1,42.358755,-71.073377,12,35,TRUE,FALSE,Phycocyanin,2.05,µg/L,,Beagle,2014,10,2,12,35,Magellan,FALSE,,
+99,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,Integrated,1,42.358519,-71.087433,12,55,FALSE,FALSE,Phycocyanin,23.88,µg/L,,Beagle,2014,10,2,12,55,Magellan,FALSE,,
+100,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,Integrated,1,42.358519,-71.087433,12,55,TRUE,FALSE,Phycocyanin,4.7,µg/L,,Beagle,2014,10,2,12,55,Magellan,FALSE,,
+101,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,FALSE,Chlorophyll,5.06,µg/L,,Beagle,2014,7,3,10,47,Magellan,FALSE,,
+102,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,FALSE,Chlorophyll,2.32,µg/L,,Beagle,2014,7,3,10,47,Magellan,FALSE,,
+103,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,FALSE,FALSE,Chlorophyll,4.98,µg/L,,Beagle,2014,7,3,11,20,Magellan,FALSE,,
+104,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,TRUE,FALSE,Chlorophyll,2.29,µg/L,,Beagle,2014,7,3,11,20,Magellan,FALSE,,
+105,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,FALSE,FALSE,Chlorophyll,4.14,µg/L,,Beagle,2014,7,10,14,22,Magellan,FALSE,,
+106,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,TRUE,FALSE,Chlorophyll,2,µg/L,,Beagle,2014,7,10,14,22,Magellan,FALSE,,
+107,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,FALSE,FALSE,Chlorophyll,2.29,µg/L,,Beagle,2014,7,10,14,37,Magellan,FALSE,,
+108,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,TRUE,FALSE,Chlorophyll,2.75,µg/L,,Beagle,2014,7,10,14,37,Magellan,FALSE,,
+109,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,FALSE,FALSE,Chlorophyll,5.9,µg/L,,Beagle,2014,7,10,15,9,Magellan,FALSE,,
+110,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,TRUE,FALSE,Chlorophyll,2.38,µg/L,,Beagle,2014,7,10,15,9,Magellan,FALSE,,
+111,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,FALSE,FALSE,Chlorophyll,4.63,µg/L,,Beagle,2014,7,10,15,52,Magellan,FALSE,,
+112,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,TRUE,FALSE,Chlorophyll,2.35,µg/L,,Beagle,2014,7,10,15,52,Magellan,FALSE,,
+113,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,FALSE,FALSE,Chlorophyll,2.96,µg/L,,Beagle,2014,7,17,11,9,Magellan,FALSE,,
+114,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,TRUE,FALSE,Chlorophyll,1.92,µg/L,,Beagle,2014,7,17,11,9,Magellan,FALSE,,
+115,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,FALSE,FALSE,Chlorophyll,3.65,µg/L,,Beagle,2014,7,17,11,44,Magellan,FALSE,,
+116,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,TRUE,FALSE,Chlorophyll,1.86,µg/L,,Beagle,2014,7,17,11,44,Magellan,FALSE,,
+117,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,FALSE,FALSE,Chlorophyll,2.93,µg/L,,Beagle,2014,7,17,12,12,Magellan,FALSE,,
+118,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,TRUE,FALSE,Chlorophyll,2.29,µg/L,,Beagle,2014,7,17,12,12,Magellan,FALSE,,
+119,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,FALSE,FALSE,Chlorophyll,2.87,µg/L,,Beagle,2014,7,17,12,39,Magellan,FALSE,,
+120,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,TRUE,FALSE,Chlorophyll,2.26,µg/L,,Beagle,2014,7,17,12,39,Magellan,FALSE,,
+121,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,Integrated,1,42.358755,-71.073377,0,0,FALSE,FALSE,Chlorophyll,2.73,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+122,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,Integrated,1,42.358755,-71.073377,0,0,TRUE,FALSE,Chlorophyll,1.77,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+123,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,FALSE,FALSE,Chlorophyll,3.07,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+124,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,TRUE,FALSE,Chlorophyll,1.92,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+125,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,Integrated,1,42.362866,-71.081652,0,0,FALSE,FALSE,Chlorophyll,3.71,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+126,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,Integrated,1,42.362866,-71.081652,0,0,TRUE,FALSE,Chlorophyll,1.98,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+127,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,24,,,SS1,Integrated,1,42.36936,-71.061925,0,0,FALSE,FALSE,Chlorophyll,3.79,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+128,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,24,,,SS1,Integrated,1,42.36936,-71.061925,0,0,TRUE,FALSE,Chlorophyll,2,µg/L,,Beagle,2014,7,24,0,0,Magellan,FALSE,,Sample collection time not available
+129,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,FALSE,Chlorophyll,4.02,µg/L,,Beagle,2014,7,31,10,47,Magellan,FALSE,,
+130,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,FALSE,Chlorophyll,1.83,µg/L,,Beagle,2014,7,31,10,47,Magellan,FALSE,,
+131,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,Integrated,1,42.358755,-71.073377,11,10,FALSE,FALSE,Chlorophyll,4.11,µg/L,,Beagle,2014,7,31,11,10,Magellan,FALSE,,
+132,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,Integrated,1,42.358755,-71.073377,11,10,TRUE,FALSE,Chlorophyll,1.92,µg/L,,Beagle,2014,7,31,11,10,Magellan,FALSE,,
+133,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,Integrated,1,42.358519,-71.087433,11,52,FALSE,FALSE,Chlorophyll,5.81,µg/L,,Beagle,2014,7,31,11,52,Magellan,FALSE,,
+134,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,31,,,SS1,Integrated,1,42.358519,-71.087433,11,52,TRUE,FALSE,Chlorophyll,1.95,µg/L,,Beagle,2014,7,31,11,52,Magellan,FALSE,,
+135,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,31,,,SS1,Integrated,1,42.36936,-71.061925,12,12,FALSE,FALSE,Chlorophyll,4.51,µg/L,,Beagle,2014,7,31,12,12,Magellan,FALSE,,
+136,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,31,,,SS1,Integrated,1,42.36936,-71.061925,12,12,TRUE,FALSE,Chlorophyll,1.86,µg/L,,Beagle,2014,7,31,12,12,Magellan,FALSE,,
+137,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,Integrated,1,42.362866,-71.081652,13,42,FALSE,FALSE,Chlorophyll,6.36,µg/L,,Beagle,2014,8,7,13,42,Magellan,FALSE,,
+138,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,7,,,SS1,Integrated,1,42.362866,-71.081652,13,42,TRUE,FALSE,Chlorophyll,1.8,µg/L,,Beagle,2014,8,7,13,42,Magellan,FALSE,,
+139,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,FALSE,FALSE,Chlorophyll,4.77,µg/L,,Beagle,2014,8,7,14,15,Magellan,FALSE,,
+140,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,TRUE,FALSE,Chlorophyll,4.49,µg/L,,Beagle,2014,8,7,14,15,Magellan,FALSE,,
+141,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,Integrated,1,42.358755,-71.073377,14,42,FALSE,FALSE,Chlorophyll,4.02,µg/L,,Beagle,2014,8,7,14,42,Magellan,FALSE,,
+142,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,Integrated,1,42.358755,-71.073377,14,42,TRUE,FALSE,Chlorophyll,1.86,µg/L,,Beagle,2014,8,7,14,42,Magellan,FALSE,,
+143,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,Integrated,1,42.358519,-71.087433,15,20,FALSE,FALSE,Chlorophyll,5.12,µg/L,,Beagle,2014,8,7,15,20,Magellan,FALSE,,
+144,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,7,,,SS1,Integrated,1,42.358519,-71.087433,15,20,TRUE,FALSE,Chlorophyll,1.72,µg/L,,Beagle,2014,8,7,15,20,Magellan,FALSE,,
+145,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,Integrated,1,42.362866,-71.081652,10,51,FALSE,FALSE,Chlorophyll,5.15,µg/L,,Beagle,2014,8,14,10,51,Magellan,FALSE,,
+146,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,14,,,SS1,Integrated,1,42.362866,-71.081652,10,51,TRUE,FALSE,Chlorophyll,2.58,µg/L,,Beagle,2014,8,14,10,51,Magellan,FALSE,,
+147,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,14,,,SS1,Integrated,1,42.36936,-71.061925,11,21,FALSE,FALSE,Chlorophyll,2.78,µg/L,,Beagle,2014,8,14,11,21,Magellan,FALSE,,
+148,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,14,,,SS1,Integrated,1,42.36936,-71.061925,11,21,TRUE,FALSE,Chlorophyll,2.38,µg/L,,Beagle,2014,8,14,11,21,Magellan,FALSE,,
+149,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,FALSE,FALSE,Chlorophyll,4.14,µg/L,,Beagle,2014,8,14,11,43,Magellan,FALSE,,
+150,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,TRUE,FALSE,Chlorophyll,3.94,µg/L,,Beagle,2014,8,14,11,43,Magellan,FALSE,,
+151,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,Integrated,1,42.358519,-71.087433,12,12,FALSE,FALSE,Chlorophyll,7.4,µg/L,,Beagle,2014,8,14,12,12,Magellan,FALSE,,
+152,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,Integrated,1,42.358519,-71.087433,12,12,TRUE,FALSE,Chlorophyll,1.75,µg/L,,Beagle,2014,8,14,12,12,Magellan,FALSE,,
+153,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,FALSE,FALSE,Chlorophyll,3.62,µg/L,,Beagle,2014,8,21,13,54,Magellan,FALSE,,
+154,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,TRUE,FALSE,Chlorophyll,1.6,µg/L,,Beagle,2014,8,21,13,54,Magellan,FALSE,,
+155,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,Integrated,1,42.362866,-71.081652,14,32,FALSE,FALSE,Chlorophyll,4.28,µg/L,,Beagle,2014,8,21,14,32,Magellan,FALSE,,
+156,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,Integrated,1,42.362866,-71.081652,14,32,TRUE,FALSE,Chlorophyll,1.51,µg/L,,Beagle,2014,8,21,14,32,Magellan,FALSE,,
+157,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,21,,,SS1,Integrated,1,42.36936,-71.061925,14,54,FALSE,FALSE,Chlorophyll,3.42,µg/L,,Beagle,2014,8,21,14,54,Magellan,FALSE,,
+158,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,21,,,SS1,Integrated,1,42.36936,-71.061925,14,54,TRUE,FALSE,Chlorophyll,2,µg/L,,Beagle,2014,8,21,14,54,Magellan,FALSE,,
+159,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,Integrated,1,42.358755,-71.073377,15,22,FALSE,FALSE,Chlorophyll,6.82,µg/L,,Beagle,2014,8,21,15,22,Magellan,FALSE,,
+160,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,21,,,SS1,Integrated,1,42.358755,-71.073377,15,22,TRUE,FALSE,Chlorophyll,1.8,µg/L,,Beagle,2014,8,21,15,22,Magellan,FALSE,,
+161,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,Integrated,1,42.358755,-71.073377,13,15,FALSE,FALSE,Chlorophyll,2.99,µg/L,,Beagle,2014,8,28,13,15,Magellan,FALSE,,
+162,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,28,,,SS1,Integrated,1,42.358755,-71.073377,13,15,TRUE,FALSE,Chlorophyll,2.06,µg/L,,Beagle,2014,8,28,13,15,Magellan,FALSE,,
+163,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,FALSE,FALSE,Chlorophyll,3.33,µg/L,,Beagle,2014,8,28,14,0,Magellan,FALSE,,
+164,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,TRUE,FALSE,Chlorophyll,1.89,µg/L,,Beagle,2014,8,28,14,0,Magellan,FALSE,,
+165,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,Integrated,1,42.358519,-71.087433,14,20,FALSE,FALSE,Chlorophyll,3.1,µg/L,,Beagle,2014,8,28,14,20,Magellan,FALSE,,
+166,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,Integrated,1,42.358519,-71.087433,14,20,TRUE,FALSE,Chlorophyll,2.12,µg/L,,Beagle,2014,8,28,14,20,Magellan,FALSE,,
+167,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,28,,,SS1,Integrated,1,42.36936,-71.061925,15,0,FALSE,FALSE,Chlorophyll,2.84,µg/L,,Beagle,2014,8,28,15,0,Magellan,FALSE,,
+168,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,28,,,SS1,Integrated,1,42.36936,-71.061925,15,0,TRUE,FALSE,Chlorophyll,1.8,µg/L,,Beagle,2014,8,28,15,0,Magellan,FALSE,,
+169,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,Integrated,1,42.358755,-71.073377,12,25,FALSE,FALSE,Chlorophyll,2.44,µg/L,,Beagle,2014,9,4,12,25,Magellan,FALSE,,
+170,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,4,,,SS1,Integrated,1,42.358755,-71.073377,12,25,TRUE,FALSE,Chlorophyll,1.8,µg/L,,Beagle,2014,9,4,12,25,Magellan,FALSE,,
+171,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,Integrated,1,42.362866,-71.081652,13,0,FALSE,FALSE,Chlorophyll,4.02,µg/L,,Beagle,2014,9,4,13,0,Magellan,FALSE,,
+172,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,4,,,SS1,Integrated,1,42.362866,-71.081652,13,0,TRUE,FALSE,Chlorophyll,1.66,µg/L,,Beagle,2014,9,4,13,0,Magellan,FALSE,,
+173,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,Integrated,1,42.358519,-71.087433,13,30,FALSE,FALSE,Chlorophyll,2.67,µg/L,,Beagle,2014,9,4,13,30,Magellan,FALSE,,
+174,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,4,,,SS1,Integrated,1,42.358519,-71.087433,13,30,TRUE,FALSE,Chlorophyll,1.63,µg/L,,Beagle,2014,9,4,13,30,Magellan,FALSE,,
+175,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,FALSE,FALSE,Chlorophyll,2.78,µg/L,,Beagle,2014,9,4,14,0,Magellan,FALSE,,
+176,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,TRUE,FALSE,Chlorophyll,1.66,µg/L,,Beagle,2014,9,4,14,0,Magellan,FALSE,,
+177,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,Integrated,1,42.358519,-71.087433,13,4,FALSE,FALSE,Chlorophyll,3.79,µg/L,,Beagle,2014,9,11,13,4,Magellan,FALSE,,
+178,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,Integrated,1,42.358519,-71.087433,13,4,TRUE,FALSE,Chlorophyll,1.37,µg/L,,Beagle,2014,9,11,13,4,Magellan,FALSE,,
+179,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,Integrated,1,42.362866,-71.081652,13,35,FALSE,FALSE,Chlorophyll,5.15,µg/L,,Beagle,2014,9,11,13,35,Magellan,FALSE,,
+180,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,11,,,SS1,Integrated,1,42.362866,-71.081652,13,35,TRUE,FALSE,Chlorophyll,1.46,µg/L,,Beagle,2014,9,11,13,35,Magellan,FALSE,,
+181,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,11,,,SS1,Integrated,1,42.36936,-71.061925,14,28,FALSE,FALSE,Chlorophyll,4.86,µg/L,,Beagle,2014,9,11,14,28,Magellan,FALSE,,
+182,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,11,,,SS1,Integrated,1,42.36936,-71.061925,14,28,TRUE,FALSE,Chlorophyll,2.06,µg/L,,Beagle,2014,9,11,14,28,Magellan,FALSE,,
+183,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,FALSE,FALSE,Chlorophyll,3.27,µg/L,,Beagle,2014,9,11,14,45,Magellan,FALSE,,
+184,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,TRUE,FALSE,Chlorophyll,1.72,µg/L,,Beagle,2014,9,11,14,45,Magellan,FALSE,,
+185,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,FALSE,FALSE,Chlorophyll,2.93,µg/L,,Beagle,2014,9,18,13,0,Magellan,FALSE,,
+186,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,TRUE,FALSE,Chlorophyll,1.72,µg/L,,Beagle,2014,9,18,13,0,Magellan,FALSE,,
+187,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,Integrated,1,42.362866,-71.081652,13,30,FALSE,FALSE,Chlorophyll,2.81,µg/L,,Beagle,2014,9,18,13,30,Magellan,FALSE,,
+188,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,Integrated,1,42.362866,-71.081652,13,30,TRUE,FALSE,Chlorophyll,1.54,µg/L,,Beagle,2014,9,18,13,30,Magellan,FALSE,,
+189,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,18,,,SS1,Integrated,1,42.36936,-71.061925,14,40,FALSE,FALSE,Chlorophyll,3.04,µg/L,,Beagle,2014,9,18,14,40,Magellan,FALSE,,
+190,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,18,,,SS1,Integrated,1,42.36936,-71.061925,14,40,TRUE,FALSE,Chlorophyll,1.92,µg/L,,Beagle,2014,9,18,14,40,Magellan,FALSE,,
+191,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,Integrated,1,42.358755,-71.073377,12,30,FALSE,FALSE,Chlorophyll,2.61,µg/L,,Beagle,2014,9,18,12,30,Magellan,FALSE,,
+192,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,18,,,SS1,Integrated,1,42.358755,-71.073377,12,30,TRUE,FALSE,Chlorophyll,1.57,µg/L,,Beagle,2014,9,18,12,30,Magellan,FALSE,,
+193,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,FALSE,FALSE,Chlorophyll,2.15,µg/L,,Beagle,2014,10,2,13,20,Magellan,FALSE,,
+194,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,TRUE,FALSE,Chlorophyll,1.28,µg/L,,Beagle,2014,10,2,13,20,Magellan,FALSE,,
+195,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,10,2,,,SS1,Integrated,1,42.36936,-71.061925,14,35,FALSE,FALSE,Chlorophyll,2.96,µg/L,,Beagle,2014,10,2,14,35,Magellan,FALSE,,
+196,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,10,2,,,SS1,Integrated,1,42.36936,-71.061925,14,35,TRUE,FALSE,Chlorophyll,1.4,µg/L,,Beagle,2014,10,2,14,35,Magellan,FALSE,,
+197,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,Integrated,1,42.358755,-71.073377,12,35,FALSE,FALSE,Chlorophyll,2.9,µg/L,,Beagle,2014,10,2,12,35,Magellan,FALSE,,
+198,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,10,2,,,SS1,Integrated,1,42.358755,-71.073377,12,35,TRUE,FALSE,Chlorophyll,1.46,µg/L,,Beagle,2014,10,2,12,35,Magellan,FALSE,,
+199,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,Integrated,1,42.358519,-71.087433,12,55,FALSE,FALSE,Chlorophyll,3.79,µg/L,,Beagle,2014,10,2,12,55,Magellan,FALSE,,
+200,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,10,2,,,SS1,Integrated,1,42.358519,-71.087433,12,55,TRUE,FALSE,Chlorophyll,1.34,µg/L,,Beagle,2014,10,2,12,55,Magellan,FALSE,,
+201,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+202,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,TRUE,Phycocyanin,2.58,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+203,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,FALSE,TRUE,Phycocyanin,4.7,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+204,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,TRUE,TRUE,Phycocyanin,0.1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+205,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,FALSE,TRUE,Phycocyanin,0.55,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+206,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,TRUE,TRUE,Phycocyanin,5.23,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+207,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,FALSE,TRUE,Phycocyanin,3.64,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+208,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,TRUE,TRUE,Phycocyanin,1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+209,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,FALSE,TRUE,Phycocyanin,0.1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+210,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,TRUE,TRUE,Phycocyanin,0.1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+211,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,FALSE,TRUE,Phycocyanin,2.05,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+212,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,TRUE,TRUE,Phycocyanin,5.23,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+213,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,FALSE,TRUE,Phycocyanin,1.52,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+214,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,TRUE,TRUE,Phycocyanin,7.88,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+215,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,FALSE,TRUE,Phycocyanin,4.7,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+216,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,TRUE,TRUE,Phycocyanin,1.52,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+217,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,FALSE,TRUE,Phycocyanin,1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+218,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,TRUE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+219,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,FALSE,TRUE,Phycocyanin,4.7,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+220,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,TRUE,TRUE,Phycocyanin,4.17,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+221,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,FALSE,TRUE,Phycocyanin,2.05,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Sample collection time not available
+222,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,TRUE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Sample collection time not available
+223,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,FALSE,TRUE,Phycocyanin,1.52,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+224,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,TRUE,Phycocyanin,2.58,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+225,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,FALSE,TRUE,Phycocyanin,5.23,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+226,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,TRUE,TRUE,Phycocyanin,1,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+227,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,FALSE,TRUE,Phycocyanin,5.76,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+228,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,TRUE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+229,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,FALSE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+230,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,TRUE,TRUE,Phycocyanin,2.58,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+231,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,FALSE,TRUE,Phycocyanin,7.35,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+232,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,TRUE,TRUE,Phycocyanin,2.58,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+233,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,FALSE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+234,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,TRUE,TRUE,Phycocyanin,4.7,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+235,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,FALSE,TRUE,Phycocyanin,5.23,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+236,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,TRUE,TRUE,Phycocyanin,0.55,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+237,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,FALSE,TRUE,Phycocyanin,4.7,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+238,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,TRUE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+239,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,FALSE,TRUE,Phycocyanin,3.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+240,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,TRUE,TRUE,Phycocyanin,1.52,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+241,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,3,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,TRUE,Chlorophyll,2.47,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+242,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,FALSE,TRUE,Chlorophyll,2.18,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+243,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,3,,,SS1,Integrated,1,42.36936,-71.061925,11,20,TRUE,TRUE,Chlorophyll,2.99,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+244,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,FALSE,TRUE,Chlorophyll,2.03,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+245,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,10,,,SS1,Integrated,1,42.358755,-71.073377,14,22,TRUE,TRUE,Chlorophyll,2.26,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+246,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,FALSE,TRUE,Chlorophyll,2.15,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+247,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,10,,,SS1,Integrated,1,42.358519,-71.087433,14,37,TRUE,TRUE,Chlorophyll,2.47,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+248,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,FALSE,TRUE,Chlorophyll,2.18,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+249,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,10,,,SS1,Integrated,1,42.362866,-71.081652,15,9,TRUE,TRUE,Chlorophyll,2.26,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+250,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,FALSE,TRUE,Chlorophyll,2.06,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+251,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,10,,,SS1,Integrated,1,42.36936,-71.061925,15,52,TRUE,TRUE,Chlorophyll,2.26,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+252,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,FALSE,TRUE,Chlorophyll,2.44,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+253,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,17,,,SS1,Integrated,1,42.362866,-71.081652,11,9,TRUE,TRUE,Chlorophyll,2.12,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+254,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,FALSE,TRUE,Chlorophyll,1.89,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+255,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,7,17,,,SS1,Integrated,1,42.36936,-71.061925,11,44,TRUE,TRUE,Chlorophyll,2.15,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+256,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,FALSE,TRUE,Chlorophyll,1.92,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+257,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,17,,,SS1,Integrated,1,42.358755,-71.073377,12,12,TRUE,TRUE,Chlorophyll,2.03,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+258,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,FALSE,TRUE,Chlorophyll,1.98,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+259,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,17,,,SS1,Integrated,1,42.358519,-71.087433,12,39,TRUE,TRUE,Chlorophyll,2.09,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+260,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,24,,,SS1,Integrated,1,42.358755,-71.073377,0,0,FALSE,TRUE,Chlorophyll,2.18,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Sample collection time not available
+261,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,7,24,,,SS1,Integrated,1,42.358519,-71.087433,0,0,TRUE,TRUE,Chlorophyll,1.54,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Sample collection time not available
+262,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,24,,,SS1,Integrated,1,42.362866,-71.081652,0,0,FALSE,TRUE,Chlorophyll,1.54,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Sample collection time not available
+263,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,7,31,,,SS1,Integrated,1,42.362866,-71.081652,10,47,TRUE,TRUE,Chlorophyll,1.75,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+264,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,7,31,,,SS1,Integrated,1,42.358755,-71.073377,11,10,FALSE,TRUE,Chlorophyll,1.51,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+265,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,8,7,,,SS1,Integrated,1,42.36936,-71.061925,14,15,TRUE,TRUE,Chlorophyll,1.95,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+266,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,7,,,SS1,Integrated,1,42.358755,-71.073377,14,42,FALSE,TRUE,Chlorophyll,1.86,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+267,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,8,14,,,SS1,Integrated,1,42.358755,-71.073377,11,43,TRUE,TRUE,Chlorophyll,1.98,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+268,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,14,,,SS1,Integrated,1,42.358519,-71.087433,12,12,FALSE,TRUE,Chlorophyll,1.66,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+269,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,21,,,SS1,Integrated,1,42.358519,-71.087433,13,54,TRUE,TRUE,Chlorophyll,2.26,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+270,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,21,,,SS1,Integrated,1,42.362866,-71.081652,14,32,FALSE,TRUE,Chlorophyll,1.6,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+271,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,8,28,,,SS1,Integrated,1,42.362866,-71.081652,14,0,TRUE,TRUE,Chlorophyll,1.69,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+272,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,8,28,,,SS1,Integrated,1,42.358519,-71.087433,14,20,FALSE,TRUE,Chlorophyll,1.46,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+273,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,9,4,,,SS1,Integrated,1,42.36936,-71.061925,14,0,TRUE,TRUE,Chlorophyll,1.49,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+274,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,11,,,SS1,Integrated,1,42.358519,-71.087433,13,4,FALSE,TRUE,Chlorophyll,1.25,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+275,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,CB,2014,9,11,,,SS1,Integrated,1,42.358755,-71.073377,14,45,TRUE,TRUE,Chlorophyll,1.46,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+276,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,FALSE,TRUE,Chlorophyll,1.11,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+277,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,SP,2014,9,18,,,SS1,Integrated,1,42.358519,-71.087433,13,0,TRUE,TRUE,Chlorophyll,1.63,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+278,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,9,18,,,SS1,Integrated,1,42.362866,-71.081652,13,30,FALSE,TRUE,Chlorophyll,1.14,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+279,Elisabeth Cianciola,CRWA,MA72-08,Charles River,MA,BROAD,2014,10,2,,,SS1,Integrated,1,42.362866,-71.081652,13,20,TRUE,TRUE,Chlorophyll,1.66,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
+280,Elisabeth Cianciola,CRWA,MA70-02 ,Charles River,MA,ND,2014,10,2,,,SS1,Integrated,1,42.36936,-71.061925,14,35,FALSE,TRUE,Chlorophyll,1.25,µg/L,,Beagle,2014,12,11,0,0,Magellan,FALSE,,Analysis time not available for frozen samples
