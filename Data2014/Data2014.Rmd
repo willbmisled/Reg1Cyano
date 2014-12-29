@@ -12,6 +12,14 @@ use these command instead of the knit icon if you want the data and work loaded 
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
   knit('Data2014.rmd')
 -->
+To Do List
+-------------------------
+* Need data from UNH, RI, and ME
+* Need answers to questions for CT
+* Map locations and send to contacts for verifications
+* Add WBIDs
+
+
 Introduction
 -------------------------
 During the summer of 2014 the New England states initiated a monitoring program for cyanobacteria in lakes.  Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division. 
@@ -24,14 +32,14 @@ This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/m
 
 The details of all data processing steps including notes and rcode are available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd
 
-The collated dataset is available here in .csv format: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true
+The collated dataset is available here in .csv format (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true
 
 Data Definitions
 -------------------------
 
-Field  | Units | Third
+Field  | Units | Description
 ------------- | ------------- | -------------
-**Order:**|(integer)|Leave Blank or number observation consecutively
+**Order:**|(integer)|Leave Blank or number observations consecutively
 **YourName:**|(text)|Enter the name of the person entering the data
 **Organization:**|(text)|Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC
 **SiteID:**|(text)|If the location has a site ID from your organization enter it here
@@ -388,7 +396,7 @@ Information on how the data were provided by the States and Organizations that p
     NH_T$YourName<-"Sonya Carlson"
     NH_T$Organization<-'NH_T'
     NH_T$SiteID<-NH$DES.Station.ID
-    NH_T$WaterbodyName<-Loc$Waterbody
+    NH_T$WaterbodyName<-Loc$Waterbody  #this is a number but appears to be consistent names is StatonName field
     NH_T$State<-'NH'
     NH_T$SiteLocation<-Loc$Station.Name
     # Add SampleYear  SampleMonth	SampleDay	
@@ -604,13 +612,73 @@ Collated Data
 Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.
 
 ```{r CTDEEP444, include=FALSE, echo=FALSE, cache=FALSE} 
- # Data2014<-rbind(CRWA,CTDEEP,NHDES,VTDEC) #combine data
-  #write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
+  Data2014<-rbind(CRWA,CTDEEP,NHDES,VTDEC) #combine data
+  write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
 
 ```
 
 
+Locations are specified by:
 
+Field  | Description
+------------- | ------------- 
+**SiteID:**|If the location has a site ID from your organization enter it here
+**WaterbodyName:**|Enter the name of the lake: be consistent with spelling and capitalization
+**State:**|Choose the two letter state code from the drop down list
+**SiteLocation:**|Some organizations have site names within a lake.  Enter these here.
+**SampleLocation:**|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
+**Latitude:**|Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
+**Longitude:**|Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
+
+* Are SiteIDs unique among states?
+{r xy1, include=TRUE, echo=FALSE, cache=FALSE} 
+a<-data.frame(Data2014[,c('SiteID','WaterbodyName','State','SiteLocation','SampleLocation','Latitude','Longitude')])
+nrow(a)
+b<-unique(a)
+nrow(b)
+b<-b[order(b$State,b$SiteID),]
+
+  a<-unique(data.frame(SiteID=Data2014$SiteID,ST=Data2014$State))
+  b<-as.data.frame(table(a$SiteID))  
+  max(b[,2])  #all unique
+
+a<-data.frame(Data2014[,c('SiteID','WaterbodyName','State','SiteLocation','SampleLocation','Latitude','Longitude')])
+nrow(a)
+b<-unique(a)
+nrow(b)
+
+
+
+
+
+SiteID,WaterbodyName,State,SiteLocation,SampleLocation,Latitude,Longitude
+
+
+
+
+
+unique(Data2014$SiteID)
+unique(Data2014$WaterbodyName)
+
+head(Data2014)
+table(is.na(Data2014$Latitude))
+
+a<-with(Data2014,table(SiteID,State))
+b<-a[,4]
+d<-data.frame(b,s=apply(a,1,sum))
+d[d[,1]>0,]
+
+SiteID 
+WaterbodyName
+State
+SiteLocation
+SampleLocation
+
+
+as.data.frame(table(Data2014$Longitude,useNA='ifany'))
+
+table(is.na(Data2014$Latitude))
+table(is.na(Data2014$Longitude))
 
 
 

@@ -66,6 +66,15 @@ use these command instead of the knit icon if you want the data and work loaded 
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
   knit('Data2014.rmd')
 -->
+<div id="to-do-list" class="section level2">
+<h2>To Do List</h2>
+<ul>
+<li>Need data from UNH, RI, and ME</li>
+<li>Need answers to questions for CT</li>
+<li>Map locations and send to contacts for verifications</li>
+<li>Add WBIDs</li>
+</ul>
+</div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>During the summer of 2014 the New England states initiated a monitoring program for cyanobacteria in lakes. Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division.</p>
@@ -73,7 +82,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <p>A simple excel template for data entry is available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true</a></p>
 <p>This document is available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md</a></p>
 <p>The details of all data processing steps including notes and rcode are available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd</a></p>
-<p>The collated dataset is available here in .csv format: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true</a></p>
+<p>The collated dataset is available here in .csv format (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true</a></p>
 </div>
 <div id="data-definitions" class="section level2">
 <h2>Data Definitions</h2>
@@ -82,14 +91,14 @@ use these command instead of the knit icon if you want the data and work loaded 
 <tr class="header">
 <th align="left">Field</th>
 <th align="left">Units</th>
-<th align="left">Third</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><strong>Order:</strong></td>
 <td align="left">(integer)</td>
-<td align="left">Leave Blank or number observation consecutively</td>
+<td align="left">Leave Blank or number observations consecutively</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>YourName:</strong></td>
@@ -509,6 +518,57 @@ use these command instead of the knit icon if you want the data and work loaded 
 <div id="collated-data" class="section level2">
 <h2>Collated Data</h2>
 <p>Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.</p>
+<p>Locations are specified by:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>SiteID:</strong></td>
+<td align="left">If the location has a site ID from your organization enter it here</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>WaterbodyName:</strong></td>
+<td align="left">Enter the name of the lake: be consistent with spelling and capitalization</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>State:</strong></td>
+<td align="left">Choose the two letter state code from the drop down list</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>SiteLocation:</strong></td>
+<td align="left">Some organizations have site names within a lake. Enter these here.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>SampleLocation:</strong></td>
+<td align="left">Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Latitude:</strong></td>
+<td align="left">Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Longitude:</strong></td>
+<td align="left">Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Are SiteIDs unique among states? {r xy1, include=TRUE, echo=FALSE, cache=FALSE} a&lt;-data.frame(Data2014[,c(‘SiteID’,‘WaterbodyName’,‘State’,‘SiteLocation’,‘SampleLocation’,‘Latitude’,‘Longitude’)]) nrow(a) b&lt;-unique(a) nrow(b) b&lt;-b[order(b<span class="math">\(State,b\)</span>SiteID),]</li>
+</ul>
+<p>a&lt;-unique(data.frame(SiteID=Data2014<span class="math">\(SiteID,ST=Data2014\)</span>State)) b&lt;-as.data.frame(table(a$SiteID))<br /> max(b[,2]) #all unique</p>
+<p>a&lt;-data.frame(Data2014[,c(‘SiteID’,‘WaterbodyName’,‘State’,‘SiteLocation’,‘SampleLocation’,‘Latitude’,‘Longitude’)]) nrow(a) b&lt;-unique(a) nrow(b)</p>
+<p>SiteID,WaterbodyName,State,SiteLocation,SampleLocation,Latitude,Longitude</p>
+<p>unique(Data2014<span class="math">\(SiteID) unique(Data2014\)</span>WaterbodyName)</p>
+<p>head(Data2014) table(is.na(Data2014$Latitude))</p>
+<p>a&lt;-with(Data2014,table(SiteID,State)) b&lt;-a[,4] d&lt;-data.frame(b,s=apply(a,1,sum)) d[d[,1]&gt;0,]</p>
+<p>SiteID WaterbodyName State SiteLocation SampleLocation</p>
+<p>as.data.frame(table(Data2014$Longitude,useNA=‘ifany’))</p>
+<p>table(is.na(Data2014<span class="math">\(Latitude)) table(is.na(Data2014\)</span>Longitude))</p>
 </div>
 
 
