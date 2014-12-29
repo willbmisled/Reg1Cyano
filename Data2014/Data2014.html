@@ -54,7 +54,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">Region1CyanoData2014</h1>
 <h4 class="author"><em>Bryan Milstead</em></h4>
-<h4 class="date"><em>Wednesday, December 17, 2014</em></h4>
+<h4 class="date"><em>Monday, December 29, 2014</em></h4>
 </div>
 
 
@@ -67,252 +67,448 @@ use these command instead of the knit icon if you want the data and work loaded 
   knit('Data2014.rmd')
 -->
 <div id="introduction" class="section level2">
-<h2>Introduction:</h2>
+<h2>Introduction</h2>
 <p>During the summer of 2014 the New England states initiated a monitoring program for cyanobacteria in lakes. Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division.</p>
 <p>The task now is to collate all the data into a standardized format. Below are the data processing steps used and some questions to be resolved for each data contributor.</p>
 <p>A simple excel template for data entry is available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true</a></p>
 <p>This document is available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md</a></p>
+<p>The details of all data processing steps including notes and rcode are available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd</a></p>
+<p>The collated dataset is available here in .csv format: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true</a></p>
 </div>
-<div id="new-hampshire" class="section level2">
-<h2>New Hampshire</h2>
-<ul>
-<li>Data received from Sonya Carlson on 11/19/14</li>
-<li>Original file name: NH-2014-11-19-PhycoData.xlsx renamed Cyano2014_NH.xlsx</li>
-<li>Locations in table “List_Frame_1”. Observations are numbered consecutively in the first column (“#”). There are 143 lines. SiteIDs in column “DES Station ID”; some are missing but can be found in the “Station Name” Column</li>
-<li>Observation in table “Data”. Observations are numbered consecutively in the first column (“Sample #”). Note: Sample#=42 is used twice). There are 144 lines.<br /></li>
-<li>Tables “Data” and “List_Frame_1” are copied and renamed: “DataEdited” and “Locations”. The first column in each table (“Sample #” and “#”) is renamed “Order”. The “DES Sation ID” field is renamed “SiteID”. In the DataEdited table the first occurence of Order=42 changed to 42.1 and the second occurence to 42.2.</li>
-<li>Table DataEdited: The names of the value fields for the Fluorometry readings are on three lines. These were combined into a single field name using the following convention- Pigment_Units_Fluorometer_SampleState_FilterState. These will be split up and renamed later.</li>
-<li>Compare the fields Order and SiteID for tables Location and DataEdited
-<ul>
-<li>Order 2 &amp; 3 are reversed-The Order field in the Locations table was changed to correct this. Flag and comment added.</li>
-<li>Order 83 &amp; 84 are reversed-The Order field in the Locations table was changed to correct this. Flag and comment added.</li>
-<li>Order 42 is repeated in the DataEdited table. First occurence changed to 42.1 and second occurence changed to 42.1.Flags and comments added.</li>
-<li>DataEdited:Order=42.2 matches Locations:Order=42; Locations:Order changed to 42.2.<br /></li>
-<li>DataEdited:Order=42.1 missing in Locations but a lake with the same SiteID is listed in DataEdited:Order=54. The location information is recopied into the Locations table as Locations:Order=42.1</li>
-<li>For Order=135 in both tables the SiteID don’t match DataEdited:SiteID=“TOWCAN-GEN” and Locations:SiteID=“TOWCND-GEN”. Simple mispelling. Flag and comment added.</li>
-<li>For Order = c(22:23,27:30,35:36,55:56,67:68,72,85-93,98:99,117:118,123,125:126) Location:SiteID is missing but the DataEdited:SiteID = Locations:StationName. Comment only added.</li>
-<li>Table Locations is reordered by the updated Order field.</li>
-<li>Fields “EpaDesignation”, “SampleDate”, and “Depth” match between tables DataUpdated and Locations. -Field=“WaterbodyName” added and populated with LakeName for the StationName and Waterbody# fields.</li>
-</ul></li>
-<li>Table NHDES_Raw created by copying the Region1CyanobacteriaTemplate file.</li>
-<li>Location data transfered to the NHDES with fields as follows (NHDES:Locations)
-<ul>
-<li>Order=Order</li>
-<li>WaterbodyName=WaterbodyName</li>
-<li>SiteLocation=StationName</li>
-<li>Latitude=Latitude</li>
-<li>Longitude=Longitude</li>
-<li>Flags and Comments copied.</li>
-</ul></li>
-<li>DataEdited fields transfered as following
-<ul>
-<li>SiteID=SiteID (originally-“DES Station ID”)</li>
-<li>SampleDate=SampleDate</li>
-<li>WeatherCondition=WeatherConditions</li>
-<li>SampleLocation=EPA Designation (note naming convention changed to match template). Note SampleLocations listed as “GRAB” changed to “Other” and “SampleMethod” noted as “Grab”</li>
-<li>Depth=Depth</li>
-</ul></li>
-<li>The following compound fields were also added to NHDES_RAW (NOTE these will need to be parsed):
-<ul>
-<li>Phycocyanin_mg/l_Beagle_Fresh_Unfiltered<br /></li>
-<li>Chlorophyll_mg/l_Beagle_Fresh_Unfiltered<br /></li>
-<li>Phycocyanin_RFU_Turner_Fresh_Unfiltered<br /></li>
-<li>Chlorophyll_RFU_Turner_Fresh_Unfiltered<br /></li>
-<li>Phycocyanin_mg/l_Beagle_Fresh_Filtered<br /></li>
-<li>Chlorophyll_mg/l_Beagle_Fresh_Filtered<br /></li>
-<li>Phycocyanin_RFU_Turner_Fresh_Filtered</li>
-<li>Chlorophyll_RFU_Turner_Fresh_Filtered</li>
-<li>Phycocyanin_mg/l_Beagle_Frozen_Unfiltered</li>
-<li>Chlorophyll_mg/l_Beagle_Frozen_Unfiltered</li>
-<li>Phycocyanin_RFU_Turner_Frozen_Unfiltered<br /></li>
-<li>Chlorophyll_RFU_Turner_Frozen_Unfiltered<br /></li>
-<li>Phycocyanin_mg/l_Beagle_Frozen_Filtered<br /></li>
-<li>Chlorophyll_mg/l_Beagle_Frozen_Filtered<br /></li>
-<li>Phycocyanin_RFU_Turner_Frozen_Filtered<br /></li>
-<li>Chlorophyll_RFU_Turner_Frozen_Filtered</li>
-</ul></li>
-<li>Table NHDES_RAW from Cyano2014_NH.xlsx saved as NHDES_RAW.csv
-<ul>
-<li>Date parsed to Year Month Day</li>
-</ul></li>
-<li>NHDES_RAW.csv read into R (code in the .rmd document) and the compound value fields parsed.<br /></li>
-<li>Final version saved as NHDES.csv</li>
-</ul>
-<p>Questions for Sonya:</p>
-<ul>
-<li>The locations are in tab “List_Frame_1” and the Data are in the data tab. Both sets of data appear to be linked by the first column (“#” or “Sample #”). It appears that a some of the lines are out of order (i.e., 2 &amp; 3 and 83 &amp; 84). This is not a problem I just adjusted them. Is this okay?</li>
-<li>In the data tab there are 2 entries for Sample#=42. The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is. To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD). Is this okay?</li>
-<li>For Sample#=135 the DES Station ID is “TOWCAN-GEN” in the Data tab and “TOWCND-GEN” in the List_Frame_1 tab. Which is correct?</li>
-<li>Could you verify the units for the Beagle readings. You have mg/l but others report ug/l.</li>
-</ul>
-</div>
-<div id="connecticut" class="section level2">
-<h2>Connecticut</h2>
-<ul>
-<li>Data received from Tracy Lizotte on 11/17/14</li>
-<li>Original file name: “Cyanobacteria data Summer 2014.xlsx”</li>
-<li>Data organized with a seperate lake in each tab.<br /></li>
-<li>Each lake has a parameter field and includes many parameters besides the fluorometry data but most of these are missing values.</li>
-<li>All of the beagle fluorometry data where copied into a single tab by filtering on the notes field and selecting records for “Beagle Flourometer”.</li>
-<li>Missing values changed to blanks</li>
-<li>Data copied into the template and saved as CTDEEP.csv</li>
-</ul>
-<p>Questions for Tracy:</p>
-<ul>
-<li>For the Housatonic River (Kettletown) on 7/7/2014 the fluorometer values are “337.23//254.39”, “310.87//363.l59”, “24.91//7.50”, and “2.50//5.50”. Do these represent multiple observations from the same sample or perhaps readings from 2 different samples? For now I am calling these reps and have separated the values.</li>
-<li>What are the measurement units? RFU, ug/l?</li>
-<li>Where were the samples taken? Shoreside? or Within Lake?</li>
-<li>What depth were the samples taken at?</li>
-<li>How were the samples taken? Grab samples? Whole Water Samples? Integrated Tube Samples?</li>
-<li>I have some but not all of the Latitude and Longitudes for the lakes. Please check the file CTDEEP_Locations.csv and verify the locations (I can send a map of the locations if you wish) and fill in missing values.</li>
-</ul>
-</div>
-<div id="vermont" class="section level2">
-<h2>Vermont</h2>
-<ul>
-<li>Data received from Hilary Snook (forwarded from Angela Shambaugh-VTDEC) on 11/13/14</li>
-<li>Original file name: VERMONT Beagle FluoroQuick data_Summer 2014.xlsx</li>
-<li>Two tabs
-<ul>
-<li>“calibrated pigment readings” includes sample dates 6/23/2014-8/20/2014</li>
-<li>“after calibration loss” includes sample dates 8/19/2014-9/19/2014</li>
-</ul></li>
-<li>Tabs combined into a single sheet and comment added to show which tab was the source.</li>
-<li>Data saved as VTDEC.csv</li>
-</ul>
-<p>Questions for Angela:</p>
-<ul>
-<li>Do we need to treat the two groups of data (“calibrated pigment readings” &amp; “after calibration loss”) separately?</li>
-<li>What are the differences between the two groups of data?</li>
-<li>What is the difference between “blank” and “blank(2)” in the “station” field?</li>
-<li>For parameter what do: “channel 1 hi”, “channel 1 lo”, and channel 2 lo&quot; represent?</li>
-<li>Where were the samples taken? Shoreside? or Within Lake? I’m assuming that the 1m depth samples are Shoreside and the 3m or greater depth samples are within lake but would like to verify.</li>
-<li>What are the units for fluorometer readings?</li>
-<li>For the “sample state” VTDEC reports the conditions shown in the table below. What information is important? For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken. You can also use flags to indicate readings that need to be checked with the details in the comments field.</li>
-<li>Please check the file VTDEC_Locations.csv. I have some of the locations but not all. The locations I have were gleaned from the lake Champlain reports. In some cases I used Google Earth to get the locations from the descriptions so I don’t have a lot of confidence in the locations. Can you verify the locations (I can send a map of the locations if you wish) and help me with the ones that are missing?</li>
-</ul>
+<div id="data-definitions" class="section level2">
+<h2>Data Definitions</h2>
 <table>
 <thead>
 <tr class="header">
-<th align="left"><strong>sample state</strong></th>
-<th align="left"><strong>Frozen</strong></th>
-<th align="left"><strong>Filtered</strong></th>
-<th align="left"><strong>Flag</strong></th>
-<th align="left"><strong>Comment</strong></th>
+<th align="left">Field</th>
+<th align="left">Units</th>
+<th align="left">Third</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">24 hours old</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">TRUE</td>
-<td align="left">24 hours old</td>
+<td align="left"><strong>Order:</strong></td>
+<td align="left">(integer)</td>
+<td align="left">Leave Blank or number observation consecutively</td>
 </tr>
 <tr class="even">
-<td align="left">blue</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>YourName:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Enter the name of the person entering the data</td>
 </tr>
 <tr class="odd">
-<td align="left">brown</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>Organization:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC</td>
 </tr>
 <tr class="even">
-<td align="left">DI</td>
-<td align="left"></td>
-<td align="left"></td>
-<td align="left">FALSE</td>
+<td align="left"><strong>SiteID:</strong></td>
+<td align="left">(text)</td>
+<td align="left">If the location has a site ID from your organization enter it here</td>
 </tr>
 <tr class="odd">
-<td align="left">filtered, CDOM, fresh</td>
-<td align="left">FALSE</td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
+<td align="left"><strong>WaterbodyName:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Enter the name of the lake: be consistent with spelling and capitalization</td>
 </tr>
 <tr class="even">
-<td align="left">fresh</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
+<td align="left"><strong>State:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">Choose the two letter state code from the drop down list</td>
 </tr>
 <tr class="odd">
-<td align="left">frozen</td>
-<td align="left">TRUE</td>
-<td align="left">FALSE</td>
-<td align="left">FALSE</td>
+<td align="left"><strong>SiteLocation:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Some organizations have site names within a lake. Enter these here.</td>
 </tr>
 <tr class="even">
-<td align="left">green</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>SampleYear:</strong></td>
+<td align="left">(YYYY)</td>
+<td align="left">Year sample was collected in format YYYY (e.g., 2014)</td>
 </tr>
 <tr class="odd">
-<td align="left">orange</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>SampleMonth:</strong></td>
+<td align="left">(MM)</td>
+<td align="left">Month sample was collected in integer format (e.g., months 1 to 12 )</td>
 </tr>
 <tr class="even">
-<td align="left">pink</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>SampleDay:</strong></td>
+<td align="left">(DD)</td>
+<td align="left">Day sample was collected in integer format (e.g., day 1 to 31 )</td>
 </tr>
 <tr class="odd">
-<td align="left">red</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>NameOfSamplers:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Add the names of the field crew separated by commas.</td>
 </tr>
 <tr class="even">
-<td align="left">silver</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>WeatherConditions:</strong></td>
+<td align="left">(text)</td>
+<td align="left">General Weather conditions separated by commas. E.g., Cloudy, Windy, Cold</td>
 </tr>
 <tr class="odd">
-<td align="left">white</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>SampleLocation:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.</td>
 </tr>
 <tr class="even">
-<td align="left">yellow</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
-<td align="left">?</td>
+<td align="left"><strong>SampleMethod:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">How was the sample collected? Grab = Grab sample for surface blooms; Composite =Composite; Integrated = Integrated tube sample; Validation = Use this for Blanks and Calibration Standards; Other = give details in the comments section.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Depth:</strong></td>
+<td align="left">(integer)</td>
+<td align="left">Within Lake samples are at 3m and Shoreside are at 1m. If samples taken at different depths not the depth here and enter details in the comments section. Leave blank for standards and blanks.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Latitude:</strong></td>
+<td align="left">(decimal)</td>
+<td align="left">Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Longitude:</strong></td>
+<td align="left">(decimal)</td>
+<td align="left">Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>SampleHour:</strong></td>
+<td align="left">(HH)</td>
+<td align="left">Hour sample was taken in 24 hour format</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>SampleMinutes:</strong></td>
+<td align="left">(MM)</td>
+<td align="left">Minute sample was taken in integer format</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Filtered:</strong></td>
+<td align="left">(TRUE/FALSE)</td>
+<td align="left">Was the sample filtered?</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Frozen:</strong></td>
+<td align="left">(TRUE/FALSE)</td>
+<td align="left">Was the sample frozen?</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Parameter:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">Phycocyanin or Chlorophyll?</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Value:</strong></td>
+<td align="left">(decimal)</td>
+<td align="left">Reading from the fluorometer</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Units:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">What were the units recorded. If not “RFU”, “µ/L”, or mg/l flag the entry and add comment with the units used.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Rep:</strong></td>
+<td align="left">(integer)</td>
+<td align="left">If you made more than one measurement per sample or took more than one sample per site assign a replicate number to each observations and add notes in the comment field.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Fluorometer:</strong></td>
+<td align="left">(lookup)</td>
+<td align="left">Type of fluorometer used?</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>AnalysisYear:</strong></td>
+<td align="left">(YYYY)</td>
+<td align="left">Year sample was analyzed in format YYYY (e.g., 2014)</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>AnalysisMonth:</strong></td>
+<td align="left">(MM)</td>
+<td align="left">Month sample was analyzed in integer format (e.g., months 1 to 12 )</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>AnalysisDay:</strong></td>
+<td align="left">(DD)</td>
+<td align="left">Day sample was analyzed in integer format (e.g., day 1 to 31 )</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>AnalysisHour:</strong></td>
+<td align="left">(HH)</td>
+<td align="left">Hour sample was analyzed in 24 hour format</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>AnalysisMinutes:</strong></td>
+<td align="left">(MM)</td>
+<td align="left">Minute sample was analyzed in integer format</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>GPSType:</strong></td>
+<td align="left">(text)</td>
+<td align="left">How was the location determined. GPS (type), map, or google?</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Photos:</strong></td>
+<td align="left">(TRUE/FALSE)</td>
+<td align="left">Where photos taken?</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Flag:</strong></td>
+<td align="left">(TRUE/FALSE)</td>
+<td align="left">Add a flag for any data line that needs further validation or processing</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Comments:</strong></td>
+<td align="left">(text)</td>
+<td align="left">Add details of flags or any notes about the data line or sample.</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="charles-river-watershed-association" class="section level2">
-<h2>Charles River Watershed Association</h2>
+<div id="data-sources" class="section level2">
+<h2>Data Sources</h2>
+<p>Information on how the data were provided by the States and Organizations that participated in the monitoring.</p>
+<div id="vermont" class="section level3">
+<h3>Vermont</h3>
+<ul>
+<li>Data received from Hilary Snook (forwarded from Angela Shambaugh-VTDEC) on 11/13/14</li>
+<li>Original file name: VERMONT Beagle FluoroQuick data_Summer 2014.xlsx renamed VTDEC.xlsx</li>
+<li>Responses to my queries answered by Angela Shambaugh on 12/19/2014</li>
+</ul>
+<p><strong>Questions for Angela with responses from Angela (AS), Hilary Snoork (HS) and me (BM):</strong></p>
+<ul>
+<li>Do we need to treat the two groups of data (“calibrated pigment readings” &amp; “after calibration loss”) separately?
+<ul>
+<li>AS: Depends on Hilary’s experience when re-calibrating my Beagle unit. I don’t know if he was able to tell how much drift there was over the summer.</li>
+<li>HS: I’ll hopefully be checking these out today.</li>
+<li>BM: tables combined and the “after calibration loss” lines flagged.</li>
+</ul></li>
+<li>What are the differences between the two groups of data?
+<ul>
+<li>AS: I apparently invalidated the instrument calibration halfway through the summer by mistakenly starting the full calibration process and then incorrectly exiting. The check standards Hilary provided were not at all consistent with expected reading so I stopped reporting phycocyanin units and switched to relative fluorescence units.<br /></li>
+</ul></li>
+<li>What is the difference between “blank” and “blank(2)” in the “station” field?
+<ul>
+<li>AS: Blank refers to a DI sample read at the beginning of each session, blank 2 refers to a second reading of the same sample at the end of the session.</li>
+<li>BM: leave as is for now.</li>
+</ul></li>
+<li>For parameter what do: “channel 1 hi”, “channel 1 lo”, and channel 2 lo&quot; represent?
+<ul>
+<li>AS: If I understood the Beagle unit correctly, Channel 1 refers to the phycocyanin filter and channel 2 to the chlorophyll filter. It wasn’t clear to me the difference between high and low – Hilary may be able to answer that better. Hopefully after recalibrating the instrument, we can interpolate and change all the relative fluorescent units to phycocyanin. Currently, any number associated with a channel will be RFU. Anything associated with the terms ‘phycocyanin’ or ‘chlorophyll’ will be biomass (as µg/L).</li>
+<li>HS: Hi/Lo is automatically selected by the instrument based on sample fluorescence and does not need to be manually selected by the user. This was pretty cryptic in the user manual and I will clarify this at the upcoming meeting.</li>
+<li>BM: add units=“RFU” for all samples where parameter= channel 1 or 2; add units=“µg/L” for all samples where parameter=“phycocyanin or chlorophyll”; change paramater=“channel 1 (hi or lo)” to “Phycocyanin”; change paramater=“channel 2 (hi or lo)” to “Chlorophyll”</li>
+</ul></li>
+<li>Where were the samples taken? Shoreside? or Within Lake? I’m assuming that the 1m depth samples are Shoreside and the 3m or greater depth samples are within lake but would like to verify.
+<ul>
+<li>AS: All locations from the Champlain TMDL sites (#4 – 51) will be offshore. RT 78 Access is shoreline as is the Black Bridge location. The others ( Highgate Cliffs, Highgate Springs, Phillipsburg and QE BM-b) are all off shore. As part of our cyanobacteria monitoring, we take only surface samples for microcystin analysis – hence any surface scums at offshore locations will be surface grabs.</li>
+<li>BM: change “RT 78 Access” and “Black Bridge” to SS1; the rest are WL1</li>
+</ul></li>
+<li>What are the units for fluorometer readings?
+<ul>
+<li>AS: Beagle units are µg/L, I think. Hilary can confirm.</li>
+<li>HS: Yes, readout is in micrograms/liter (ppb)</li>
+<li>BM: µg/L</li>
+</ul></li>
+<li>For the “sample state” VTDEC reports the conditions as c(“filtered, CDOM, fresh”, “fresh”,“frozen”,“DI”, “24 hours old”, “white”, “orange”, “blue”,“”, “red”, “green”, “yellow”,“pink”). What information is important? For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken.
+<ul>
+<li>AS: The colors under ‘sample state’ refer to the solid check standards provided by Hilary so the terms frozen/filtered do not apply. The 24hr sample old sample was not frozen or filtered. All CDOM samples were filtered and not frozen. All fresh samples were unfrozen and unfiltered. If it is easier, I can re-send my data using the EXCEL spreadsheet you sent out.</li>
+<li>BM: all samples except those for sample.state==‘Frozen’ changed to Frozen=FALSE; samples for sample.state=“…CDOM…” changed to Filtered==TRUE, the rest are Filtered=FALSE.</li>
+</ul></li>
+<li>Please check the file VTDEC_Locations.csv. I have some of the locations but not all. The locations I have were gleaned from the lake Champlain reports. In some cases I used Google Earth to get the locations from the descriptions so I don’t have a lot of confidence in the locations. Can you verify the locations (I can send a map of the locations if you wish) and help me with the ones that are missing?
+<ul>
+<li>AS: I added lat lons to your table for the missing locations. If you took the lat lon for the other stations from the Champlain TMDL files, they should be correct. The updates are attached.</li>
+</ul></li>
+</ul>
+<p><strong>Data steps</strong>-View code in Data2014.rmd document to see details.</p>
+<ul>
+<li>table=“calibrated pigment readings” in VTDEC.xlsx saved as VTDEC_calibrated.csv; read into R</li>
+<li>table=“after calibration loss” in VTDEC.xlsx saved as VTDEC_uncalibrated.csv; read into R;Flag=TRUE;Comment=“Uncertain Calibration Status”</li>
+<li>both tables combined into df=VT</li>
+<li>Build VTDEC data.frame</li>
+<li>Save as VTDEC.csv</li>
+</ul>
+</div>
+<div id="charles-river-watershed-association" class="section level3">
+<h3>Charles River Watershed Association</h3>
 <ul>
 <li>Data received from Elisabeth Cianciola on 12/12/14</li>
-<li>Original file name: CRWA_Region1CyanobacteriaDataEntryTemplate.xls</li>
-<li>Data entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.</li>
-<li>Parsed dates and times</li>
-<li>data saved as CWRA.csv</li>
+<li>Original file name: CRWA_Region1CyanobacteriaDataEntryTemplate.xls renamed CRWA.xls</li>
+<li>Resaved as CRWA_RAW.csv for import into R</li>
 </ul>
-<p>Questions for Elisabeth</p>
+<p><strong>Questions for Elisabeth with her responses</strong></p>
 <ul>
-<li>Were all samples collected with the integrated tube sampler?</li>
-<li>What were the units for the fluorometer readings? RFU? ug/l?</li>
+<li>Were all samples collected with the integrated tube sampler?
+<ul>
+<li>EC: Yes</li>
+</ul></li>
+<li>What were the units for the fluorometer readings? RFU? µg/L?
+<ul>
+<li>EC: µg/L</li>
+</ul></li>
 </ul>
+<p><strong>Data steps</strong>-View code in Data2014.rmd document to see details.</p>
+<ul>
+<li>Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.</li>
+<li>CWRA_RAW.csv imported into R</li>
+<li>Each field verified with consistency checks</li>
+<li>Field updated where necessary.</li>
+</ul>
+</div>
+<div id="new-hampshire" class="section level3">
+<h3>New Hampshire</h3>
+<ul>
+<li>Data received from Sonya Carlson on 11/19/14</li>
+<li>Original file name: NH-2014-11-19-PhycoData.xlsx renamed NHDES.xlsx</li>
+</ul>
+<p><strong>Questions for Sonya: with her responses</strong></p>
+<ul>
+<li>The locations are in tab “List_Frame_1” and the Data are in the data tab. Both sets of data appear to be linked by the first column (“#” or “Sample #”). It appears that a some of the lines are out of order (i.e., 2 &amp; 3 and 83 &amp; 84). This is not a problem I just adjusted them. Is this okay?
+<ul>
+<li>SC: Okay</li>
+</ul></li>
+<li>In the data tab there are 2 entries for Sample#=42. The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is. To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD). Is this okay?
+<ul>
+<li>SC: Okay</li>
+</ul></li>
+<li>For Sample#=135 the DES Station ID is “TOWCAN-GEN” in the Data tab and “TOWCND-GEN” in the List_Frame_1 tab. Which is correct?
+<ul>
+<li>SC: TOWCND-GEN: this is corrected above</li>
+</ul></li>
+<li>Could you verify the units for the Beagle readings. You have mg/l but others report µg/L.
+<ul>
+<li>SC: Should be µg/L-corrected above.</li>
+</ul></li>
+<li>Are all Turner readings in RFU and all beagle in µg/L?
+<ul>
+<li>SC: Yes</li>
+</ul></li>
+<li>Were all samples except the Grab samples collected with an integrated sampler (a hose)?
+<ul>
+<li>SC: Yes</li>
+</ul></li>
+</ul>
+<p><strong>Data steps</strong>-View code in Data2014.rmd document to see details.</p>
+<ul>
+<li>The fluorometer data are in NHDES.XLSX tab:Data. This is copied to NHDES_RAW.csv and modified as follows:</li>
+<li>First column (“#”) containing a sequential list of numbers is renamed “Order”</li>
+<li>There are two observations for Order=42;the first does not match the location information but the second does.</li>
+<li>First occurence of Order=42 changed to Order=144; it is then cut and pasted to the bottom of the sheet.</li>
+<li>The location information for the new NHDES_Raw:Order=144 data matches NHDES_Locations:Order=54. See NHDES_Locations.csv below.</li>
+<li>Order=135 the DES Station ID doesn’t match the Location table. I checked with Sonya and changed the NHDES_RAW value to ‘TOWCND-GEN’.</li>
+<li>The “adjusted turner” and calculated “ratio” fields were deleted.</li>
+<li>The value fields for the Fluorometry readings are on three lines. These were combined into a single field name using the following convention: Pigment_Units_Fluorometer_SampleState_FilterState. These will be split up and renamed later.</li>
+<li>Location information is in NHDES.XLSX tab:List_Frame1. This is copied to NHDES_Locations.csv and modified as follows:
+<ul>
+<li>First column (“#”) containing a sequential list of numbers is renamed “Order”</li>
+<li>Missing location information for NHDES_Raw:Order=144 same as information NHDES_Locations:Order=54. This line is copied and appended to the bottom and the Locations:Order is Changed to 144</li>
+<li>Observations for Order=2 and Order=3 are reversed between NHDES_Raw.csv and NHDES_Data.csv. Locations:Order=2 changed to 3 and Locations:Order=3 changed to 2.</li>
+<li>Observations for Order=83 and Order=84 are reversed between NHDES_Raw.csv and NHDES_Data.csv. Locations:Order=83 changed to 84 and Locations:Order=84 changed to 83.</li>
+</ul></li>
+<li>Final version saved as NHDES.csv</li>
+</ul>
+</div>
+<div id="connecticut" class="section level3">
+<h3>Connecticut</h3>
+<ul>
+<li>Data received from Tracy Lizotte on 11/17/14</li>
+<li>Original file name: “Cyanobacteria data Summer 2014.xlsx” saved as CTDEEP.xlsx</li>
+</ul>
+<p>Questions for Tracy:</p>
+<ul>
+<li>For the Housatonic River (Kettletown) on 7/7/2014 the fluorometer values are “337.23//254.39”, “310.87//363.l59”, “24.91//7.50”, and “2.50//5.50”. Do these represent multiple observations from the same sample or perhaps readings from 2 different samples? For now I am calling these reps and have separated the values.</li>
+<li>What are the measurement units? RFU, µg/L?</li>
+<li>Where were the samples taken? Shoreside? or Within Lake?</li>
+<li>What depth were the samples taken at?</li>
+<li>How were the samples taken? Grab samples? Whole Water Samples? Integrated Tube Samples?</li>
+<li>I have some but not all of the Latitude and Longitudes for the lakes. Please check the file CTDEEP_Locations.csv and verify the locations (I can send a map of the locations if you wish) and fill in missing values. *NEW: were any samples frozen?</li>
+</ul>
+<p><strong>Data steps</strong>-View code in Data2014.rmd document to see details. * Data organized with a separate lake in each tab. These are read directly into R and the data from the separate sheets are combined into a single data.frame.</p>
+<ul>
+<li>Each lake has a parameter field that includes many parameters besides the fluorometry data but most of these are missing values.</li>
+<li>The dataset includes many parameters but only the Chlorophyll and Phycocanin observations will be kept.</li>
+<li>The Parameters with Chlorophyll and Phycocyanin include information on whether the samples were filtered or not. We’ll assume that the samples were not frozen.</li>
+<li>The parameter field was parsed as follows (NOTE: observations with ParameterNew=NA were deleted):</li>
+</ul>
+<pre><code>##                      Parameter ParameterNew Filtered Frozen
+## 26  Air temp at time of sample         &lt;NA&gt;     TRUE  FALSE
+## 24           Algae Concentrate         &lt;NA&gt;     TRUE  FALSE
+## 23               Algal ID Grab         &lt;NA&gt;     TRUE  FALSE
+## 1                   Alkalinity         &lt;NA&gt;     TRUE  FALSE
+## 9                 Ammonia as N         &lt;NA&gt;     TRUE  FALSE
+## 19                    Anotoxin         &lt;NA&gt;     TRUE  FALSE
+## 21            Anotoxin- Filter         &lt;NA&gt;     TRUE  FALSE
+## 782            Anotoxin-Filter         &lt;NA&gt;     TRUE  FALSE
+## 2                      Calcium         &lt;NA&gt;     TRUE  FALSE
+## 30                Chl a- As is  Chlorophyll    FALSE  FALSE
+## 22               Chl a- Filter  Chlorophyll     TRUE  FALSE
+## 29             Chl a- Filtrate  Chlorophyll     TRUE  FALSE
+## 783               Chl a-Filter  Chlorophyll     TRUE  FALSE
+## 372             Chl a-Filtrate  Chlorophyll     TRUE  FALSE
+## 36            Chl a (filtered)  Chlorophyll     TRUE  FALSE
+## 34          Chl a (unfiltered)  Chlorophyll    FALSE  FALSE
+## 3                    Chlorides         &lt;NA&gt;     TRUE  FALSE
+## 25       Day's mean water temp         &lt;NA&gt;     TRUE  FALSE
+## 4                     Hardness         &lt;NA&gt;     TRUE  FALSE
+## 5                    Magnesium         &lt;NA&gt;     TRUE  FALSE
+## 18                 Microcystin         &lt;NA&gt;     TRUE  FALSE
+## 363        Microcystin- Filter         &lt;NA&gt;     TRUE  FALSE
+## 20          Microcystin-Filter         &lt;NA&gt;     TRUE  FALSE
+## 10                Nitrate as N         &lt;NA&gt;     TRUE  FALSE
+## 11                Nitrite as N         &lt;NA&gt;     TRUE  FALSE
+## 12  NOX (nitrate-nitrite as N)         &lt;NA&gt;     TRUE  FALSE
+## 16              orthophosphate         &lt;NA&gt;     TRUE  FALSE
+## 32          Phycocyanin- As is  Phycocyanin    FALSE  FALSE
+## 31       Phycocyanin- Filtrate  Phycocyanin     TRUE  FALSE
+## 35      Phycocyanin (filtered)  Phycocyanin     TRUE  FALSE
+## 33    Phycocyanin (unfiltered)  Phycocyanin    FALSE  FALSE
+## 27                 Secchi tube         &lt;NA&gt;     TRUE  FALSE
+## 6              Suspened Solids         &lt;NA&gt;     TRUE  FALSE
+## 14                         TKN         &lt;NA&gt;     TRUE  FALSE
+## 17                         TOC         &lt;NA&gt;     TRUE  FALSE
+## 13         Total Nitrogen as N         &lt;NA&gt;     TRUE  FALSE
+## 15        Total Phosphate as P         &lt;NA&gt;     TRUE  FALSE
+## 7                 Total Solids         &lt;NA&gt;     TRUE  FALSE
+## 8                    Turbidity         &lt;NA&gt;     TRUE  FALSE
+## 37                        &lt;NA&gt;         &lt;NA&gt;     TRUE  FALSE</code></pre>
+<ul>
+<li>The value field contains a mix of numeric values, character values, and missing values.<br /></li>
+<li>The table below shows the number of occurences of each non-numeric value</li>
+</ul>
+<pre><code>##               Var1 Freq
+## 1       2.50//5.50    1
+## 2      24.91//7.50    1
+## 3  310.87//363.l59    1
+## 4 337.23//254.39      1
+## 5    Not collected   20
+## 6             &lt;NA&gt;  340</code></pre>
+<ul>
+<li>The first four character values (two number separated by 2 slashes) appear to be two readings for the same sample. Split these into two lines. Assign the first to Rep=1 with Value = the first value. Assign the second to Rep=2 with Value = the second value.</li>
+<li><p>Delete observations with Value=“not Collected” or NA</p></li>
+<li>Data massage complete-build CTDEEP</li>
+<li><p>Save as CTDEEP.csv</p></li>
+</ul>
+</div>
+<div id="university-of-new-hampshire" class="section level3">
+<h3>University of New Hampshire</h3>
+<ul>
+<li>Data in prep by Jim Haney and Amanda Murby</li>
+</ul>
+</div>
+<div id="maine" class="section level3">
+<h3>Maine</h3>
+<ul>
+<li>Data in prep by Linda Bacon</li>
+</ul>
+</div>
+<div id="rhode-island" class="section level3">
+<h3>Rhode Island</h3>
+<ul>
+<li>Data in prep by Linda Green &amp; Elizabeth Herron</li>
+</ul>
+</div>
+</div>
+<div id="collated-data" class="section level2">
+<h2>Collated Data</h2>
+<p>Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.</p>
 </div>
 
 

@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoData2014"
 author: "Bryan Milstead"
-date: "Wednesday, December 17, 2014"
+date: "Monday, December 29, 2014"
 output: html_document
 ---
 <!---
@@ -12,7 +12,7 @@ use these command instead of the knit icon if you want the data and work loaded 
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
   knit('Data2014.rmd')
 -->
-Introduction:
+Introduction
 -------------------------
 During the summer of 2014 the New England states initiated a monitoring program for cyanobacteria in lakes.  Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division. 
 
@@ -22,183 +22,594 @@ A simple excel template for data entry is available here: https://github.com/wil
 
 This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md
 
-New Hampshire
+The details of all data processing steps including notes and rcode are available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd
+
+The collated dataset is available here in .csv format: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true
+
+Data Definitions
 -------------------------
+
+Field  | Units | Third
+------------- | ------------- | -------------
+**Order:**|(integer)|Leave Blank or number observation consecutively
+**YourName:**|(text)|Enter the name of the person entering the data
+**Organization:**|(text)|Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC
+**SiteID:**|(text)|If the location has a site ID from your organization enter it here
+**WaterbodyName:**|(text)|Enter the name of the lake: be consistent with spelling and capitalization
+**State:**|(lookup)|Choose the two letter state code from the drop down list
+**SiteLocation:**|(text)|Some organizations have site names within a lake.  Enter these here.
+**SampleYear:**|(YYYY)|Year sample was collected in format YYYY (e.g., 2014)
+**SampleMonth:**|(MM)|Month sample was collected in integer format (e.g., months 1 to 12 )
+**SampleDay:**|(DD)|Day sample was collected in integer format (e.g., day 1 to 31 )
+**NameOfSamplers:**|(text)|Add the names of the field crew separated by commas.
+**WeatherConditions:**|(text)|General Weather conditions separated by commas.  E.g., Cloudy, Windy, Cold
+**SampleLocation:**|(lookup)|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
+**SampleMethod:**|(lookup)|How was the sample collected? Grab = Grab sample for surface blooms; Composite =Composite; Integrated = Integrated tube sample; Validation = Use this for Blanks and Calibration Standards; Other = give details in the comments section.
+**Depth:**|(integer)|Within Lake samples are at 3m and Shoreside are at 1m.  If samples taken at different depths not the depth here and enter details in the comments section.  Leave blank for standards and blanks.
+**Latitude:**|(decimal)|Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
+**Longitude:**|(decimal)|Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
+**SampleHour:**|(HH)|Hour sample was taken in 24 hour format
+**SampleMinutes:**|(MM)|Minute sample was taken in integer format
+**Filtered:**|(TRUE/FALSE)|Was the sample filtered?
+**Frozen:**|(TRUE/FALSE)|Was the sample frozen?
+**Parameter:**|(lookup)|Phycocyanin or Chlorophyll?
+**Value:**|(decimal)|Reading from the fluorometer
+**Units:**|(lookup)|What were the units recorded.  If not "RFU", "µ/L", or mg/l flag the entry and add comment with the units used. 
+**Rep:**|(integer)|If you made more than one measurement per sample or took more than one sample per site assign a replicate number to each observations and add notes in the comment field.
+**Fluorometer:**|(lookup)|Type of fluorometer used?
+**AnalysisYear:**|(YYYY)|Year sample was analyzed in format YYYY (e.g., 2014)
+**AnalysisMonth:**|(MM)|Month sample was analyzed in integer format (e.g., months 1 to 12 )
+**AnalysisDay:**|(DD)|Day sample was analyzed in integer format (e.g., day 1 to 31 )
+**AnalysisHour:**|(HH)|Hour sample was analyzed in 24 hour format
+**AnalysisMinutes:**|(MM)|Minute sample was analyzed in integer format
+**GPSType:**|(text)|How was the location determined.  GPS (type), map, or google?
+**Photos:**|(TRUE/FALSE)|Where photos taken?
+**Flag:**|(TRUE/FALSE)|Add a flag for any data line that needs further validation or processing
+**Comments:**|(text)|Add details of flags or any notes about the data line or sample.
+
+Data Sources
+-------------------------
+Information on how the data were provided by the States and Organizations that participated in the monitoring.
+
+
+### Vermont
+
+* Data received from Hilary Snook (forwarded from Angela Shambaugh-VTDEC) on 11/13/14
+* Original file name: VERMONT Beagle FluoroQuick data_Summer 2014.xlsx renamed VTDEC.xlsx
+* Responses to my queries answered by Angela Shambaugh on 12/19/2014
+
+**Questions for Angela with responses from Angela (AS), Hilary Snoork (HS) and me (BM):**
+
+* Do we need to treat the two groups of data ("calibrated pigment readings" & "after calibration loss") separately?
+    - AS: Depends on Hilary’s experience when re-calibrating my Beagle unit.  I don’t know if he was able to tell how much drift there was over the summer.
+    - HS: I’ll hopefully be checking these out today. 
+    - BM: tables combined and the "after calibration loss" lines flagged.
+* What are the differences between the two groups of data?
+    - AS: I apparently invalidated the instrument calibration halfway through the summer by mistakenly starting the full calibration process and then incorrectly exiting.  The check standards Hilary provided were not at all consistent with expected reading so I stopped reporting phycocyanin units and switched to relative fluorescence units.  
+* What is the difference between "blank" and "blank(2)" in the "station" field?
+    - AS: Blank refers to a DI sample read at the beginning of each session, blank 2 refers to a second reading of the same sample at the end of the session.
+    - BM: leave as is for now.
+* For parameter what do: "channel 1 hi", "channel 1 lo", and channel 2 lo" represent?
+    - AS: If I understood the Beagle unit correctly, Channel 1 refers to the phycocyanin filter and channel 2 to the chlorophyll filter.  It wasn’t clear to me the difference between high and low – Hilary may be able to answer that better.  Hopefully after recalibrating the instrument, we can interpolate and change all the relative fluorescent units to phycocyanin.  Currently, any number associated with a channel will be RFU.  Anything associated with the terms ‘phycocyanin’ or ‘chlorophyll’ will be biomass (as µg/L).
+    - HS: Hi/Lo is automatically selected by the instrument based on sample fluorescence and does not need to be manually selected by the user. This was pretty cryptic in the user manual and I will clarify this at the upcoming meeting.
+    - BM: add units="RFU"  for all samples where parameter= channel 1 or 2; add units="µg/L" for all samples where parameter="phycocyanin or chlorophyll"; change paramater="channel 1 (hi or lo)" to "Phycocyanin"; change paramater="channel 2 (hi or lo)" to "Chlorophyll"
+* Where were the samples taken?  Shoreside? or Within Lake?  I'm assuming that the 1m depth samples are Shoreside and the 3m or greater depth samples are within lake but would like to verify.
+    - AS: All locations from the Champlain TMDL sites (#4 – 51) will be offshore.  RT 78 Access is shoreline as is the Black Bridge location. The others ( Highgate Cliffs, Highgate Springs, Phillipsburg and QE BM-b) are all off shore.  As part of our cyanobacteria monitoring, we take only surface samples for microcystin analysis – hence any surface scums at offshore locations will be surface grabs. 
+    - BM: change "RT 78 Access" and "Black Bridge" to SS1; the rest are WL1
+* What are the units for fluorometer readings?
+    - AS: Beagle units are µg/L, I think.  Hilary can confirm.
+    - HS: Yes, readout is in micrograms/liter (ppb)
+    - BM: µg/L
+* For the "sample state" VTDEC reports the conditions as  c("filtered, CDOM, fresh", "fresh","frozen","DI", "24 hours old", "white", "orange", "blue","", "red", "green", "yellow","pink").  What information is important?  For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken. 
+    - AS: The colors under ‘sample state’ refer to the solid check standards provided by Hilary so the terms frozen/filtered do not apply.  The 24hr sample old sample was not frozen or filtered.  All CDOM samples were filtered and not frozen.  All fresh samples were unfrozen and unfiltered.  If it is easier, I can re-send my data using the EXCEL spreadsheet you sent out.
+    - BM: all samples except those for sample.state=='Frozen' changed to Frozen=FALSE; samples for sample.state="...CDOM..." changed to Filtered==TRUE, the rest are Filtered=FALSE.
+* Please check the file VTDEC_Locations.csv.  I have some of the locations but not all.  The locations I have were gleaned from the lake Champlain reports.  In some cases I used Google Earth to get the locations from the descriptions so I don't have a lot of confidence in the locations.  Can you verify the locations (I can send a map of the locations if you wish) and help me with the ones that are missing?
+    - AS: I added lat lons to your table for the missing locations.  If you took the lat lon for the other stations from the Champlain TMDL files, they should be correct.  The updates are attached.
+
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* table="calibrated pigment readings" in VTDEC.xlsx saved as VTDEC_calibrated.csv; read into R
+* table="after calibration loss" in VTDEC.xlsx saved as VTDEC_uncalibrated.csv; read into R;Flag=TRUE;Comment="Uncertain Calibration Status"
+* both tables combined into df=VT
+* Build VTDEC data.frame
+* Save as VTDEC.csv
+
+```{r VTDEC, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data and combine tables
+  VT<-read.csv("VTDEC_calibrated.csv") #read the calbibrated data
+    VT$Flag<-FALSE #add Flag field
+    VT$Comments<-VT$notes  #rename notes to comments
+    nrow(VT) #444
+  
+  VT1<-read.csv("VTDEC_uncalibrated.csv") #read the uncalbrated data
+    VT1$Flag<-TRUE #add Flag field
+    VT1$Comments<-paste("Uncertain Calibration Status;", VT1$notes)  #add comment and notes to comments
+    nrow(VT1) #392
+  
+  VT<-rbind(VT,VT1) #combine the datasets
+    nrow(VT) #836
+
+#Build VTDEC
+  #Order=sequential ordering of the raw data
+    VTDEC<-data.frame(Order=1:nrow(VT))
+  #Add name and org
+    VTDEC$YourName<-"Angela Shambaugh"  
+    VTDEC$Organization<-"VTDEC"
+  #Add SiteID from VT$station
+    VTDEC$SiteID<-VT$station
+    #fix spellings
+      as.data.frame(table(VTDEC$SiteID,useNA='ifany'))
+      VTDEC$SiteID[VTDEC$SiteID=="QE BM - b"]<-"QE BM b"
+      VTDEC$SiteID[VTDEC$SiteID=="highgate Springs, VT"]<-"Highgate Springs"
+    #remove blanks and standards 
+      VTDEC$SiteID[grep('blank',VTDEC$SiteID)]<-NA
+      VTDEC$SiteID[grep('standard',VTDEC$SiteID)]<-NA
+  #Add WaterbodyName
+    VTDEC$WaterbodyName<-NA
+  #Add State	
+    VTDEC$State<-"VT"
+  #Add SiteLocation	
+    VTDEC$SiteLocation<-NA
+  # Add SampleYear	SampleMonth	SampleDay	
+    a<-matrix(as.numeric(unlist(strsplit(VT$Sample.Date,'/'))),nrow=nrow(VT),ncol=3,byrow=TRUE)
+      VTDEC$SampleYear<-a[,3] 
+      VTDEC$SampleMonth<-a[,1] 
+      VTDEC$SampleDay<-a[,2] 
+  #Add NameOfSamplers	
+    VTDEC$NameOfSamplers<-NA
+  #Add WeatherConditions	
+    VTDEC$WeatherConditions<-NA
+  #Add SampleLocation	
+    VTDEC$SampleLocation<-"WL1"
+    VTDEC$SampleLocation[grep('Black',VT$station)]<-'SS1'
+    VTDEC$SampleLocation[grep('Access',VT$station)]<-'SS1'
+    VTDEC$SampleLocation[grep('blank',VT$station)]<-'Blank'
+    VTDEC$SampleLocation[grep('standard',VT$station)]<-'Calibration'
+    table(VTDEC$SampleLocation,useNA='ifany')
+  #Add SampleMethod from VT$sample.type & VT&collection.type; blanks and standards from VT$station
+    table(VT$sample.type,useNA='ifany') #654 whole water samples and 182 blanks and standards
+    table(VT$collection.type,useNA='ifany') #grab=104;hose=550; blanks & standards=182
+    VTDEC$SampleMethod<-VT$collection.type
+      #rename methods to match template
+        VTDEC$SampleMethod[VTDEC$SampleMethod=="grab"]<-'Grab'
+        VTDEC$SampleMethod[VTDEC$SampleMethod=="hose"]<-'Integrated'
+      #add blanks and standards
+        VTDEC$SampleMethod[grep('blank',VT$station)]<-VT$station[grep('blank',VT$station)]
+        VTDEC$SampleMethod[grep('standard',VT$station)]<-VT$station[grep('standard',VT$station)]
+        table(VTDEC$SampleMethod,useNA='ifany')
+   #Add Depth  
+    VTDEC$Depth<-VT$depth..m.
+  #Add Latitude	Longitude
+    loc<-read.csv("VTDEC_Locations.csv") #read the locations
+    a<-merge(VTDEC,loc,by='SiteID',all.x=T) #merge locations and siteIDs
+    a<-a[order(a$Order),] #reorder
+    VTDEC$Latitude<-a$Latitude
+    VTDEC$Longitude<-a$Longitude
+  #Add SampleHour	SampleMinutes	
+    VTDEC$SampleHour<-NA
+    VTDEC$SampleMinutes<-NA
+  #Add Filtered	
+    VTDEC$Filtered<-FALSE
+    VTDEC$Filtered[grep('filtered',VT$sample.state)]<-TRUE
+    table(VTDEC$Filtered)
+  #Add Frozen
+    VTDEC$Frozen<-FALSE
+    VTDEC$Frozen[grep('frozen',VT$sample.state)]<-TRUE
+    table(VTDEC$Frozen)
+  #Add Parameter & Value
+    VTDEC$Parameter<-VT$parameter
+    VTDEC$Value<-VT$Reading
+  #Add Units and update parameter
+    VTDEC$Units<-paste('\u03BC','g/l',sep='')
+    #change channel 1 to Parameter=Phycocyanin and Units=RFU
+      a<-grep('1',VTDEC$Parameter)
+        VTDEC$Parameter[a]<-'Phycocyanin'
+        VTDEC$Units[a]<-'RFU'
+    #change channel 2 to Parameter=Chlorophyll and Units=RFU
+      a<-grep('2',VTDEC$Parameter)
+        VTDEC$Parameter[a]<-'Chlorophyll'
+        VTDEC$Units[a]<-'RFU'
+    #change spelling
+      VTDEC$Parameter[VTDEC$Parameter=='phycocyanin']<-'Phycocyanin'
+      VTDEC$Parameter[VTDEC$Parameter=='chlorophyll']<-'Chlorophyll'
+  #Add Rep
+    VTDEC$Rep<-VT$rep
+  #Add Fluorometer
+    VTDEC$Fluorometer<-'Beagle'
+  #Add AnalysisYear  AnalysisMonth	AnalysisDay	AnalysisHour	AnalysisMinutes
+    VT[VT$Analysis.date=='','Analysis.date']<-"NA/NA/NA" #replace missing values
+    a<-matrix(as.numeric(unlist(strsplit(VT$Analysis.date,'/'))),nrow=nrow(VT),ncol=3,byrow=TRUE)
+      VTDEC$AnalysisYear<-a[,3] 
+      VTDEC$AnalysisMonth<-a[,1] 
+      VTDEC$AnalysisDay<-a[,2] 
+    VTDEC$AnalysisHour<-NA
+    VTDEC$AnalysisMinutes<-NA
+  #Add GPSType	Photos	Flag	Comments
+    VTDEC$GPSType<-NA
+    VTDEC$Photos<-FALSE
+    VTDEC$Flag<-VT$Flag
+    VTDEC$Comments<-VT$Comments
+#save the data
+  write.table(VTDEC, file='VTDEC.csv',row.names=F,sep=',') #write to csv
+```
+
+### Charles River Watershed Association
+
+* Data received from Elisabeth Cianciola on 12/12/14
+* Original file name: CRWA_Region1CyanobacteriaDataEntryTemplate.xls renamed CRWA.xls
+* Resaved as CRWA_RAW.csv for import into R
+
+**Questions for Elisabeth with her responses**
+
+* Were all samples collected with the integrated tube sampler?
+    - EC: Yes
+* What were the units for the fluorometer readings?  RFU? µg/L?
+    - EC: µg/L
+    
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.
+* CWRA_RAW.csv imported into R
+* Each field verified with consistency checks
+* Field updated where necessary.
+
+```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data 
+  CRWA<-read.csv("CRWA_RAW.csv") #read the data
+  names(CRWA)[c(15,16,23,24)]<-c("Filtered1","Frozen1","Photos1","Flag1") #rename fields that ended in "?"
+#check fields for consistency
+  table(CRWA$YourName,useNA='ifany')
+  table(CRWA$Organization,useNA='ifany')
+  table(CRWA$SiteID,useNA='ifany')
+  table(CRWA$WaterbodyName,useNA='ifany')
+  table(CRWA$State,useNA='ifany')
+  table(CRWA$SiteLocation,useNA='ifany')
+  table(CRWA$NameOfSamplers,useNA='ifany')
+  table(CRWA$WeatherConditions,useNA='ifany')
+  table(CRWA$Depth,useNA='ifany')
+  table(CRWA$Latitude,useNA='ifany')
+  table(CRWA$Longitude,useNA='ifany')
+  table(CRWA$Parameter,useNA='ifany')
+  summary(CRWA$Value)
+  table(is.na(CRWA$Value))
+  table(CRWA$Fluorometer,useNA='ifany')
+  table(CRWA$GPSType,useNA='ifany')
+  table(CRWA$Comments,useNA='ifany')
+#update or modify fields
+  #Add Order=sequential ordering of the raw data
+    CRWA$Order<-1:nrow(CRWA)
+  # Add SampleYear	SampleMonth	SampleDay	Drop SampleDate
+    a<-matrix(as.numeric(unlist(strsplit(CRWA$SampleDate,'/'))),nrow=nrow(CRWA),ncol=3,byrow=TRUE)
+      CRWA$SampleYear<-a[,3] 
+      CRWA$SampleMonth<-a[,1] 
+      CRWA$SampleDay<-a[,2]
+      CRWA<-CRWA[,-which(names(CRWA)=="SampleDate")]
+  # Add AnalysisYear  AnalysisMonth	AnalysisDay	Drop AnalysisDate
+    a<-matrix(as.numeric(unlist(strsplit(CRWA$AnalysisDate,'/'))),nrow=nrow(CRWA),ncol=3,byrow=TRUE)
+      CRWA$AnalysisYear<-a[,3] 
+      CRWA$AnalysisMonth<-a[,1] 
+      CRWA$AnalysisDay<-a[,2]
+      CRWA<-CRWA[,-which(names(CRWA)=="AnalysisDate")]
+  #Add SampleLocation	& SampleMethod
+    CRWA$SampleLocation<-"SS1" #all sites at SS1
+    CRWA<-CRWA[,-which(names(CRWA)=="TypeOfSample")] #delete earlier name for this field
+    CRWA$SampleMethod<-'Integrated' #all collected with tube
+  #Add SampleHour	SampleMinutes	
+    CRWA$SampleTime[CRWA$SampleTime==""]<-"NA:NA" #replace missing values
+    a<-matrix(as.numeric(unlist(strsplit(CRWA$SampleTime,':'))),nrow=nrow(CRWA),ncol=2,byrow=TRUE) #parse
+    CRWA$SampleHour<-a[,1]
+    CRWA$SampleMinutes<-a[,2]
+    CRWA<-CRWA[,-which(names(CRWA)=="SampleTime")] #delete time field
+  #Add AnalysisHour  AnalysisMinutes	
+    CRWA$AnalysisTime[CRWA$AnalysisTime==""]<-"NA:NA" #replace missing values
+    a<-matrix(as.numeric(unlist(strsplit(CRWA$AnalysisTime,':'))),nrow=nrow(CRWA),ncol=2,byrow=TRUE) #parse
+    CRWA$AnalysisHour<-a[,1]
+    CRWA$AnalysisMinutes<-a[,2]
+    CRWA<-CRWA[,-which(names(CRWA)=="AnalysisTime")] #delete time field
+  #Add Units and update parameter
+    CRWA$Units<-paste('\u03BC','g/l',sep='')
+  #Add Rep
+    CRWA$Rep<-1
+  #Change yes/no field to True/False: Frozen Filtered  Photos	Flag
+    #Frozen
+      table(CRWA$Frozen1,useNA='ifany')
+      CRWA$Frozen<-ifelse(CRWA$Frozen1=="Yes",TRUE,FALSE)
+      table(CRWA$Frozen,useNA='ifany')
+      CRWA<-CRWA[,-which(names(CRWA)=="Frozen1")] #delete old field
+    #Filtered
+      table(CRWA$Filtered1,useNA='ifany')
+      CRWA$Filtered<-ifelse(CRWA$Filtered1=="YES",TRUE,FALSE)
+      table(CRWA$Filtered,useNA='ifany')
+      CRWA<-CRWA[,-which(names(CRWA)=="Filtered1")] #delete old field
+    #Photos
+      table(CRWA$Photos1,useNA='ifany')
+      CRWA$Photos<-ifelse(CRWA$Photos1=="YES",TRUE,FALSE)
+      table(CRWA$Photos,useNA='ifany')
+      CRWA<-CRWA[,-which(names(CRWA)=="Photos1")] #delete old field
+    #Flag
+      table(CRWA$Flag1,useNA='ifany')
+      CRWA$Flag<-FALSE
+      table(CRWA$Flag,useNA='ifany')
+      CRWA<-CRWA[,-which(names(CRWA)=="Flag1")] #delete old field
+  #reorder fields to match template
+    CRWA<-CRWA[,names(VTDEC)]
+#save the data
+  write.table(CRWA, file='CRWA.csv',row.names=F,sep=',') #write to csv
+```
+
+### New Hampshire
+
 * Data received from Sonya Carlson on 11/19/14
-* Original file name: NH-2014-11-19-PhycoData.xlsx renamed Cyano2014_NH.xlsx
-* Locations in table "List_Frame_1".  Observations are numbered consecutively in the first column ("#"). There are 143 lines. SiteIDs in column "DES Station ID"; some are missing but can be found in the "Station Name" Column 
-* Observation in table "Data". Observations are numbered consecutively in the first column ("Sample #"). Note: Sample#=42 is used twice).  There are 144 lines.  
-* Tables "Data" and "List_Frame_1" are copied and renamed: "DataEdited" and "Locations".  The first column in each table ("Sample #" and "#") is renamed "Order".  The "DES Sation ID" field is renamed "SiteID".  In the DataEdited table the first occurence of Order=42 changed to 42.1 and the second occurence to 42.2.
-* Table DataEdited: The names of the value fields for the Fluorometry readings are on three lines.  These were combined into a single field name using the following convention- Pigment_Units_Fluorometer_SampleState_FilterState.  These will be split up and renamed later.
-* Compare the fields Order and SiteID for tables Location and DataEdited
-    - Order 2 & 3 are reversed-The Order field in the Locations table was changed to correct this. Flag and comment added.
-    - Order 83 & 84 are reversed-The Order field in the Locations table was changed to correct this. Flag and comment added.
-    - Order 42 is repeated in the DataEdited table.  First occurence changed to 42.1 and second occurence changed to 42.1.Flags and comments added.
-    - DataEdited:Order=42.2 matches Locations:Order=42; Locations:Order changed to 42.2.  
-    - DataEdited:Order=42.1 missing in Locations but a lake with the same SiteID is listed in DataEdited:Order=54.  The location information is recopied into the Locations table as Locations:Order=42.1
-    - For Order=135 in both tables the SiteID don't match DataEdited:SiteID="TOWCAN-GEN
-" and Locations:SiteID="TOWCND-GEN".  Simple mispelling. Flag and comment added.
-    - For Order = c(22:23,27:30,35:36,55:56,67:68,72,85-93,98:99,117:118,123,125:126) Location:SiteID is missing but the DataEdited:SiteID = Locations:StationName.  Comment only added.
-    - Table Locations is reordered by the updated Order field.
-    - Fields "EpaDesignation", "SampleDate", and "Depth" match between tables DataUpdated and Locations.
-    -Field="WaterbodyName" added and populated with LakeName for the StationName and Waterbody# fields.
-* Table NHDES_Raw created by copying the Region1CyanobacteriaTemplate file.
-* Location data transfered to the NHDES with fields as follows (NHDES:Locations)
-    - Order=Order 
-    - WaterbodyName=WaterbodyName
-    - SiteLocation=StationName
-    - Latitude=Latitude
-    - Longitude=Longitude
-    - Flags and Comments copied.
-* DataEdited fields transfered as following
-    - SiteID=SiteID (originally-"DES Station ID")
-    - SampleDate=SampleDate
-    - WeatherCondition=WeatherConditions
-    - SampleLocation=EPA Designation (note naming convention changed to match template).  Note SampleLocations listed as "GRAB" changed to "Other" and "SampleMethod" noted as "Grab"
-    - Depth=Depth
-* The following compound fields were also added to NHDES_RAW (NOTE these will need to be parsed): 
-    - Phycocyanin_mg/l_Beagle_Fresh_Unfiltered  
-    - Chlorophyll_mg/l_Beagle_Fresh_Unfiltered	
-    - Phycocyanin_RFU_Turner_Fresh_Unfiltered	
-    - Chlorophyll_RFU_Turner_Fresh_Unfiltered	
-    - Phycocyanin_mg/l_Beagle_Fresh_Filtered	
-    - Chlorophyll_mg/l_Beagle_Fresh_Filtered	
-    - Phycocyanin_RFU_Turner_Fresh_Filtered	
-    - Chlorophyll_RFU_Turner_Fresh_Filtered	
-    - Phycocyanin_mg/l_Beagle_Frozen_Unfiltered	
-    - Chlorophyll_mg/l_Beagle_Frozen_Unfiltered	
-    - Phycocyanin_RFU_Turner_Frozen_Unfiltered	
-    - Chlorophyll_RFU_Turner_Frozen_Unfiltered	
-    - Phycocyanin_mg/l_Beagle_Frozen_Filtered	
-    - Chlorophyll_mg/l_Beagle_Frozen_Filtered	
-    - Phycocyanin_RFU_Turner_Frozen_Filtered	
-    - Chlorophyll_RFU_Turner_Frozen_Filtered
-* NOTE: the Beagle units are ug/l not mg/l.  This is corrected below in the final version.
-* Table NHDES_RAW from Cyano2014_NH.xlsx saved as NHDES_RAW.csv
-    - Date parsed to Year Month Day
-* NHDES_RAW.csv read into R (code in the .rmd document) and the compound value fields parsed.  
+* Original file name: NH-2014-11-19-PhycoData.xlsx renamed NHDES.xlsx
+
+**Questions for Sonya: with her responses**
+
+* The locations are in tab "List_Frame_1" and the Data are in the data tab.  Both sets of data appear to be linked by the first column ("#" or "Sample #").  It appears that a some of the lines are out of order (i.e., 2 & 3 and 83 & 84).  This is not a problem I just adjusted them.  Is this okay?
+    - SC: Okay
+* In the data tab there are 2 entries for Sample#=42.  The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is.  To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD).  Is this okay?
+    - SC: Okay
+* For Sample#=135 the DES Station ID is "TOWCAN-GEN
+" in the Data tab and "TOWCND-GEN" in the List_Frame_1 tab.  Which is correct?
+    - SC: TOWCND-GEN: this is corrected above
+* Could you verify the units for the Beagle readings.  You have mg/l but others report µg/L.
+    - SC: Should be µg/L-corrected above.
+* Are all Turner readings in RFU and all beagle in µg/L?  
+    - SC: Yes
+* Were all samples except the Grab samples collected with  an integrated sampler (a hose)?
+    - SC: Yes
+
+
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* The fluorometer data are in NHDES.XLSX tab:Data. This is copied to NHDES_RAW.csv and modified as follows:
+  - First column ("#") containing a sequential list of numbers is renamed "Order"
+  - There are two observations for Order=42;the first does not match the location information but the second does.
+  - First occurence of Order=42 changed to Order=144; it is then cut and pasted to the bottom of the sheet.
+  - The location information for the new NHDES_Raw:Order=144 data matches NHDES_Locations:Order=54. See NHDES_Locations.csv below. 
+  - Order=135 the DES Station ID doesn't match the Location table.  I checked with Sonya and changed the NHDES_RAW value to 'TOWCND-GEN'.
+  - The "adjusted turner" and calculated "ratio" fields were deleted.
+  - The value fields for the Fluorometry readings are on three lines.  These were combined into a single field name using the following convention: Pigment_Units_Fluorometer_SampleState_FilterState.  These will be split up and renamed later.
+* Location information is in NHDES.XLSX tab:List_Frame1.  This is copied to NHDES_Locations.csv and modified as follows:
+    - First column ("#") containing a sequential list of numbers is renamed "Order"
+    - Missing location information for NHDES_Raw:Order=144 same as information NHDES_Locations:Order=54.  This line is copied and appended to the bottom and the Locations:Order is Changed to 144
+    - Observations for Order=2 and Order=3 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=2 changed to 3 and Locations:Order=3 changed to 2.
+    - Observations for Order=83 and Order=84 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=83 changed to 84 and Locations:Order=84 changed to 83.
 * Final version saved as NHDES.csv
 
 ```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
-NH<-read.csv("NHDES_RAW.csv") #read the data
-  NH_T<-NH[,1:30] #NH template-delete Fluoremeter observations
-
-#loop to reformat the data into a long form
+#read the data
+  NH<-read.csv("NHDES_RAW.csv") #read the data
+  Loc<-read.csv("NHDES_Locations.csv") #read the data
+#compare Order in NH and LOC
+  all.equal(NH$Order,Loc$Order) #TRUE
+#Build NHDES
+  #Build Template first
+    NH_T<-data.frame(Order=NH$Order)
+    NH_T$YourName<-"Sonya Carlson"
+    NH_T$Organization<-'NH_T'
+    NH_T$SiteID<-NH$DES.Station.ID
+    NH_T$WaterbodyName<-Loc$Waterbody
+    NH_T$State<-'NH'
+    NH_T$SiteLocation<-Loc$Station.Name
+    # Add SampleYear  SampleMonth	SampleDay	
+        a<-matrix(as.numeric(unlist(strsplit(NH$Sample.Date,'/'))),nrow=nrow(NH),ncol=3,byrow=TRUE)
+          NH_T$SampleYear<-a[,3] 
+          NH_T$SampleMonth<-a[,1] 
+          NH_T$SampleDay<-a[,2] 
+    NH_T$NameOfSamplers<-NA
+    NH_T$WeatherConditions<-NH$Weather
+    #Add SampleLocation
+      table(NH$EPA.Designation,useNA='ifany')
+      NH_T$SampleLocation<-NH$EPA.Designation
+        NH_T$SampleLocation[NH_T$SampleLocation=='SS#1']<-'SS1'
+        NH_T$SampleLocation[NH_T$SampleLocation=='SS#2']<-'SS2'
+        NH_T$SampleLocation[NH_T$SampleLocation=='SS#3']<-'SS3'
+        NH_T$SampleLocation[NH_T$SampleLocation=='WL#1']<-'WL1'
+        NH_T$SampleLocation[NH_T$SampleLocation=='WL#2']<-'WL2'
+        NH_T$SampleLocation[NH_T$SampleLocation=='WL#3']<-'WL3'
+        NH_T$SampleLocation[NH_T$SampleLocation=='WL#4']<-'WL4'
+        NH_T$SampleLocation[NH_T$SampleLocation=='GRAB']<-'Other' #change SampleMethod to 'Grab'
+      table(NH_T$SampleLocation,useNA='ifany')
+    #Add SampleMethod
+      NH_T$SampleMethod<-'Integrated'
+        NH_T$SampleMethod[NH_T$SampleLocation=='Other']<-'Grab'
+    NH_T$Depth<-NH$Depth
+    NH_T$Latitude<-Loc$Latitude.DecDeg
+    NH_T$Longitude<-Loc$Longitude.DecDeg
+    NH_T$SampleHour<-NA 
+    NH_T$SampleMinutes<-NA 
+    NH_T$Filtered<-NA 
+    NH_T$Frozen<-NA 
+    NH_T$Parameter<-NA 
+    NH_T$Value<-NA 
+    NH_T$Units<-NA 
+    NH_T$Rep<-NA
+    NH_T$Fluorometer<-NA
+    NH_T$AnalysisYear<-NA 
+    NH_T$AnalysisMonth<-NA
+    NH_T$AnalysisDay<-NA
+    NH_T$AnalysisHour<-NA
+    NH_T$AnalysisMinutes<-NA
+    NH_T$GPSType<-NA
+    NH_T$Photos<-FALSE
+    NH_T$Flag<-FALSE
+    NH_T$Comments<-NA
+#Loop to add "Filtered"  "Frozen" "Parameter" "Value" "Units" & "Fluorometer"
   NHDES<-c()  #empty data frame
-    for(i in c(35:ncol(NH))){
+    for(i in c(7:ncol(NH))){
       a<-unlist(strsplit(names(NH)[i],'_')) #get the column name
       b<-NH_T #open the blank template then fill in the field below
-        b$Parameter<-ifelse(a[1]=='Phycocyanin','Phycocyanin','Chlorophyll')
-        b$Units<-ifelse(a[2]=='RFU','RFU',paste('\u03BC','g/l',sep=''))
-        b$Fluorometer<-ifelse(a[3]=='Beagle','Beagle','Turner')
+        b$Parameter<-a[1]
+        b$Units<-a[2]
+        b$Fluorometer<-a[3]
         b$Frozen<-ifelse(a[4]=='Frozen','TRUE','FALSE')
         b$Filtered<-ifelse(a[5]=='Filtered','TRUE','FALSE')
         b$Value<-NH[,i]
       NHDES<-rbind(NHDES,b) #add data to data.frame
-      NHDES[NHDES$SiteID=="TOWCAN-GEN","SiteID"]<-'TOWCND-GEN'
     }
-  write.table(NHDES, file='NHDES.csv',row.names=F,sep=',') #write to csv
-
+write.table(NHDES, file='NHDES.csv',row.names=F,sep=',') #write to csv
 ```
-Questions for Sonya: all have been answered and the data updated.
 
-* The locations are in tab "List_Frame_1" and the Data are in the data tab.  Both sets of data appear to be linked by the first column ("#" or "Sample #").  It appears that a some of the lines are out of order (i.e., 2 & 3 and 83 & 84).  This is not a problem I just adjusted them.  Is this okay?
-    - Okay
-* In the data tab there are 2 entries for Sample#=42.  The first for DESStationID=BEELTUFD is not in the List_Frame_1 tab but the second (DESStationID=BROOSSD) is.  To correct this I used the location information from Sample#=54 (DESStationID=BEELTUFD).  Is this okay?
-    - Okay
-* For Sample#=135 the DES Station ID is "TOWCAN-GEN
-" in the Data tab and "TOWCND-GEN" in the List_Frame_1 tab.  Which is correct?
-    - TOWCND-GEN: this is corrected above
-* Could you verify the units for the Beagle readings.  You have mg/l but others report ug/l.
-    - Should be ug/l-corrected above.
+### Connecticut
 
-
-Connecticut
--------------------------
 * Data received from Tracy Lizotte on 11/17/14
-* Original file name: "Cyanobacteria data Summer 2014.xlsx"
-* Data organized with a seperate lake in each tab.  
-* Each lake has a parameter field and includes many parameters besides the fluorometry data but most of these are missing values.
-* All of the beagle fluorometry data where copied into a single tab by filtering on the notes field and selecting records for "Beagle Flourometer".
-* Missing values changed to blanks
-* Data copied into the template and saved as CTDEEP.csv
-
+* Original file name: "Cyanobacteria data Summer 2014.xlsx" saved as CTDEEP.xlsx
 
 Questions for Tracy:
 
 * For the Housatonic River (Kettletown) on 7/7/2014 the fluorometer values are "337.23//254.39", "310.87//363.l59", "24.91//7.50", and "2.50//5.50".  Do these represent multiple observations from the same sample or perhaps readings from 2 different samples? For now I am calling these reps and have separated the values.
-* What are the measurement units? RFU, ug/l?
+* What are the measurement units? RFU, µg/L?
 * Where were the samples taken?  Shoreside? or Within Lake?
 * What depth were the samples taken at?
 * How were the samples taken?  Grab samples? Whole Water Samples? Integrated Tube Samples?
 * I have some but not all of the Latitude and Longitudes for the lakes.  Please check the file CTDEEP_Locations.csv and verify the locations (I can send a map of the locations if you wish) and fill in missing values. 
+*NEW: were any samples frozen?
 
+**Data steps**-View code in Data2014.rmd document to see details.
+* Data organized with a separate lake in each tab.  These are read directly into R and the data from the separate sheets are combined into a single data.frame.
+```{r CTDEEP1, include=FALSE, echo=FALSE, cache=FALSE} 
+#read the data from the Excel files and rbind all of the separate sheets into a single DF
+  library(RODBC)
+  conn<-odbcConnectExcel2007("CTDEEP.xlsx") # open a connection to the Excel file
+  a<-sqlTables(conn)$TABLE_NAME # get list of all sheets
+  a<-a[-12] #remove sheet "Station$" from the list
+  
+  CT<-c() #blank object to store data
+  for(i in c(1:length(a))){
+    b<-sqlFetch(conn, a[i]) # read a sheet
+    CT<-rbind(CT,b)
+  }
+  close(conn)
+```
+* Each lake has a parameter field that includes many parameters besides the fluorometry data but most of these are missing values.
+* The dataset includes many parameters but only the Chlorophyll and Phycocanin observations will be kept.
+* The Parameters with Chlorophyll and Phycocyanin include information on whether the samples were filtered or not. We'll assume that the samples were not frozen.
+* The parameter field was parsed as follows (NOTE: observations with ParameterNew=NA were deleted):
+```{r CTDEEP2, include=TRUE, echo=FALSE, cache=FALSE} 
+  #Add ParameterNew field with just the Parameter names
+    CT$ParameterNew<-NA
+    CT$ParameterNew[grep('Phycocyanin',CT$Parameter)]<-'Phycocyanin' 
+    CT$ParameterNew[grep('Chl a',CT$Parameter)]<-'Chlorophyll' 
+  #add Frozen and Filtered fields based on Parameter names
+    a<-c(grep("As is",CT$Parameter), grep("unfiltered",CT$Parameter)) #select parameter for unfiltered samples
+    CT$Frozen<-FALSE  #all samples appear to have been processed unfrozen
+    CT$Filtered<-FALSE #start with all equal FALSE
+      CT$Filtered[-a]<-TRUE #changed to TRUE those that do not have "unfiltered" or "AS is" in the parameter name.
+  #Show changes
+    unique(CT[order(CT$Parameter),c('Parameter','ParameterNew','Filtered','Frozen')])
+  #Keep phycocyanin and Chlorophyll data only
+   CT<-CT[!is.na(CT$ParameterNew),] #limit to Phyco and Chl parameters only
+```
+* The value field contains a mix of numeric values, character values, and missing values.  
+* The table below shows the number of occurences of each non-numeric value
+```{r CTDEEP3, include=TRUE, echo=FALSE, cache=FALSE, warning=FALSE} 
+  CT$ValueNew<-as.numeric(CT$Value)
+  as.data.frame(table(CT$Value[is.na(CT$ValueNew)],useNA='ifany'))
+```
+* The first four character values (two number separated by 2 slashes) appear to be two readings for the same sample.  Split these into two lines.  Assign the first to Rep=1 with Value = the first value.  Assign the second to Rep=2 with Value = the second value. 
+* Delete observations with Value="not Collected" or NA
+```{r CTDEEP4, include=FALSE, echo=FALSE, cache=FALSE} 
+  #add Rep field
+    CT$Rep<-1
+  #add flag field
+    CT$Flag<-FALSE
+  #copy lines with two readings;change ValueNew to second reading and the Rep to Rep=2
+    a<-CT[grep("//",CT$Value),] #select rows
+    a$Rep<-2 #change rep to 2
+    a$ValueNew<-c(254.39,363.159,7.50,5.50) #Note: 363.l59 changed to 363.159
+    a$Flag<-TRUE  #add flag
+    a$Comment<-paste('Value Changed from:',a$Value) #add comment
+  #change ValueNew for lines with two readings for value to the first reading
+    b<-grep("//",CT$Value)
+    CT$Flag[b]<-TRUE
+    CT$Comment<-paste('Value Changed from:',CT$Value[b])
+    CT$ValueNew[grep("//",CT$Value)]<-c(337.23,310.87,24.91,2.50)
+  #Append rep=2 lines to CT
+    CT<-rbind(CT,a)
+  #Delete rows with ValueNew=NA
+    nrow(CT) #612+4=616
+    CT<-CT[!is.na(CT$ValueNew),]
+    nrow(CT) #256
+```
+* Data massage complete-build CTDEEP
+* Save as CTDEEP.csv
 ```{r CTDEEP, include=FALSE, echo=FALSE, cache=FALSE} 
-CT<-read.csv("CTDEEP.csv") #read the data
-
-#locations
-CTDEEP_Locations<-unique(CT[,c('SiteID','WaterbodyName','SiteLocation')])
-CTDEEP_Locations$Latitude<-NA
-CTDEEP_Locations$Longitude<-NA
-write.table(CTDEEP_Locations, file='CTDEEP_Locations.csv',row.names=F,sep=',') #write to csv
+#rename fields to remove spaces and special characters.
+names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Parameter","Value","gtG","ltG","UOM","Lab","Note","ParameterNew","Frozen","Filtered","ValueNew","Rep","Flag","Comment")
+#view data
+  unique(CT$StationID) #SiteID: 12 station IDs 
+  unique(CT$WaterbodyName) #WaterbodyName 12 lake names
+  unique(CT$Landmark) #SiteLocation 
+  unique(CT$Date) #SampleDates in format YYYY-MM-DD
+  unique(CT$lab_accession) #all NA
+  table(CT$gtG,useNA='ifany') #this must be the detection limit
+  table(CT$ltG,useNA='ifany') #this must be the detection limit
+  unique(CT$UOM) #Units: NA
+  unique(CT$Lab) # all values="DEEP"
+  unique(CT$Note) #"Beagle Flourometer"
+#build CTDEEP
+  CTDEEP<-data.frame(Order=1:nrow(CT))
+  CTDEEP$YourName<-'Tracy Lizotte'
+  CTDEEP$Organization<-'CTDEEP'
+  CTDEEP$SiteID<-CT$StationID
+  CTDEEP$WaterbodyName<-CT$WaterbodyName
+  CTDEEP$State<-'CT'
+  CTDEEP$SiteLocation<-CT$Landmark
+  CTDEEP$SampleYear<-2014 
+  CTDEEP$SampleMonth<-as.numeric(substr(CT$Date,6,7)) 
+  CTDEEP$SampleDay<-as.numeric(substr(CT$Date,9,10)) 
+  CTDEEP$NameOfSamplers<-NA
+  CTDEEP$WeatherConditions<-NA
+  CTDEEP$SampleLocation<-NA
+  CTDEEP$SampleMethod<-NA  #probably "Integrated"
+  CTDEEP$Depth<-NA
+  CTDEEP$Latitude<-NA
+  CTDEEP$Longitude<-NA
+  CTDEEP$SampleHour<-NA
+  CTDEEP$SampleMinutes<-NA
+  CTDEEP$Filtered<-CT$Filtered
+  CTDEEP$Frozen<-CT$Frozen
+  CTDEEP$Parameter<-CT$ParameterNew
+  CTDEEP$Value<-CT$ValueNew
+  CTDEEP$Units<-NA
+  CTDEEP$Rep<-CT$Rep
+  CTDEEP$Fluorometer<-'Beagle'
+  CTDEEP$AnalysisYear<-NA
+  CTDEEP$AnalysisMonth<-NA
+  CTDEEP$AnalysisDay<-NA
+  CTDEEP$AnalysisHour<-NA
+  CTDEEP$AnalysisMinutes<-NA
+  CTDEEP$GPSType<-NA
+  CTDEEP$Photos<-FALSE
+  CTDEEP$Flag<-CT$Flag
+  CTDEEP$Comments<-CT$Comment
+#Save CTDEEP
+  write.table(CTDEEP, file='CTDEEP.csv',row.names=F,sep=',') #write to csv
 ```
 
-Vermont
--------------------------
-* Data received from Hilary Snook (forwarded from Angela Shambaugh-VTDEC) on 11/13/14
-* Original file name: VERMONT Beagle FluoroQuick data_Summer 2014.xlsx
-* Two tabs
-    - "calibrated pigment readings" includes sample dates 6/23/2014-8/20/2014
-    - "after calibration loss" includes sample dates 8/19/2014-9/19/2014
-* Tabs combined into a single sheet and comment added to show which tab was the source.
-* Data saved as VTDEC.csv
+### University of New Hampshire
 
-```{r VTDEC, include=FALSE, echo=FALSE, cache=FALSE} 
-VT<-read.csv("VTDEC.csv") #read the data
+* Data in prep by Jim Haney and Amanda Murby
+
+### Maine
+
+* Data in prep by Linda Bacon
+
+### Rhode Island
+
+* Data in prep by Linda Green & Elizabeth Herron
+
+Collated Data
+-------------------------
+Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.
+
+```{r CTDEEP444, include=FALSE, echo=FALSE, cache=FALSE} 
+ # Data2014<-rbind(CRWA,CTDEEP,NHDES,VTDEC) #combine data
+  #write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
+
 ```
 
-Questions for Angela:
 
-* Do we need to treat the two groups of data ("calibrated pigment readings" & "after calibration loss") separately?
-* What are the differences between the two groups of data?
-* What is the difference between "blank" and "blank(2)" in the "station" field?
-* For parameter what do: "channel 1 hi", "channel 1 lo", and channel 2 lo" represent?
-* Where were the samples taken?  Shoreside? or Within Lake?  I'm assuming that the 1m depth samples are Shoreside and the 3m or greater depth samples are within lake but would like to verify.
-* What are the units for fluorometer readings?
-* For the "sample state" VTDEC reports the conditions shown in the table below.  What information is important?  For each condition we need to know whether the sample was frozen (TRUE/FALSE) or filtered (TRUE/FALSE) before the fluoremeter reading was taken. You can also use flags to indicate readings that need to be checked with the details in the comments field.
-* Please check the file VTDEC_Locations.csv.  I have some of the locations but not all.  The locations I have were gleaned from the lake Champlain reports.  In some cases I used Google Earth to get the locations from the descriptions so I don't have a lot of confidence in the locations.  Can you verify the locations (I can send a map of the locations if you wish) and help me with the ones that are missing?
-
-**sample state**|**Frozen**|**Filtered**|**Flag**|**Comment**
-------------- | ------------- | ------------- | ------------- | -------------
-24 hours old|?|?|TRUE|24 hours old
-blue|?|?|?|?
-brown|?|?|?|?
-DI|||FALSE|
-filtered, CDOM, fresh|FALSE|TRUE|FALSE|
-fresh|FALSE|FALSE|FALSE|
-frozen|TRUE|FALSE|FALSE|
-green|?|?|?|?
-orange|?|?|?|?
-pink|?|?|?|?
-red|?|?|?|?
-silver|?|?|?|?
-white|?|?|?|?
-yellow|?|?|?|?
-
-Charles River Watershed Association
--------------------------
-* Data received from Elisabeth Cianciola on 12/12/14
-* Original file name: CRWA_Region1CyanobacteriaDataEntryTemplate.xls
-* Data entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.
-* Parsed dates and times
-* data saved as CWRA.csv
-
-Questions for Elisabeth-all question answered and the data updated.
-
-* Were all samples collected with the integrated tube sampler?
-    - Yes
-* What were the units for the fluorometer readings?  RFU? µg/L?
-    - µg/L
 
 
 
