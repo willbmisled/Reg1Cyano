@@ -606,6 +606,7 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
 * Additional data to be sent later
 
 **Questions for Amanda:**
+I've been modifying the template as I process data.  One of the fields added since you got the template is a column for "SampleMethod" that identifies how the sample was collected (Integrated Tube Sample, Grab Sample, etc.).  Several of the questions below relate to this and others not. The questions are: 
 
 * The "Depth"" field has a mixture of depth ranges and single depth values.  Do these represent different sample methods?  For example are the depth ranges (e.g., 0-4) from the integrated tube samplers?  How were the single depth samples collected? 
 * The "TypeOfSample" field has many missing values. What are these samples? and, How were they collected?
@@ -756,7 +757,49 @@ Save Data2014
 -------------------------
 After standardization the individual datasets have been combined into the data.frame "Data2014", this is saved as "Data2014.csv"
 
-```{r Save, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE,eval=FALSE} 
+#review the data:
+  summary(Data2014$Order)
+  table(Data2014$YourName,useNA='ifany')
+  table(Data2014$Organization,useNA='ifany')
+  as.data.frame(table(Data2014$SiteID,useNA='ifany'))
+  as.data.frame(table(Data2014$WaterbodyName,useNA='ifany'))
+  table(Data2014$State,useNA='ifany')  #missing values are 12 UNH calibration readings
+  as.data.frame(table(Data2014$SiteLocation,useNA='ifany'))
+    Data2014$SiteLocation[Data2014$SiteLocation=='']<-NA #replace empty cells with NA
+  Data2014$SampleYear<-2014  #mix of 2014, 14, and NA-make them all 2014
+  table(Data2014$SampleMonth,useNA='ifany')
+  table(Data2014$SampleDay,useNA='ifany')
+  table(Data2014$NameOfSamplers,useNA='ifany')
+  table(Data2014$WeatherConditions,useNA='ifany')
+    Data2014$WeatherConditions[Data2014$WeatherConditions=='']<-NA #replace empty cells with NA
+  table(Data2014$SampleLocation,useNA='ifany')
+  table(Data2014$SampleMethod,useNA='ifany')
+  table(Data2014$Depth,useNA='ifany')
+    Data2014$Depth[Data2014$Depth=='']<-NA #replace empty cells with NA
+  table(Data2014$Latitude,useNA='ifany')
+  table(Data2014$Longitude,useNA='ifany')
+    Data2014$Longitude[Data2014$Longitude=='']<-NA #replace empty cells with NA
+  table(Data2014$SampleHour,useNA='ifany')
+  table(Data2014$SampleMinutes,useNA='ifany')
+  table(Data2014$Filtered,useNA='ifany')
+  table(Data2014$Frozen,useNA='ifany')
+  table(Data2014$Parameter,useNA='ifany')
+  table(Data2014$Value,useNA='ifany')
+  table(Data2014$Units,useNA='ifany')
+    Data2014$Units<-gsub('µg.L',paste('\u03BC','g/l',sep=''),Data2014$Units) #consistency tweak
+  table(Data2014$Rep,useNA='ifany')
+  table(Data2014$Fluorometer,useNA='ifany')
+  Data2014$AnalysisYear<-2014  #mix of 2014, 14, and NA-make them all 2014
+  table(Data2014$AnalysisMonth,useNA='ifany')
+  table(Data2014$AnalysisDay,useNA='ifany')
+  table(Data2014$AnalysisHour,useNA='ifany')
+  table(Data2014$AnalysisMinutes,useNA='ifany')
+  table(Data2014$GPSType,useNA='ifany')
+  table(Data2014$Photos,useNA='ifany')
+  table(Data2014$Flag,useNA='ifany')
+  as.data.frame(table(Data2014$Comments,useNA='ifany'))
+#save the data
   write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
 ```
 
