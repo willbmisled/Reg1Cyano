@@ -14,8 +14,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 -->
 To Do List
 -------------------------
-* Need data from UNH, RI, and ME
-* Need answers to questions for CT
+* Need data from RI, and ME
+* Need answers to questions for CT & UNH
 * Map locations and send to contacts for verifications
 * Add WBIDs
 
@@ -120,7 +120,7 @@ Information on how the data were provided by the States and Organizations that p
 * table="after calibration loss" in VTDEC.xlsx saved as VTDEC_uncalibrated.csv; read into R;Flag=TRUE;Comment="Uncertain Calibration Status"
 * both tables combined into df=VT
 * Build VTDEC data.frame
-* Save as VTDEC.csv
+* Add to data.frame Data2014
 
 ```{r VTDEC, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data and combine tables
@@ -237,8 +237,8 @@ Information on how the data were provided by the States and Organizations that p
     VTDEC$Photos<-FALSE
     VTDEC$Flag<-VT$Flag
     VTDEC$Comments<-VT$Comments
-#save the data
-  write.table(VTDEC, file='VTDEC.csv',row.names=F,sep=',') #write to csv
+#add to Data2014
+  Data2014<-VTDEC #this creates Data2014
 ```
 
 ### Charles River Watershed Association
@@ -260,6 +260,7 @@ Information on how the data were provided by the States and Organizations that p
 * CWRA_RAW.csv imported into R
 * Each field verified with consistency checks
 * Field updated where necessary.
+* Add to data.frame Data2014
 
 ```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data 
@@ -341,8 +342,8 @@ Information on how the data were provided by the States and Organizations that p
       CRWA<-CRWA[,-which(names(CRWA)=="Flag1")] #delete old field
   #reorder fields to match template
     CRWA<-CRWA[,names(VTDEC)]
-#save the data
-  write.table(CRWA, file='CRWA.csv',row.names=F,sep=',') #write to csv
+# add to data.frame Data2014
+  Data2014<-rbind(Data2014,CRWA)
 ```
 
 ### New Hampshire
@@ -382,7 +383,7 @@ Information on how the data were provided by the States and Organizations that p
     - Missing location information for NHDES_Raw:Order=144 same as information NHDES_Locations:Order=54.  This line is copied and appended to the bottom and the Locations:Order is Changed to 144
     - Observations for Order=2 and Order=3 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=2 changed to 3 and Locations:Order=3 changed to 2.
     - Observations for Order=83 and Order=84 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=83 changed to 84 and Locations:Order=84 changed to 83.
-* Final version saved as NHDES.csv
+* Add to data.frame Data2014
 
 ```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
 #read the data
@@ -455,7 +456,9 @@ Information on how the data were provided by the States and Organizations that p
         b$Value<-NH[,i]
       NHDES<-rbind(NHDES,b) #add data to data.frame
     }
-write.table(NHDES, file='NHDES.csv',row.names=F,sep=',') #write to csv
+
+# add to data.frame Data2014
+  Data2014<-rbind(Data2014,NHDES)
 ```
 
 ### Connecticut
@@ -540,7 +543,7 @@ Questions for Tracy:
     nrow(CT) #256
 ```
 * Data massage complete-build CTDEEP
-* Save as CTDEEP.csv
+* Add to data.frame Data2014
 ```{r CTDEEP, include=FALSE, echo=FALSE, cache=FALSE} 
 #rename fields to remove spaces and special characters.
 names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Parameter","Value","gtG","ltG","UOM","Lab","Note","ParameterNew","Frozen","Filtered","ValueNew","Rep","Flag","Comment")
@@ -591,13 +594,155 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
   CTDEEP$Photos<-FALSE
   CTDEEP$Flag<-CT$Flag
   CTDEEP$Comments<-CT$Comment
-#Save CTDEEP
-  write.table(CTDEEP, file='CTDEEP.csv',row.names=F,sep=',') #write to csv
+
+# add to data.frame Data2014
+  Data2014<-rbind(Data2014,CTDEEP)
 ```
 
 ### University of New Hampshire
 
-* Data in prep by Jim Haney and Amanda Murby
+* Data received from Amanda Murby on 12/29/14
+* Original file name: "Region1CyanobacteriaDataEntryTemplate_NewHampshire-UNH2014.xls" saved as UNH.xls
+* Additional data to be sent later
+
+**Questions for Amanda:**
+
+* The "Depth"" field has a mixture of depth ranges and single depth values.  Do these represent different sample methods?  For example are the depth ranges (e.g., 0-4) from the integrated tube samplers?  How were the single depth samples collected? 
+* The "TypeOfSample" field has many missing values. What are these samples? and, How were they collected?
+* Missing Longitude and Latitude?
+* What are the measurement units? RFU? µg/L?
+* What do the Flags=Yes represent? Most comments for these lines are blank.
+
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.
+* UNH_RAW.csv imported into R
+* Each field verified with consistency checks
+* Field updated where necessary.
+* Add to data.frame Data2014
+
+```{r UNH, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data 
+  UNH<-read.csv("UNH_RAW.csv") #read the data
+  names(UNH)[c(15,16,23,24)]<-c("Filtered","Frozen","Photos","Flag") #rename fields that ended in "?"
+#remove empty line.
+  UNH[338,] #this line contains only the comment "additional data missing" delete the line
+  UNH<-UNH[-338,]
+#check fields X,X.1-X.17
+    table(UNH$X,useNA='ifany') # Appears to be the 6 missing negative values for a blank reading-delete
+    table(is.na(UNH[,paste("X.",c(1:17),sep='')]))  #all NA; delete
+    UNH<-UNH[,-c(26:ncol(UNH))]
+#Review, add, & modify fields as needed
+  UNH$Order<-1:nrow(UNH)
+  table(UNH$YourName,useNA='ifany') 
+  table(UNH$Organization,useNA='ifany')  #'UNH Center for Freshwater Biology' change to:
+    UNH$Organization<-'UNH_CFB'
+  table(UNH$SiteID,useNA='ifany')  #all NA
+  table(UNH$WaterbodyName,useNA='ifany')
+    UNH$WaterbodyName[UNH$WaterbodyName=='']<-NA #replace empty cells with NA
+  table(UNH$State,useNA='ifany')  #ME=12 NH=313 NA=12
+    UNH$State[UNH$State=='']<-NA #replace empty cells with NA
+  table(UNH$SiteLocation,useNA='ifany')
+  # Add SampleYear  SampleMonth  SampleDay	Drop SampleDate
+    table(UNH$SampleDate,useNA='ifany')
+      UNH$SampleDate[UNH$SampleDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
+    a<-matrix(as.numeric(unlist(strsplit(UNH$SampleDate,'/'))),nrow=nrow(UNH),ncol=3,byrow=TRUE)
+      UNH$SampleYear<-a[,3] 
+      UNH$SampleMonth<-a[,1] 
+      UNH$SampleDay<-a[,2]
+      UNH<-UNH[,-which(names(UNH)=="SampleDate")]
+  table(UNH$NameOfSamplers,useNA='ifany')
+    UNH$NameOfSamplers[UNH$NameOfSamplers=='']<-NA #replace empty cells with NA
+  table(UNH$WeatherConditions,useNA='ifany')
+    UNH$WeatherConditions[UNH$WeatherConditions=='']<-NA #replace empty cells with NA
+  #rename TypeOfSample to SampleLocation
+    names(UNH)[which(names(UNH)=="TypeOfSample")]<-'SampleLocation'
+      table(UNH$SampleLocation,useNA='ifany')
+        #modify values for consistency
+          UNH$SampleLocation[UNH$SampleLocation=='']<-NA #replace empty cells with NA
+          unique(Data2014$SampleLocation)
+            unique(UNH$SampleLocation)
+              UNH$SampleLocation<-gsub("-","",UNH$SampleLocation)
+              UNH$SampleLocation<-gsub("Standard","Calibration",UNH$SampleLocation)
+  #add field "SampleMethod"
+    UNH$SampleMethod<-NA
+#Depth is a mix of character and numeric data  
+  as.data.frame(table(UNH$Depth,useNA='ifany'))
+  #change ranges to max
+    a<-grep("-",UNH$Depth) #select rows with depth ranges
+      as.data.frame(table(UNH$Depth[a],useNA='ifany'))  #check
+        b<-as.numeric(unlist(strsplit(UNH$Depth[a],'-'))) #use the "-" character to split values
+        #b[seq(2,length(b),2)] #choose the second value only
+          data.frame(UNH$Depth[a],b[seq(2,length(b),2)]) #check
+        #update records and add comment
+          UNH$Comments[a]<-paste("Depth Changed From:",UNH$Depth[a])
+          UNH$Depth[a]<-b[seq(2,length(b),2)] #update records
+  table(UNH$Latitude,useNA='ifany')  #missing 105 observations
+  table(UNH$Longitude,useNA='ifany') #missing 105 observations
+  #parse SampleTime
+    table(UNH$SampleTime,useNA='ifany') #All missing
+      UNH$SampleHour<-NA
+      UNH$SampleMinutes<-NA
+        UNH<-UNH[,-which(names(UNH)=="SampleTime")]
+  table(UNH$Filtered,useNA='ifany')
+  #change field Filtered from Y/N to TRUE/FALSE
+    table(UNH$Filtered,useNA='ifany')
+      UNH$Filtered[UNH$Filtered=='']<-NA #replace empty cells with NA
+      UNH$Filtered<-gsub("Yes",TRUE,UNH$Filtered)
+      UNH$Filtered<-gsub("No",FALSE,UNH$Filtered)
+        UNH$Filtered<-as.logical(UNH$Filtered) #convert to logical
+  #change field Frozen from Y/N to TRUE/FALSE
+    table(UNH$Frozen,useNA='ifany')
+      UNH$Frozen[UNH$Frozen=='']<-NA #replace empty cells with NA
+      UNH$Frozen<-gsub("Yes",TRUE,UNH$Frozen)
+      UNH$Frozen<-gsub("No",FALSE,UNH$Frozen)
+        UNH$Frozen<-as.logical(UNH$Frozen) #convert to logical
+  table(UNH$Parameter,useNA='ifany')
+  table(UNH$Value,useNA='ifany')
+  UNH$Units<-NA
+  UNH$Rep<-NA
+  table(UNH$Fluorometer,useNA='ifany')  #mostly missing
+    UNH$Fluorometer<-ifelse(UNH$Fluorometer=='',NA,'Beagle')  #change 'Beagle Amniscience Fluorquick' to 'Beagle'
+  # Add AnalysisYear  AnalysisMonth  AnalysisDay  Drop AnalysisDate
+    table(UNH$AnalysisDate,useNA='ifany')
+      UNH$AnalysisDate[UNH$AnalysisDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
+    a<-matrix(as.numeric(unlist(strsplit(UNH$AnalysisDate,'/'))),nrow=nrow(UNH),ncol=3,byrow=TRUE)
+      UNH$AnalysisYear<-a[,3] 
+      UNH$AnalysisMonth<-a[,1] 
+      UNH$AnalysisDay<-a[,2]
+      UNH<-UNH[,-which(names(UNH)=="AnalysisDate")]
+  #parse AnalysisTime
+    table(UNH$AnalysisTime,useNA='ifany') #All missing
+      UNH$AnalysisHour<-NA
+      UNH$AnalysisMinutes<-NA
+        UNH<-UNH[,-which(names(UNH)=="AnalysisTime")]
+  table(UNH$GPSType,useNA='ifany')
+    UNH$GPSType[UNH$GPSType=='']<-NA #replace empty cells with NA
+  #change field Photos from Y/N to TRUE/FALSE
+    table(UNH$Photos,useNA='ifany')
+      UNH$Photos[UNH$Photos=='']<-NA #replace empty cells with NA
+      UNH$Photos<-gsub("Yes",TRUE,UNH$Photos)
+      UNH$Photos<-gsub("No",FALSE,UNH$Photos)
+        UNH$Photos<-as.logical(UNH$Photos) #convert to logical
+  #change field Flag from Y/N to TRUE/FALSE
+    table(UNH$Flag,useNA='ifany')
+      UNH$Flag[UNH$Flag=='']<-NA #replace empty cells with NA
+      UNH$Flag<-gsub("Yes",TRUE,UNH$Flag)
+      UNH$Flag<-gsub("No",FALSE,UNH$Flag)
+        UNH$Flag<-as.logical(UNH$Flag) #convert to logical
+  as.data.frame(table(UNH$Comments,useNA='ifany'))
+#reorder fields to match Data2014
+  #consistency check
+  ncol(UNH) #35
+  ncol(Data2014) #35
+  table(names(UNH)%in%names(Data2014))
+  names(UNH)[27]
+  #reorder
+    UNH<-UNH[,names(Data2014)]
+# add to data.frame Data2014
+  Data2014<-rbind(Data2014,UNH)
+```
+
 
 ### Maine
 
@@ -607,82 +752,13 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
 
 * Data in prep by Linda Green & Elizabeth Herron
 
-Collated Data
+Save Data2014
 -------------------------
-Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.
+After standardization the individual datasets have been combined into the data.frame "Data2014", this is saved as "Data2014.csv"
 
-```{r CTDEEP444, include=FALSE, echo=FALSE, cache=FALSE} 
-  Data2014<-rbind(CRWA,CTDEEP,NHDES,VTDEC) #combine data
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE} 
   write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
-
 ```
-
-
-Locations are specified by:
-
-Field  | Description
-------------- | ------------- 
-**SiteID:**|If the location has a site ID from your organization enter it here
-**WaterbodyName:**|Enter the name of the lake: be consistent with spelling and capitalization
-**State:**|Choose the two letter state code from the drop down list
-**SiteLocation:**|Some organizations have site names within a lake.  Enter these here.
-**SampleLocation:**|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
-**Latitude:**|Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
-**Longitude:**|Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
-
-* Are SiteIDs unique among states?
-{r xy1, include=TRUE, echo=FALSE, cache=FALSE} 
-a<-data.frame(Data2014[,c('SiteID','WaterbodyName','State','SiteLocation','SampleLocation','Latitude','Longitude')])
-nrow(a)
-b<-unique(a)
-nrow(b)
-b<-b[order(b$State,b$SiteID),]
-
-  a<-unique(data.frame(SiteID=Data2014$SiteID,ST=Data2014$State))
-  b<-as.data.frame(table(a$SiteID))  
-  max(b[,2])  #all unique
-
-a<-data.frame(Data2014[,c('SiteID','WaterbodyName','State','SiteLocation','SampleLocation','Latitude','Longitude')])
-nrow(a)
-b<-unique(a)
-nrow(b)
-
-
-
-
-
-SiteID,WaterbodyName,State,SiteLocation,SampleLocation,Latitude,Longitude
-
-
-
-
-
-unique(Data2014$SiteID)
-unique(Data2014$WaterbodyName)
-
-head(Data2014)
-table(is.na(Data2014$Latitude))
-
-a<-with(Data2014,table(SiteID,State))
-b<-a[,4]
-d<-data.frame(b,s=apply(a,1,sum))
-d[d[,1]>0,]
-
-SiteID 
-WaterbodyName
-State
-SiteLocation
-SampleLocation
-
-
-as.data.frame(table(Data2014$Longitude,useNA='ifany'))
-
-table(is.na(Data2014$Latitude))
-table(is.na(Data2014$Longitude))
-
-
-
-
 
 
 

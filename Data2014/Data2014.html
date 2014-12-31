@@ -69,8 +69,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 <div id="to-do-list" class="section level2">
 <h2>To Do List</h2>
 <ul>
-<li>Need data from UNH, RI, and ME</li>
-<li>Need answers to questions for CT</li>
+<li>Need data from RI, and ME</li>
+<li>Need answers to questions for CT &amp; UNH</li>
 <li>Map locations and send to contacts for verifications</li>
 <li>Add WBIDs</li>
 </ul>
@@ -333,7 +333,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>table=“after calibration loss” in VTDEC.xlsx saved as VTDEC_uncalibrated.csv; read into R;Flag=TRUE;Comment=“Uncertain Calibration Status”</li>
 <li>both tables combined into df=VT</li>
 <li>Build VTDEC data.frame</li>
-<li>Save as VTDEC.csv</li>
+<li>Add to data.frame Data2014</li>
 </ul>
 </div>
 <div id="charles-river-watershed-association" class="section level3">
@@ -360,6 +360,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>CWRA_RAW.csv imported into R</li>
 <li>Each field verified with consistency checks</li>
 <li>Field updated where necessary.</li>
+<li>Add to data.frame Data2014</li>
 </ul>
 </div>
 <div id="new-hampshire" class="section level3">
@@ -412,7 +413,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>Observations for Order=2 and Order=3 are reversed between NHDES_Raw.csv and NHDES_Data.csv. Locations:Order=2 changed to 3 and Locations:Order=3 changed to 2.</li>
 <li>Observations for Order=83 and Order=84 are reversed between NHDES_Raw.csv and NHDES_Data.csv. Locations:Order=83 changed to 84 and Locations:Order=84 changed to 83.</li>
 </ul></li>
-<li>Final version saved as NHDES.csv</li>
+<li>Add to data.frame Data2014</li>
 </ul>
 </div>
 <div id="connecticut" class="section level3">
@@ -493,13 +494,31 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>The first four character values (two number separated by 2 slashes) appear to be two readings for the same sample. Split these into two lines. Assign the first to Rep=1 with Value = the first value. Assign the second to Rep=2 with Value = the second value.</li>
 <li><p>Delete observations with Value=“not Collected” or NA</p></li>
 <li>Data massage complete-build CTDEEP</li>
-<li><p>Save as CTDEEP.csv</p></li>
+<li><p>Add to data.frame Data2014</p></li>
 </ul>
 </div>
 <div id="university-of-new-hampshire" class="section level3">
 <h3>University of New Hampshire</h3>
 <ul>
-<li>Data in prep by Jim Haney and Amanda Murby</li>
+<li>Data received from Amanda Murby on 12/29/14</li>
+<li>Original file name: “Region1CyanobacteriaDataEntryTemplate_NewHampshire-UNH2014.xls” saved as UNH.xls</li>
+<li>Additional data to be sent later</li>
+</ul>
+<p><strong>Questions for Amanda:</strong></p>
+<ul>
+<li>The “Depth”&quot; field has a mixture of depth ranges and single depth values. Do these represent different sample methods? For example are the depth ranges (e.g., 0-4) from the integrated tube samplers? How were the single depth samples collected?</li>
+<li>The “TypeOfSample” field has many missing values. What are these samples? and, How were they collected?</li>
+<li>Missing Longitude and Latitude?</li>
+<li>What are the measurement units? RFU? µg/L?</li>
+<li>What do the Flags=Yes represent? Most comments for these lines are blank.</li>
+</ul>
+<p><strong>Data steps</strong>-View code in Data2014.rmd document to see details.</p>
+<ul>
+<li>Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.</li>
+<li>UNH_RAW.csv imported into R</li>
+<li>Each field verified with consistency checks</li>
+<li>Field updated where necessary.</li>
+<li>Add to data.frame Data2014</li>
 </ul>
 </div>
 <div id="maine" class="section level3">
@@ -515,60 +534,9 @@ use these command instead of the knit icon if you want the data and work loaded 
 </ul>
 </div>
 </div>
-<div id="collated-data" class="section level2">
-<h2>Collated Data</h2>
-<p>Once the individual data sets are standardized then they are combined into a single dataset that is saved as a text file in CSV format.</p>
-<p>Locations are specified by:</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Field</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><strong>SiteID:</strong></td>
-<td align="left">If the location has a site ID from your organization enter it here</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>WaterbodyName:</strong></td>
-<td align="left">Enter the name of the lake: be consistent with spelling and capitalization</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>State:</strong></td>
-<td align="left">Choose the two letter state code from the drop down list</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>SiteLocation:</strong></td>
-<td align="left">Some organizations have site names within a lake. Enter these here.</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>SampleLocation:</strong></td>
-<td align="left">Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.</td>
-</tr>
-<tr class="even">
-<td align="left"><strong>Latitude:</strong></td>
-<td align="left">Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>Longitude:</strong></td>
-<td align="left">Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Are SiteIDs unique among states? {r xy1, include=TRUE, echo=FALSE, cache=FALSE} a&lt;-data.frame(Data2014[,c(‘SiteID’,‘WaterbodyName’,‘State’,‘SiteLocation’,‘SampleLocation’,‘Latitude’,‘Longitude’)]) nrow(a) b&lt;-unique(a) nrow(b) b&lt;-b[order(b<span class="math">\(State,b\)</span>SiteID),]</li>
-</ul>
-<p>a&lt;-unique(data.frame(SiteID=Data2014<span class="math">\(SiteID,ST=Data2014\)</span>State)) b&lt;-as.data.frame(table(a$SiteID))<br /> max(b[,2]) #all unique</p>
-<p>a&lt;-data.frame(Data2014[,c(‘SiteID’,‘WaterbodyName’,‘State’,‘SiteLocation’,‘SampleLocation’,‘Latitude’,‘Longitude’)]) nrow(a) b&lt;-unique(a) nrow(b)</p>
-<p>SiteID,WaterbodyName,State,SiteLocation,SampleLocation,Latitude,Longitude</p>
-<p>unique(Data2014<span class="math">\(SiteID) unique(Data2014\)</span>WaterbodyName)</p>
-<p>head(Data2014) table(is.na(Data2014$Latitude))</p>
-<p>a&lt;-with(Data2014,table(SiteID,State)) b&lt;-a[,4] d&lt;-data.frame(b,s=apply(a,1,sum)) d[d[,1]&gt;0,]</p>
-<p>SiteID WaterbodyName State SiteLocation SampleLocation</p>
-<p>as.data.frame(table(Data2014$Longitude,useNA=‘ifany’))</p>
-<p>table(is.na(Data2014<span class="math">\(Latitude)) table(is.na(Data2014\)</span>Longitude))</p>
+<div id="save-data2014" class="section level2">
+<h2>Save Data2014</h2>
+<p>After standardization the individual datasets have been combined into the data.frame “Data2014”, this is saved as “Data2014.csv”</p>
 </div>
 
 
