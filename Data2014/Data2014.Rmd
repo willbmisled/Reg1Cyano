@@ -609,14 +609,20 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
 I've been modifying the template as I process data.  One of the fields added since you got the template is a column for "SampleMethod" that identifies how the sample was collected (Integrated Tube Sample, Grab Sample, etc.).  Several of the questions below relate to this and others not. The questions are: 
 
 * The "Depth"" field has a mixture of depth ranges and single depth values.  Do these represent different sample methods?  For example are the depth ranges (e.g., 0-4) from the integrated tube samplers?  How were the single depth samples collected? 
+    - AB 12/31/15: Those with 0-4 or other are integrated. Those as 0 were surface samples by grab. Those with just one depth were sampled by bottle, such as a Van Dorn, discrete water sampler.
 * The "TypeOfSample" field has many missing values. What are these samples? and, How were they collected?
-* Missing Longitude and Latitude?
+    - AB 12/31/15: No response
 * What are the measurement units? RFU? µg/L?
+    - AB 12/31/15: RFU
 * What do the Flags=Yes represent? Most comments for these lines are blank.
+    - AB 12/31/15: see answer below
+* Missing Longitude and Latitude?
+    - AB 12/31/15: We had to google for approx. GPS. However, I didn't know the exact long and lat for the lakes with multiple sites. I flagged yes for those that did not have lat/long yet. I could find out from those who sampled. I should have copied the same comment for all of those flagged. 
+    - BM add comment "Location Approximate or Missing" to Flag=YES observations
 
 **Data steps**-View code in Data2014.rmd document to see details.
 
-* Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls so little massaging was needed.
+* Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls 
 * UNH_RAW.csv imported into R
 * Each field verified with consistency checks
 * Field updated where necessary.
@@ -665,84 +671,112 @@ I've been modifying the template as I process data.  One of the fields added sin
             unique(UNH$SampleLocation)
               UNH$SampleLocation<-gsub("-","",UNH$SampleLocation)
               UNH$SampleLocation<-gsub("Standard","Calibration",UNH$SampleLocation)
-  #add field "SampleMethod"
-    UNH$SampleMethod<-NA
-#Depth is a mix of character and numeric data  
-  as.data.frame(table(UNH$Depth,useNA='ifany'))
-  #change ranges to max
-    a<-grep("-",UNH$Depth) #select rows with depth ranges
-      as.data.frame(table(UNH$Depth[a],useNA='ifany'))  #check
+  #Sample Method, SampleLocation and Depth are conflated in this version of the template.
+    #SampleLocation is Okay as is but:
+      #SampleMethod for Depth expressed as integer values are:
+        #SampleMethod='VanDorn' for Depth>0
+          UNH$SampleMethod[!is.na(as.numeric(UNH$Depth))]<-'VanDorn'
+        #SampleMethod='Grab' for Depth=0
+          UNH$SampleMethod[which(UNH$Depth=='0')]<-'Grab'
+    #Depths expressed as ranges are for SampleMethod='Integrated'; change depth to the max for the range.
+      #change ranges to max
+        a<-grep("-",UNH$Depth) #select rows with depth ranges
+          as.data.frame(table(UNH$Depth[a],useNA='ifany'))  #check
         b<-as.numeric(unlist(strsplit(UNH$Depth[a],'-'))) #use the "-" character to split values
         #b[seq(2,length(b),2)] #choose the second value only
           data.frame(UNH$Depth[a],b[seq(2,length(b),2)]) #check
-        #update records and add comment
+        #update Depth to max and SampleMethod='Integrate' and add comment
           UNH$Comments[a]<-paste("Depth Changed From:",UNH$Depth[a])
-          UNH$Depth[a]<-b[seq(2,length(b),2)] #update records
-  table(UNH$Latitude,useNA='ifany')  #missing 105 observations
-  table(UNH$Longitude,useNA='ifany') #missing 105 observations
-  #parse SampleTime
-    table(UNH$SampleTime,useNA='ifany') #All missing
-      UNH$SampleHour<-NA
-      UNH$SampleMinutes<-NA
-        UNH<-UNH[,-which(names(UNH)=="SampleTime")]
-  table(UNH$Filtered,useNA='ifany')
-  #change field Filtered from Y/N to TRUE/FALSE
+          UNH$Depth[a]<-b[seq(2,length(b),2)] #update Depth
+          UNH$SampleMethod[a]<-'Integrated' #update SampleMethod
+    #missing values for depths are for Calibration standards and blanks
+      #Replace Depth='' with Depth=NA
+        UNH$Depth[UNH$Depth=='']<-NA #replace empty cells with NA
+      #Convert UNH$Depth to numeric
+        UNH$Depth<-as.numeric(UNH$Depth)
+      #Update SampleMethod='Calibration' for SampleLocation='Calibration';
+        table(subset(UNH$Depth,UNH$SampleLocation=='Calibration'),useNA='ifany') #6 obs. for Depth=NA
+        UNH$SampleMethod[UNH$SampleLocation=='Calibration']<-'Calibration' 
+      #Update SampleMethod='Blank' for SampleLocation='Blank'
+        table(subset(UNH$Depth,UNH$SampleLocation=='Blank'),useNA='ifany') #61 obs. for Depth=NA & 4 obs. for Depth=1
+        UNH$SampleMethod[UNH$SampleLocation=='Blank']<-'Blank' 
+      #Verify
+        table(UNH$SampleMethod,useNA='ifany')
+  #continue with template
+    table(UNH$Latitude,useNA='ifany')  #missing 105 observations
+    table(UNH$Longitude,useNA='ifany') #missing 105 observations
+    #parse SampleTime
+      table(UNH$SampleTime,useNA='ifany') #All missing
+        UNH$SampleHour<-NA
+        UNH$SampleMinutes<-NA
+          UNH<-UNH[,-which(names(UNH)=="SampleTime")]
     table(UNH$Filtered,useNA='ifany')
-      UNH$Filtered[UNH$Filtered=='']<-NA #replace empty cells with NA
-      UNH$Filtered<-gsub("Yes",TRUE,UNH$Filtered)
-      UNH$Filtered<-gsub("No",FALSE,UNH$Filtered)
-        UNH$Filtered<-as.logical(UNH$Filtered) #convert to logical
-  #change field Frozen from Y/N to TRUE/FALSE
-    table(UNH$Frozen,useNA='ifany')
-      UNH$Frozen[UNH$Frozen=='']<-NA #replace empty cells with NA
-      UNH$Frozen<-gsub("Yes",TRUE,UNH$Frozen)
-      UNH$Frozen<-gsub("No",FALSE,UNH$Frozen)
-        UNH$Frozen<-as.logical(UNH$Frozen) #convert to logical
-  table(UNH$Parameter,useNA='ifany')
-  table(UNH$Value,useNA='ifany')
-  UNH$Units<-NA
-  UNH$Rep<-NA
-  table(UNH$Fluorometer,useNA='ifany')  #mostly missing
-    UNH$Fluorometer<-ifelse(UNH$Fluorometer=='',NA,'Beagle')  #change 'Beagle Amniscience Fluorquick' to 'Beagle'
-  # Add AnalysisYear  AnalysisMonth  AnalysisDay  Drop AnalysisDate
-    table(UNH$AnalysisDate,useNA='ifany')
-      UNH$AnalysisDate[UNH$AnalysisDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
-    a<-matrix(as.numeric(unlist(strsplit(UNH$AnalysisDate,'/'))),nrow=nrow(UNH),ncol=3,byrow=TRUE)
-      UNH$AnalysisYear<-a[,3] 
-      UNH$AnalysisMonth<-a[,1] 
-      UNH$AnalysisDay<-a[,2]
-      UNH<-UNH[,-which(names(UNH)=="AnalysisDate")]
-  #parse AnalysisTime
-    table(UNH$AnalysisTime,useNA='ifany') #All missing
-      UNH$AnalysisHour<-NA
-      UNH$AnalysisMinutes<-NA
-        UNH<-UNH[,-which(names(UNH)=="AnalysisTime")]
-  table(UNH$GPSType,useNA='ifany')
-    UNH$GPSType[UNH$GPSType=='']<-NA #replace empty cells with NA
-  #change field Photos from Y/N to TRUE/FALSE
-    table(UNH$Photos,useNA='ifany')
-      UNH$Photos[UNH$Photos=='']<-NA #replace empty cells with NA
-      UNH$Photos<-gsub("Yes",TRUE,UNH$Photos)
-      UNH$Photos<-gsub("No",FALSE,UNH$Photos)
-        UNH$Photos<-as.logical(UNH$Photos) #convert to logical
-  #change field Flag from Y/N to TRUE/FALSE
-    table(UNH$Flag,useNA='ifany')
-      UNH$Flag[UNH$Flag=='']<-NA #replace empty cells with NA
-      UNH$Flag<-gsub("Yes",TRUE,UNH$Flag)
-      UNH$Flag<-gsub("No",FALSE,UNH$Flag)
-        UNH$Flag<-as.logical(UNH$Flag) #convert to logical
-  as.data.frame(table(UNH$Comments,useNA='ifany'))
-#reorder fields to match Data2014
-  #consistency check
-  ncol(UNH) #35
-  ncol(Data2014) #35
-  table(names(UNH)%in%names(Data2014))
-  names(UNH)[27]
-  #reorder
-    UNH<-UNH[,names(Data2014)]
-# add to data.frame Data2014
-  Data2014<-rbind(Data2014,UNH)
-```
+    #change field Filtered from Y/N to TRUE/FALSE
+      table(UNH$Filtered,useNA='ifany')
+        UNH$Filtered[UNH$Filtered=='']<-NA #replace empty cells with NA
+        UNH$Filtered<-gsub("Yes",TRUE,UNH$Filtered)
+        UNH$Filtered<-gsub("No",FALSE,UNH$Filtered)
+          UNH$Filtered<-as.logical(UNH$Filtered) #convert to logical
+    #change field Frozen from Y/N to TRUE/FALSE
+      table(UNH$Frozen,useNA='ifany')
+        UNH$Frozen[UNH$Frozen=='']<-NA #replace empty cells with NA
+        UNH$Frozen<-gsub("Yes",TRUE,UNH$Frozen)
+        UNH$Frozen<-gsub("No",FALSE,UNH$Frozen)
+          UNH$Frozen<-as.logical(UNH$Frozen) #convert to logical
+    table(UNH$Parameter,useNA='ifany')
+    table(UNH$Value,useNA='ifany')
+    UNH$Units<-'RFU'
+    UNH$Rep<-NA
+    table(UNH$Fluorometer,useNA='ifany')  #mostly missing
+      UNH$Fluorometer<-ifelse(UNH$Fluorometer=='',NA,'Beagle')  #change 'Beagle Amniscience Fluorquick' to 'Beagle'
+    # Add AnalysisYear  AnalysisMonth  AnalysisDay  Drop AnalysisDate
+      table(UNH$AnalysisDate,useNA='ifany')
+        UNH$AnalysisDate[UNH$AnalysisDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
+      a<-matrix(as.numeric(unlist(strsplit(UNH$AnalysisDate,'/'))),nrow=nrow(UNH),ncol=3,byrow=TRUE)
+        UNH$AnalysisYear<-a[,3] 
+        UNH$AnalysisMonth<-a[,1] 
+        UNH$AnalysisDay<-a[,2]
+        UNH<-UNH[,-which(names(UNH)=="AnalysisDate")]
+    #parse AnalysisTime
+      table(UNH$AnalysisTime,useNA='ifany') #All missing
+        UNH$AnalysisHour<-NA
+        UNH$AnalysisMinutes<-NA
+          UNH<-UNH[,-which(names(UNH)=="AnalysisTime")]
+    table(UNH$GPSType,useNA='ifany')
+      UNH$GPSType[UNH$GPSType=='']<-NA #replace empty cells with NA
+    #change field Photos from Y/N to TRUE/FALSE
+      table(UNH$Photos,useNA='ifany')
+        UNH$Photos[UNH$Photos=='']<-NA #replace empty cells with NA
+        UNH$Photos<-gsub("Yes",TRUE,UNH$Photos)
+        UNH$Photos<-gsub("No",FALSE,UNH$Photos)
+          UNH$Photos<-as.logical(UNH$Photos) #convert to logical
+    #change field Flag from Y/N to TRUE/FALSE
+      table(UNH$Flag,useNA='ifany')
+        #What are Flag=''
+          UNH[UNH$Flag=='',c('SampleLocation','Latitude')] #blanks,calibration, and approximate GPS locations
+            #Change blanks and calibration Flags to FALSE
+              UNH$Flag[UNH$Flag==''& UNH$SampleLocation=='Blank']<-FALSE
+              UNH$Flag[UNH$Flag==''& UNH$SampleLocation=='Calibration']<-FALSE
+            #remaining Flag='' observations mean the location is approximate.  Change to TRUE
+              UNH$Flag[UNH$Flag=='']<-FALSE #replace empty cells with FALSE
+        #convert field to logical
+          UNH$Flag<-gsub("Yes",TRUE,UNH$Flag)
+          UNH$Flag<-gsub("No",FALSE,UNH$Flag)
+          UNH$Flag<-as.logical(UNH$Flag) #convert to logical
+    #Flag=TRUE observations have missing or approximate locations.  Add comment
+      UNH$Comment[UNH$Flag==TRUE]<-paste("Location Approximate or Missing;",UNH$Comment[UNH$Flag==TRUE])
+
+  #reorder fields to match Data2014
+    #consistency check
+    ncol(UNH) #35
+    ncol(Data2014) #35
+    table(names(UNH)%in%names(Data2014))
+    names(UNH)[27]
+    #reorder
+      UNH<-UNH[,names(Data2014)]
+  # add to data.frame Data2014
+    Data2014<-rbind(Data2014,UNH)
+  ```
 
 
 ### Maine
