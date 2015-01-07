@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoData2014"
 author: "Bryan Milstead"
-date: "Monday, December 29, 2014"
+date: "January 7, 2015"
 output: html_document
 ---
 <!---
@@ -14,8 +14,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 -->
 To Do List
 -------------------------
-* Need data from RI, and ME
-* Need answers to questions for CT & UNH
+* Need data from ME
+* Add locations for CTDEEP
 * Map locations and send to contacts for verifications
 * Add WBIDs
 
@@ -62,7 +62,7 @@ Field  | Units | Description
 **Frozen:**|(TRUE/FALSE)|Was the sample frozen?
 **Parameter:**|(lookup)|Phycocyanin or Chlorophyll?
 **Value:**|(decimal)|Reading from the fluorometer
-**Units:**|(lookup)|What were the units recorded.  If not "RFU", "µ/L", or mg/l flag the entry and add comment with the units used. 
+**Units:**|(lookup)|What were the units recorded.  If not "RFU" or "µ/L" flag the entry and add comment with the units used. 
 **Rep:**|(integer)|If you made more than one measurement per sample or took more than one sample per site assign a replicate number to each observations and add notes in the comment field.
 **Fluorometer:**|(lookup)|Type of fluorometer used?
 **AnalysisYear:**|(YYYY)|Year sample was analyzed in format YYYY (e.g., 2014)
@@ -208,7 +208,7 @@ Information on how the data were provided by the States and Organizations that p
     VTDEC$Parameter<-VT$parameter
     VTDEC$Value<-VT$Reading
   #Add Units and update parameter
-    VTDEC$Units<-paste('\u03BC','g/l',sep='')
+    VTDEC$Units<-'ug/l'
     #change channel 1 to Parameter=Phycocyanin and Units=RFU
       a<-grep('1',VTDEC$Parameter)
         VTDEC$Parameter[a]<-'Phycocyanin'
@@ -316,7 +316,7 @@ Information on how the data were provided by the States and Organizations that p
     CRWA$AnalysisMinutes<-a[,2]
     CRWA<-CRWA[,-which(names(CRWA)=="AnalysisTime")] #delete time field
   #Add Units and update parameter
-    CRWA$Units<-paste('\u03BC','g/l',sep='')
+    CRWA$Units<-'ug/l'
   #Add Rep
     CRWA$Rep<-1
   #Change yes/no field to True/False: Frozen Filtered  Photos	Flag
@@ -389,6 +389,10 @@ Information on how the data were provided by the States and Organizations that p
 #read the data
   NH<-read.csv("NHDES_RAW.csv") #read the data
   Loc<-read.csv("NHDES_Locations.csv") #read the data
+    str(Loc) #Longitude read as character data.  Observation #88 seems to be the problem
+    data.frame(a=Loc$Longitude.DecDeg,b=as.numeric(Loc$Longitude.DecDeg))  #-71.4010500
+      Loc$Longitude.DecDeg[88]<--71.4010500  #not sure why this is read as a number but it can be fixed
+    Loc$Longitude.DecDeg<-as.numeric(Loc$Longitude.DecDeg)
 #compare Order in NH and LOC
   all.equal(NH$Order,Loc$Order) #TRUE
 #Build NHDES
@@ -469,12 +473,19 @@ Information on how the data were provided by the States and Organizations that p
 Questions for Tracy:
 
 * For the Housatonic River (Kettletown) on 7/7/2014 the fluorometer values are "337.23//254.39", "310.87//363.l59", "24.91//7.50", and "2.50//5.50".  Do these represent multiple observations from the same sample or perhaps readings from 2 different samples? For now I am calling these reps and have separated the values.
+    - TL 1/7/14: These are multiple observations from the same sample.
 * What are the measurement units? RFU, µg/L?
+    - TL 1/7/14: The measurements are in RFU.
 * Where were the samples taken?  Shoreside? or Within Lake?
+    - TL 1/7/14: All samples were taken at shoreside .
 * What depth were the samples taken at?
+    - TL 1/7/14: Samples procedures called for taking the integrated samples at approximately 1.0 m.
 * How were the samples taken?  Grab samples? Whole Water Samples? Integrated Tube Samples?
+    - TL 1/7/14: Samples were composite grab samples taken with a Modified Integrated Sample Tube. 
 * I have some but not all of the Latitude and Longitudes for the lakes.  Please check the file CTDEEP_Locations.csv and verify the locations (I can send a map of the locations if you wish) and fill in missing values. 
-*NEW: were any samples frozen?
+    - TL 1/7/14: Working on it.
+* Were any samples frozen?
+    - TL 1/7/14:  No, the results that you have at this point are all from as is sample.
 
 **Data steps**-View code in Data2014.rmd document to see details.
 * Data organized with a separate lake in each tab.  These are read directly into R and the data from the separate sheets are combined into a single data.frame.
@@ -571,9 +582,9 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
   CTDEEP$SampleDay<-as.numeric(substr(CT$Date,9,10)) 
   CTDEEP$NameOfSamplers<-NA
   CTDEEP$WeatherConditions<-NA
-  CTDEEP$SampleLocation<-NA
-  CTDEEP$SampleMethod<-NA  #probably "Integrated"
-  CTDEEP$Depth<-NA
+  CTDEEP$SampleLocation<-'SS1'
+  CTDEEP$SampleMethod<-"Integrated"
+  CTDEEP$Depth<-1
   CTDEEP$Latitude<-NA
   CTDEEP$Longitude<-NA
   CTDEEP$SampleHour<-NA
@@ -582,7 +593,7 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
   CTDEEP$Frozen<-CT$Frozen
   CTDEEP$Parameter<-CT$ParameterNew
   CTDEEP$Value<-CT$ValueNew
-  CTDEEP$Units<-NA
+  CTDEEP$Units<-'RFU'
   CTDEEP$Rep<-CT$Rep
   CTDEEP$Fluorometer<-'Beagle'
   CTDEEP$AnalysisYear<-NA
@@ -778,20 +789,143 @@ I've been modifying the template as I process data.  One of the fields added sin
     Data2014<-rbind(Data2014,UNH)
   ```
 
+### Rhode Island
+
+* Data prepared by Linda Green, Elizabeth Herron, & Vuarnelle Urena
+* Data received from Elizabeth Herron on 1/6/15
+* Original file name: "Region1CyanobacteriaData_ URI_Watershed_Watch-Sent.xlsx" saved as RIWW.xlsx
+* Data also saved as RIWW.csv for import into R
+
+**Questions for RIWW**
+* How were the samples collected?  Integrated Sampler?
+    - EH 1/7/14: Integrated
+* What were the units? 
+    - EH 1/7/14: µ/L 
+
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* Data entered in an earlier version of Region1CyanobacteriaDataEntryTemplate.xls 
+* RIWW.csv imported into R
+* Each field verified with consistency checks
+* Field updated where necessary.
+* Add to data.frame Data2014
+
+```{r RIWW, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data 
+  RIWW<-read.csv("RIWW.csv") #read the data
+  names(RIWW)[c(15,16,23,24)]<-c("Filtered","Frozen","Photos","Flag") #rename fields that ended in "?"
+#check fields X,X.1-X.17
+    table(RIWW$X,useNA='ifany') # all NA; delete
+    table(is.na(RIWW[,paste("X.",c(1:17),sep='')]))  #all NA; delete
+    RIWW<-RIWW[,-c(26:ncol(RIWW))]
+#Review, add, & modify fields as needed
+  RIWW$Order<-1:nrow(RIWW)
+  table(RIWW$YourName,useNA='ifany') 
+  table(RIWW$Organization,useNA='ifany')  #'URI Watershed Watch' change to:
+    RIWW$Organization<-'RIWW'
+  table(RIWW$SiteID,useNA='ifany')  #9 sites
+  table(RIWW$WaterbodyName,useNA='ifany') #9 names
+  table(RIWW$State,useNA='ifany')  #all RI
+  table(RIWW$SiteLocation,useNA='ifany') #most are blank
+    RIWW$SiteLocation[RIWW$SiteLocation=='']<-NA #replace empty cells with NA
+  # Add SampleYear  SampleMonth  SampleDay  Drop SampleDate
+    table(RIWW$SampleDate,useNA='ifany')
+      a<-matrix(as.numeric(unlist(strsplit(RIWW$SampleDate,'/'))),nrow=nrow(RIWW),ncol=3,byrow=TRUE)
+      RIWW$SampleYear<-2014 
+      RIWW$SampleMonth<-a[,1] 
+      RIWW$SampleDay<-a[,2]
+      RIWW<-RIWW[,-which(names(RIWW)=="SampleDate")]
+  table(RIWW$NameOfSamplers,useNA='ifany')
+  table(RIWW$WeatherConditions,useNA='ifany')
+    RIWW$WeatherConditions[RIWW$WeatherConditions=='']<-NA #replace empty cells with NA
+  #rename TypeOfSample to SampleLocation
+    names(RIWW)[which(names(RIWW)=="TypeOfSample")]<-'SampleLocation'
+      table(RIWW$SampleLocation,useNA='ifany')
+        #modify values for consistency
+          unique(Data2014$SampleLocation)
+            unique(RIWW$SampleLocation)
+              RIWW$SampleLocation<-gsub("-","",RIWW$SampleLocation)
+  table(RIWW$Depth,useNA='ifany')
+  RIWW$SampleMethod<-'Integrated'
+  table(RIWW$Latitude,useNA='ifany')  #complete
+    #Two latitudes are recorded for Pasquisett Pond:40.4274 & 41.4274; From Google Earth 41.4274 is correct.
+      RIWW$Latitude[which(RIWW$Latitude==40.4274)]<-41.4274
+  table(RIWW$Longitude,useNA='ifany') #complete
+  #parse SampleTime
+    table(RIWW$SampleTime,useNA='ifany') #174 missing
+    RIWW$SampleTime[RIWW$SampleTime==""]<-"NA:NA" #replace missing values
+    a<-matrix(as.numeric(unlist(strsplit(RIWW$SampleTime,':'))),nrow=nrow(RIWW),ncol=2,byrow=TRUE) #parse
+    RIWW$SampleHour<-a[,1]
+    RIWW$SampleMinutes<-a[,2]
+    RIWW[,c('SampleTime','SampleHour','SampleMinutes')]
+    RIWW<-RIWW[,-which(names(RIWW)=="SampleTime")] #delete time field
+  table(RIWW$Filtered,useNA='ifany') #complete
+    #change field Filtered from Y/N to TRUE/FALSE
+      RIWW$Filtered<-gsub("Yes",TRUE,RIWW$Filtered)
+      RIWW$Filtered<-gsub("No",FALSE,RIWW$Filtered)
+        RIWW$Filtered<-as.logical(RIWW$Filtered) #convert to logical
+  table(RIWW$Frozen,useNA='ifany') #1 missing value
+    #change field Frozen from Y/N to TRUE/FALSE
+      RIWW$Frozen[RIWW$Frozen=='']<-NA #replace empty cells with NA
+      RIWW$Frozen<-gsub("Yes",TRUE,RIWW$Frozen)
+      RIWW$Frozen<-gsub("No",FALSE,RIWW$Frozen)
+      RIWW$Frozen<-as.logical(RIWW$Frozen) #convert to logical
+  table(RIWW$Parameter,useNA='ifany') #ok
+  table(RIWW$Value,useNA='ifany') #ok
+  RIWW$Units<-'ug/l'
+  RIWW$Rep<-NA
+  table(RIWW$Fluorometer,useNA='ifany')  #Beagle
+  # Add AnalysisYear  AnalysisMonth  AnalysisDay  Drop AnalysisDate
+      table(RIWW$AnalysisDate,useNA='ifany')
+        RIWW$AnalysisDate[RIWW$AnalysisDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
+      a<-matrix(as.numeric(unlist(strsplit(RIWW$AnalysisDate,'-'))),nrow=nrow(RIWW),ncol=2,byrow=TRUE)
+          #note this does okay for the day of the month but not the character value of month
+        RIWW$AnalysisYear<-2014 
+        RIWW$AnalysisDay<-a[,1]
+        RIWW$AnalysisMonth<-NA
+          RIWW$AnalysisMonth[grep('Jul',RIWW$AnalysisDate)]<-7
+          RIWW$AnalysisMonth[grep('Aug',RIWW$AnalysisDate)]<-8
+          RIWW$AnalysisMonth[grep('Sep',RIWW$AnalysisDate)]<-9
+          RIWW$AnalysisMonth[grep('Nov',RIWW$AnalysisDate)]<-11
+        unique(RIWW[order(RIWW$AnalysisDate),c('AnalysisDate','AnalysisDay','AnalysisMonth')])
+      RIWW<-RIWW[,-which(names(RIWW)=="AnalysisDate")]
+    #parse AnalysisTime
+      table(RIWW$AnalysisTime,useNA='ifany') #All missing
+        RIWW$AnalysisHour<-NA
+        RIWW$AnalysisMinutes<-NA
+          RIWW<-RIWW[,-which(names(RIWW)=="AnalysisTime")]
+    table(RIWW$GPSType,useNA='ifany')
+    #change field Photos from Y/N to TRUE/FALSE
+      table(RIWW$Photos,useNA='ifany')
+        RIWW$Photos<-gsub("Yes",TRUE,RIWW$Photos)
+        RIWW$Photos<-gsub("No",FALSE,RIWW$Photos)
+          RIWW$Photos<-as.logical(RIWW$Photos) #convert to logical
+    #change field Flag from Y/N to TRUE/FALSE
+      table(RIWW$Flag,useNA='ifany')
+        RIWW$Flag[RIWW$Flag!='Yes']<-FALSE
+        RIWW$Flag<-gsub("Yes",TRUE,RIWW$Flag)
+        RIWW$Flag<-as.logical(RIWW$Flag) #convert to logical
+  #reorder fields to match Data2014
+    #consistency check
+    ncol(RIWW) #35
+    ncol(Data2014) #35
+    table(names(RIWW)%in%names(Data2014))
+    #reorder
+      RIWW<-RIWW[,names(Data2014)]
+  # add to data.frame Data2014
+    Data2014<-rbind(Data2014,RIWW)
+```
+
 
 ### Maine
 
 * Data in prep by Linda Bacon
 
-### Rhode Island
-
-* Data in prep by Linda Green & Elizabeth Herron
-
 Save Data2014
 -------------------------
 After standardization the individual datasets have been combined into the data.frame "Data2014", this is saved as "Data2014.csv"
 
-```{r Save, include=FALSE, echo=FALSE, cache=FALSE,eval=FALSE} 
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
 #review the data:
   summary(Data2014$Order)
   table(Data2014$YourName,useNA='ifany')
@@ -805,6 +939,7 @@ After standardization the individual datasets have been combined into the data.f
   table(Data2014$SampleMonth,useNA='ifany')
   table(Data2014$SampleDay,useNA='ifany')
   table(Data2014$NameOfSamplers,useNA='ifany')
+    Data2014$NameOfSamplers[Data2014$NameOfSamplers=='']<-NA #replace empty cells with NA
   table(Data2014$WeatherConditions,useNA='ifany')
     Data2014$WeatherConditions[Data2014$WeatherConditions=='']<-NA #replace empty cells with NA
   table(Data2014$SampleLocation,useNA='ifany')
@@ -814,6 +949,10 @@ After standardization the individual datasets have been combined into the data.f
   table(Data2014$Latitude,useNA='ifany')
   table(Data2014$Longitude,useNA='ifany')
     Data2014$Longitude[Data2014$Longitude=='']<-NA #replace empty cells with NA
+      #a few values for longitude are greater than zero-change to negative values
+        a<-!is.na(Data2014$Longitude) & Data2014$Longitude>0
+        Data2014$Longitude[a]
+        Data2014$Longitude[a]<--Data2014$Longitude[a]
   table(Data2014$SampleHour,useNA='ifany')
   table(Data2014$SampleMinutes,useNA='ifany')
   table(Data2014$Filtered,useNA='ifany')
@@ -821,7 +960,7 @@ After standardization the individual datasets have been combined into the data.f
   table(Data2014$Parameter,useNA='ifany')
   table(Data2014$Value,useNA='ifany')
   table(Data2014$Units,useNA='ifany')
-    Data2014$Units<-gsub('µg.L',paste('\u03BC','g/l',sep=''),Data2014$Units) #consistency tweak
+    Data2014$Units<-gsub('µg.L','ug/l',Data2014$Units) #consistency tweak
   table(Data2014$Rep,useNA='ifany')
   table(Data2014$Fluorometer,useNA='ifany')
   Data2014$AnalysisYear<-2014  #mix of 2014, 14, and NA-make them all 2014

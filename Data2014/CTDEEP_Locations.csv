@@ -1,13 +1,13 @@
-"SiteID","WaterbodyName","SiteLocation","Latitude","Longitude"
-"18713","Housatonic River (Kettletown)","at middle of beach",NA,NA
-"18714","Pattaconk Reservoir","at middle of beach",NA,NA
-"18715","Mount Tom Pond","at middle of beach",NA,NA
-"18716","Lake Waramaug","at middle of beach",NA,NA
-"18717","Squantz Pond","at middle of beach",NA,NA
-"18718","Gardner Lake","at middle of beach",NA,NA
-"18475","Lower Bolton Lake","at boat ramp",NA,NA
-"14514","Porter Pond","Near outlet dam",NA,NA
-"18742","Tyler Lake","",NA,NA
-"15924-M","Mashamoquet","middle of swimming area",NA,NA
-"15675","Lake Beseck","At dam",NA,NA
-"18770","Lake Pocotopaug","Sears Park Beach",NA,NA
+SiteID,WaterbodyName,SiteLocation,Latitude,Longitude
+18713,Housatonic River (Kettletown),at middle of beach,41.424144,-73.206937
+18714,Pattaconk Reservoir,at middle of beach,41.409081,-72.52544
+18715,Mount Tom Pond,at middle of beach,41.697709,-73.28029
+18716,Lake Waramaug,at middle of beach,41.707665,-73.382964
+18717,Squantz Pond,at middle of beach,41.512,-73.4765
+18718,Gardner Lake,at middle of beach,41.501,-72.221
+18475,Lower Bolton Lake,at boat ramp,41.798303,-72.428591
+14514,Porter Pond,Near outlet dam,NA,NA
+18742,Tyler Lake,,NA,NA
+15924-M,Mashamoquet,middle of swimming area,NA,NA
+15675,Lake Beseck,At dam,NA,NA
+18770,Lake Pocotopaug,Sears Park Beach,NA,NA
