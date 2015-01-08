@@ -15,7 +15,6 @@ use these command instead of the knit icon if you want the data and work loaded 
 To Do List
 -------------------------
 * Need data from ME
-* Add locations for CTDEEP
 * Map locations and send to contacts for verifications
 * Add WBIDs
 
@@ -399,7 +398,7 @@ Information on how the data were provided by the States and Organizations that p
   #Build Template first
     NH_T<-data.frame(Order=NH$Order)
     NH_T$YourName<-"Sonya Carlson"
-    NH_T$Organization<-'NH_T'
+    NH_T$Organization<-'NHDES'
     NH_T$SiteID<-NH$DES.Station.ID
     NH_T$WaterbodyName<-Loc$Waterbody  #this is a number but appears to be consistent names is StatonName field
     NH_T$State<-'NH'
@@ -555,6 +554,8 @@ Questions for Tracy:
 ```
 * Data massage complete-build CTDEEP
 * Add to data.frame Data2014
+* Missing CTDEEP locations received from Tracy Lizotte on 1/8/14 (CTDEEP_Locations.csv)
+* Latitude and Longitude updated
 ```{r CTDEEP, include=FALSE, echo=FALSE, cache=FALSE} 
 #rename fields to remove spaces and special characters.
 names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Parameter","Value","gtG","ltG","UOM","Lab","Note","ParameterNew","Frozen","Filtered","ValueNew","Rep","Flag","Comment")
@@ -605,6 +606,17 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
   CTDEEP$Photos<-FALSE
   CTDEEP$Flag<-CT$Flag
   CTDEEP$Comments<-CT$Comment
+
+#add location information
+  CTL<-read.csv("CTDEEP_locations.csv") #read the data
+    CTL<-CTL[,c('SiteID','Latitude','Longitude')] #keep only the fields of interest
+    a<-CTDEEP[,c('Order','SiteID')]  #get merge fields from CTDEEP
+    a<-merge(a,CTL,by='SiteID',all.x=T) #merge locations with CTDEEP
+    a<-a[order(a$Order),]  #reorder
+    all.equal(a$Order,CTDEEP$Order) #check order
+    #Update fields
+      CTDEEP$Latitude<-a$Latitude
+      CTDEEP$Longitude<-a$Longitude
 
 # add to data.frame Data2014
   Data2014<-rbind(Data2014,CTDEEP)
@@ -952,7 +964,7 @@ After standardization the individual datasets have been combined into the data.f
       #a few values for longitude are greater than zero-change to negative values
         a<-!is.na(Data2014$Longitude) & Data2014$Longitude>0
         Data2014$Longitude[a]
-        Data2014$Longitude[a]<--Data2014$Longitude[a]
+        Data2014$Longitude[a]<--Data2014$Longitude[a]     
   table(Data2014$SampleHour,useNA='ifany')
   table(Data2014$SampleMinutes,useNA='ifany')
   table(Data2014$Filtered,useNA='ifany')

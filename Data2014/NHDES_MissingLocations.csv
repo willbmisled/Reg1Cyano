@@ -1,0 +1,9 @@
+Order,DES Station ID,DES Alias ID,Station Name,Town,Station Type,Latitude DecDeg,Longitude DecDeg,Description,Waterbody#,Sample Date,EPA Designation,Depth,Date Filtered sample brought EPA,Date Unfiltered sample brought EPA,Filtered-DES,Unfiltered-DES?
+52,Rockybound SS#1,,,CROYDON,LAKE/POND,,,,13,8/7/2014,SS#1,1,?,?,,?
+53,Rockybound SS#2,,,CROYDON,LAKE/POND,,,,13,8/7/2014,SS#2,1,?,?,,?
+108,Wicwas Lake SS#2,does not exist in EMD,,MEREDITH,LAKE/POND,,,,27,9/28/2014,SS#2,0.5,X,X,Freezer,Freezer
+112,Sand Pond SS#1,,,,LAKE/POND,,,,30,8/26/2014,SS#1,1,?,,,?
+113,Sand Pond SS#2,,,,LAKE/POND,,,,30,8/26/2014,SS#2,1,?,,,?
+114,Sand Pond WL#2,,,,LAKE/POND,,,,30,8/26/2014,WL#2,3,?,,,?
+115,SANMLWD,,,,LAKE/POND,,,,30,8/26/2014,WL#1,3,?,,,?
+123,,does not exist in EMD,Sebbins Pond WL#3,BEDFORD,LAKE/POND,,,,32,8/27/2014,WL#3,3,10-Sep,10-Sep,11/5/2014,11/5/2014
