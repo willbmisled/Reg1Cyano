@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoData2014"
 author: "Bryan Milstead"
-date: "January 7, 2015"
+date: "January 13, 2015"
 output: html_document
 ---
 <!---
@@ -349,6 +349,8 @@ Information on how the data were provided by the States and Organizations that p
 
 * Data received from Sonya Carlson on 11/19/14
 * Original file name: NH-2014-11-19-PhycoData.xlsx renamed NHDES.xlsx
+* Additional Location information received from Sonya as 'NHDES_MissingLocations.csv' on 1/9/15
+
 
 **Questions for Sonya: with her responses**
 
@@ -382,7 +384,6 @@ Information on how the data were provided by the States and Organizations that p
     - Missing location information for NHDES_Raw:Order=144 same as information NHDES_Locations:Order=54.  This line is copied and appended to the bottom and the Locations:Order is Changed to 144
     - Observations for Order=2 and Order=3 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=2 changed to 3 and Locations:Order=3 changed to 2.
     - Observations for Order=83 and Order=84 are reversed between NHDES_Raw.csv and NHDES_Data.csv.  Locations:Order=83 changed to 84 and Locations:Order=84 changed to 83.
-* Add to data.frame Data2014
 
 ```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
 #read the data
@@ -459,6 +460,31 @@ Information on how the data were provided by the States and Organizations that p
         b$Value<-NH[,i]
       NHDES<-rbind(NHDES,b) #add data to data.frame
     }
+```
+
+* update missing locations with information received from Sonya Carlson on 1/9/15
+  - Locations in "NHDES_MissingLocations.csv"
+  - Received locations for 6 locations.
+  - No locations fro Rockybound Pond SS#1 and SS#2 near the town of Croydon NH
+  - Approximate locations for these sites is the approximate centroid of the lake.
+  - Update Lat/Lon 
+  - Add comments
+* Add to data.frame Data2014
+
+```{r NHloc, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data 
+  NHmissing<-read.csv("NHDES_MissingLocations.csv") #additional location information.
+    NHmissing<-NHmissing[,c("Order","DES.Station.ID","DES.Alias.ID","Station.Name","Town","Station.Type","Latitude.DecDeg","Longitude.DecDeg" )]
+#update Lat & Lon
+  a<-which(NHDES$Order%in%c(52,53,108,112,113,114,115,123)) #row indices of locations to update
+  b<-NHDES[a,c('Order','SiteID','WaterbodyName')]  #rows to update
+    b$RowName<-a  #use this to keep in the same order
+  b<-merge(b,NHmissing,by='Order',all.x=TRUE) #add missing lat/lon
+          b<-b[order(b$RowName),]  #reorder 
+        NHDES[a,c('Latitude','Longitude')]<-b[,c('Latitude.DecDeg','Longitude.DecDeg')]   
+          #update Comments
+  #consistency check
+      unique(NHDES[a,c('Order','Latitude')])==NHmissing[,c('Order','Latitude.DecDeg')]
 
 # add to data.frame Data2014
   Data2014<-rbind(Data2014,NHDES)
@@ -626,8 +652,8 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
 
 * Data received from Amanda Murby on 12/29/14
 * Original file name: "Region1CyanobacteriaDataEntryTemplate_NewHampshire-UNH2014.xls" saved as UNH.xls
-* Additional data to be sent later
-
+* Some updated locations received from Jim Haney 1/9/15 as "UNH_MissingLocations.xlsx"  saved as UNH_MissingLocations.csv - more information on this below
+ 
 **Questions for Amanda:**
 I've been modifying the template as I process data.  One of the fields added since you got the template is a column for "SampleMethod" that identifies how the sample was collected (Integrated Tube Sample, Grab Sample, etc.).  Several of the questions below relate to this and others not. The questions are: 
 
@@ -648,12 +674,12 @@ I've been modifying the template as I process data.  One of the fields added sin
 * Data originally entered in a version of Region1CyanobacteriaDataEntryTemplate.xls 
 * UNH_RAW.csv imported into R
 * Each field verified with consistency checks
-* Field updated where necessary.
-* Add to data.frame Data2014
+* Fields updated where necessary.
 
 ```{r UNH, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data 
   UNH<-read.csv("UNH_RAW.csv") #read the data
+  UNHmissing<-read.csv("UNH_MissingLocations.csv") #additional location information.
   names(UNH)[c(15,16,23,24)]<-c("Filtered","Frozen","Photos","Flag") #rename fields that ended in "?"
 #remove empty line.
   UNH[338,] #this line contains only the comment "additional data missing" delete the line
@@ -673,6 +699,7 @@ I've been modifying the template as I process data.  One of the fields added sin
   table(UNH$State,useNA='ifany')  #ME=12 NH=313 NA=12
     UNH$State[UNH$State=='']<-NA #replace empty cells with NA
   table(UNH$SiteLocation,useNA='ifany')
+    UNH$SiteLocation[UNH$SiteLocation=='']<-NA #replace empty cells with NA
   # Add SampleYear  SampleMonth  SampleDay	Drop SampleDate
     table(UNH$SampleDate,useNA='ifany')
       UNH$SampleDate[UNH$SampleDate=='']<-'NA/NA/NA' #replace empty cells with NA/NA/NA
@@ -701,6 +728,12 @@ I've been modifying the template as I process data.  One of the fields added sin
           UNH$SampleMethod[!is.na(as.numeric(UNH$Depth))]<-'VanDorn'
         #SampleMethod='Grab' for Depth=0
           UNH$SampleMethod[which(UNH$Depth=='0')]<-'Grab'
+  #change field Flag from Y/N to TRUE/FALSE
+      table(UNH$Flag,useNA='ifany')
+        #Flag=TRUE observations have missing or approximate locations. These can be eliminated
+          #Change all to Flag=TRUE and convert to logical
+            UNH$Flag<-FALSE
+            UNH$Flag<-as.logical(UNH$Flag) #convert to logical
     #Depths expressed as ranges are for SampleMethod='Integrated'; change depth to the max for the range.
       #change ranges to max
         a<-grep("-",UNH$Depth) #select rows with depth ranges
@@ -712,6 +745,7 @@ I've been modifying the template as I process data.  One of the fields added sin
           UNH$Comments[a]<-paste("Depth Changed From:",UNH$Depth[a])
           UNH$Depth[a]<-b[seq(2,length(b),2)] #update Depth
           UNH$SampleMethod[a]<-'Integrated' #update SampleMethod
+          UNH$Flag[a]<-TRUE
     #missing values for depths are for Calibration standards and blanks
       #Replace Depth='' with Depth=NA
         UNH$Depth[UNH$Depth=='']<-NA #replace empty cells with NA
@@ -728,7 +762,7 @@ I've been modifying the template as I process data.  One of the fields added sin
   #continue with template
     table(UNH$Latitude,useNA='ifany')  #missing 105 observations
     table(UNH$Longitude,useNA='ifany') #missing 105 observations
-    #parse SampleTime
+  #parse SampleTime
       table(UNH$SampleTime,useNA='ifany') #All missing
         UNH$SampleHour<-NA
         UNH$SampleMinutes<-NA
@@ -773,22 +807,7 @@ I've been modifying the template as I process data.  One of the fields added sin
         UNH$Photos<-gsub("Yes",TRUE,UNH$Photos)
         UNH$Photos<-gsub("No",FALSE,UNH$Photos)
           UNH$Photos<-as.logical(UNH$Photos) #convert to logical
-    #change field Flag from Y/N to TRUE/FALSE
-      table(UNH$Flag,useNA='ifany')
-        #What are Flag=''
-          UNH[UNH$Flag=='',c('SampleLocation','Latitude')] #blanks,calibration, and approximate GPS locations
-            #Change blanks and calibration Flags to FALSE
-              UNH$Flag[UNH$Flag==''& UNH$SampleLocation=='Blank']<-FALSE
-              UNH$Flag[UNH$Flag==''& UNH$SampleLocation=='Calibration']<-FALSE
-            #remaining Flag='' observations mean the location is approximate.  Change to TRUE
-              UNH$Flag[UNH$Flag=='']<-FALSE #replace empty cells with FALSE
-        #convert field to logical
-          UNH$Flag<-gsub("Yes",TRUE,UNH$Flag)
-          UNH$Flag<-gsub("No",FALSE,UNH$Flag)
-          UNH$Flag<-as.logical(UNH$Flag) #convert to logical
-    #Flag=TRUE observations have missing or approximate locations.  Add comment
-      UNH$Comment[UNH$Flag==TRUE]<-paste("Location Approximate or Missing;",UNH$Comment[UNH$Flag==TRUE])
-
+      
   #reorder fields to match Data2014
     #consistency check
     ncol(UNH) #35
@@ -797,9 +816,41 @@ I've been modifying the template as I process data.  One of the fields added sin
     names(UNH)[27]
     #reorder
       UNH<-UNH[,names(Data2014)]
-  # add to data.frame Data2014
+```
+
+* Jim Haney has informed us (1/12/15) that the site identified as UNH$WaterbodyName=='Wentworth' & UNH$SiteLocation=='Center' in the orginal dataset sent by Amanda should be changed to UNH$WaterbodyName=='Crescent Lake' & UNH$SiteLocation=='Center' 
+
+```{r UNHname, include=FALSE, echo=FALSE, cache=FALSE} 
+  a<-which(UNH$WaterbodyName=='Wentworth' & UNH$SiteLocation=='Center') #select observations
+  UNH$WaterbodyName[a]<-'Crescent Lake' #change name
+  UNH$Comments[a]<-paste(UNH$Comments[a],"; WaterbodyName changed from 'Wentworth'")
+``` 
+
+* update missing locations with information received from Jim Haney 1/9/15 (UNH_MissingLocations.csv)
+* location for Lake Wentworth SiteLocation=NA still missing; set to approximate lake centroid. (Latitude=43.597897 & Longitude=-71.157598)
+* Update Lat/Lon 
+* Add to data.frame Data2014
+
+```{r UNHloc, include=FALSE, echo=FALSE, cache=FALSE} 
+#read data 
+  UNHmissing<-read.csv("UNH_MissingLocations.csv") #additional location information.
+#update missing lake location
+  UNHmissing[which(is.na(UNHmissing$SiteLocation==TRUE)),c('Latitude','Longitude')]<-c(43.597897,-71.157598)
+#update Lat & Lon
+        a<-which(is.na(UNH$Latitude) & UNH$SampleMethod=="Integrated") #row indices of locations to update
+        b<-UNH[a,c('WaterbodyName','SiteLocation')]  #rows to update
+          b$RowName<-a  #use this to keep in the same order
+        b<-merge(b,UNHmissing,by=c('WaterbodyName','SiteLocation'),all.x=TRUE) #add missing lat/lon
+          b<-b[order(b$RowName),-3]  #reorder and remove "RowName" field
+        UNH[a,c('Latitude','Longitude')]<-b[,c('Latitude','Longitude')] 
+          #update Comments
+            b<-which(UNH$Latitude==43.597897)
+            UNH$Comments[b]<-paste(UNH$Comments[b],'; Exact Location unknown, approximate lake centroid used')
+        #consistency check
+          unique(UNH[a,c('WaterbodyName','SiteLocation','Latitude')])==UNHmissing[,c('WaterbodyName','SiteLocation','Latitude')]
+# add to data.frame Data2014
     Data2014<-rbind(Data2014,UNH)
-  ```
+```
 
 ### Rhode Island
 

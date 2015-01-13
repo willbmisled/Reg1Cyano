@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 7, 2015"
+date: "January 13, 2015"
 output: html_document
 ---
 <!---
@@ -14,7 +14,7 @@ use these command instead of the knit icon if you want the data and work loaded 
   -->
 ```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
   #########function to install (if needed) and load R packages by list
-libs<-c("rgdal","sp","knitr","maptools","plotKML") #list of packages to load
+libs<-c("rgdal","sp","knitr","maptools","rgeos") #list of packages to load
 
 installLoad<-function(pck){ #user defined function
     if(!pck%in%installed.packages()){install.packages(pck)}
@@ -25,7 +25,8 @@ lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 
 To Do List
 -------------------------
-* missing location data for ME, NH, and UNH
+* missing location data for ME
+* check locations manually for distance >0
 * Map locations and send to contacts for verifications
 * Add WBIDs
 
@@ -58,18 +59,7 @@ Data Steps
   unique(Data2014$SampleMethod)
   a<-Data2014[Data2014$SampleMethod=='Grab'|Data2014$SampleMethod=='VanDorn'|Data2014$SampleMethod=='Integrated',]
 #which locations are missing
-  table(is.na(a$Latitude)) #188 missing
-  table(a[is.na(a$Latitude),'Organization'])  #NHDES=128 UNH_CFB=60
-  Missing<-a[is.na(a$Latitude),]
-  table(Missing$SiteID,useNA='ifany') #This shows the NHDES that are missing UNH are the NA's
-#missing UNH sites
-  unh<-Missing[Missing$Organization=='UNH_CFB',]
-  table(unh$WaterbodyName,useNA='ifany')
-  table(unh$SiteLocation,useNA='ifany')
-  table(unh$SampleLocation,useNA='ifany') #all NA
-  unhMissing<-unique(unh[,c('WaterbodyName','SiteLocation','Latitude','Longitude')])
-    #save the data
-  write.table(unhMissing, file='UNH_MissingLocations.csv',row.names=F,sep=',') #write to csv
+  table(is.na(a$Latitude)) #0 missing
 ```
 
 * Keep only the unique long lat data 
@@ -177,6 +167,41 @@ library(maptools)
   shell.exec('Locations.kml')
   
   
+  nrow(WBID)  #227 locations
+  length(unique(WBID$WBID))  #75 lakes
+  
+  plot(Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),])
+  
+  
+  Lakes1<-Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),]
+  a<-gCentroid(Lakes1,byid=TRUE,)
+  
+
+  
  
+
+```{r getSt, include=FALSE, echo=FALSE, cache=TRUE}  
+#get map of USA states
+  #us states from Jane Copeland
+  US50wgs84<- readShapePoly('L:/Public/Milstead_Lakes/GIS/StateBoundaries/States.shp', 
+                         proj4string=CRS("+proj=longlat +datum=WGS84"))   #read a large shapefile with the state boundaries
+  #northeast
+  NE<-US50wgs84[US50wgs84@data$STATE_ABBR%in%c('RI','CT','MA','VT','NH','ME'),]
+  
+  #northeast albers
+    #ESRI USA Contiguous Albers Equal Area Conic (used by MRB1 WBIDLakes as AlbersX and AlbersY)
+      AlbersContiguous<-CRS('+proj=aea +x_0=0 +y_0=0 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +units=m +datum=NAD83')
+    NEalb<-spTransform(NE,AlbersContiguous)
+      plot(NEalb)
+```  
+  
+  windows(8,10)
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(a,add=T,pch=16,col='red')
+  
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(Loc,add=T,pch=16,col='red')
 
 

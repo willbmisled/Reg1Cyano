@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 7, 2015"
+date: "January 13, 2015"
 output: html_document
 ---
 <!---
@@ -16,6 +16,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 
 To Do List
 -------------------------
+* missing location data for ME
+* check locations manually for distance >0
 * Map locations and send to contacts for verifications
 * Add WBIDs
 
@@ -40,6 +42,11 @@ This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/m
 Data Steps
 -------------------------
 * Download the data 
+* Check which data (excluding blanks and standards) are missing locations
+* Created NHDES_MissingLocation.csv & UNH_MissingLocation.csv
+
+
+
 * Keep only the unique long lat data 
 * Add a unique identifier "Location" 
 * Create a SpatialPointsDataFrame
@@ -59,24 +66,46 @@ Data Steps
 
 
 
-Data2014[which(Data2014$Longitude==-71.63140),c('SiteID','WaterbodyName','SampleLocation','Latitude','Longitude')]
-Data2014[which(Data2014$Latitude==40.427400),]
 
-Loc@data[185,]
-
-Change Latitude= 40.4274 to 41.4274 
-
--71.6314  40.427400° -71.631400°
-
-a<-Loc@data$WBID==Loc@data$WBID
-Loc@data[Loc@data$WBID!=Loc@data$WBID,] 
 
 * produce KML file and view in google earth
 * produce SHP file
 
-writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile")
+
+#create KML file of location          
+  kmlPoints(Loc, 
+            kmlfile='Locations.kml', 
+            name=paste("Location",Loc@data$Location), 
+            description=paste("WBID",Loc@data$WBID),
+            icon="http://google.com/mapfiles/kml/paddle/wht-diamond.png",
+            kmlname="Locations",
+            kmldescription="Region 1 CyanoMonitoring Locations")
+#open file in google earth
+  shell.exec('Locations.kml')
+  
+  
+  nrow(WBID)  #227 locations
+  length(unique(WBID$WBID))  #75 lakes
+  
+  plot(Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),])
+  
+  
+  Lakes1<-Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),]
+  a<-gCentroid(Lakes1,byid=TRUE,)
+  
+
+  
+ 
 
 
-plotKML(Loc["WBID"])
+  
+  windows(8,10)
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(a,add=T,pch=16,col='red')
+  
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(Loc,add=T,pch=16,col='red')
 
 

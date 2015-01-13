@@ -1,12 +1,12 @@
-"WaterbodyName","SiteLocation","Latitude","Longitude"
-"Wentworth","Center",NA,NA
-"Wentworth","Triggs",NA,NA
-"Wentworth","Fullers",NA,NA
-"Wentworth","Governors",NA,NA
-"Wentworth",NA,NA,NA
-"Silver","East",NA,NA
-"Silver","N. Island",NA,NA
-"Silver","North",NA,NA
-"Silver","2Deep",NA,NA
-"Silver","1South",NA,NA
-"Silver","Center",NA,NA
+WaterbodyName,SiteLocation,Latitude,Longitude
+Crescent Lake,Center,43.591914,-71.195869
+Wentworth,Triggs,43.604283,-71.153126
+Wentworth,Fullers,43.591914,-71.172008
+Wentworth,Governors,43.592349,-71.131411
+Wentworth,NA,NA,NA
+Silver,East,43.865002,-71.161709
+Silver,N. Island,43.884058,-71.170206
+Silver,North,43.88112,-71.175184
+Silver,2Deep,43.85807,-71.175356
+Silver,1South,43.851015,-71.172523
+Silver,Center,43.864692,-71.169434
