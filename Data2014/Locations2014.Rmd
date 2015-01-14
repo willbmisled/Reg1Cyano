@@ -179,10 +179,10 @@ library(maptools)
 ```
 
 * rename SpatialPointsDataFrame Loc to Locations `r Locations<-Loc'
-* save Locations as SpatialPointsDataFrame 
+* save Locations as SpatialPointsDataFrame and SpatialPolygonsDataFrame "Lakes" 
 
 ```{r Save, include=FALSE, echo=FALSE, cache=FALSE} 
-  save(Locations,file='Locations.rda')
+  save(Locations,Lakes,file='Locations.rda')
 ```
 
 
