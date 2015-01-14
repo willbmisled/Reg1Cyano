@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 13, 2015"
+date: "January 14, 2015"
 output: html_document
 ---
 <!---
@@ -28,7 +28,6 @@ To Do List
 * missing location data for ME
 * check locations manually for distance >0
 * Map locations and send to contacts for verifications
-* Add WBIDs
 
 Introduction
 -------------------------
@@ -40,6 +39,20 @@ The details of the data processing steps can be found here: https://github.com/w
 
 This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations2014.md
 
+A KML file for view in Google Earth is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.kml?raw=true
+
+An R datafile with a the Locations in SpatialPointsDataframe format is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true
+
+Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" `r nrow(Locations)` observations
+-------------------------
+Field  | Units | Description
+------------- | ------------- | -------------
+**Longitude:**|(Decimal Degrees)|Longitude of Location
+**Latitude:**|(Decimal Degrees)|Latitude of Location
+**Location:**|(Integer)|Unique identifier for location
+**WBID:**|(Integer)|Unique identifier for closest lake to location
+**Distance:**|(Meters)|Distance from Location to nearest lake
+
 Data Sources
 -------------------------
 The field data, including location information, have been standardized and are available here in .csv format (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true
@@ -50,6 +63,7 @@ This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/m
 
 Data Steps
 -------------------------
+
 * Download the data `r Data2014<-read.csv("Data2014.csv")`
 * Check which data (excluding blanks and standards) are missing locations
 * Created NHDES_MissingLocation.csv & UNH_MissingLocation.csv
@@ -103,7 +117,7 @@ library(maptools)
 * First buffer the points by 1000 meters
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
-* If no lakes are found iteratively increase the buffer distance up to 50km.
+* If no lakes are found iteratively, increase the buffer distance up to 50km.
 
 ```{r gDist, include=FALSE, echo=FALSE, cache=FALSE} 
 #buffer points and select lakes within the buffer.
@@ -149,12 +163,9 @@ library(maptools)
 
 ```
 
+* Create KML file of locations
 
-
-* produce KML file and view in google earth
-* produce SHP file
-
-
+```{r KML, include=FALSE, echo=FALSE, cache=FALSE} 
 #create KML file of location          
   kmlPoints(Loc, 
             kmlfile='Locations.kml', 
@@ -164,44 +175,17 @@ library(maptools)
             kmlname="Locations",
             kmldescription="Region 1 CyanoMonitoring Locations")
 #open file in google earth
-  shell.exec('Locations.kml')
-  
-  
-  nrow(WBID)  #227 locations
-  length(unique(WBID$WBID))  #75 lakes
-  
-  plot(Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),])
-  
-  
-  Lakes1<-Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),]
-  a<-gCentroid(Lakes1,byid=TRUE,)
-  
+  #shell.exec('Locations.kml')
+```
 
-  
- 
+* rename SpatialPointsDataFrame Loc to Locations `r Locations<-Loc'
+* save Locations as SpatialPointsDataFrame 
 
-```{r getSt, include=FALSE, echo=FALSE, cache=TRUE}  
-#get map of USA states
-  #us states from Jane Copeland
-  US50wgs84<- readShapePoly('L:/Public/Milstead_Lakes/GIS/StateBoundaries/States.shp', 
-                         proj4string=CRS("+proj=longlat +datum=WGS84"))   #read a large shapefile with the state boundaries
-  #northeast
-  NE<-US50wgs84[US50wgs84@data$STATE_ABBR%in%c('RI','CT','MA','VT','NH','ME'),]
-  
-  #northeast albers
-    #ESRI USA Contiguous Albers Equal Area Conic (used by MRB1 WBIDLakes as AlbersX and AlbersY)
-      AlbersContiguous<-CRS('+proj=aea +x_0=0 +y_0=0 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +units=m +datum=NAD83')
-    NEalb<-spTransform(NE,AlbersContiguous)
-      plot(NEalb)
-```  
-  
-  windows(8,10)
-  plot(NE)
-  plot(Lakes1,add=TRUE,col='blue')
-  plot(a,add=T,pch=16,col='red')
-  
-  plot(NE)
-  plot(Lakes1,add=TRUE,col='blue')
-  plot(Loc,add=T,pch=16,col='red')
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE} 
+  save(Locations,file='Locations.rda')
+```
+
+
+
 
 

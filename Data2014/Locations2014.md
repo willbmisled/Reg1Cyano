@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 13, 2015"
+date: "January 14, 2015"
 output: html_document
 ---
 <!---
@@ -19,7 +19,6 @@ To Do List
 * missing location data for ME
 * check locations manually for distance >0
 * Map locations and send to contacts for verifications
-* Add WBIDs
 
 Introduction
 -------------------------
@@ -31,6 +30,20 @@ The details of the data processing steps can be found here: https://github.com/w
 
 This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations2014.md
 
+A KML file for view in Google Earth is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.kml?raw=true
+
+An R datafile with a the Locations in SpatialPointsDataframe format is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true
+
+Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" 227 observations
+-------------------------
+Field  | Units | Description
+------------- | ------------- | -------------
+**Longitude:**|(Decimal Degrees)|Longitude of Location
+**Latitude:**|(Decimal Degrees)|Latitude of Location
+**Location:**|(Integer)|Unique identifier for location
+**WBID:**|(Integer)|Unique identifier for closest lake to location
+**Distance:**|(Meters)|Distance from Location to nearest lake
+
 Data Sources
 -------------------------
 The field data, including location information, have been standardized and are available here in .csv format (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.csv?raw=true
@@ -41,6 +54,7 @@ This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/m
 
 Data Steps
 -------------------------
+
 * Download the data 
 * Check which data (excluding blanks and standards) are missing locations
 * Created NHDES_MissingLocation.csv & UNH_MissingLocation.csv
@@ -62,50 +76,20 @@ Data Steps
 * First buffer the points by 1000 meters
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
-* If no lakes are found iteratively increase the buffer distance up to 50km.
+* If no lakes are found, iteratively increase the buffer distance up to 50km.
+
+
+
+* Create KML file of locations
+
+
+
+* rename SpatialPointsDataFrame Loc to Locations `r Locations<-Loc'
+* save Locations as SpatialPointsDataFrame 
 
 
 
 
 
-* produce KML file and view in google earth
-* produce SHP file
-
-
-#create KML file of location          
-  kmlPoints(Loc, 
-            kmlfile='Locations.kml', 
-            name=paste("Location",Loc@data$Location), 
-            description=paste("WBID",Loc@data$WBID),
-            icon="http://google.com/mapfiles/kml/paddle/wht-diamond.png",
-            kmlname="Locations",
-            kmldescription="Region 1 CyanoMonitoring Locations")
-#open file in google earth
-  shell.exec('Locations.kml')
-  
-  
-  nrow(WBID)  #227 locations
-  length(unique(WBID$WBID))  #75 lakes
-  
-  plot(Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),])
-  
-  
-  Lakes1<-Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),]
-  a<-gCentroid(Lakes1,byid=TRUE,)
-  
-
-  
- 
-
-
-  
-  windows(8,10)
-  plot(NE)
-  plot(Lakes1,add=TRUE,col='blue')
-  plot(a,add=T,pch=16,col='red')
-  
-  plot(NE)
-  plot(Lakes1,add=TRUE,col='blue')
-  plot(Loc,add=T,pch=16,col='red')
 
 
