@@ -997,7 +997,7 @@ Save Data2014
 * After standardization the individual datasets have been combined into the data.frame "Data2014", this is saved as "Data2014.csv"
 
 
-```{r Save, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
+```{r saveData1, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
 # Add ID
   Data2014$ID<-1:nrow(Data2014)
 # Add WBID, Location, and Distance fields from SpatialPointsDataFrame "Locations"
@@ -1040,8 +1040,6 @@ Save Data2014
   table(Data2014$Frozen,useNA='ifany')
   table(Data2014$Parameter,useNA='ifany')
   table(Data2014$Value,useNA='ifany')
-  table(Data2014$Units,useNA='ifany')
-    Data2014$Units<-gsub('µg.L','ug/l',Data2014$Units) #consistency tweak
   table(Data2014$Rep,useNA='ifany')
   table(Data2014$Fluorometer,useNA='ifany')
   Data2014$AnalysisYear<-2014  #mix of 2014, 14, and NA-make them all 2014
@@ -1054,7 +1052,10 @@ Save Data2014
   table(Data2014$Flag,useNA='ifany')
   as.data.frame(table(Data2014$Comments,useNA='ifany'))
 
-
+```{r saveData2, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE}
+  table(Data2014$Units,useNA='ifany')
+    Data2014$Units<-ifelse(Data2014$Units=='RFU','RFU','ug/l')
+  table(Data2014$Units,useNA='ifany')
 #save the data
   write.table(Data2014, file='Data2014.csv',row.names=F,sep=',') #write to csv
 ```
