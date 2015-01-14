@@ -1,0 +1,53 @@
+---
+title: "HilaryData"
+author: "Bryan Milstead"
+date: "January 14, 2015"
+output: html_document
+---
+<!---
+use these command instead of the knit icon if you want the data and work loaded into the R workspace
+  library(knitr)
+      a<-getwd()
+        if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
+          } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
+  knit('HilaryData.rmd')
+  -->
+  Introduction
+-------------------------  
+  Hilary has requested data reformated to:
+  
+* I would like to plot RFUs to ug/l by state/entity (keeps the instruments separate) for phyco and chlorophyll.
+* Plan to plot frozen vs thawed by state/entity
+* Like to display variation among replicates & within lake locations
+* Field of interest: ORGANIZATION / SAMPLE DAY / SAMPLE MONTH / DEPTH / SAMPLE LOCATION / SAMPLE METHOD / FILTERED / FROZEN / VALUE / UNITS / REP / FLUOROMETER / COMMENTS
+* Also add the "Location" field
+
+  Data Steps
+-------------------------
+
+* Download the data `r Data2014<-read.csv("Data2014.csv")`
+* Create data.frame with units (RFU and ug/l) as columns
+
+```{r units, include=FALSE, echo=FALSE, cache=FALSE} 
+#keep only the fields of interest
+  A<-Data2014[,c("Organization","Location","SampleMonth","SampleDay","SampleLocation","SampleMethod","Depth","Filtered","Frozen","Parameter","Value","Units","Rep","Order","Fluorometer","Comments")]   
+
+library(reshape2)
+Units<-dcast(A,Organization+Location+SampleMonth+SampleDay+SampleLocation+SampleMethod+Depth+Filtered+Frozen+Parameter+Rep+Order+Fluorometer+Comments~ Units,value.var="Value") 
+#save the data
+  write.table(Units, file='c:/temp/Hilary_units.csv',row.names=F,sep=',') #write to csv
+```
+
+```{r units, include=FALSE, echo=FALSE, cache=FALSE} 
+#keep only the fields of interest
+  A<-Data2014[,c("Organization","Location","SampleMonth","SampleDay","SampleLocation","SampleMethod","Depth","Filtered","Frozen","Parameter","Value","Units","Rep","Order","Fluorometer","Comments")]   
+
+library(reshape2)
+Frozen<-dcast(A[!is.na(A$Frozen),],Organization+Location+SampleMonth+SampleDay+SampleLocation+SampleMethod+Depth+Filtered+Units+Parameter+Rep+Order+Fluorometer+Comments~ Frozen,value.var="Value") 
+  names(Frozen)[15:16]<-c('Thawed','Frozen')
+
+#save the data
+  write.table(Frozen, file='c:/temp/Hilary_frozen.csv',row.names=F,sep=',') #write to csv
+```
+
+
