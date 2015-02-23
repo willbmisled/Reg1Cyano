@@ -7,6 +7,7 @@ output: html_document
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
+    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
       a<-getwd()
         if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
@@ -1054,7 +1055,6 @@ Save Data2014
   table(Data2014$Flag,useNA='ifany')
   as.data.frame(table(Data2014$Comments,useNA='ifany'))
 
-```{r saveData2, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE}
   table(Data2014$Units,useNA='ifany')
     Data2014$Units<-ifelse(Data2014$Units=='RFU','RFU','ug/l')
   table(Data2014$Units,useNA='ifany')
