@@ -30,7 +30,32 @@ use these command instead of the knit icon if you want the data and work loaded 
   nrow(Locations) #227 locations
   length(unique(Locations$WBID)) #75 lakes
 
+
+#how many samples by org by SampleLocation
 table(Samples$Organization,Samples$SampleLocation,useNA='ifany')
+
+#how many lakes by org
+a<-unique(data.frame(Org=Data2014$Organization,WBID=Data2014$WBID))
+  table(a$Org)
+
+#samples by depth
+a<-as.data.frame(table(Samples$Depth,useNA='ifany'))
+hist(Samples$Depth)
+a<-Samples$Depth
+unique(a)
+a[a=='surface']<-0
+b<-as.data.frame(table(a))
+b<-b[b$Freq>0,]
+
+#samples by SampleMethod
+as.data.frame(table(Data2014$SampleMethod,useNA='ifany'))
+as.data.frame(table(Samples$SampleMethod,useNA='ifany'))
+
+#samples by Units
+as.data.frame(table(Data2014$Units,useNA='ifany'))
+as.data.frame(table(Samples$Units,useNA='ifany'))
+
+
 ```
  
   
