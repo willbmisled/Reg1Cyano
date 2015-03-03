@@ -7,6 +7,7 @@ output: html_document
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
+    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
       a<-getwd()
         if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
@@ -34,13 +35,14 @@ A KML file for view in Google Earth is available here (hint: right click on the 
 
 An R datafile with a the Locations in SpatialPointsDataframe format is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true
 
-Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" 227 observations
+Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" 
 -------------------------
+
 Field  | Units | Description
 ------------- | ------------- | -------------
 **Longitude:**|(Decimal Degrees)|Longitude of Location
 **Latitude:**|(Decimal Degrees)|Latitude of Location
-**Location:**|(Integer)|Unique identifier for location
+**LocID:**|(Integer)|Unique identifier for location
 **WBID:**|(Integer)|Unique identifier for closest lake to location
 **Distance:**|(Meters)|Distance from Location to nearest lake
 
@@ -62,7 +64,6 @@ Data Steps
 
 
 * Keep only the unique long lat data 
-* Add a unique identifier "Location" 
 * Create a SpatialPointsDataFrame
 
 
@@ -70,26 +71,15 @@ Data Steps
 * Get MRB1_WBIDLakes from the WaterbodyDatabase.mdb
 * Reproject to WGS84
 * Fix holes (just in case)
+* Cache this XXX
+
 
 
 * Find the closest lake to each point
 * First buffer the points by 1000 meters
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
-* If no lakes are found, iteratively increase the buffer distance up to 50km.
-
-
-
-* Create KML file of locations
-
-
-
-* rename SpatialPointsDataFrame Loc to Locations `r Locations<-Loc'
-* save Locations as SpatialPointsDataFrame 
-
-
-
-
+* If no lakes are found iteratively, increase the buffer distance up to 50km.
 
 
 

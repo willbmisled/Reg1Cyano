@@ -7,6 +7,7 @@ output: html_document
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
+    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
       a<-getwd()
         if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
@@ -43,13 +44,14 @@ A KML file for view in Google Earth is available here (hint: right click on the 
 
 An R datafile with a the Locations in SpatialPointsDataframe format is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true
 
-Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" `r nrow(Locations)` observations
+Data Definitions SpatialPointsDataFrame "Locations" in "Locations.rda" 
 -------------------------
+
 Field  | Units | Description
 ------------- | ------------- | -------------
 **Longitude:**|(Decimal Degrees)|Longitude of Location
 **Latitude:**|(Decimal Degrees)|Latitude of Location
-**Location:**|(Integer)|Unique identifier for location
+**LocID:**|(Integer)|Unique identifier for location
 **WBID:**|(Integer)|Unique identifier for closest lake to location
 **Distance:**|(Meters)|Distance from Location to nearest lake
 
@@ -64,11 +66,13 @@ This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/m
 Data Steps
 -------------------------
 
-* Download the data `r Data2014<-read.csv("Data2014.csv")`
+* Download the data 
 * Check which data (excluding blanks and standards) are missing locations
 * Created NHDES_MissingLocation.csv & UNH_MissingLocation.csv
 
-```{r missing, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r missing, include=FALSE, echo=FALSE, cache=FALSE}
+#Download the data 
+  Data2014<-read.csv("Data2014.csv")
 #select samples only
   unique(Data2014$SampleMethod)
   a<-Data2014[Data2014$SampleMethod=='Grab'|Data2014$SampleMethod=='VanDorn'|Data2014$SampleMethod=='Integrated',]
@@ -77,17 +81,15 @@ Data Steps
 ```
 
 * Keep only the unique long lat data 
-* Add a unique identifier "Location" 
 * Create a SpatialPointsDataFrame
 
 ```{r spdf, include=FALSE, echo=FALSE, cache=FALSE} 
- #Download the data
-Loc<-unique(na.exclude(Data2014[,c("Longitude","Latitude")])) #Keep only the unique long lat data
-Loc$Location<-c(1:nrow(Loc)) #unique identifier
+#Unique location data
+  Loc<-unique(na.exclude(Data2014[,c("LocID","Longitude","Latitude")])) 
 
 #create spatial points dataframe
   WGS84<-CRS("+proj=longlat +datum=WGS84")  #ESRI GCS_WGS_1984 
-  Loc<-SpatialPointsDataFrame(coordinates(Loc[,-3]), Loc, proj4string=WGS84)
+  Loc<-SpatialPointsDataFrame(coordinates(Loc[,-1]), Loc, proj4string=WGS84)
 plot(Loc)
 
 #transform to Albers
@@ -99,10 +101,13 @@ plot(Loc)
 * Get MRB1_WBIDLakes from the WaterbodyDatabase.mdb
 * Reproject to WGS84
 * Fix holes (just in case)
-```{r getLakes, include=FALSE, echo=FALSE, cache=TRUE} 
+* Cache this XXX
+
+```{r getLakes, include=FALSE, echo=FALSE, cache=FALSE} 
 library(rgdal)
 library(maptools)
-  MDB<-"c:/bryan/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
+  MDB<-"c:/Users/FrayJorge/My Documents/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
+  #MDB<-"~/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
   features <- ogrListLayers(dsn=MDB) #MRB1_WBIDLakes
   Lakes<-readOGR(dsn=MDB,'MRB1_WBIDLakes')
   Lakes<-spTransform(Lakes,WGS84) #reproject
@@ -165,11 +170,11 @@ library(maptools)
 
 * Create KML file of locations
 
-```{r KML, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r KML, include=FALSE, echo=FALSE, cache=FALSE}
 #create KML file of location          
   kmlPoints(Loc, 
             kmlfile='Locations.kml', 
-            name=paste("Location",Loc@data$Location), 
+            name=paste("Location",Loc@data$LocID), 
             description=paste("WBID",Loc@data$WBID),
             icon="http://google.com/mapfiles/kml/paddle/wht-diamond.png",
             kmlname="Locations",
@@ -178,14 +183,23 @@ library(maptools)
   #shell.exec('Locations.kml')
 ```
 
-* rename SpatialPointsDataFrame Loc to Locations `r Locations<-Loc'
+* rename SpatialPointsDataFrame Loc to Locations 
 * save Locations as SpatialPointsDataFrame and SpatialPolygonsDataFrame "Lakes" 
 
-```{r Save, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE}
+  Locations<-Loc
   save(Locations,Lakes,file='Locations.rda')
 ```
 
 
+a<-merge(Data2014,Locations@data[,c("LocID","WBID","Distance")],by='LocID',all.x=FALSE)
 
+b<-unique(a[,c("Organization","LocID","Longitude","Latitude","WaterbodyName","SiteID","SiteLocation","SampleLocation","WBID","Distance")]);nrow(b) #333
 
+x<-as.data.frame(table(b$LocID))
+  names(x)[1]<-"LocID"
+  
+b<-merge(b,x,by='LocID')
+
+write.table(b, file='tempLocations.csv',row.names=F,sep=',') #write to csv
 
