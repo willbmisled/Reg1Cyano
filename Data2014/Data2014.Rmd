@@ -40,14 +40,10 @@ Data Definitions
 
 Field  | Units | Description
 ------------- | ------------- | -------------
-**ID:**|(integer)|Unique Identifier for Sample
 **Order:**|(integer)|Unique Identifier for sample by Organization-disregard this is for house keeping only.
 **YourName:**|(text)|Enter the name of the person entering the data
 **Organization:**|(text)|Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC
 **SiteID:**|(text)|If the location has a site ID from your organization enter it here
-**Location:**|(integer)|Unique Identifier for the Location based on unique Lon/Lat combinations
-**WBID:**|(integer)|Unique Identifier for the closest lake from the WaterbodyDatabase
-**Distance:**|(meters)|Distance from the Location to the WBID Lake 
 **WaterbodyName:**|(text)|Enter the name of the lake: be consistent with spelling and capitalization
 **State:**|(lookup)|Choose the two letter state code from the drop down list
 **SiteLocation:**|(text)|Some organizations have site names within a lake.  Enter these here.
@@ -79,6 +75,8 @@ Field  | Units | Description
 **Photos:**|(TRUE/FALSE)|Where photos taken?
 **Flag:**|(TRUE/FALSE)|Add a flag for any data line that needs further validation or processing
 **Comments:**|(text)|Add details of flags or any notes about the data line or sample.
+**ID:**|(integer)|Unique Identifier for Sample
+**LocID:**|(integer)|Unique Identifier for the Location based on unique Lon/Lat combinations
 
 Data Sources
 -------------------------
@@ -129,7 +127,7 @@ Information on how the data were provided by the States and Organizations that p
 
 ```{r VTDEC, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data and combine tables
-  VT<-read.csv("VTDEC_calibrated.csv") #read the calbibrated data
+  VT<-read.csv("VTDEC_calibrated.csv",stringsAsFactors=FALSE) #read the calbibrated data
     VT$Flag<-FALSE #add Flag field
     VT$Comments<-VT$notes  #rename notes to comments
     nrow(VT) #444
@@ -269,7 +267,7 @@ Information on how the data were provided by the States and Organizations that p
 
 ```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data 
-  CRWA<-read.csv("CRWA_RAW.csv") #read the data
+  CRWA<-read.csv("CRWA_RAW.csv",stringsAsFactors=FALSE) #read the data
   names(CRWA)[c(15,16,23,24)]<-c("Filtered1","Frozen1","Photos1","Flag1") #rename fields that ended in "?"
 #check fields for consistency
   table(CRWA$YourName,useNA='ifany')
@@ -393,7 +391,7 @@ Information on how the data were provided by the States and Organizations that p
 
 ```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
 #read the data
-  NH<-read.csv("NHDES_RAW.csv") #read the data
+  NH<-read.csv("NHDES_RAW.csv",stringsAsFactors=FALSE) #read the data
   Loc<-read.csv("NHDES_Locations.csv") #read the data
     str(Loc) #Longitude read as character data.  Observation #88 seems to be the problem
     data.frame(a=Loc$Longitude.DecDeg,b=as.numeric(Loc$Longitude.DecDeg))  #-71.4010500
@@ -500,6 +498,7 @@ Information on how the data were provided by the States and Organizations that p
 
 * Data received from Tracy Lizotte on 11/17/14
 * Original file name: "Cyanobacteria data Summer 2014.xlsx" saved as CTDEEP.xlsx
+* had trouble reading the .xlsx file so file resaved as CTDEEP.XLS
 
 Questions for Tracy:
 
@@ -523,7 +522,7 @@ Questions for Tracy:
 ```{r CTDEEP1, include=FALSE, echo=FALSE, cache=FALSE} 
 #read the data from the Excel files and rbind all of the separate sheets into a single DF
   library(RODBC)
-  conn<-odbcConnectExcel2007("CTDEEP.xlsx") # open a connection to the Excel file
+  conn<-odbcConnectExcel("CTDEEP.xls") # open a connection to the Excel file
   a<-sqlTables(conn)$TABLE_NAME # get list of all sheets
   a<-a[-12] #remove sheet "Station$" from the list
   
@@ -640,7 +639,7 @@ names(CT)<-c("StationID","WaterbodyName","Landmark","Date","lab_accession","Para
   CTDEEP$Comments<-CT$Comment
 
 #add location information
-  CTL<-read.csv("CTDEEP_locations.csv") #read the data
+  CTL<-read.csv("CTDEEP_locations.csv",stringsAsFactors=FALSE) #read the data
     CTL<-CTL[,c('SiteID','Latitude','Longitude')] #keep only the fields of interest
     a<-CTDEEP[,c('Order','SiteID')]  #get merge fields from CTDEEP
     a<-merge(a,CTL,by='SiteID',all.x=T) #merge locations with CTDEEP
@@ -686,7 +685,7 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 ```{r UNH, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data 
-  UNH<-read.csv("UNH_RAW.csv") #read the data
+  UNH<-read.csv("UNH_RAW.csv",stringsAsFactors=FALSE) #read the data
   UNHmissing<-read.csv("UNH_MissingLocations.csv") #additional location information.
   names(UNH)[c(15,16,23,24)]<-c("Filtered","Frozen","Photos","Flag") #rename fields that ended in "?"
 #remove empty line.
@@ -883,7 +882,7 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 ```{r RIWW, include=FALSE, echo=FALSE, cache=FALSE} 
 #read data 
-  RIWW<-read.csv("RIWW.csv") #read the data
+  RIWW<-read.csv("RIWW.csv",stringsAsFactors=FALSE) #read the data
   names(RIWW)[c(15,16,23,24)]<-c("Filtered","Frozen","Photos","Flag") #rename fields that ended in "?"
 #check fields X,X.1-X.17
     table(RIWW$X,useNA='ifany') # all NA; delete
@@ -994,21 +993,25 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 Save Data2014
 -------------------------
-* ID field created to track observations 
-* WBID, Location, and Distance fields added from SpatialPointsDataFrame "Locations"
-* WBID field added from
-* After standardization the individual datasets have been combined into the data.frame "Data2014", this is saved as "Data2014.csv"
+* Add "ID" field to track observations 
+* Add "LocID" field to track locations
+* WBID, Location, and Distance fields added from SpatialPointsDataFrame 
 
 
-```{r saveData1, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
+
+```{r IDs, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
 # Add ID
   Data2014$ID<-1:nrow(Data2014)
-# Add WBID, Location, and Distance fields from SpatialPointsDataFrame "Locations"
-  #get SPDF "Locations"
-    load(file='Locations.rda')
-    Data2014<-merge(Data2014,Locations[,c("Location","WBID","Distance")],by=c('Latitude','Longitude'),all.x=TRUE)
-#reorder fields
-  Data2014<-Data2014[,c("ID","Order","YourName","Organization","SiteID","Location","WBID","Distance","WaterbodyName","State","SiteLocation","SampleYear","SampleMonth","SampleDay" ,"NameOfSamplers","WeatherConditions","SampleLocation","SampleMethod","Depth","Latitude","Longitude","SampleHour","SampleMinutes","Filtered","Frozen","Parameter","Value","Units","Rep","Fluorometer","AnalysisYear","AnalysisMonth","AnalysisDay","AnalysisHour","AnalysisMinutes","GPSType","Photos","Flag","Comments")]                        
+# Add LocID
+  a<-na.exclude(unique(Data2014[,c('Longitude','Latitude')])) #221
+  a$LocID<-1:nrow(a)
+  Data2014<-merge(Data2014,a,by=c('Longitude','Latitude'),all.x=TRUE)
+```
+ 
+* Review and standardize the data
+* Save as "Data2014.csv" 
+  
+```{r save, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE}   
 
 #review the data:
   summary(Data2014$Order)
