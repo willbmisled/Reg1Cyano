@@ -62,6 +62,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
+    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
       a<-getwd()
         if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
           } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
@@ -86,8 +87,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 <p>A KML file for view in Google Earth is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.kml?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.kml?raw=true</a></p>
 <p>An R datafile with a the Locations in SpatialPointsDataframe format is available here (hint: right click on the link and choose “Save As” to save the file to your computer, otherwise, it will open in your browser): <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true">https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations.rda?raw=true</a></p>
 </div>
-<div id="data-definitions-spatialpointsdataframe-locations-in-locations.rda-227-observations" class="section level2">
-<h2>Data Definitions SpatialPointsDataFrame “Locations” in “Locations.rda” 227 observations</h2>
+<div id="data-definitions-spatialpointsdataframe-locations-in-locations.rda" class="section level2">
+<h2>Data Definitions SpatialPointsDataFrame “Locations” in “Locations.rda”</h2>
 <table>
 <thead>
 <tr class="header">
@@ -108,7 +109,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <td align="left">Latitude of Location</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Location:</strong></td>
+<td align="left"><strong>LocID:</strong></td>
 <td align="left">(Integer)</td>
 <td align="left">Unique identifier for location</td>
 </tr>
@@ -138,19 +139,41 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>Check which data (excluding blanks and standards) are missing locations</li>
 <li><p>Created NHDES_MissingLocation.csv &amp; UNH_MissingLocation.csv</p></li>
 <li>Keep only the unique long lat data</li>
-<li>Add a unique identifier “Location”</li>
 <li><p>Create a SpatialPointsDataFrame</p></li>
 <li>Get MRB1_WBIDLakes from the WaterbodyDatabase.mdb</li>
 <li>Reproject to WGS84</li>
-<li><p>Fix holes (just in case)</p></li>
+<li>Fix holes (just in case)</li>
+<li><p>Cache this XXX</p></li>
 <li>Find the closest lake to each point</li>
 <li>First buffer the points by 1000 meters</li>
 <li>Use Over to select lakes within the buffer</li>
 <li>Use gDistance to find closest lake to each point</li>
-<li><p>If no lakes are found iteratively increase the buffer distance up to 50km.</p></li>
-<li><p>Create KML file of locations</p></li>
-<li>rename SpatialPointsDataFrame Loc to Locations `r Locations&lt;-Loc’</li>
-<li><p>save Locations as SpatialPointsDataFrame</p></li>
+<li><p>If no lakes are found iteratively, increase the buffer distance up to 50km.</p></li>
+<li><p>Create KML and SHP files of locations</p></li>
+<li>create an output file to check locations and location information</li>
+<li><p>save as ‘tempLocations.csv’</p></li>
+<li>tempLocations.csv manually reviewed in excel</li>
+<li>Locations.kml verified in Google Earth</li>
+<li>shell.exec(‘Locations.kml’)</li>
+<li>names checked</li>
+<li>LocIDNew field added to aggregrate Sites with multiple location observations</li>
+<li>siteDescriptions simplified-manually.</li>
+<li>file resaved as tempLocations1.csv</li>
+<li>locations with distances to WBID greater than 20m verified in ArcGIS &amp; GE</li>
+<li>LocID=11 Lon/Lat changed from -73.078158 / 45.340375; moved to offshore Phillpsburg</li>
+<li>shell.exec(‘Locations.mxd’)</li>
+<li>check that each there is only one siteDescription for each LocIDNew</li>
+<li>check that each there is only one WBID for each LocIDNew</li>
+<li>get unique LocIDNew information</li>
+<li>rename Lon/Lat ‘Lon_LocIDNew’ &amp; ‘Lat_LocIDNew’</li>
+<li>add WBID centroids ‘Lon_WBID’ &amp; ‘Lat_WBID’</li>
+<li>add WBID Centroids for Charles River sites (no WBID) (estimated from GE)</li>
+<li>make final locations files</li>
+<li>“LocIDNew” a SpatialPointDataFrame with the unique aggregated locations and site information</li>
+<li>“LocIDNew.kml” kml file of the locations</li>
+<li>“LocIDNew.shp” shapefile of the locations<br /></li>
+<li>“LocID2LocIDNew” crosswalk of the information in in LocIDNew to the original LocID in Data2014</li>
+<li><p>save data as Locations.rda</p></li>
 </ul>
 </div>
 

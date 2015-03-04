@@ -1,0 +1,103 @@
+---
+title: "Analysis20150115"
+author: "Bryan Milstead"
+date: "January 15, 2015"
+output: html_document
+---
+<!---
+use these command instead of the knit icon if you want the data and work loaded into the R workspace
+  library(knitr)
+      a<-getwd()
+        if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
+          } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
+  knit('Analysis20150115.rmd')
+  -->
+
+* How many lakes, sites and samples
+
+```{r Sums, include=TRUE, echo=TRUE, cache=TRUE} 
+#get data
+  Data2014<-read.csv("Data2014.csv")
+#select samples only  
+  Data1<-Data2014[Data2014$SampleMethod=='Grab'|Data2014$SampleMethod=='VanDorn'|Data2014$SampleMethod=='Integrated',]
+#how many observations
+  nrow(Data1) #4728 observation
+#how many for Beagle/Unfrozen/Unfiltered
+  Samples<-Data1[Data1$Fluorometer=='Beagle' & Data1$Frozen==FALSE & Data1$Filtered==FALSE,]
+  nrow(Samples)  #1035
+
+  load('Locations.rda')
+  nrow(Locations) #227 locations
+  length(unique(Locations$WBID)) #75 lakes
+
+
+#how many samples by org by SampleLocation
+table(Samples$Organization,Samples$SampleLocation,useNA='ifany')
+
+#how many lakes by org
+a<-unique(data.frame(Org=Data2014$Organization,WBID=Data2014$WBID))
+  table(a$Org)
+
+#samples by depth
+a<-as.data.frame(table(Samples$Depth,useNA='ifany'))
+hist(Samples$Depth)
+a<-Samples$Depth
+unique(a)
+a[a=='surface']<-0
+b<-as.data.frame(table(a))
+b<-b[b$Freq>0,]
+
+#samples by SampleMethod
+as.data.frame(table(Data2014$SampleMethod,useNA='ifany'))
+as.data.frame(table(Samples$SampleMethod,useNA='ifany'))
+
+#samples by Units
+as.data.frame(table(Data2014$Units,useNA='ifany'))
+as.data.frame(table(Samples$Units,useNA='ifany'))
+
+
+```
+ 
+  
+  plot(Lakes[Lakes@data$WB_ID%in%unique(Locations$WBID),])
+  
+  
+unlist(strsplit(names(NH)[15],'_')) #get the column name
+  
+
+  
+ 
+
+ 
+#get map of USA states
+  #us states from Jane Copeland
+  US50wgs84<- readShapePoly('L:/Public/Milstead_Lakes/GIS/StateBoundaries/States.shp', 
+                         proj4string=CRS("+proj=longlat +datum=WGS84"))   #read a large shapefile with the state boundaries
+  #northeast
+  NE<-US50wgs84[US50wgs84@data$STATE_ABBR%in%c('RI','CT','MA','VT','NH','ME'),]
+  
+  #northeast albers
+    #ESRI USA Contiguous Albers Equal Area Conic (used by MRB1 WBIDLakes as AlbersX and AlbersY)
+      AlbersContiguous<-CRS('+proj=aea +x_0=0 +y_0=0 +lon_0=-96 +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +units=m +datum=NAD83')
+    NEalb<-spTransform(NE,AlbersContiguous)
+      plot(NEalb)
+ 
+  
+  Lakes1<-Lakes[Lakes@data$WB_ID%in%unique(WBID$WBID),]
+  a<-gCentroid(Lakes1,byid=TRUE,)
+  
+  windows(10.5,7)
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(a,add=T,pch=16,col='red')
+  
+  plot(NE)
+  plot(Lakes1,add=TRUE,col='blue')
+  plot(Loc,add=T,pch=16,col='red')
+
+nrow(Loc) #227
+nrow(Lakes1)  #75
+
+
+a<-Data2014[Data2014$Fluorometer=='Beagle'|is.na(Data2014$Fluorometer),]
+with(a,table(Organization,Units))

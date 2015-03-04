@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 14, 2015"
+date: "March 4, 2015"
 output: html_document
 ---
 <!---
@@ -104,10 +104,8 @@ plot(Loc)
 * Cache this XXX
 
 ```{r getLakes, include=FALSE, echo=FALSE, cache=FALSE} 
-library(rgdal)
-library(maptools)
-  MDB<-"c:/Users/FrayJorge/My Documents/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
-  #MDB<-"~/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
+  #MDB<-"c:/Users/FrayJorge/My Documents/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
+  MDB<-"c:/Bryan/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
   features <- ogrListLayers(dsn=MDB) #MRB1_WBIDLakes
   Lakes<-readOGR(dsn=MDB,'MRB1_WBIDLakes')
   Lakes<-spTransform(Lakes,WGS84) #reproject
@@ -168,38 +166,116 @@ library(maptools)
 
 ```
 
-* Create KML file of locations
+* Create KML and SHP files of locations
 
 ```{r KML, include=FALSE, echo=FALSE, cache=FALSE}
 #create KML file of location          
   kmlPoints(Loc, 
             kmlfile='Locations.kml', 
-            name=paste("Location",Loc@data$LocID), 
+            name=formatC(Loc$LocID, width=3, flag="0"), 
             description=paste("WBID",Loc@data$WBID),
-            icon="http://google.com/mapfiles/kml/paddle/wht-diamond.png",
+            icon="http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png",
             kmlname="Locations",
             kmldescription="Region 1 CyanoMonitoring Locations")
 #open file in google earth
   #shell.exec('Locations.kml')
-```
-
-* rename SpatialPointsDataFrame Loc to Locations 
-* save Locations as SpatialPointsDataFrame and SpatialPolygonsDataFrame "Lakes" 
-
-```{r Save, include=FALSE, echo=FALSE, cache=FALSE}
-  Locations<-Loc
-  save(Locations,Lakes,file='Locations.rda')
-```
 
 
-a<-merge(Data2014,Locations@data[,c("LocID","WBID","Distance")],by='LocID',all.x=FALSE)
-
-b<-unique(a[,c("Organization","LocID","Longitude","Latitude","WaterbodyName","SiteID","SiteLocation","SampleLocation","WBID","Distance")]);nrow(b) #333
-
-x<-as.data.frame(table(b$LocID))
-  names(x)[1]<-"LocID"
+#save shapefile
+writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile",overwrite_layer=TRUE)
   
-b<-merge(b,x,by='LocID')
+```
 
-write.table(b, file='tempLocations.csv',row.names=F,sep=',') #write to csv
+* create an output file to check locations and location information
+* save as 'tempLocations.csv'
+
+```{r verfiyLoc, include=FALSE, echo=FALSE, cache=FALSE}
+# merge locations with Data2014 to get the location information
+  a<-merge(Data2014,Locations@data[,c("LocID","WBID","Distance")],by='LocID',all.x=FALSE)
+# get the unique site information
+  b<-unique(a[,c("Organization","LocID","Longitude","Latitude","WaterbodyName","SiteID","SiteLocation","SampleLocation","WBID","Distance")]);nrow(b) #333
+#add freqLocID: the number of times each LocID is include.
+  x<-as.data.frame(table(b$LocID))
+    names(x)<-c("LocID","freqLocID")
+  b<-merge(b,x,by='LocID')
+#add freqWBID: the number of times each WBID is include.
+  x<-as.data.frame(table(b$WBID))
+    names(x)<-c("WBID","freqWBID")
+  b<-merge(b,x,by='WBID')
+#save
+  write.table(b, file='tempLocations.csv',row.names=F,sep=',') #write to csv
+```
+
+* tempLocations.csv manually reviewed in excel
+* Locations.kml verified in Google Earth
+  - shell.exec('Locations.kml')
+* names checked
+* LocIDNew field added to aggregrate Sites with multiple location observations
+* siteDescriptions simplified-manually.
+* file resaved as tempLocations1.csv
+* locations with distances to WBID greater than 20m verified in ArcGIS & GE
+* LocID=11 Lon/Lat changed from -73.078158 / 45.340375; moved to offshore Phillpsburg
+  - shell.exec('Locations.mxd')
+* check that each there is only one siteDescription for each LocIDNew
+* check that each there is only one WBID for each LocIDNew
+* get unique LocIDNew information
+* rename Lon/Lat 'Lon_LocIDNew' & 'Lat_LocIDNew'
+* add WBID centroids 'Lon_WBID' & 'Lat_WBID'
+* add WBID Centroids for Charles River sites (no WBID) (estimated from GE)
+* make final locations files
+  - "LocIDNew" a SpatialPointDataFrame with the unique aggregated locations and site information
+  - "LocIDNew.kml" kml file of the locations
+  - "LocIDNew.shp" shapefile of the locations  
+  - "LocID2LocIDNew" crosswalk of the information in in LocIDNew to the original LocID in Data2014
+* save data as Locations.rda
+
+```{r SaveData, include=FALSE, echo=FALSE, cache=FALSE}
+#read the data
+  a<-read.csv("tempLocations1.csv")
+#check that each there is only one siteDescription for each LocIDNew
+  b<-unique(a[,c('LocIDNew','siteDescription')])
+  x<-as.data.frame(table(b$LocIDNew))
+  x[x$Freq>1,]
+#check that each there is only one WBID for each LocIDNew
+  b<-unique(a[,c('LocIDNew','WBID')])
+  x<-as.data.frame(table(b$LocIDNew))
+  x[x$Freq>1,]
+#get unique LocIDNew information
+  b<-unique(a[a$LocID==a$LocIDNew,c("LocIDNew","WBID","Longitude","Latitude","siteDescription","siteComment")]);nrow(b) #183
+    names(b)[3:4]<-c('Lon_LocIDNew','Lat_LocIDNew')
+# add WBID centroids 'Lon_WBID' & 'Lat_WBID'
+  b<-merge(b,Lakes@data[,c('WB_ID','Centroid_Long','Centroid_Lat')],by.x='WBID',by.y='WB_ID',all.x=TRUE);nrow(b) #183
+    names(b)[7:8]<-c('Lon_WBID','Lat_WBID')
+  LocIDNew<-SpatialPointsDataFrame(coordinates(b[,3:4]), b, proj4string=WGS84)
+  #add centroids for missing WBID
+    LocIDNew$Lon_WBID[is.na(LocIDNew$WBID)]<--71.076827
+    LocIDNew$Lat_WBID[is.na(LocIDNew$WBID)]<-42.359977
+    
+#create KML file        
+  kmlPoints(LocIDNew, 
+            kmlfile='LocIDNew.kml', 
+            name=formatC(LocIDNew$LocIDNew, width=3, flag="0"), 
+            description=LocIDNew$siteDescription,
+            icon="http://maps.google.com/mapfiles/kml/paddle/pause.png",
+            kmlname="LocIDNew",
+            kmldescription="Region 1 CyanoMonitoring Locations")
+#open file in google earth
+  #shell.exec('LocIDNew.kml')
+
+
+#save shapefile
+  writeOGR(LocIDNew,getwd(),'LocIDew', driver="ESRI Shapefile",overwrite_layer=TRUE)
+
+#create LocID2LocIDNew
+  a<-read.csv("tempLocations1.csv")
+    b<-unique(a[,c('LocID','LocIDNew')]);nrow(b) #221
+      length(unique(b$LocID)) #221
+      nrow(LocIDNew)#183
+  LocID2LocIDNew<-merge(b,LocIDNew@data,by='LocIDNew',all.x=TRUE);nrow(LocID2LocIDNew)#221
+
+        
+
+#save R objects
+  save(LocIDNew,LocID2LocIDNew,Lakes,file='Locations.rda')
+```
 

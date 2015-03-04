@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "January 14, 2015"
+date: "March 4, 2015"
 output: html_document
 ---
 <!---
@@ -80,6 +80,40 @@ Data Steps
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
 * If no lakes are found iteratively, increase the buffer distance up to 50km.
+
+
+
+* Create KML and SHP files of locations
+
+
+
+* create an output file to check locations and location information
+* save as 'tempLocations.csv'
+
+
+
+* tempLocations.csv manually reviewed in excel
+* Locations.kml verified in Google Earth
+  - shell.exec('Locations.kml')
+* names checked
+* LocIDNew field added to aggregrate Sites with multiple location observations
+* siteDescriptions simplified-manually.
+* file resaved as tempLocations1.csv
+* locations with distances to WBID greater than 20m verified in ArcGIS & GE
+* LocID=11 Lon/Lat changed from -73.078158 / 45.340375; moved to offshore Phillpsburg
+  - shell.exec('Locations.mxd')
+* check that each there is only one siteDescription for each LocIDNew
+* check that each there is only one WBID for each LocIDNew
+* get unique LocIDNew information
+* rename Lon/Lat 'Lon_LocIDNew' & 'Lat_LocIDNew'
+* add WBID centroids 'Lon_WBID' & 'Lat_WBID'
+* add WBID Centroids for Charles River sites (no WBID) (estimated from GE)
+* make final locations files
+  - "LocIDNew" a SpatialPointDataFrame with the unique aggregated locations and site information
+  - "LocIDNew.kml" kml file of the locations
+  - "LocIDNew.shp" shapefile of the locations  
+  - "LocID2LocIDNew" crosswalk of the information in in LocIDNew to the original LocID in Data2014
+* save data as Locations.rda
 
 
 
