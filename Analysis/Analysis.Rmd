@@ -23,7 +23,7 @@ The task now is to collate all the data into a standardized format.  Below are t
 
 A simple excel template for data entry is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Region1CyanobacteriaDataEntryTemplate.xls?raw=true
 
-This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/Analsysis.md
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/Analysis.md
 
 The details of all data processing steps including notes and rcode are available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.Rmd
 
