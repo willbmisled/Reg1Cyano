@@ -42,39 +42,15 @@ Analysis
 
   
 
-```{r Pck, include=FALSE, echo=FALSE, cache=FALSE} 
-  #########function to install (if needed) and load R packages by list
-libs<-c("rgdal","sp","knitr","maptools","rgeos") #list of packages to load
-
-installLoad<-function(pck){ #user defined function
-    if(!pck%in%installed.packages()){install.packages(pck)}
-    require(pck, character.only = TRUE)
-  }
-lapply(libs,function(x) installLoad(x))  #Load/Install require packages
-```
-
-```{r dataStep, include=FALSE, echo=FALSE, cache=FALSE} 
-#get monitoring data
-  Data2014<-read.csv("../Data2014/Data2014.csv",stringsAsFactors=FALSE)
-
-#get location data
- load('../Data2014/Locations.rda')
-
-#merge locations with the data
-  a<-merge(Data2014,LocID2LocIDNew,by='LocID',all.x=TRUE)
-
-# remove the blanks and calibration standards 
-  Cyano<-a[a$SampleMethod=='Grab'| a$SampleMethod=='VanDorn'| a$SampleMethod=='Integrated',c("ID","Organization","State","YourName","SiteID","WaterbodyName","SiteLocation","SampleLocation","SampleYear","SampleMonth","SampleDay","SampleHour","SampleMinutes","NameOfSamplers","WeatherConditions","SampleMethod","Depth","Filtered","Frozen","Parameter","Value","Units","Rep","Fluorometer","AnalysisYear","AnalysisMonth","AnalysisDay","AnalysisHour","AnalysisMinutes","GPSType","Photos","LocIDNew","Lon_LocIDNew","Lat_LocIDNew","WBID","Lon_WBID","Lat_WBID","Flag","Comments")    ]
 
 
 
-```
 
 
 Data Definitions
 -------------------------
 
-Data.frame "Cyano" has `r nrow(Cyano)` observations
+Data.frame "Cyano" has 4500 observations
 
 Field  | Units | Description
 ------------- | ------------- | -------------
@@ -122,41 +98,143 @@ Decisions
 -------------------------
 
 * Restrict analysis to samples read on Cyano$Fluorometer=="Beagle"
-```{r Fluorometer, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Fluorometer,useNA='ifany')
 ```
 
+```
+## 
+## Beagle Turner 
+##   3348   1152
+```
+
 * RFU vs ug/l:  Phycocyanin and Chlorophyll were read as either ug/l or as RFU.  We should probably limit the data Cyano$Units=='ug/l'
-```{r Units, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Parameter,Cyano$Units,useNA='ifany')
 ```
 
+```
+##              
+##                RFU ug/l
+##   Chlorophyll  508 1710
+##   Phycocyanin  574 1708
+```
+
 * How do we deal with multiple observations per lake in space?
-```{r Space, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$SampleLocation,Cyano$Parameter,useNA='ifany')
+```
+
+```
+##        
+##         Chlorophyll Phycocyanin
+##   Other         112         112
+##   SS1           518         530
+##   SS10            0           1
+##   SS11            0           1
+##   SS2           156         158
+##   SS3            28          30
+##   SS4             0           2
+##   SS5             0           2
+##   SS6             0           2
+##   SS7             0           2
+##   SS8             0           2
+##   SS9             0           2
+##   SSC             9          10
+##   WL1           695         756
+##   WL2           287         286
+##   WL3           269         268
+##   WL4            41          40
+##   WL5             1           0
+##   WL6             1           0
+##   WL7             1           0
+##   WL8             1           0
+##   WLC            29          30
+##   <NA>           70          48
 ```
 
 * How do we deal with multiple observations per lake in time?
 
 
 * How do we deal with different depths?
-```{r Depth, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Depth,Cyano$Parameter,useNA='ifany')
 ```
 
+```
+##          
+##           Chlorophyll Phycocyanin
+##   0               137         135
+##   0.5              16          16
+##   1               732         722
+##   1.1               8           8
+##   1.2              14          14
+##   1.5              16          16
+##   1.6               4           4
+##   10                3           3
+##   11                3           3
+##   12                3           3
+##   13                3           3
+##   14                3           3
+##   15                3           3
+##   2                19          23
+##   3              1105        1145
+##   4                 6           6
+##   4.11              2           2
+##   4.27              3           3
+##   4.5               6           6
+##   5                18          18
+##   6                 6           6
+##   6.5               6           6
+##   7                11          11
+##   7.5              15          15
+##   7.8               9           9
+##   8                 6           6
+##   8.27              3           3
+##   8.37              3           3
+##   9                 3           3
+##   9.6               5           9
+##   surface          47          75
+```
+
 * What about the Reps?
-```{r Reps, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Rep,useNA='ifany')
 ```
 
+```
+## 
+##    1    2    3 <NA> 
+##  548  210  204 3538
+```
+
 * Should we use the filtered or unfiltered samples?
-```{r Filter, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Filtered,useNA='ifany')
 ```
 
+```
+## 
+## FALSE  TRUE 
+##  2717  1783
+```
+
 * Should we use the frozen or fresh samples? Probably the fresh.
-```{r Frozen, include=TRUE, echo=TRUE, cache=FALSE} 
+
+```r
   table(Cyano$Frozen,useNA='ifany')
+```
+
+```
+## 
+## FALSE  TRUE  <NA> 
+##  2035  2464     1
 ```
 
 
