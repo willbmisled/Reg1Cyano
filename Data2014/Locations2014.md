@@ -80,6 +80,7 @@ Data Steps
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
 * If no lakes are found iteratively, increase the buffer distance up to 50km.
+* Cache this XXX
 
 
 

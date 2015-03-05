@@ -103,7 +103,7 @@ plot(Loc)
 * Fix holes (just in case)
 * Cache this XXX
 
-```{r getLakes, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r getLakes, include=FALSE, echo=FALSE, cache=TRUE} 
   #MDB<-"c:/Users/FrayJorge/My Documents/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
   MDB<-"c:/Bryan/EPA/Data/WaterbodyDatabase/WaterbodyDatabase.mdb" #data source
   features <- ogrListLayers(dsn=MDB) #MRB1_WBIDLakes
@@ -121,8 +121,9 @@ plot(Loc)
 * Use Over to select lakes within the buffer
 * Use gDistance to find closest lake to each point
 * If no lakes are found iteratively, increase the buffer distance up to 50km.
+* Cache this XXX
 
-```{r gDist, include=FALSE, echo=FALSE, cache=FALSE} 
+```{r gDist, include=FALSE, echo=FALSE, cache=TRUE} 
 #buffer points and select lakes within the buffer.
   #dataframe to hold results
     WBID<-data.frame(WBID=rep(NA,nrow(LocA)),Distance=rep(NA,nrow(LocA)))  
@@ -191,7 +192,7 @@ writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile",overwrite_layer=TRUE)
 
 ```{r verfiyLoc, include=FALSE, echo=FALSE, cache=FALSE}
 # merge locations with Data2014 to get the location information
-  a<-merge(Data2014,Locations@data[,c("LocID","WBID","Distance")],by='LocID',all.x=FALSE)
+  a<-merge(Data2014,Loc@data[,c("LocID","WBID","Distance")],by='LocID',all.x=FALSE)
 # get the unique site information
   b<-unique(a[,c("Organization","LocID","Longitude","Latitude","WaterbodyName","SiteID","SiteLocation","SampleLocation","WBID","Distance")]);nrow(b) #333
 #add freqLocID: the number of times each LocID is include.

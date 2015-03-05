@@ -1,8 +1,6 @@
 base
-classInt
 knitr
-maptools
-rgdal
-rgeos
-RODBC
 sp
+rgdal
+maptools
+rgeos
