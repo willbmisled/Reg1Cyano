@@ -8,7 +8,7 @@ output: html_document
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
   setwd('Analysis')
-  knit('Analysis20150115.rmd')
+  knit('Analysis.rmd')
   -->
 
 To Do List
