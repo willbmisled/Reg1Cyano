@@ -11,7 +11,25 @@ library(wesanderson)
 dat <- read.csv("Data2014/Data2014.csv")
 calib <- read.csv("lakeline_figs//calibration_ct_me.csv")
 names(calib)[2]<-"Value"
-
+dat %>% filter(Units == "RFU" & Parameter == "Chlorophyll") %>% 
+  ggplot(aes(x=log10(Value))) +
+  facet_grid(State ~ .) +
+  geom_histogram()
+dat %>% filter(Units == "RFU" & Parameter == "Phycocyanin") %>% 
+  select(Value)%>%
+  summary()
+dat %>% filter(Units == "RFU" & Parameter == "Chlorophyll") %>% 
+  select(Value)%>%
+  summary()
+dat %>% filter(Units == "RFU") %>% 
+  group_by(State,Parameter)%>%
+  summarize(min = min(Value, na.rm = T),
+            median = median(Value, na.rm = T),
+            mean = median(Value, na.rm = T),
+            max(Value,na.rm=T))%>%
+  ungroup()%>%
+  arrange(Parameter) %>% filter(State == "CT" | State == "NH" | State == "VT")
+  
 ####################################################################################
 # CT calib models
 ####################################################################################
@@ -26,10 +44,10 @@ ct_chloro_lm <- calib %>% filter(Parameter == "Chloro" & Organization == "CTDEP"
   lm(Concentration ~ Value, data = .)
 
 ct_chloro_conc<-dat %>% filter(State == "CT" & Parameter == "Chlorophyll") %>% select(Value) %>%
-  predict(ct_chloro_lm,newdata = .)
+  predict(ct_phyco_lm,newdata = .)
 
 ct_phyco_conc<-dat %>% filter(State == "CT" & Parameter == "Phycocyanin") %>% select(Value) %>%
-  predict(ct_phyco_lm,newdata = .)
+  predict(ct_chloro_lm,newdata = .)
 
 pred_phyco_rows<-dat %>% filter(State == "CT" & Parameter == "Phycocyanin") %>% 
   mutate(Value = ct_phyco_conc) %>% 
@@ -107,7 +125,8 @@ state_bar_mdn_boot
 ggsave("lakeline_figs/state_summ_bar.tiff", state_bar_mdn_boot,dpi=150,height=4,width=6)
 ggsave("lakeline_figs/state_summ_bar.jpg", state_bar_mdn_boot,dpi=300,height=4,width=6)
 
-
+dat_clean %>% group_by(Parameter) %>% summarize(median(Value,na.rm=T))
+dat_clean %>% group_by(Parameter) %>% summarize(mean(Value,na.rm=T))
 #dat_clean %>%
 #  select(State,Parameter,Value,Units)%>%
 #  filter(Parameter=="Phycocyanin")%>%
