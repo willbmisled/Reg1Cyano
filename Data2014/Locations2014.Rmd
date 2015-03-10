@@ -123,7 +123,7 @@ plot(Loc)
 * If no lakes are found iteratively, increase the buffer distance up to 50km.
 * Cache this XXX
 
-```{r gDist, include=FALSE, echo=FALSE, cache=TRUE} 
+```{r gDist, include=FALSE, echo=FALSE, cache=FALSE} 
 #buffer points and select lakes within the buffer.
   #dataframe to hold results
     WBID<-data.frame(WBID=rep(NA,nrow(LocA)),Distance=rep(NA,nrow(LocA)))  
