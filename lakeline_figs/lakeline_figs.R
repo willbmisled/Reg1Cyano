@@ -9,11 +9,12 @@ library(dplyr)
 library(wesanderson)
 
 dat <- read.csv("Data2014/Data2014.csv")
+calib <- read.csv("lakeline_figs//calibration_ct_me.csv")
 
 ####################################################################################
 # CT calib models
 ####################################################################################
-dat %>% filter(State == "CT") %>% select(Parameter, Value, Units,Comments, ID, LocID)
+dat %>% filter(Units == "RFU") %>% select(Parameter, Value, Units,Comments, State)
 
 ct_phyco_lm <- calib %>% filter(Parameter == "Phyco" & Organization == "CTDEP") %>% 
   with(lm(Concentration ~ RFU))
