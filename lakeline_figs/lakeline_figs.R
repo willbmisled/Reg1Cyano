@@ -6,6 +6,7 @@
 
 library(ggplot2)
 library(dplyr)
+library(wesanderson)
 
 dat <- read.csv("Data2014/Data2014.csv")
 dat_clean <- dat %>%
@@ -17,6 +18,8 @@ dat_clean <- dat %>%
   filter(Units=="ug/l")%>%
   filter(!is.na(Longitude))%>%
   filter(!is.na(Latitude))
+
+calib<-read.csv()
 
 my_boot<-function(x,R,type=c("median","mean"),...){
   b_md<-vector("numeric",R)
@@ -50,31 +53,24 @@ dat_bar <- dat_clean %>%
             value_mn_bootUL = my_boot(Value,1000,"mean")[2]
             )
 
-limits_mn_se<-aes(ymax=value_mn+value_se, ymin=value_mn-value_se)
-limits_mdn_iqr<-aes(ymax=value_mdn+value_iqr, ymin=value_mdn-value_iqr)
 limits_mdn_boot<-aes(ymax=value_mdn_bootUL,ymin=value_mdn_bootLL)
-
 dodge<-position_dodge(width=0.9)
-state_bar_mn_se <- dat_bar %>% 
-  ggplot(aes(x=State,y=value_mn,fill=Parameter)) +
-    geom_bar(position="dodge",stat="identity") +
-    geom_errorbar(limits_mn_se, position=dodge, width=0.25)
-
-state_bar_mn_se
-
-state_bar_mdn_iqr <- dat_bar %>% 
-  ggplot(aes(x=State,y=value_mdn,fill=Parameter)) +
-  geom_bar(position="dodge",stat="identity") +
-  geom_errorbar(limits_mdn_iqr, position=dodge, width=0.25)
-
-state_bar_mdn_iqr
 
 state_bar_mdn_boot <- dat_bar %>% 
   ggplot(aes(x=State,y=value_mdn_boot,fill=Parameter)) +
   geom_bar(position="dodge",stat="identity") +
-  geom_errorbar(limits_mdn_boot, position=dodge, width=0.25)
+  geom_errorbar(limits_mdn_boot, position=dodge, width=0.25) + 
+  theme_classic(12,"times") +
+  theme(axis.title.y = element_text(vjust=1.25)) + 
+  scale_fill_manual(values=wes_palettes$Moonrise2[c(2,3)]) + 
+  ylab("Median Bootstrapped Value (ug/l)") + 
+  theme(axis.title.y = element_text(vjust=1.25))
 
 state_bar_mdn_boot
+
+ggsave("lakeline_figs/state_summ_bar.tiff", state_bar_mdn_boot,dpi=150,height=4,width=6)
+ggsave("lakeline_figs/state_summ_bar.jpg", state_bar_mdn_boot,dpi=300,height=4,width=6)
+
 
 #dat_clean %>%
 #  select(State,Parameter,Value,Units)%>%
@@ -84,5 +80,20 @@ state_bar_mdn_boot
 #  summarize(phyco_mn = mean(Value))%>%
 #  ggplot(aes(x=State,y=phyco_mn)) +
 #  geom_bar(stat="identity")
+
+#limits_mn_se<-aes(ymax=value_mn+value_se, ymin=value_mn-value_se)
+#limits_mdn_iqr<-aes(ymax=value_mdn+value_iqr, ymin=value_mdn-value_iqr)
+
+#state_bar_mn_se <- dat_bar %>% 
+#  ggplot(aes(x=State,y=value_mn,fill=Parameter)) +
+#  geom_bar(position="dodge",stat="identity") +
+#  geom_errorbar(limits_mn_se, position=dodge, width=0.25)
+#state_bar_mn_se
+
+#state_bar_mdn_iqr <- dat_bar %>% 
+#  ggplot(aes(x=State,y=value_mdn,fill=Parameter)) +
+#  geom_bar(position="dodge",stat="identity") +
+#  geom_errorbar(limits_mdn_iqr, position=dodge, width=0.25)
+#state_bar_mdn_iqr
 
   
