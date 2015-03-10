@@ -9,6 +9,25 @@ library(dplyr)
 library(wesanderson)
 
 dat <- read.csv("Data2014/Data2014.csv")
+
+####################################################################################
+# CT calib models
+####################################################################################
+dat %>% filter(State == "CT") %>% select(Parameter, Value, Units,Comments, ID, LocID)
+
+ct_phyco_lm <- calib %>% filter(Parameter == "Phyco" & Organization == "CTDEP") %>% 
+  with(lm(Concentration ~ RFU))
+
+ct_chloro_lm <- calib %>% filter(Parameter == "Chloro" & Organization == "CTDEP") %>% 
+  with(lm(Concentration ~ RFU))
+
+dat %>% filter(State == "CT") %>% select(Parameter, Value, Units) %>% tbl_df()
+  predict(ct_phyco_lm,data = .)
+
+####################################################################################
+# Clean up data
+####################################################################################
+
 dat_clean <- dat %>%
   filter(SampleLocation != "Other" || 
            SampleLocation != "Calibration" ||
@@ -19,7 +38,6 @@ dat_clean <- dat %>%
   filter(!is.na(Longitude))%>%
   filter(!is.na(Latitude))
 
-calib<-read.csv()
 
 my_boot<-function(x,R,type=c("median","mean"),...){
   b_md<-vector("numeric",R)
