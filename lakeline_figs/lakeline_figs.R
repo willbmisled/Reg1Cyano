@@ -10,21 +10,38 @@ library(wesanderson)
 
 dat <- read.csv("Data2014/Data2014.csv")
 calib <- read.csv("lakeline_figs//calibration_ct_me.csv")
+names(calib)[2]<-"Value"
 
 ####################################################################################
 # CT calib models
 ####################################################################################
-dat %>% filter(Units == "RFU") %>% select(Parameter, Value, Units,Comments, State)
+dat %>% filter(State == "CT") %>% select(Parameter, Value, Units)
 
 ct_phyco_lm <- calib %>% filter(Parameter == "Phyco" & Organization == "CTDEP") %>% 
-  with(lm(Concentration ~ RFU))
+  select(Value, Concentration) %>%
+  lm(Concentration ~ Value, data = .)
 
 ct_chloro_lm <- calib %>% filter(Parameter == "Chloro" & Organization == "CTDEP") %>% 
-  with(lm(Concentration ~ RFU))
+  select(Value, Concentration) %>%
+  lm(Concentration ~ Value, data = .)
 
-dat %>% filter(State == "CT") %>% select(Parameter, Value, Units) %>% tbl_df()
-  predict(ct_phyco_lm,data = .)
+ct_chloro_conc<-dat %>% filter(State == "CT" & Parameter == "Chlorophyll") %>% select(Value) %>%
+  predict(ct_chloro_lm,newdata = .)
 
+ct_phyco_conc<-dat %>% filter(State == "CT" & Parameter == "Phycocyanin") %>% select(Value) %>%
+  predict(ct_phyco_lm,newdata = .)
+
+pred_phyco_rows<-dat %>% filter(State == "CT" & Parameter == "Phycocyanin") %>% 
+  mutate(Value = ct_phyco_conc) %>% 
+  mutate(Units = "ug/l") %>%
+  mutate(Comments = "Predicted Concentration from calibration done at Chelmsford on June 11, 2014") %>%
+
+pred_chloro_rows<-dat %>% filter(State == "CT" & Parameter == "Chlorophyll") %>% 
+  mutate(Value = ct_chloro_conc) %>% 
+  mutate(Units = "ug/l") %>%
+  mutate(Comments = "Predicted Concentration from calibration done at Chelmsford on June 11, 2014")
+  
+dat2<-rbind(dat,pred_phyco_rows,pred_chloro_rows)
 ####################################################################################
 # Clean up data
 ####################################################################################
