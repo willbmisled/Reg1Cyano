@@ -521,17 +521,12 @@ Questions for Tracy:
 * Data organized with a separate lake in each tab.  These are read directly into R and the data from the separate sheets are combined into a single data.frame.
 ```{r CTDEEP1, include=FALSE, echo=FALSE, cache=FALSE} 
 #read the data from the Excel files and rbind all of the separate sheets into a single DF
-  library(RODBC)
-  conn<-odbcConnectExcel("CTDEEP.xls") # open a connection to the Excel file
-  a<-sqlTables(conn)$TABLE_NAME # get list of all sheets
-  a<-a[-12] #remove sheet "Station$" from the list
-  
+library(gdata)
   CT<-c() #blank object to store data
-  for(i in c(1:length(a))){
-    b<-sqlFetch(conn, a[i]) # read a sheet
-    CT<-rbind(CT,b)
-  }
-  close(conn)
+    for(i in c(1:11)){
+      b<-read.xls ("CTDEEP.xls", sheet = i, header = TRUE) # read a sheet
+      CT<-rbind(CT,b)
+    }
 ```
 * Each lake has a parameter field that includes many parameters besides the fluorometry data but most of these are missing values.
 * The dataset includes many parameters but only the Chlorophyll and Phycocanin observations will be kept.
@@ -555,16 +550,18 @@ Questions for Tracy:
 * The value field contains a mix of numeric values, character values, and missing values.  
 * The table below shows the number of occurences of each non-numeric value
 ```{r CTDEEP3, include=TRUE, echo=FALSE, cache=FALSE, warning=FALSE} 
-  CT$ValueNew<-as.numeric(CT$Value)
-  as.data.frame(table(CT$Value[is.na(CT$ValueNew)],useNA='ifany'))
+  CT$ValueNew<-as.numeric(as.character(CT$Value))
+  as.data.frame(table(as.character(CT$Value[is.na(CT$ValueNew)]),useNA='ifany'))
 ```
-* The first four character values (two number separated by 2 slashes) appear to be two readings for the same sample.  Split these into two lines.  Assign the first to Rep=1 with Value = the first value.  Assign the second to Rep=2 with Value = the second value. 
-* Delete observations with Value="not Collected" or NA
+* The four character values with two number separated by 2 slashes are two readings for the same sample.  Split these into two lines.  Assign the first to Rep=1 with Value = the first value.  Assign the second to Rep=2 with Value = the second value. 
+* Delete observations with Value="not Collected" or " "
 ```{r CTDEEP4, include=FALSE, echo=FALSE, cache=FALSE} 
   #add Rep field
     CT$Rep<-1
   #add flag field
     CT$Flag<-FALSE
+  #add comment field
+    CT$Comment<-NA
   #copy lines with two readings;change ValueNew to second reading and the Rep to Rep=2
     a<-CT[grep("//",CT$Value),] #select rows
     a$Rep<-2 #change rep to 2
@@ -574,14 +571,15 @@ Questions for Tracy:
   #change ValueNew for lines with two readings for value to the first reading
     b<-grep("//",CT$Value)
     CT$Flag[b]<-TRUE
-    CT$Comment<-paste('Value Changed from:',CT$Value[b])
-    CT$ValueNew[grep("//",CT$Value)]<-c(337.23,310.87,24.91,2.50)
+    CT$Comment[b]<-paste('Value Changed from:',CT$Value[b])
+    CT$ValueNew[b]<-c(337.23,310.87,24.91,2.50)
+    CT[b,]
   #Append rep=2 lines to CT
     CT<-rbind(CT,a)
   #Delete rows with ValueNew=NA
-    nrow(CT) #612+4=616
+    nrow(CT) #603+4=607
     CT<-CT[!is.na(CT$ValueNew),]
-    nrow(CT) #256
+    nrow(CT) #252
 ```
 * Data massage complete-build CTDEEP
 * Add to data.frame Data2014
