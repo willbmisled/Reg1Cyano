@@ -1,6 +1,6 @@
 ---
-title: "Cyano Monitroing Data Variables"
-author: "Jeff"
+title: "Cyano Monitoring Data Variables"
+author: "Jeff, Bryan, Hilary, Betty, Jim, and Shane"
 date: "03/11/2015"
 output: pdf_document
 ---
