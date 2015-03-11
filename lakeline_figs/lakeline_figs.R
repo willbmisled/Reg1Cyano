@@ -21,12 +21,12 @@ dat %>% filter(Units == "RFU" & Parameter == "Phycocyanin") %>%
 dat %>% filter(Units == "RFU" & Parameter == "Chlorophyll") %>% 
   select(Value)%>%
   summary()
-dat %>% filter(Units == "RFU") %>% 
+rfu_summary<-dat %>% filter(Units == "RFU") %>% 
   group_by(State,Parameter)%>%
   summarize(min = min(Value, na.rm = T),
             median = median(Value, na.rm = T),
             mean = median(Value, na.rm = T),
-            max(Value,na.rm=T))%>%
+            max=max(Value,na.rm=T))%>%
   ungroup()%>%
   arrange(Parameter) %>% filter(State == "CT" | State == "NH" | State == "VT")
   
