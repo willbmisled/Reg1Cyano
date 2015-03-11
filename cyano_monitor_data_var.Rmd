@@ -4,8 +4,9 @@ author: "Jeff"
 date: "03/11/2015"
 output: pdf_document
 ---
+# Sampling Data Variables
 
-# Visit Event (We have arrived)
+## Visit Event (We have arrived)
 - Visit ID
 - Weather Conditions
     - Overcast
@@ -13,7 +14,7 @@ output: pdf_document
     - Clear
     - Rain
 - Surface Water Conditions
-    - Calm  
+    - Calm
     - Ripples
     - Choppy
     - White Caps
@@ -28,7 +29,7 @@ output: pdf_document
 - Photo
 - Comment
 
-# Site Event (we have arrived at the site)
+## Site Event (we have arrived at the site)
 - Visit ID
 - Site ID
 - Sample Time
@@ -43,8 +44,7 @@ output: pdf_document
 - Photo
 - Comment
 
-# Analysis Event
-- Visit ID
+## Analysis Event
 - Site ID
 - Analysis ID
 - Analysis Date
@@ -60,5 +60,34 @@ output: pdf_document
 - Chlorophyll Value (ug/l)
 - Sample Photos
 - Comments
+
+# Bloom Watch
+
+## Bloom Event
+- Interface
+    - Observer Name
+    - Waterbody Name
+    - Weather Conditions
+        - Overcast
+        - Partly Cloudy
+        - Clear
+        - Rain
+    - Surface Water Conditions
+        - Calm
+        - Ripples
+        - Choppy
+        - White Caps
+    - Photo(s)
+        - Prompt with Bloom, Bloom + Shore, Up close
+    - Bloom Description
+        - Size
+    - Comment
+    - Contact Info
+- Behind the Scences
+    - Visit ID
+    - Date
+    - Time
+    - Long, Lat
+
 
 
