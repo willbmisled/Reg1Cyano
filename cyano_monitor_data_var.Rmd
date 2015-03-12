@@ -1,0 +1,93 @@
+---
+title: "Cyano Monitoring Data Variables"
+author: "Jeff, Bryan, Hilary, Betty, Jim, and Shane"
+date: "03/11/2015"
+output: pdf_document
+---
+# Sampling Data Variables
+
+## Visit Event (We have arrived)
+- Visit ID
+- Weather Conditions
+    - Overcast
+    - Partly Cloudy
+    - Clear
+    - Rain
+- Surface Water Conditions
+    - Calm
+    - Ripples
+    - Choppy
+    - White Caps
+- Date
+- Arrival Time
+- Sampler Names
+- Primary Organization
+- Waterbody Identifier
+    - Name
+    - State ID (Optional)
+    - Org ID (Optional)
+- Photo
+- Comment
+
+## Site Event (we have arrived at the site)
+- Visit ID
+- Site ID
+- Sample Time
+- Site Description
+- Long, Lat
+- Location Source
+- Site Type 
+    - Near Shore 1 m
+    - Off Shore 1 m
+    - Off Shore 3 m
+- Lake Water Temperature
+- Photo
+- Comment
+
+## Analysis Event
+- Site ID
+- Analysis ID
+- Analysis Date
+- Analysis Time
+- Analyst Name(s)
+- Frozen
+- Sample Temperature
+- Dilution
+    - 1:1
+    - 1:5
+    - 1:10
+- Phycocyanin Value (ug/l)
+- Chlorophyll Value (ug/l)
+- Sample Photos
+- Comments
+
+# Bloom Watch
+
+## Bloom Event
+- Interface
+    - Observer Name
+    - Waterbody Name
+    - Weather Conditions
+        - Overcast
+        - Partly Cloudy
+        - Clear
+        - Rain
+    - Surface Water Conditions
+        - Calm
+        - Ripples
+        - Choppy
+        - White Caps
+    - Photo(s)
+        - Prompt with Bloom, Bloom + Shore, Up close
+    - Bloom Description
+        - Size
+    - Comment
+    - Contact Info
+- Behind the Scences
+    - Visit ID
+    - Date
+    - Time
+    - Long, Lat
+
+
+
