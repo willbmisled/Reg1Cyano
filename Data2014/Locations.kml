@@ -2233,6 +2233,46 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>617</name>
+  <description><![CDATA[WBID 1031419]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.9309,45.5075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>619</name>
+  <description><![CDATA[WBID 6709833]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.930049,44.50816
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>618</name>
+  <description><![CDATA[WBID 6709833]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.93,44.508
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>630</name>
+  <description><![CDATA[WBID 9312435]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.925924,43.576778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>157</name>
   <description><![CDATA[WBID 5843810]]></description>
   <styleUrl>#style1</styleUrl>
@@ -2249,6 +2289,4046 @@
   <Point>
     <coordinates>
 -70.743766,44.086969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>627</name>
+  <description><![CDATA[WBID 6719937]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.3586,43.77696
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>626</name>
+  <description><![CDATA[WBID 3322990]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11852,44.57793
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>418</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11432,44.14893
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>423</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11368,44.15032
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>424</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11265,44.15356
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>422</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10672,44.12477
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>522</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10632,44.12402
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>518</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10629,44.12429
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>516</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.1062,44.12521
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>442</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10616,44.12517
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>421</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10611,44.12497
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>514</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10605,44.12521
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>420</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10595,44.12485
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>517</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10594,44.1244
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>515</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10571,44.12515
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>441</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10569,44.12517
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>440</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10514,44.1252
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>519</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10233,44.15446
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>446</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10189,44.14767
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>425</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10189,44.15659
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>445</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10188,44.14754
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>439</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10181,44.14756
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>426</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10174,44.15676
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>419</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10172,44.15677
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>520</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10165,44.15403
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>521</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10131,44.15451
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>286</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10114,44.15456
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>291</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10018,44.16125
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>287</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10014,44.15456
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>285</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>288</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09991,44.15845
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>289</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09895,44.16137
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>290</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09775,44.16128
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>444</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09602,44.16182
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>443</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09593,44.16211
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>447</name>
+  <description><![CDATA[WBID 6711483]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.09563,44.16228
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>449</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07557,44.32493
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>453</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07468,44.32402
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>452</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07342,44.32314
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>448</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07248,44.32254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>451</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07187,44.32218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>450</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0714,44.32186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>235</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05964,44.36188
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>236</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05962,44.36183
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>240</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05938,44.36212
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>237</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05935,44.36246
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>239</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0582,44.37585
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>238</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05804,44.37565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>234</name>
+  <description><![CDATA[WBID 6711311]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05743,44.37414
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>634</name>
+  <description><![CDATA[WBID 3326100]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.044666,44.23015
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>245</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04433,44.28256
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>243</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04372,44.28191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>242</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0433,44.28085
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>244</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03967,44.2751
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>246</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0393,44.27525
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>241</name>
+  <description><![CDATA[WBID 3325996]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03896,44.27537
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>563</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03825,44.5947
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>565</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03819,44.59472
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>568</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03789,44.59388
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>564</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03785,44.59427
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>566</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03783,44.59361
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>567</name>
+  <description><![CDATA[WBID 3322984]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03781,44.59347
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>616</name>
+  <description><![CDATA[WBID 6711205]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03055,44.50222
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>603</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02963,44.43572
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>602</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02946,44.43636
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>604</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02908,44.43591
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>473</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0247,44.3948
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>469</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0239,44.39519
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>472</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02388,44.3952
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>614</name>
+  <description><![CDATA[WBID 6711205]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>615</name>
+  <description><![CDATA[WBID 6711205]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02358,44.50222
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>474</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01941,44.39645
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>471</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39613
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>470</name>
+  <description><![CDATA[WBID 6711271]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39618
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>606</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01627,44.44179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>607</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01612,44.44249
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>605</name>
+  <description><![CDATA[WBID 6711229]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01593,44.44135
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>600</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97908,44.4288
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>599</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97881,44.42884
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>598</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97829,44.42917
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>268</name>
+  <description><![CDATA[WBID 6709547]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97755,44.51195
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>601</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97643,44.43168
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>597</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97577,44.43121
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>596</name>
+  <description><![CDATA[WBID 3323716]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97516,44.43096
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>593</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9501,44.19467
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>592</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.95004,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>595</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94836,44.19589
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>590</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94807,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>591</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19534
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>594</name>
+  <description><![CDATA[WBID 3324122]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19567
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>612</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94344,44.25179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>611</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94338,44.25178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>609</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94336,44.25176
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>588</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93984,44.31111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>584</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93983,44.31113
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>587</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93976,44.31125
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>585</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9352,44.31615
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>608</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93504,44.25505
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>586</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93498,44.31607
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>589</name>
+  <description><![CDATA[WBID 3323944]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93478,44.31595
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>610</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93423,44.2565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>613</name>
+  <description><![CDATA[WBID 3325032]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93286,44.25872
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>302</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.86489,44.64218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>301</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.86441,44.64253
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>300</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8639,44.64262
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>340</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8582,44.63047
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>620</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85432,44.54428
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>624</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85392,44.54409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>625</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8536,44.54364
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>254</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83892,44.63008
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>255</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83884,44.63026
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>256</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83875,44.6306
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>574</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83735,44.62996
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>576</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8372,44.62995
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>621</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83668,44.50075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>570</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83658,44.63005
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>343</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83641,44.63019
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>259</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83629,44.63346
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>405</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>402</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83577,44.62947
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>401</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83572,44.62954
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>258</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83559,44.6329
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>257</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8353,44.6325
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>622</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83489,44.5008
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>303</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8345,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>344</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83449,44.63051
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>304</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83447,44.6301
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>399</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83443,44.60994
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>299</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83432,44.62997
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>623</name>
+  <description><![CDATA[WBID 6710627]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83392,44.50086
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>404</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8334,44.60742
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>573</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83288,44.62965
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>571</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8327,44.62955
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>572</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83234,44.62913
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>400</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83231,44.60885
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>403</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83158,44.60956
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>341</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83051,44.63083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>345</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.82986,44.62918
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>569</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.82961,44.63107
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>575</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.82952,44.63031
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>577</name>
+  <description><![CDATA[WBID 3320002]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.82945,44.63069
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>478</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.80914,44.63001
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>479</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.80638,44.62951
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>477</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.80637,44.62952
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>406</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.79143,44.51936
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>407</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.7911,44.51894
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>408</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.79093,44.51873
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>233</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78908,44.52321
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>411</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.7873,44.52271
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>232</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78698,44.52454
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>397</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78694,44.59553
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>394</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78672,44.59494
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>231</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78658,44.52492
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>315</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78561,44.52142
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>398</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78548,44.59435
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>314</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78545,44.52151
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>311</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78535,44.52156
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>409</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78426,44.52234
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>228</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78409,44.52254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>410</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78382,44.52261
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>230</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78375,44.52236
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>306</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78373,44.52266
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>227</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78339,44.52229
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>229</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78337,44.52228
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>352</name>
+  <description><![CDATA[WBID 3323964]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78295,44.3218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>309</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78249,44.52287
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>356</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78237,44.52186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>310</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78185,44.52417
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>396</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>395</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78073,44.6108
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>357</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77792,44.52156
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>353</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77768,44.52174
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>475</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77727,44.61679
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>355</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77724,44.52198
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>294</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77721,44.61032
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>298</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77711,44.60946
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>292</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77711,44.60964
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>293</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77707,44.6097
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>476</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77706,44.61089
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>483</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77695,44.61117
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>482</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77676,44.61182
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>307</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77621,44.53807
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>480</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77618,44.61667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>481</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77596,44.61643
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>583</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.60568
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>578</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.60595
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>579</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.60635
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>580</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.61156
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>581</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.61214
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>582</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77567,44.61227
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>347</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.7756,44.61083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>295</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.7754,44.60178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>305</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.775,44.53778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>349</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77472,44.61032
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>296</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77436,44.60139
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>297</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77346,44.60102
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>313</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77312,44.52729
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>312</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77293,44.52946
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>348</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77261,44.60983
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>316</name>
+  <description><![CDATA[WBID 3320048]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77184,44.52892
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>350</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77146,44.61038
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>346</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77137,44.60925
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>351</name>
+  <description><![CDATA[WBID 3320004]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.77099,44.60903
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>524</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.67372,44.39714
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>523</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6692,44.3951
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>274</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66692,44.40611
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>271</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66673,44.40657
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>272</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6666,44.40685
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>270</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6665,44.4012
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>273</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66644,44.40234
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>275</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66638,44.40156
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>498</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66637,44.40088
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>379</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66631,44.4016
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>497</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66624,44.40098
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>525</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>380</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66586,44.40024
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>496</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66558,44.40145
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>381</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66518,44.40054
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>382</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.65929,44.39962
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>383</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.65867,44.39982
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>384</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6581,44.40012
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>494</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.65645,44.40218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>493</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.65633,44.4026
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>495</name>
+  <description><![CDATA[WBID 3323750]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.65604,44.4031
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>543</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64148,44.34729
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>539</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34744
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>542</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34745
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>541</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6403,44.34845
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>540</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64027,44.34904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>544</name>
+  <description><![CDATA[WBID 3323908]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64024,44.348
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>342</name>
+  <description><![CDATA[WBID 6709503]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.63009,44.63009
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>512</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61593,44.37928
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>359</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61591,44.37936
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>507</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61583,44.37939
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>505</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61581,44.37945
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>362</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61579,44.37945
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>360</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61575,44.37954
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>363</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61465,44.37526
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>365</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61456,44.37371
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>364</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61446,44.37435
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>416</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61287,44.36472
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>415</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61275,44.36411
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>414</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61269,44.36327
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>508</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61249,44.38104
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>506</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61201,44.37995
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>513</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61161,44.37921
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>321</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.61023,44.37889
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>417</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60891,44.36626
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>561</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6088,44.36788
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>560</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60878,44.36784
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>412</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6087,44.36645
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>413</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60846,44.3665
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>317</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60821,44.3677
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>554</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60813,44.36734
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>318</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60806,44.3679
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>511</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.607899,44.3674
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>322</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60789,44.36817
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>358</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60728,44.36541
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>320</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60725,44.38078
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>509</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60675,44.37073
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>361</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60665,44.36567
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>366</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60664,44.3664
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>510</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>319</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60526,44.38068
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>558</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60262,44.35982
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>559</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60225,44.35917
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>562</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60169,44.35957
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>555</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60106,44.35841
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>557</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.601,44.35934
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>556</name>
+  <description><![CDATA[WBID 3323864]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6004,44.35883
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>549</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.59424,44.4428083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>547</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.580497,44.428821
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>548</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.579824,44.428408
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>545</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.578973,44.428633
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>553</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.578972,44.428226
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>546</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.576796,44.429454
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>459</name>
+  <description><![CDATA[WBID 5202054]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.57098,44.29517
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>551</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.5698221,44.432283
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>550</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.569628,44.431435
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>552</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.569588,44.431762
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>526</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56047,44.53237
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>530</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56042,44.53243
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>531</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56019,44.53265
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>529</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55865,44.53814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>528</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55811,44.53827
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>527</name>
+  <description><![CDATA[WBID 3320068]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55753,44.53833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>371</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51493,44.47688
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>367</name>
+  <description><![CDATA[WBID 3319930]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51485,44.77083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>368</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51472,44.47119
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>335</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.5147,44.47017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>454</name>
+  <description><![CDATA[WBID 5202084]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51458,44.28969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>369</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.5145,44.47149
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>370</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51444,44.47696
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>499</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51434,44.47013
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>455</name>
+  <description><![CDATA[WBID 5202084]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51422,44.28987
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>500</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>501</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47103
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>456</name>
+  <description><![CDATA[WBID 5202084]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51384,44.2903
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>339</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51309,44.47163
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>338</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51292,44.47184
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>336</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51125,44.47815
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>503</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51114,44.47419
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>502</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51106,44.47358
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>372</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51085,44.47785
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>458</name>
+  <description><![CDATA[WBID 5202084]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51072,44.295
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>457</name>
+  <description><![CDATA[WBID 5202084]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51057,44.29469
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>337</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51012,44.477199
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>504</name>
+  <description><![CDATA[WBID 3323678]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.50948,44.47831
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>334</name>
+  <description><![CDATA[WBID 3323664]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47804,44.47801
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>308</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.477812,44.53847
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>485</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47743,44.51178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>265</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47681,44.51225
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>267</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47626,44.5116
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>264</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47584,44.51221
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>266</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47536,44.51191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>263</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47492,44.51252
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>486</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47431,44.51213
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>488</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47356,44.51984
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>484</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.4724,44.51951
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>492</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47202,44.51968
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>489</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.4718,44.51988
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>262</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47077,44.51779
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>260</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47061,44.51804
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>261</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47057,44.51844
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>269</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47044,44.51824
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>390</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47005,44.52001
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>388</name>
+  <description><![CDATA[WBID 3319920]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.47005,44.81928
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>385</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46992,44.52055
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>532</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46962,44.51974
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>490</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>393</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.52861
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>491</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.4689,44.51912
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>487</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46882,44.51915
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>392</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46854,44.52707
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>391</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46781,44.52662
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>389</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.4676,44.52589
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>387</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46716,44.52943
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>386</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46714,44.52939
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>538</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46479,44.52382
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>537</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46451,44.52452
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>536</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46399,44.5244
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>535</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46379,44.52505
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>534</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46304,44.52511
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>533</name>
+  <description><![CDATA[WBID 3320078]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46235,44.52587
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>468</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34821,44.63843
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>460</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34802,44.63721
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>465</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34732,44.63853
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>323</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34353,44.65102
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>324</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34329,44.65085
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>325</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34299,44.65065
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>279</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34255,44.62795
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>464</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34254,44.62812
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>463</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34232,44.62844
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>277</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34211,44.62834
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>462</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34211,44.62888
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>278</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34167,44.62904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>438</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.341427,44.629
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>436</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.341296,44.630299
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>437</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.341045,44.629861
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>467</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34081,44.63461
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>461</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34074,44.63401
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>466</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.34073,44.63499
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>433</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.339343,44.630907
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>434</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.339273,44.631277
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>435</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.338501,44.631984
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>327</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33743,44.6313
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>326</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33741,44.63147
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>280</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33734,44.62232
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>283</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33719,44.63071
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>284</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33718,44.63108
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>281</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33685,44.62219
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>282</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>276</name>
+  <description><![CDATA[WBID 3319994]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33628,44.62217
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>628</name>
+  <description><![CDATA[WBID 5202298]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.33141,44.12864
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>249</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.24756,44.87222
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>247</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.24471,44.87353
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>248</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.24085,44.87523
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>377</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23682,44.86851
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>375</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23656,44.8679
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>373</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23612,44.86727
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>251</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23455,44.86741
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>329</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23452,44.87218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>250</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.2345,44.86739
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>252</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23441,44.8674
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>253</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23429,44.86472
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>328</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23407,44.87186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>428</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.233979,44.867445
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>330</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23383,44.87172
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>427</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.233438,44.867305
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>333</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23308,44.86749
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>332</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23267,44.86774
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>331</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23254,44.86781
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>429</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23243,44.867454
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>378</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.22292,44.84919
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>374</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.22231,44.84988
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>376</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.22179,44.85041
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>431</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.220602,44.863892
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>430</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.212032,44.859205
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>432</name>
+  <description><![CDATA[WBID 3319884]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.210723,44.859272
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>354</name>
+  <description><![CDATA[WBID 1737596]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.193,44.52201
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>629</name>
+  <description><![CDATA[WBID 2679118]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.24401,44.61508
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>632</name>
+  <description><![CDATA[WBID 803405]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.005058,46.615817
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>633</name>
+  <description><![CDATA[WBID 816819]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.87154,46.289409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>631</name>
+  <description><![CDATA[WBID 802769]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.809076,46.711588
     </coordinates>
   </Point>
 </Placemark>

@@ -987,21 +987,128 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 ### Maine
 
-* Data in prep by Linda Bacon
+* Data received from Linda Bacon on 3/13/15 as "Cyanotoxin.zip"
+* Data extracted and access database "Cyanotoxin.accdb" renamed "MEDEP.accdb"
+* Added field "Comments" to table "Events" to document two changes to MIDAS numbers that I made
+* Newer version of ME database receieved from Linda Bacon on 3/18/15 also as "Cyanotoxin.zip"
+* The 3/13 version renamed MEDEP20150313.accdb
+* The 3/18 version renamed MEDEP.accdb
 
-Save Data2014
--------------------------
-* Add "ID" field to track observations 
-* Add "LocID" field to track locations
-* WBID, Location, and Distance fields added from SpatialPointsDataFrame 
+
+**Questions for Linda Bacon**
+* From the "Events" table can you check the MIDAS numbers for eventID=9 and eventID=49?  These are listed as (eventID=9 & lake=Sabattus & midas=2796) and (eventID=49 & lake=Threemile & midas=5418).  Based on the names and closest cities I believe these should be (eventID=9 & lake=Sabattus & midas=3796) and (eventID=49 & lake=Threemile & midas=5416). They look typos to me. 
+  - LB: You are correct; they are either typos or were written on the data sheets wrong.
+  - BM: this was fixed in the 3/19 version
+* In the "Sample" table what do the following "samplecodes" mean: DH1, DH3, SC1, SC2, & SC3? 
+  - LB: DH1 and DH3 refer to Deep Hole Station 1 and Deep Hole Station 3; we paired the regional sampling with our regular sampling regime (taking core sample to the bottom of the epilimnion rather than  just to 3 meters).   We also collected three samples of Surface Scums (SC1, SC2, SC3), if/when they were found to get at concentrations a dog might encounter drinking from scums at the shoreline. 
+* In the "Sample" table what do type="C" and type="G" mean?  I"m guessing C is the integrated sampler and G is a grab sample. 
+  - LB: Yes, exactly.
+* In the "Sample" table what do the values of 0-6 mean in the "Flour" column?
+  - LB: That Column is “FluorFrozenDays.” Those should ALL be zero…don’t know how the 1-6 crept in (4 different people entered the data).   We didn’t have time to process any frozen samples…
+  - BM: this was fixed in the 3/19 version; all zeros now
+* In the "Sample" table what are the units for the values in the "result" column? ug/l? or RFU?
+  - LB: Very Good Question!   Last summer I thought they were RFUs but in January was told they were not.  I tried to get a straight answer from the group in January and was told that the units were ug/L.  I was told to ‘trust us’ – which I still do not.  What says you???
+* In the "Sample" table do you have the lat/lon values for sampleID=329 & sampleID=330?  These correspond to eventid=42.
+ - LB: Yes.  They were not on the Cyano Field Sheeet but were on the regular field sheet filled out at the deep hole: 44.3674    -69.607899   (note that all DH1 & WL1 samples were taken at the same location; likewise for DH3 and WL1).
+ - BM: this was fixed in the 3/19 version
+* In the FluoroResults table what do the codes  "FC", "FP", "RC", & "RP" in the "Anal" column mean?
+  - LB: FC=Filtered Chlorophyll; FP= Filtered Phycocyanin; RC=Raw Chlorophyll; FC=Filtered Chlorophyll
+* Probably related to the question above-where samples frozen or filtered?  How can I tell? 
+  - LB: None were Frozen (see the answer to the “Fluor’ question) and the answer above.  
+* Also am guessing that codes "FC" & RC" are for Chlorophyll and "FP" & "RP" are for Phycocyanin.  Am I right?
+  - LB: Yup; see above.
+* How were the sample site locations determined (GPS? GoogleEarth? Map?)
+  - LB: Hand-held GPS  units using WGS84 projection with accuracy +/- ~9feet.  
+
+**Data steps**-View code in Data2014.rmd document to see details.
+
+* SQL query used to read all data into R
+* Data reformatted
 
 
+
+```{r MEDEP, include=FALSE, echo=FALSE, cache=FALSE} 
+# Read data
+  library(RODBC)  
+  con <- odbcConnectAccess2007('MEDEP.accdb')
+    ME<- sqlQuery(con, "
+    SELECT Event.EventID, Sample.SampleID, FluoroResults.FluoroResultID, Event.lake, Event.midas, Event.station, Event.sampdate, Event.Town, Event.crew, Event.weather, Sample.samplecode, Sample.depth, Sample.type, Sample.lat, Sample.long, Sample.Time, Sample.Photos, Sample.PhotoNum, Sample.FluorFrozenDays, Sample.DateFluor, Sample.TimeFluor, FluoroResults.Anal, FluoroResults.result
+FROM (Event LEFT JOIN Sample ON Event.EventID = Sample.eventid) LEFT JOIN FluoroResults ON Sample.SampleID = FluoroResults.SampleID;
+    ",stringsAsFactors=FALSE)
+    close(con)
+    str(ME)
+
+#Review, add, & modify fields as needed
+  MEDEP<-data.frame(Order=ME$FluoroResultID)
+  MEDEP$YourName<-'LindaBacon'
+  MEDEP$Organization<-'MEDEP'
+  MEDEP$SiteID<-ME$midas
+  MEDEP$WaterbodyName<-ME$lake
+    table(MEDEP$WaterbodyName,useNA='ifany')  
+  MEDEP$State<-'ME'
+  MEDEP$SiteLocation<-ME$station
+  MEDEP$SampleYear<-2014
+  MEDEP$SampleMonth<-as.numeric(substr(as.Date(ME$sampdate),6,7))
+  MEDEP$SampleDay<-as.numeric(substr(as.Date(ME$sampdate),9,10))
+  MEDEP$NameOfSamplers<-ME$crew
+  MEDEP$WeatherConditions<-ME$weather
+  MEDEP$SampleLocation<-ME$samplecode
+  MEDEP$Depth<-ME$depth
+  table(ME$type,useNA='ifany')  
+    MEDEP$SampleMethod<-ifelse(ME$type=='C','Integrated','Grab')
+      table(MEDEP$SampleMethod,useNA='ifany') 
+  MEDEP$Latitude<-ME$lat
+  MEDEP$Longitude<-ME$lon
+  MEDEP$SampleHour<-floor(ME$Time/100)
+  MEDEP$SampleMinutes<-ME$Time-(100*MEDEP$SampleHour)
+  table(ME$Anal,useNA='ifany')
+    MEDEP$Filtered<-NA                                          
+      MEDEP$Filtered[ME$Anal=='FC'|ME$Anal=='FP']<-TRUE
+      MEDEP$Filtered[ME$Anal=='RC'|ME$Anal=='RP']<-FALSE
+        table(MEDEP$Filtered,useNA='ifany')
+  MEDEP$Frozen<-FALSE                                             
+  MEDEP$Parameter<-NA 
+    MEDEP$Parameter[ME$Anal=='FC'|ME$Anal=='RC']<-'Chlorophyll'
+    MEDEP$Parameter[ME$Anal=='FP'|ME$Anal=='RP']<-'Phycocyanin'
+      table(MEDEP$Parameter,useNA='ifany')    
+  MEDEP$Value<-ME$result
+  MEDEP$Units<-'ug/l'                                             #############OJO
+    summary(Data2014$Value[Data2014$Parameter=='Phycocyanin' & Data2014$Units=='ug/l' & Data2014$Organization!='MEDEP'])
+    summary(ME$result[ME$Anal=='FP' |ME$Anal=='RP'])
+    summary(Data2014$Value[Data2014$Parameter=='Phycocyanin' & Data2014$Units=='RFU' & Data2014$Organization!='MEDEP'])
+  MEDEP$Rep<-NA
+  MEDEP$Fluorometer<-"Beagle"
+  MEDEP$AnalysisYear<-2014 
+  MEDEP$AnalysisMonth<-as.numeric(substr(as.Date(ME$DateFluor),6,7))
+  MEDEP$AnalysisDay<-as.numeric(substr(as.Date(ME$DateFluor),9,10))
+  MEDEP$AnalysisHour<-floor(ME$TimeFluor/100)
+  MEDEP$AnalysisMinutes<-ME$TimeFluor-(100*MEDEP$AnalysisHour)
+  MEDEP$GPSType<-'Handheld'                                          
+    #change field Photos from 0/1 to TRUE/FALSE
+      table(ME$Photos,useNA='ifany')
+      MEDEP$Photos<-TRUE
+      MEDEP$Photos[ME$Photos==0]<-FALSE
+      table(MEDEP$Photos,useNA='ifany')
+  MEDEP$Flag<-FALSE
+  MEDEP$Comments<-NA
+  #reorder fields to match Data2014
+    #consistency check
+    ncol(MEDEP) #35
+    ncol(Data2014) #35
+    table(names(MEDEP)%in%names(Data2014))
+    #reorder
+      MEDEP<-MEDEP[,names(Data2014)]
+  # add to data.frame Data2014
+    Data2014<-rbind(Data2014,MEDEP)
+```
+
+#add observation and location IDs
 
 ```{r IDs, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE} 
 # Add ID
   Data2014$ID<-1:nrow(Data2014)
 # Add LocID
-  a<-na.exclude(unique(Data2014[,c('Longitude','Latitude')])) #221
+  a<-na.exclude(unique(Data2014[,c('Longitude','Latitude')])) #633
   a$LocID<-1:nrow(a)
   Data2014<-merge(Data2014,a,by=c('Longitude','Latitude'),all.x=TRUE)
 ```
@@ -1009,10 +1116,10 @@ Save Data2014
 * Review and standardize the data
 * Save as "Data2014.csv" 
   
-```{r save, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE}   
+```{r save, include=FALSE, echo=FALSE, cache=FALSE,eval=TRUE}  
 
 #review the data:
-  summary(Data2014$Order)
+  summary(Data2014$Order)  
   table(Data2014$YourName,useNA='ifany')
   table(Data2014$Organization,useNA='ifany')
   as.data.frame(table(Data2014$SiteID,useNA='ifany'))
@@ -1038,8 +1145,8 @@ Save Data2014
         a<-!is.na(Data2014$Longitude) & Data2014$Longitude>0
         Data2014$Longitude[a]
         Data2014$Longitude[a]<--Data2014$Longitude[a]     
-  table(Data2014$SampleHour,useNA='ifany')
-  table(Data2014$SampleMinutes,useNA='ifany')
+  table(Data2014$SampleHour,useNA='ifany')  #one ME sample event has erroneus time value (9573) ignore for now
+  table(Data2014$SampleMinutes,useNA='ifany') #one ME sample event has erroneus time value (9573) ignore for now
   table(Data2014$Filtered,useNA='ifany')
   table(Data2014$Frozen,useNA='ifany')
   table(Data2014$Parameter,useNA='ifany')
