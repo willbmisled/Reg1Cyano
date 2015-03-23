@@ -1,0 +1,108 @@
+ST,WB_ID,Waterbody,Town,AlbersAreaM,Centroid_Long,Centroid_Lat,Y2009,Y2010,Y2011,Y2012,Flag,Comment
+MA,5862237,Lake Quannapowitt,Wakefield,929924.5514,-71.07855842,42.51497435,1,1,0,0,,
+MA,5864367,Horn Pond,Woburn,399418.396,-71.15646748,42.46872879,1,1,1,1,,
+MA,5864419,Ell Pond,Melrose,84020.12823,-71.06513486,42.46111133,1,1,0,1,,
+MA,5864435,Wedge Pond,Winchester,91138.78482,-71.1410131,42.45419178,1,0,1,1,,
+MA,5864561,Fellsmere Pond,Malden,18631.58807,-71.08532117,42.42808128,0,0,1,0,,
+MA,5864621,Spy Pond,Arlington,380885.685,-71.15484293,42.40775945,1,1,1,1,,
+MA,5864641,Little Pond,Belmont,65419.30397,-71.15885986,42.3998925,0,0,1,0,,
+MA,5864871,Crystal Lake,Newton,90922.05922,-71.20050507,42.32707346,0,0,0,2,,
+MA,5875121,Oldham Pond,Pembroke,928929.1771,-70.83657152,42.06633174,0,0,1,0,,
+MA,5875135,Wampatuck Pond,Hanson,255882.4182,-70.86697242,42.06092162,1,1,0,0,,
+MA,5875155,Furnace Pond,Pembroke,395205.9194,-70.82569454,42.05564862,0,0,1,0,,
+MA,5875179,Indian Head Pond,Hanson,471396.6876,-70.85014597,42.04821361,1,0,0,0,,
+MA,5876835,Moll's Pond,Eastham,13728.74418,-69.9756221,41.84494699,0,0,0,1,,
+MA,5876877,Uncle Harvey's Pond,Orleans,25559.81198,-69.95490786,41.77963512,0,0,0,1,,
+MA,5877435,Little Long Pond,Plymouth,177196.7443,-70.61315891,41.86932127,0,0,0,1,,
+MA,5877527,Savery Pond,Plymouth,111731.5667,-70.54971892,41.84732443,0,0,1,0,,
+MA,5877617,White Island Pond,Plymouth,1133997.172,-70.6220544,41.80938392,1,0,1,0,,
+MA,5877835,Cliff Pond,Brewster,757853.2303,-70.02380656,41.75793877,1,0,0,2,,
+MA,5877907,Smith Pond,Brewster,37448.56809,-70.10414308,41.74773455,0,1,0,0,,
+MA,5877909,Sassaquin Pond,New Bedford,134262.5375,-70.94894108,41.73480839,0,1,1,0,,
+MA,5877947,Walker's Pond,Brewster,1381830.455,-70.11944921,41.72857607,3,0,0,1,,
+MA,5878063,Hinkley Pond,Harwich,650721.852,-70.08961682,41.71302618,1,0,0,0,,
+MA,5878317,Santuit Pond,Mashpee,626120.687,-70.45834391,41.65360247,1,1,2,1,,
+MA,5878349,Lovell's Pond,Barnstable,201497.1629,-70.44178351,41.64845791,2,2,1,1,,
+MA,5878367,Buttonwood Pond,New Bedford,33786.08601,-70.95454024,41.63356751,0,0,1,0,,
+MA,5878395,North Pond,Barnstable,15238.75048,-70.36450528,41.63555969,0,0,1,0,,
+MA,5882135,Head of Hummock,Nantucket,63536.73072,-70.13402205,41.27873014,0,1,0,0,,
+MA,6095787,Congamond Lake,Southwick,1033790.823,-72.75876371,42.02884056,0,0,1,0,,
+MA,6095911,South Congamond Lake,Southwick,553728.7146,-72.76484082,42.01361208,0,0,0,1,,
+MA,6114682,Jordan Pond,Shrewsbury,69498.48739,-71.74591221,42.2681665,0,0,0,1,,
+MA,6115096,Sutton Falls Pond,Sutton,37581.97749,-71.78469098,42.110801,1,0,0,0,,
+MA,6123527,Stetson Pond,Pembroke,340814.6646,-70.82741319,42.02799649,0,1,0,0,,
+MA,6123569,West Monponsett Pond,Halifax,1109471.743,-70.84854897,42.00833709,3,5,2,1,,
+MA,6123575,East Monponsett Pond,Halifax,778769.4073,-70.83798257,42.00660153,0,0,1,2,,
+RI,6127083,Slack Reservoir,Smithfield-Johnston,506095.7232,-71.55317705,41.86112533,,0,1,1,,
+RI,6127275,Mashapaug Pond,Providence,279103.1999,-71.4328238,41.79404531,,0,1,1,,
+RI,6127287,Spectacle Pond,Cranston,130354.8458,-71.44279473,41.79042878,,0,1,0,,
+RI,6127339,Blackamore Pond,Cranston,71707.07666,-71.44686031,41.77464313,,0,0,1,,
+RI,6127835,Watson Pond,Little Compton,1460432.361,-71.17920831,41.53913086,,0,0,2,,
+RI,6131075,Paradise Pond,Middletown,128195.8164,-71.26234188,41.49391112,,0,0,1,,
+RI,6131079,Gardiner Pond,Middletown,368364.7945,-71.25415638,41.49158331,,0,0,1,,
+RI,6131119,Almy Pond,Newport,215442.6479,-71.31254059,41.46135554,,1,0,1,,
+RI,6140576,Pasquisset Pond,Charlestown,304720.1786,-71.63123501,41.42605739,,0,0,1,,
+MA,6143993,Carbuncle Pond,Oxford,39179.69819,-71.8679763,42.13538924,0,1,1,0,,
+MA,6742526,Lake Attitash,Amesbury/Merrimac,1459668.404,-70.98188693,42.84950508,1,1,1,3,,
+MA,6743338,Steven's Pond,North Andover,102687.8005,-71.10847397,42.69131677,0,0,0,1,,
+MA,6743424,Lake Nabnasset,Westford,469363.8671,-71.42596682,42.61735758,0,0,0,1,,
+MA,6771769,Dudley Pond,Wayland,287776.7689,-71.37140157,42.32999382,0,0,0,1,,
+MA,6771813,Chauncy Lake,Westborough,686158.4763,-71.61251686,42.29434438,0,0,1,0,,
+MA,7689341,Quaboag Pond,Brookfield/E. Brookfield,2178972.448,-72.06881522,42.19606256,0,0,0,1,,
+MA,9344199,Dean Pond,Shrewsbury,26191.68435,-71.69471032,42.2986293,0,0,0,1,,
+RI,9494666,Barber Pond,South Kingstown,88522.00224,-71.56486641,41.50198449,,0,0,1,,
+RI,6127049,Slater Memorial Park Pond,Pawtucket,66637.50088,-71.34067831,41.87712574,,0,1,0,,#3 Ten Mile System
+RI,6127113,Central Pond,East Providence,543268.8925,-71.33996842,41.85443392,,1,0,0,,#5 Ten Mile System
+RI,6127171,Omega Pond,East Providence,118616.0569,-71.36501979,41.83784098,,1,0,0,,#8 Ten Mile System
+NH,6777469,Forest Lake TB,Windchester,375845.4514,-72.36636265,42.79344564,,0,1,,,1 Advisory & 1 warning
+RI,6117816,Scott Pond,Lincoln,132267.8825,-71.40714636,41.89815459,,0,0,1,,2 polygon appears to be the same pond
+RI,6131061,Easton Pond North,Middletown,429701.2227,-71.28986967,41.49827126,,0,0,1,,"2 polygons, may be connected"
+RI,6127387,J.L. Curran Reservoir,Cranston,118416.0163,-71.5492566,41.75274287,,0,1,1,,2 polygons-also called Fiskeville Reservoir
+RI,6127747,Melville Ponds,Portsmouth,32936.47713,-71.27305824,41.58346038,,1,0,1,,2 separate ponds
+NH,-6,Camp Kettleford Beach,Bedford,,-71.47815556,42.92793056,,1,0,,,Advisory
+NH,-5,Elm Brook Park,Hopkinton,,-71.74786389,43.18934722,,1,1,,,Advisory
+NH,5847224,Pawtuckaway SP,Nottingham,3174716.323,-71.14495506,43.08913438,,0,1,,,Advisory
+NH,6743164,Robinson Pond Town Beach,Hudson,517083.1142,-71.38685126,42.79852137,,1,0,,,Advisory
+NH,6743222,Silver Lake State Park,Hollis,142943.0077,-71.59831814,42.75722404,,0,1,,,Advisory
+NH,6776227,Surry Mountain Lake Beach,Surry,694751.841,-72.31280586,43.00527464,,1,0,,,Advisory
+NH,9315167,White Lake State Park Beach,Tamworth,485872.1692,-71.22322403,43.83993819,,1,0,,,Advisory
+NH,9315231,Duncan Lake Town Beach,Ossipee,336507.5136,-71.10634657,43.70616898,,1,0,,,Advisory
+NH,9326568,Canaan Street Lake Beach,Canaan,1160307.762,-72.03466977,43.66779679,,1,0,,,Advisory
+NH,9342917,Pearly Pond,Rindge,805883.0455,-72.06291317,42.7756002,,1,0,,,Advisory
+RI,6127315,Roger Williams Park Ponds,Providence,242353.3782,-71.41062492,41.77950284,,0,1,1,,At least 5 ponds with 4 names.
+MA,6127167,Turner Reservoir,Seekonk,442247.0296,-71.338504,41.842104,0,1,1,0,,Lake in MA & RI
+RI,6127167,Turner Reservoir,East Providence,442247.0296,-71.339977,41.832677,,1,0,0,,Lake in MA & RI;#6 Ten Mile System
+MA,22289469,Lake Monomonac,Winchendon,2307040.7,-72.010081,42.711211,0,1,0,0,,"Lake in MA and NH, warnings in both for 2010; points manually separated "
+NH,22289469,Lake Monomonac,Rindge,2307040.7,-71.985054,42.7298,,1,0,,,"Lake in MA and NH, warnings in both for 2010; points manually separated; Warning"
+MA,5878223,Middle Pond,Barnstable,978878.1849,-70.416162,41.669505,1,1,0,0,,Middle Pond and Mystic Lake share a WBID; points manually separated
+MA,5878223,Mystic Lake,Barnstable,978878.1849,-70.41537,41.683485,1,1,0,0,,Middle Pond and Mystic Lake share a WBID; points manually separated
+VT,22302965,Lake Champlain,,1074596929,-73.31346707,44.57606578,1,1,1,1,,Not really sure about the closures or warnings but problems apparent in all years.
+MA,6743322,Long Pond,Dracut/Tyngsborough,663509.0416,-71.37031538,42.69394206,0,0,0,1,,Pond in NH and MA advisories for both
+NH,6743322,Long Pond,Pelham,663509.0416,-71.37031538,42.69394206,,1,1,,,Pond in NH and MA advisories for both; Advisory
+RI,-4,Bailey Brook,Middletown,,-71.28805133,41.53454779,,0,0,1,,River
+MA,-2,Charles River,Waltham,,-71.079287,42.357996,1,1,0,4,,River
+MA,-1,Malden River,Medford,,-71.075885,42.400097,0,0,1,0,,River
+RI,-3,Lower Ten Mile River,East Providence,,-71.34967705,41.82989576,,1,0,0,,River: #7 Ten Mile System
+ME,3320004,East Pond,Kennebec,7249213.021,-69.78454749,44.61081445,,1,,,,Sampled for Toxins in 2010
+ME,6710627,Great Pond,Belgrade,34345259.81,-69.84380623,44.53741015,,1,,,,Sampled for Toxins in 2010
+ME,1720557,Harlow Pond,Guilford,2602622.001,-69.37868779,45.14391196,,1,,,,Sampled for Toxins in 2010
+ME,3323630,Long Pond,Belgrade,10275530.09,-69.90657326,44.51189793,,1,,,,Sampled for Toxins in 2010
+ME,3320002,North Pond,Smithfield,10218713.24,-69.84367917,44.62375821,,1,,,,Sampled for Toxins in 2010
+ME,5204620,Sewell Pond,Arrowsic,171489.0495,-69.7810381,43.87025148,,1,,,,Sampled for Toxins in 2010
+ME,3323864,Threemile Pond,Kennebec,4648275.617,-69.60525414,44.36660747,,1,,,,Sampled for Toxins in 2010
+ME,3323750,Webber Pond,Augusta,4891045.929,-69.65461636,44.40986143,,1,,,,Sampled for Toxins in 2010
+RI,6127803,St. Marys Pond,Portsmouth,444974.9662,-71.270278,41.557975,,0,0,1,,St. Mary's and Sisson 2 polygon appears to be the same pond 2012 two sampling events
+RI,6127803,Sisson Pond,Portsmouth,444974.9662,-71.277242,41.54835,,0,0,1,,St. Mary's and Sisson 2 polygon appears to be the same pond 2012 two sampling events
+RI,6131083,Easton Pond South,Middletown,526735.0917,-71.2925577,41.49128446,,0,0,1,,"Very close to Easton Pond North, may share a border."
+NH,5843810,Willand Pond,Dover,269178.5801,-70.88887923,43.22851587,,1,0,,,Warning
+NH,5846990,Nippo Pond,Barrington,310977.4094,-71.0826319,43.22173022,,1,0,,,Warning
+NH,5849752,Showell Pond,Sandown,71021.61176,-71.1760768,42.90807095,,1,0,,,Warning
+NH,6739046,Halfmoon Lake,Barnstead/Alton,1087774.366,-71.22877792,43.39181312,,0,1,,,Warning
+NH,6739244,Jenness Pond,Northwood/Pittsfield,1035274.64,-71.24967048,43.25693115,,0,1,,,Warning
+NH,6741234,Locke Lake,Barnstead,496073.7692,-71.23487277,43.38145359,,1,0,,,Warning
+NH,6742962,Sebbins Pond,Bedford,76834.80955,-71.47859454,42.92807956,,1,1,,,Warning
+NH,6743030,Angle Pond ,Sandown,552500.0754,-71.15906328,42.90033347,,1,0,,,Warning
+NH,6743056,Big Island Pond,Atkinson,2253610.293,-71.20840721,42.86923562,,1,0,,,Warning
+NH,6743212,Rock Pond,Windham,132741.447,-71.30004815,42.77070944,,1,0,,,Warning
+NH,9315245,Province Lake,Effingham,3764960.413,-70.99476423,43.69076543,,1,0,,,Warning
+NH,9328110,Winnipesaukee,Meredith,185552842.3,-71.34533281,43.61409551,,0,1,,,Warning

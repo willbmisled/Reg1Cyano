@@ -7,11 +7,8 @@ output: html_document
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
-    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
-      a<-getwd()
-        if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
-          } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
-  knit('Locations2014.rmd')
+    setwd("Data2014")
+    knit('Locations2014.rmd')
   -->
 ```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
   #########function to install (if needed) and load R packages by list
@@ -77,7 +74,7 @@ Data Steps
   unique(Data2014$SampleMethod)
   a<-Data2014[Data2014$SampleMethod=='Grab'|Data2014$SampleMethod=='VanDorn'|Data2014$SampleMethod=='Integrated',]
 #which locations are missing
-  table(is.na(a$Latitude)) #0 missing
+  table(is.na(a$Latitude)) #0 missing  N=8499
 ```
 
 * Keep only the unique long lat data 
