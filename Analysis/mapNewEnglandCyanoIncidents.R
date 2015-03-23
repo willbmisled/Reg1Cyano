@@ -31,6 +31,12 @@ windows(7,7)
   gg<-gg + theme(axis.title= element_text(face="bold", size=20))
   gg<-gg + theme(axis.text=element_text(angle=0, vjust=0.5, size=16))
   gg<-gg +ggtitle("mapNewEnglandCyanoIncidents.R")
+  gg<-gg + annotate("text", x = -69, y = 46, label = "ME")
+  gg<-gg + annotate("text", x = -71.5, y = 44.2, label = "NH")
+  gg<-gg + annotate("text", x = -72.8, y = 44.2, label = "VT")
+  gg<-gg + annotate("text", x = -72.6, y = 42.4, label = "MA")
+  gg<-gg + annotate("text", x = -72.7, y = 41.6, label = "CT")
+  gg<-gg + annotate("text", x = -71.4, y = 41.2, label = "RI")
   gg
 
 
