@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoData2014"
 author: "Bryan Milstead"
-date: "March 18, 2015"
+date: "March 30, 2015"
 output: html_document
 ---
 <!---
@@ -984,11 +984,9 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 ### Maine
 
-* Data received from Linda Bacon on 3/13/15 as "Cyanotoxin.zip"
+* Latest version of data received from Linda Bacon on 3/26/15 as "Cyanotoxin.zip"
 * Data extracted and access database "Cyanotoxin.accdb" renamed "MEDEP.accdb"
-* Newer version of ME database receieved from Linda Bacon on 3/19/15 also as "Cyanotoxin.zip"
-* The 3/13 version renamed MEDEP20150313.accdb
-* The 3/19 version renamed MEDEP.accdb
+* Earlier version of data received on 3/13/15 and 3/19/15
 
 
 **Questions for Linda Bacon**
@@ -1020,9 +1018,8 @@ I've been modifying the template as I process data.  One of the fields added sin
 **Data steps**-View code in Data2014.rmd document to see details.
 
 * SQL query used to read all data into R
+* Rep added as the rank of FluoroResultID by SampleID and Anal
 * Data reformatted
-
-
 
 ```{r MEDEP, include=FALSE, echo=FALSE, cache=FALSE} 
 # Read data
@@ -1034,6 +1031,8 @@ FROM (Event LEFT JOIN Sample ON Event.EventID = Sample.eventid) LEFT JOIN Fluoro
     ",stringsAsFactors=FALSE)
     close(con)
     str(ME)
+  #add rep field
+    ME<-transform(ME,rep=ave(FluoroResultID,SampleID,Anal,FUN=function(x) rank(x,ties.method="first")))
 
 #Review, add, & modify fields as needed
   MEDEP<-data.frame(Order=ME$FluoroResultID)
@@ -1073,7 +1072,7 @@ FROM (Event LEFT JOIN Sample ON Event.EventID = Sample.eventid) LEFT JOIN Fluoro
     summary(Data2014$Value[Data2014$Parameter=='Phycocyanin' & Data2014$Units=='ug/l' & Data2014$Organization!='MEDEP'])
     summary(ME$result[ME$Anal=='FP' |ME$Anal=='RP'])
     summary(Data2014$Value[Data2014$Parameter=='Phycocyanin' & Data2014$Units=='RFU' & Data2014$Organization!='MEDEP'])
-  MEDEP$Rep<-NA
+  MEDEP$Rep<-ME$rep
   MEDEP$Fluorometer<-"Beagle"
   MEDEP$AnalysisYear<-2014 
   MEDEP$AnalysisMonth<-as.numeric(substr(as.Date(ME$DateFluor),6,7))
