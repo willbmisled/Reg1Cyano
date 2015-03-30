@@ -1,21 +1,18 @@
 ---
 title: "Region1CyanoData2014"
 author: "Bryan Milstead"
-date: "January 13, 2015"
+date: "March 18, 2015"
 output: html_document
 ---
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
     setwd("Data2014")
-      a<-getwd()
-        if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
-          } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
-  knit('Data2014.rmd')
+    knit('Data2014.rmd')
 -->
 To Do List
 -------------------------
-* Need data from ME
+* Convert RFU to ug/l for CTDEEP and UNH_CFB
 * Map locations and send to contacts for verifications
 
 
@@ -989,10 +986,9 @@ I've been modifying the template as I process data.  One of the fields added sin
 
 * Data received from Linda Bacon on 3/13/15 as "Cyanotoxin.zip"
 * Data extracted and access database "Cyanotoxin.accdb" renamed "MEDEP.accdb"
-* Added field "Comments" to table "Events" to document two changes to MIDAS numbers that I made
-* Newer version of ME database receieved from Linda Bacon on 3/18/15 also as "Cyanotoxin.zip"
+* Newer version of ME database receieved from Linda Bacon on 3/19/15 also as "Cyanotoxin.zip"
 * The 3/13 version renamed MEDEP20150313.accdb
-* The 3/18 version renamed MEDEP.accdb
+* The 3/19 version renamed MEDEP.accdb
 
 
 **Questions for Linda Bacon**
@@ -1008,6 +1004,7 @@ I've been modifying the template as I process data.  One of the fields added sin
   - BM: this was fixed in the 3/19 version; all zeros now
 * In the "Sample" table what are the units for the values in the "result" column? ug/l? or RFU?
   - LB: Very Good Question!   Last summer I thought they were RFUs but in January was told they were not.  I tried to get a straight answer from the group in January and was told that the units were ug/L.  I was told to ‘trust us’ – which I still do not.  What says you???
+  - BM:  the distribution of values is consistent with ug/l.  I have asked Linda to check if they have any chlorophyll records for the lakes to verify.
 * In the "Sample" table do you have the lat/lon values for sampleID=329 & sampleID=330?  These correspond to eventid=42.
  - LB: Yes.  They were not on the Cyano Field Sheeet but were on the regular field sheet filled out at the deep hole: 44.3674    -69.607899   (note that all DH1 & WL1 samples were taken at the same location; likewise for DH3 and WL1).
  - BM: this was fixed in the 3/19 version

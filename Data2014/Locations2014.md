@@ -1,23 +1,19 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "March 4, 2015"
+date: "March 18, 2015"
 output: html_document
 ---
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
-    setwd("~/PortableApps/R/scripts/Reg1Cyano/Data2014")
-      a<-getwd()
-        if(substr(a,nchar(a)-8,nchar(a))=='Reg1Cyano')  {setwd('./Data2014/')
-          } else {if(substr(a,nchar(a)-7,nchar(a))!='Reg1Cyano') print('WARNING: Wrong Working Directory')}
-  knit('Locations2014.rmd')
+    setwd("Data2014")
+    knit('Locations2014.rmd')
   -->
 
 
 To Do List
 -------------------------
-* missing location data for ME
 * check locations manually for distance >0
 * Map locations and send to contacts for verifications
 

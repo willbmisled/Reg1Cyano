@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "March 4, 2015"
+date: "March 18, 2015"
 output: html_document
 ---
 <!---
@@ -23,7 +23,6 @@ lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 
 To Do List
 -------------------------
-* missing location data for ME
 * check locations manually for distance >0
 * Map locations and send to contacts for verifications
 
