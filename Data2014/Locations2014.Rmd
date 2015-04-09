@@ -1,7 +1,7 @@
 ---
 title: "Region1CyanoLocations2014"
 author: "Bryan Milstead"
-date: "March 31, 2015"
+date: "April 1, 2015"
 output: html_document
 ---
 <!---
@@ -212,13 +212,17 @@ writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile",overwrite_layer=TRUE)
 * file resaved as tempLocations1.csv
 * locations with distances to WBID greater than 20m verified in ArcGIS & GE
 * LocID=11 Lon/Lat changed from -73.078158 / 45.340375; moved to offshore Phillpsburg
-  - shell.exec('Locations.mxd')
+* LocID=101 Lon/Lat changed from -72.134333, 43.639417; to Dartmouth Corinthian Yacht Club location
+* LocID=628 Lon/Lat changed from -69.33141, 44.12864); GoogleEarth Clary Lake ME location
 * check that each there is only one siteDescription for each LocIDNew
 * check that each there is only one WBID for each LocIDNew
 * get unique LocIDNew information
 * rename Lon/Lat 'Lon_LocIDNew' & 'Lat_LocIDNew'
 * add WBID centroids 'Lon_WBID' & 'Lat_WBID'
 * add WBID Centroids for Charles River sites (no WBID) (estimated from GE)
+
+* add WBID for LocIDNew==151; lake exists but not in NHDplus; estimated from GE
+
 * make final locations files
   - "LocIDNew" a SpatialPointDataFrame with the unique aggregated locations and site information
   - "LocIDNew.kml" kml file of the locations
@@ -238,16 +242,19 @@ writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile",overwrite_layer=TRUE)
   x<-as.data.frame(table(b$LocIDNew))
   x[x$Freq>1,]
 #get unique LocIDNew information
-  b<-unique(a[a$LocID==a$LocIDNew,c("LocIDNew","WBID","Longitude","Latitude","siteDescription","siteComment")]);nrow(b) #183
+  b<-unique(a[a$LocID==a$LocIDNew,c("LocIDNew","WBID","Longitude","Latitude","siteDescription","siteComment")]);nrow(b) #298
     names(b)[3:4]<-c('Lon_LocIDNew','Lat_LocIDNew')
 # add WBID centroids 'Lon_WBID' & 'Lat_WBID'
-  b<-merge(b,Lakes@data[,c('WB_ID','Centroid_Long','Centroid_Lat')],by.x='WBID',by.y='WB_ID',all.x=TRUE);nrow(b) #183
+  b<-merge(b,Lakes@data[,c('WB_ID','Centroid_Long','Centroid_Lat')],by.x='WBID',by.y='WB_ID',all.x=TRUE);nrow(b) #298
     names(b)[7:8]<-c('Lon_WBID','Lat_WBID')
   LocIDNew<-SpatialPointsDataFrame(coordinates(b[,3:4]), b, proj4string=WGS84)
-  #add centroids for missing WBID
-    LocIDNew$Lon_WBID[is.na(LocIDNew$WBID)]<--71.076827
-    LocIDNew$Lat_WBID[is.na(LocIDNew$WBID)]<-42.359977
-    
+  #add centroids for missing WBID-centroids estimated from google earth or from Lon_LocIDNew & Lat_LocIDNew
+    LocIDNew$Lon_WBID[LocIDNew$LocIDNew%in%c(20:23)]<--71.076890
+    LocIDNew$Lat_WBID[LocIDNew$LocIDNew%in%c(20:23)]<-42.359291
+    LocIDNew$Lon_WBID[LocIDNew$LocIDNew==151]<--71.979289
+    LocIDNew$Lat_WBID[LocIDNew$LocIDNew==151]<-41.857677
+    LocIDNew$Lon_WBID[LocIDNew$LocIDNew==631]<-LocIDNew$Lon_LocIDNew[LocIDNew$LocIDNew==631]
+    LocIDNew$Lat_WBID[LocIDNew$LocIDNew==631]<-LocIDNew$Lat_LocIDNew[LocIDNew$LocIDNew==631]
 #create KML file        
   kmlPoints(LocIDNew, 
             kmlfile='LocIDNew.kml', 
@@ -265,10 +272,10 @@ writeOGR(Loc,getwd(),'Locations', driver="ESRI Shapefile",overwrite_layer=TRUE)
 
 #create LocID2LocIDNew
   a<-read.csv("tempLocations1.csv")
-    b<-unique(a[,c('LocID','LocIDNew')]);nrow(b) #221
-      length(unique(b$LocID)) #221
-      nrow(LocIDNew)#183
-  LocID2LocIDNew<-merge(b,LocIDNew@data,by='LocIDNew',all.x=TRUE);nrow(LocID2LocIDNew)#221
+    b<-unique(a[,c('LocID','LocIDNew')]);nrow(b) #634
+      length(unique(b$LocID)) #634
+      nrow(LocIDNew)#298
+  LocID2LocIDNew<-merge(b,LocIDNew@data,by='LocIDNew',all.x=TRUE);nrow(LocID2LocIDNew)#634
 
         
 

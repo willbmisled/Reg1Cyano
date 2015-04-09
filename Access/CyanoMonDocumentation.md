@@ -1,5 +1,5 @@
 ---
-title: "CyanoMonDocumentation"
+title: "cyanoMonDocumentation"
 author: "Bryan"
 date: "Monday, March 30, 2015"
 output: html_document
@@ -8,7 +8,7 @@ output: html_document
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
     setwd("Access")
-    knit('CyanoMonDocumentation.rmd')
+    knit('cyanoMonDocumentation.rmd')
   -->
 
 
@@ -29,15 +29,15 @@ Background
 * 2014 data have been collated and standardized
 * For future data collection we need a relational database developed for data entry and archiving 
 * The Database need to work with a Data Collection Phone App under development
-* For now, the database will be created in MSAccess (CyanoMon.mdb)
-* This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/CyanoMonDocumentation.md
+* For now, the database will be created in MSAccess (cyanoMon.mdb)
+* This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMonDocumentation.md
 
 Database Structure
 -------------------------
 
-* The five tables in the access database (CyanoMon.mdb) are described below:
+* The five tables in the access database (cyanoMon.mdb) are described below:
 
-![Relationships for CyanoMon.mdb](CyanoMonRelationships.jpg)
+![Relationships for cyanoMon.mdb](cyanoMonRelationships.jpg)
 
 * **tblWaterbody** provides general information on the waterbody and assigns a unique identifier.  Ideally we will have this table populated before the field crews go out so that they can select the correct lake from a list.  The reality is that we will also need to be able to add lakes on the fly as new lakes are added to the sampling plan. There may be multiple stations for each waterbody.
 
@@ -52,7 +52,7 @@ Field  | Data Type | Description
 **longitudeWB**|Double|Text Box: longitude in decimal degrees (WGS84) of the lake centroid
 **latitudeWB**|Double|Text Box: latitude in decimal degrees (WGS84) of the lake centroid
 **locationSourceWB**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined?
-**commentWaterbody**|Long Text| Text Box: Additional information or comments
+**commentWB**|Long Text| Text Box: Additional information or comments
 
 
 * **tblStation** within each Waterbody there may be multiple stations. This table provides general information on the station.  There may be multiple samples taken from each station.

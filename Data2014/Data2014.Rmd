@@ -52,8 +52,8 @@ Field  | Units | Description
 **SampleLocation:**|(lookup)|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
 **SampleMethod:**|(lookup)|How was the sample collected? Grab = Grab sample for surface blooms; Composite =Composite; Integrated = Integrated tube sample; Validation = Use this for Blanks and Calibration Standards; Other = give details in the comments section.
 **Depth:**|(integer)|Within Lake samples are at 3m and Shoreside are at 1m.  If samples taken at different depths not the depth here and enter details in the comments section.  Leave blank for standards and blanks.
-**Latitude:**|(decimal)|Latitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
-**Longitude:**|(decimal)|Longitude in Decimal Degrees with 4 decimal places or degrees minutes seconds
+**Latitude:**|(decimal)|Latitude in Decimal Degrees with 4 decimal places
+**Longitude:**|(decimal)|Longitude in Decimal Degrees with 4 decimal places
 **SampleHour:**|(HH)|Hour sample was taken in 24 hour format
 **SampleMinutes:**|(MM)|Minute sample was taken in integer format
 **Filtered:**|(TRUE/FALSE)|Was the sample filtered?

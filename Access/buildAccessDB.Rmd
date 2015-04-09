@@ -1,0 +1,324 @@
+---
+title: "buildAccessDB"
+author: "Bryan"
+date: "Thursday, April 02, 2015"
+output: html_document
+---
+
+<!---
+use these command instead of the knit icon if you want the data and work loaded into the R workspace
+  library(knitr)
+    setwd("Access")
+    knit('buildAccessDB.rmd')
+  -->
+  
+```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
+  #########function to install (if needed) and load R packages by list
+libs<-c("knitr","chron") #list of packages to load
+
+installLoad<-function(pck){ #user defined function
+    if(!pck%in%installed.packages()){install.packages(pck)}
+    require(pck, character.only = TRUE)
+  }
+lapply(libs,function(x) installLoad(x))  #Load/Install require packages
+```
+
+To Do List
+-------------------------
+
+* Develop a method to assign unique identifiers that works with the phone app
+* Build forms
+* Add 2014 data
+* Develop and test phone app
+* reassign values for stationType (tblStation) to "nearShore" and "offShore"
+
+Background
+-------------------------
+
+* EPA region 1 is coordinating a Cyanobacteria Monitoring Progam for the six New England States (CT, MA, ME, NH, RI, & VT)
+* Data collection initiated during the summer of 2014
+* 2014 data have been collated and standardized: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Data2014.md
+* 2014 locations have been verified: https://github.com/willbmisled/Reg1Cyano/blob/master/Data2014/Locations2014.md
+* A MSaccess database has been developed: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMonDocumentation.md
+* OBJECTIVE: add the 2014 locations and data to cyanoMon.mdb
+
+Datasteps
+-------------------------
+
+* Get data
+* Keep samples only (eliminate blanks and standards)
+* Merge tablular (df "Data") and location (df "LocID2LocIDNEW") data for Lakes
+* Check that all data have locations-yes
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - WaterbodyName:waterbodyName
+    - State:state
+    - Lon_DataID:longitudeData
+    - Lat_DataID:latitudeData
+    - Lon_LocIDNew:longitudeSta
+    - Lat_LocIDNew:latitudeSta
+    - GPSType:locationSourceSta
+    - SampleLocation:stationType
+
+```{r Data, include=FALSE, echo=FALSE, cache=FALSE} 
+#reset working directory
+  setwd("C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Access")
+#Get the data 
+  Data2014<-read.csv("../Data2014/Data2014.csv")
+#Get the locations
+ load("../Data2014/Locations.rda")
+#Get the NH waterbodyNames
+  NH<-read.csv("../Data2014/NHDES_waterbodyNames.csv") #get names NHDES
+#select samples only
+  unique(Data2014$SampleMethod)
+  Data<-Data2014[Data2014$SampleMethod=='Grab'|Data2014$SampleMethod=='VanDorn'|Data2014$SampleMethod=='Integrated',]
+  nrow(Data) #8499
+
+#merge tabular data with locations
+      Data<-merge(Data,LocID2LocIDNew,by='LocID')
+        nrow(Data) #8499
+
+#make sure all data have locations
+      table(is.na(Data$Lon_LocIDNew)) #0 missing  N=8499
+      table(is.na(Data$Lon_WBID)) #0 missing  N=8499
+
+#rename fields
+  names(Data)[which(names(Data)=="WaterbodyName")]<-"waterbodyName"
+  names(Data)[which(names(Data)=="State")]<-"state"
+  names(Data)[which(names(Data)=="Lon_WBID")]<-"longitudeWB"
+  names(Data)[which(names(Data)=="Lat_WBID")]<-"latitudeWB"
+  names(Data)[which(names(Data)=="Lon_LocIDNew")]<-"longitudeSta"
+  names(Data)[which(names(Data)=="Lat_LocIDNew")]<-"latitudeSta"
+  names(Data)[which(names(Data)=="GPSType")]<-"locationSourceSta"
+  names(Data)[which(names(Data)=="SampleLocation")]<-"stationType"
+
+  
+```
+
+**build tblWaterbody**
+
+* Assign a unique waterbodyID to each lake-this will be the primary Key for tblWaterbody. Varies by Organization:
+    - CRWA, CTDEEP, RIWW,VTDEC: Organization + SiteID
+    - MEDEP: "MIDAS" + SiteID
+    - NHDES: Organization + WaterbodyName
+    - UNH_CFB & VTDEC: "WBID" + WBID
+* Assign a otherWaterbodyID to each lake. Varies by Organization: 
+    - CRWA, CTDEEP, RIWW,VTDEC: SiteID
+    - VTDEC, UNH_CFB: NA #no ID given
+    - NHDES: Organization + WaterbodyName #waterbody names are numeric IDs
+* Make sure all waterbodyNames are consistently spelled
+    - MIDAS_5408  Webber==Weber pond
+    - MIDAS_5172  Unity==Unity Pond
+* add missing lake names
+    - VTDEC: lake champlain
+    - NHDES: names manually extracted from "NHDES_Locations.csv" saved as "NHDES_waterbodyNames.csv" then added to DF "WB"
+* add town==NA as a placeholder
+* add field "locationSourceWB"
+    - No WBID=='Google Earth
+    - With WBID =='MRB1_WBIDLakes'
+* extract commentWB and commentSta for siteComment
+* Get unique values for c("waterbodyID","waterbodyName","state","town","WBID","otherWaterbodyID","LongitudeWB","LatitudeWB","locationSourceWB","commentWB")
+* check to make sure the waterbodyID is unique and consistent
+
+```{r tblWaterbody, include=FALSE, echo=FALSE, cache=FALSE}   
+#assign otherWaterbodyID
+  Data$otherWaterbodyID<-as.character(Data$SiteID)
+    x<-Data$Organization=='UNH_CFB'|Data$Organization=='VTDEC'
+      Data$otherWaterbodyID[x]<-NA
+    x<-Data$Organization=='NHDES'
+      Data$otherWaterbodyID[x]<-paste('NHDES','_',Data$waterbodyName[x],sep='')
+  unique(Data$otherWaterbodyID)
+
+#assign waterbodyID
+  Data$waterbodyID<-paste(Data$Organization,'_',Data$SiteID,sep='')
+    x<-Data$Organization=='MEDEP'
+      Data$waterbodyID[x]<-paste('MIDAS','_',Data$SiteID[x],sep='')
+    x<-Data$Organization=='UNH_CFB'|Data$Organization=='VTDEC'
+      Data$waterbodyID[x]<-paste(Data$Organization[x],'_','WBID','_',Data$WBID[x],sep='')
+    x<-Data$Organization=='NHDES'
+      Data$waterbodyID[x]<-paste('NHDES','_',Data$waterbodyName[x],sep='')
+        #remove spaces from one ID
+          x<-grep('MA70-02',Data$waterbodyID)
+            Data$waterbodyID[x]<-"CRWA_MA70-02"
+            Data$otherWaterbodyID[1]<-"MA70-02"
+  unique(Data$waterbodyID)
+
+#waterbodyName consistency check  
+  a<-unique(Data[,c('waterbodyID','waterbodyName')])
+    x<-as.data.frame(table(a$waterbodyID))
+      b<-x[x$Freq>1,]
+        a[a$waterbodyID%in%b$Var1,]
+    #waterbodyID with multiple lines due to spelling differences
+        Data$waterbodyName[which(Data$waterbodyName=='Unity')]<-'Unity Pond'
+        Data$waterbodyName[which(Data$waterbodyName=='Webber')]<-'Webber pond'
+
+#missing or incorrect waterbodyName
+  # add new levels to factor (Data$waterbodyName)
+     levels(Data$waterbodyName)<-c(levels(Data$waterbodyName),'Lake Champlain',levels(NH$waterbodyName))
+    #VTDEC
+      Data$waterbodyName[grep("VTDEC",Data$waterbodyID)]<-"Lake Champlain"
+    #NHDES
+      Data<-merge(Data,NH,by='waterbodyID',all.x=TRUE)
+        names(Data)[which(names(Data)=="waterbodyName.x")]<-"waterbodyName"
+          x<-grep("NHDES",Data$waterbodyID)
+            Data$waterbodyName[x]<-Data$waterbodyName.y[x]
+#add town==NA
+  Data$town<-NA
+
+#add locationSourceWB
+  Data$locationSourceWB<-ifelse(is.na(Data$WBID),'GoogleEarth','MRB1_WBIDLakes')
+
+# extract commentWB and commentSta for siteComment
+  # check comments for waterbody and station
+    unique(Data$siteComment)
+    #commentWB
+      Data$commentWB<-NA
+        x<-grep('WBID',Data$siteComment) #only a few wb comments
+          Data$commentWB[x]<-as.character(Data$siteComment[x])
+    #commentSta
+      Data$commentSta<-Data$siteComment
+
+#get unique values for tblWaterbody
+    tblWaterbody<-unique(Data[,c("waterbodyID","waterbodyName","state","town","WBID","otherWaterbodyID","longitudeWB","latitudeWB","locationSourceWB","commentWB")]);nrow(tblWaterbody)#106
+    head(tblWaterbody)
+
+#waterbodyID consistency check  
+  #repeated waterbodyIDs
+    a<-as.data.frame(table(tblWaterbody$waterbodyID))
+      b<-a[a$Freq>1,]
+        tblWaterbody[tblWaterbody$waterbodyID%in%b$Var1,]
+    #waterbodyID with multiple lines due to spelling differences
+        tblWaterbody$waterbodyName[which(tblWaterbody$waterbodyName=='Unity')]<-'Unity Pond'
+        tblWaterbody$waterbodyName[which(tblWaterbody$waterbodyName=='Webber')]<-'Webber pond'
+```
+
+**build tblStation**
+
+* stationID: unique identifier for tblStation-combination of LocIDNew and stationType 
+* Assign otherStationID to each station within each lake. Varies by Organization:
+    - CRWA,MEDEP:  SiteLocation
+    - CTDEEP,RIWW,UNH_CFB,: NA
+    - NHDES,VTDEC: SiteID
+* stationLocation-varies by organization
+    - CRWA,CTDEEP,RIWW,UNH_CFB,NHDES:  siteLocation
+    - MEDEP,VTDEC: NA
+* stationType: field "sampleLocation" renamed "stationType" above Okay for now but will need to reassign values to "nearShore" and "offShore"
+* Get unique values for c("stationID","waterbodyID","otherStationID","stationLocation","stationType","LongitudeSta","LatitudeSta","locationSourceSta","commentSta")
+* check to make sure the waterbodyID is unique and consistent
+
+
+```{r tblStation, include=FALSE, echo=FALSE, cache=FALSE}
+#Assign otherStationID
+  Data$otherStationID<-NA
+    x<-Data$Organization=='CRWA'|Data$Organization=='MEDEP'
+      Data$otherStationID[x]<-as.character(Data$SiteLocation[x])
+    x<-Data$Organization=='NHDES'|Data$Organization=='VTDEC'
+      Data$otherStationID[x]<-as.character(Data$SiteID[x])
+  table(Data$Organization,is.na(Data$otherStationID))
+  table(Data$Organization,Data$otherStationID)
+
+#stationLocation
+  Data$stationLocation<-Data$SiteLocation
+    x<-Data$Organization=='VTDEC'|Data$Organization=='MEDEP'
+      Data$stationLocation[x]<-NA
+    table(Data$Organization,is.na(Data$stationLocation))
+
+#Assign stationID
+  Data$stationID<-paste(Data$LocIDNew,"_",Data$stationType,sep='')
+  #modify stationID for LocIDNew==158
+    x<-Data$LocIDNew==158
+      Data$stationID[x]<-paste(Data$LocIDNew[x],"_",Data$stationType[x],"_",Data$stationLocation[x],sep='')
+        Data$stationID[x]<-gsub(" ","",Data$stationID[x])
+  #update locationSorceSta for LocIDNew==171 or LocIDNew==206
+    x<-Data$LocIDNew==171|Data$LocIDNew==206
+      Data$locationSourceSta[x]<-NA
+
+#get unique values for tblStation
+    tblStation<-unique(Data[,c("stationID","waterbodyID","otherStationID","stationLocation","stationType","longitudeSta","latitudeSta","locationSourceSta","commentSta")]);nrow(tblStation)#468
+
+#stationID consistency check  
+  #repeated stationIDs
+    a<-as.data.frame(table(tblStation$stationID))
+      b<-a[a$Freq>1,]
+        x<-tblStation[tblStation$stationID%in%b$Var1,]
+        x[order(x$stationID),]
+```
+
+**build tblSample**
+
+* add formatted sample and analysis dates and times.
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - Organization:organization
+    - NameOfSamplers:fieldCrew
+    - SampleMethod:sampleMethod
+    - Depth:sampleDepthM
+    - WeatherConditions:weather
+    - Photos:photoSample
+* Add placeholder fields
+    - waterTempC
+    - surfaceWaterCondition
+    - commentSample
+* Get unique values for c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample")
+* sampleID: create sampleID as 1:nrow(tblSample)
+* check to make sure the sampleID is unique and consistent
+* add sampleID to df Data so it can used in the next table
+ 
+
+
+```{r tblSample, include=FALSE, echo=FALSE, cache=FALSE}
+#add formatted date
+  Data$sampleDate<-dates(paste(Data$SampleMonth,'/',Data$SampleDay,'/',Data$SampleYear,sep=''))
+    unique(Data[,c('SampleMonth','SampleDay','SampleYear','sampleDate')])
+  Data$analysisDate<-dates(paste(Data$AnalysisMonth,'/',Data$AnalysisDay,'/',Data$AnalysisYear,sep=''))
+    unique(Data[,c('AnalysisMonth','AnalysisDay','AnalysisYear','analysisDate')])
+
+#add formatted time
+  Data$sampleTime<-times(paste(Data$SampleHour,':',Data$SampleMinutes,":00",sep=''))
+    unique(Data[,c('SampleHour','SampleMinutes','sampleTime')])
+  Data$analysisTime<-times(paste(Data$AnalysisHour,':',Data$AnalysisMinutes,":00",sep=''))
+    unique(Data[,c('AnalysisHour','AnalysisMinutes','analysisTime')])
+
+#rename fields
+  names(Data)[which(names(Data)=="Organization")]<-"organization"
+  names(Data)[which(names(Data)=="NameOfSamplers")]<-"fieldCrew"
+  names(Data)[which(names(Data)=="SampleMethod")]<-"sampleMethod"
+  names(Data)[which(names(Data)=="Depth")]<-"sampleDepthM"
+  names(Data)[which(names(Data)=="WeatherConditions")]<-"weather"
+  names(Data)[which(names(Data)=="Photos")]<-"photoSample"
+
+#add placeholder fields
+  Data$waterTempC<-NA
+  Data$surfaceWaterCondition<-NA
+  Data$commentSample<-NA
+
+#create tblSample
+  tblSample<-unique(Data[,c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample")]);nrow(tblSample) #1102
+
+#add sampleID
+  sampleID<-1:nrow(tblSample)
+  tblSample<-data.frame(sampleID,tblSample)
+
+#check to make sure the sampleID is unique and consistent
+  #repeated sampleIDs
+      a<-as.data.frame(table(tblSample$sampleID))
+        b<-a[a$Freq>1,]
+          x<-tblSample[tblSample$sampleID%in%b$Var1,]
+          x[order(x$sampleID),]
+
+#add sampleID to df Data
+  #select "by" fields
+    #all
+      nrow(unique(tblSample[,c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","weather","photoSample")])) #1102
+    #subset
+      nrow(unique(tblSample[,c("stationID","sampleDate","sampleTime","sampleMethod","sampleDepthM","weather")])) #1102
+  #merge to df Data
+    a<-merge(Data,tblSample,by=c("stationID","sampleDate","sampleTime","sampleMethod","sampleDepthM","weather"))
+    Data<-merge(Data,a[,c('ID','sampleID')],by='ID')
+```
+
+table(Data$Fluorometer,useNA='ifany')
+
+
+
+
+
+

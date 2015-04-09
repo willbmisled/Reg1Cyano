@@ -13,8 +13,728 @@
 </Style>
 
 <Placemark>
+  <name>632</name>
+  <description><![CDATA[WBID=803405 MEDEP Echo 1776 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.005058,46.615817
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>633</name>
+  <description><![CDATA[WBID=816819 MEDEP Conroy 1018 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.87154,46.289409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>629</name>
+  <description><![CDATA[WBID=2679118 MEDEP Georges P 4406 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.24401,44.61508
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>331</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23254,44.86781
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>378</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.22292,44.84919
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>330</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23383,44.87172
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>328</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23407,44.87186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>332</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23267,44.86774
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>333</name>
+  <description><![CDATA[WBID=3319884 MEDEP Sebasticook 2264 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23308,44.86749
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>282</name>
+  <description><![CDATA[WBID=3319994 MEDEP Unity 5172 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>405</name>
+  <description><![CDATA[WBID=6709503 MEDEP North 5344 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>396</name>
+  <description><![CDATA[WBID=3320004 MEDEP East 5349 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>230</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78375,44.52236
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>231</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78658,44.52492
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>232</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78698,44.52454
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>233</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78908,44.52321
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>228</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78409,44.52254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>309</name>
+  <description><![CDATA[WBID=3320048 MEDEP Salmon 5352 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78249,44.52287
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>531</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56019,44.53265
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>527</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55753,44.53833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>528</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55811,44.53827
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>530</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56042,44.53243
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>526</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56047,44.53237
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>529</name>
+  <description><![CDATA[WBID=3320068 MEDEP Pattee 5458 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55865,44.53814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>490</name>
+  <description><![CDATA[WBID=3320078 MEDEP Lovejoy 5176]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>568</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03789,44.59388
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>564</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03785,44.59427
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>565</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03819,44.59472
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>566</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03783,44.59361
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>563</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03825,44.5947
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>567</name>
+  <description><![CDATA[WBID=3322984 MEDEP Crowell 5200 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03781,44.59347
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>626</name>
+  <description><![CDATA[WBID=3322990 MEDEP Locke 5202 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11852,44.57793
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>500</name>
+  <description><![CDATA[WBID=3323678 MEDEP China 5448 3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>597</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97577,44.43121
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>598</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97829,44.42917
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>599</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97881,44.42884
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>600</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97908,44.4288
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>596</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97516,44.43096
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>601</name>
+  <description><![CDATA[WBID=3323716 MEDEP Torsey 5307 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97643,44.43168
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>525</name>
+  <description><![CDATA[WBID=3323750 MEDEP Webber pond 5408 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>510</name>
+  <description><![CDATA[WBID=3323864 MEDEP Threemile 5416 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>539</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34744
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>540</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64027,44.34904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>541</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6403,44.34845
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>542</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34745
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>543</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64148,44.34729
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>544</name>
+  <description><![CDATA[WBID=3323908 MEDEP Threecornered 5424 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64024,44.348
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>584</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93983,44.31113
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>585</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9352,44.31615
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>586</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93498,44.31607
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>587</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93976,44.31125
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>588</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93984,44.31111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>589</name>
+  <description><![CDATA[WBID=3323944 MEDEP Narrows Pond 98 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93478,44.31595
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>595</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94836,44.19589
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>590</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94807,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>591</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19534
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>592</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.95004,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>593</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9501,44.19467
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>594</name>
+  <description><![CDATA[WBID=3324122 MEDEP Woodbury Pond 5240 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19567
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>613</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93286,44.25872
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>610</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93423,44.2565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>611</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94338,44.25178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>612</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94344,44.25179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>608</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93504,44.25505
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>609</name>
+  <description><![CDATA[WBID=3325032 MEDEP Cobbosseecontee 5236 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94336,44.25176
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>244</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03967,44.2751
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>241</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03896,44.27537
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>243</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04372,44.28191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>245</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04433,44.28256
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>242</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0433,44.28085
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>246</name>
+  <description><![CDATA[WBID=3325996 MEDEP Wilson 3832 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0393,44.27525
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>634</name>
+  <description><![CDATA[WBID=3326100 MEDEP Cochnewagon 3814 99 SC1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.044666,44.23015
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>066</name>
-  <description><![CDATA[WBID= 4594887 NHDES 15 Gardner Lake SS#1 SS1]]></description>
+  <description><![CDATA[WBID=4594887 NHDES 15 Gardner Lake SS#1 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -23,18 +743,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>067</name>
-  <description><![CDATA[WBID= 4594887 NHDES 15 Gardner Lake SS#2 SS2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.007627,44.16327
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>068</name>
-  <description><![CDATA[WBID= 4594887 NHDES 15 GARBATD GARDNER LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=4594887 NHDES 15 GARBATD GARDNER LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -43,8 +753,78 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>152</name>
-  <description><![CDATA[WBID= 5843810 UNH_CFB Williand]]></description>
+  <name>067</name>
+  <description><![CDATA[WBID=4594887 NHDES 15 Gardner Lake SS#2 NA SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.007627,44.16327
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>458</name>
+  <description><![CDATA[WBID=5202084 MEDEP Long Pond 5444 1 SS2 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51072,44.295
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>454</name>
+  <description><![CDATA[WBID=5202084 MEDEP Long Pond 5444 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51458,44.28969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>455</name>
+  <description><![CDATA[WBID=5202084 MEDEP Long Pond 5444 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51422,44.28987
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>456</name>
+  <description><![CDATA[WBID=5202084 MEDEP Long Pond 5444 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51384,44.2903
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>457</name>
+  <description><![CDATA[WBID=5202084 MEDEP Long Pond 5444 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51057,44.29469
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>628</name>
+  <description><![CDATA[WBID= NA MEDEP Clary L 5382 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.555233,44.214243
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>157</name>
+  <description><![CDATA[WBID=5843810 UNH_CFB Williand NA NA WL1-WL8]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -53,8 +833,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>089</name>
+  <description><![CDATA[WBID=5846928 NHDES 22 Ayers Lake WL#3 Ayers Lake WL#3 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.038456,43.258643
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>086</name>
-  <description><![CDATA[WBID= 5846928 NHDES 22 AYEBARD AYERS POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=5846928 NHDES 22 AYEBARD AYERS POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -64,7 +854,7 @@
 </Placemark>
 <Placemark>
   <name>087</name>
-  <description><![CDATA[WBID= 5846928 NHDES 22 BCHFIRBRRLF CAMP FIRESIDE-LEFT SS1]]></description>
+  <description><![CDATA[WBID=5846928 NHDES 22 BCHFIRBRRLF CAMP FIRESIDE-LEFT SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -74,7 +864,7 @@
 </Placemark>
 <Placemark>
   <name>088</name>
-  <description><![CDATA[WBID= 5846928 NHDES 22 Ayers Lake WL#2 Ayers Lake WL#2 WL2]]></description>
+  <description><![CDATA[WBID=5846928 NHDES 22 Ayers Lake WL#2 Ayers Lake WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -83,18 +873,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>089</name>
-  <description><![CDATA[WBID= 5846928 NHDES 22 Ayers Lake WL#3 Ayers Lake WL#3 WL3]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.038456,43.258643
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>090</name>
-  <description><![CDATA[WBID= 5846928 NHDES 22 Ayers Lake SS#2 SS2]]></description>
+  <description><![CDATA[WBID=5846928 NHDES 22 Ayers Lake SS#2 NA SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -103,8 +883,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>150</name>
-  <description><![CDATA[WBID= 5846990 UNH_CFB Nippo]]></description>
+  <name>155</name>
+  <description><![CDATA[WBID=5846990 UNH_CFB Nippo NA NA WL1 WL2 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -113,48 +893,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>042</name>
-  <description><![CDATA[WBID= 5849710 NHDES 8 BCHSELSDNRT PHILLIPS POND SEELEY PARK-RIGHT SS1 & Other]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.187255,42.923905
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>043</name>
-  <description><![CDATA[WBID= 5849710 NHDES 8 PHISDND PHILLIPS POND-DEEP SPOT WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.187874,42.918884
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>044</name>
-  <description><![CDATA[WBID= 5849710 NHDES 8 Phillips Pond WL#2 Phillips Pond WL#2 WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.190441,42.914415
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>045</name>
-  <description><![CDATA[WBID= 5849710 NHDES 8 Phillips Pond WL#3 Phillips Pond WL#3 WL3]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.188273,42.922492
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>046</name>
-  <description><![CDATA[WBID= 5849710 NHDES 8 Phillips Pond SS#2 Phillips Pond SS1 & SS2]]></description>
+  <description><![CDATA[WBID=5849710 NHDES 8 Phillips Pond SS#1 Phillips Pond SS1 & SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -163,8 +903,48 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>042</name>
+  <description><![CDATA[WBID=5849710 NHDES 8 BCHSELSDNRT PHILLIPS POND SEELEY PARK-RIGHT SS1 & Other]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187255,42.923905
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>045</name>
+  <description><![CDATA[WBID=5849710 NHDES 8 Phillips Pond WL#3 Phillips Pond WL#3 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.188273,42.922492
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>044</name>
+  <description><![CDATA[WBID=5849710 NHDES 8 Phillips Pond WL#2 Phillips Pond WL#2 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.190441,42.914415
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>043</name>
+  <description><![CDATA[WBID=5849710 NHDES 8 PHISDND PHILLIPS POND-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187874,42.918884
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>139</name>
-  <description><![CDATA[WBID= 5849752 NHDES 37 SHOSDN-GEN SHOWELL POND-GENERIC Other]]></description>
+  <description><![CDATA[WBID=5849752 NHDES 37 SHOSDN-GEN SHOWELL POND-GENERIC Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -173,58 +953,38 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>179</name>
-  <description><![CDATA[WBID= 6127295 RIWW Randall Pond WW36 SS]]></description>
+  <name>188</name>
+  <description><![CDATA[WBID=6127295 RIWW Randall Pond WW36]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.4672,41.7878
+-71.4674,41.7877
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>213</name>
-  <description><![CDATA[WBID= 6127295 RIWW Randall Pond WW36 WL]]></description>
+  <name>171</name>
+  <description><![CDATA[WBID=6127315 RIWW Roger Williams Park Pond WW37 Cunliff Pond (RWP #7) SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.4675,41.7875
+-71.4142,41.7773
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>167</name>
-  <description><![CDATA[WBID= 6127315 RIWW Roger Williams Park Pond WW37 Cunliff Pond (RWP #7) SS1]]></description>
+  <name>206</name>
+  <description><![CDATA[WBID=6127315 RIWW Roger Williams Park Pond WW37 Cunliff Pond (RWP #7) WL1 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.4142,41.7774
+-71.413,41.7785
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>184</name>
-  <description><![CDATA[WBID= 6738242 NHDES 36 HUNSAND HUNKINS POND-DEEP SPOT WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.414,41.777
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>200</name>
-  <description><![CDATA[WBID= 6127315 RIWW Roger Williams Park Pond WW37 Cunliff Pond (RWP #7) WL]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.4114,41.7807
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>205</name>
-  <description><![CDATA[WBID= 6127339 RIWW Blackmore Pond WW05 WL1]]></description>
+  <name>210</name>
+  <description><![CDATA[WBID=6127339 RIWW Blackmore Pond WW05 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -233,8 +993,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>169</name>
-  <description><![CDATA[WBID= 6127339 RIWW Blackmore Pond WW05 SS1]]></description>
+  <name>174</name>
+  <description><![CDATA[WBID=6127339 RIWW Blackmore Pond WW05 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -243,18 +1003,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>216</name>
-  <description><![CDATA[WBID= 6127455 RIWW Warwick Pond WW59 WL]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.411,41.7226
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>187</name>
-  <description><![CDATA[WBID= 6127455 RIWW Warwick Pond WW59 SS]]></description>
+  <name>192</name>
+  <description><![CDATA[WBID=6127455 RIWW Warwick Pond WW59 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -263,8 +1013,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>214</name>
-  <description><![CDATA[WBID= 6127747 RIWW Upper Melville Pond WW183 WL]]></description>
+  <name>220</name>
+  <description><![CDATA[WBID=6127455 RIWW Warwick Pond WW59 NA WL1-WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.411,41.7227
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>219</name>
+  <description><![CDATA[WBID=6127747 RIWW Upper Melville Pond WW183]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -273,8 +1033,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>186</name>
-  <description><![CDATA[WBID= 6127747 RIWW Upper Melville Pond WW183 SS1]]></description>
+  <name>191</name>
+  <description><![CDATA[WBID=6127747 RIWW Upper Melville Pond WW183 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -283,38 +1043,38 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>190</name>
-  <description><![CDATA[WBID= 6139878 RIWW Yawgoo Pond WW68 SS]]></description>
+  <name>149</name>
+  <description><![CDATA[WBID=6139688 CTDEEP Porter Pond 14514 Near outlet dam SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.5764,41.5153
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>218</name>
-  <description><![CDATA[WBID= 6139878 RIWW Yawgoo Pond WW68 WL]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.5711,41.5111
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>168</name>
-  <description><![CDATA[WBID= 6140538 RIWW Asa Pond WW209 SS]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.515,41.458
+-71.81883,41.64518
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>196</name>
-  <description><![CDATA[WBID= 6140538 RIWW Asa Pond WW209 WL]]></description>
+  <description><![CDATA[WBID=6139878 RIWW Yawgoo Pond WW68 NA SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5764,41.515
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>200</name>
+  <description><![CDATA[WBID=6139878 RIWW Yawgoo Pond WW68]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>201</name>
+  <description><![CDATA[WBID=6140538 RIWW Asa Pond WW209]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -323,38 +1083,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>174</name>
-  <description><![CDATA[WBID= 6140576 RIWW Pasquisett Pond WW30 SS]]></description>
+  <name>182</name>
+  <description><![CDATA[WBID=6140576 RIWW Pasquisett Pond WW30]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.6326,41.4244
+-71.6314,41.4274
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>208</name>
-  <description><![CDATA[WBID= 6140576 RIWW Pasquisett Pond WW30 WL]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.6315,41.4273
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>172</name>
-  <description><![CDATA[WBID= 6140628 RIWW Chapman Pond WW200 SS]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.7998,41.3818
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>197</name>
-  <description><![CDATA[WBID= 6140628 RIWW Chapman Pond WW200 WL]]></description>
+  <name>202</name>
+  <description><![CDATA[WBID=6140628 RIWW Chapman Pond WW200]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -363,8 +1103,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>145</name>
-  <description><![CDATA[WBID= 6161343 CTDEEP Lower Bolton Lake 18475 at boat ramp SS1]]></description>
+  <name>148</name>
+  <description><![CDATA[WBID=6161343 CTDEEP Lower Bolton Lake 18475 at boat ramp SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -373,8 +1113,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>142</name>
-  <description><![CDATA[WBID= 6168152 CTDEEP Gardner Lake 18718 at middle of beach SS1]]></description>
+  <name>147</name>
+  <description><![CDATA[WBID=6168152 CTDEEP Gardner Lake 18718 at middle of beach SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -383,8 +1123,338 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>148</name>
-  <description><![CDATA[WBID= 6718859 UNH_CFB Highland Lake WL]]></description>
+  <name>620</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85432,44.54428
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>621</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83668,44.50075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>622</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83489,44.5008
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>623</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83392,44.50086
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>624</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85392,44.54409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>625</name>
+  <description><![CDATA[WBID=6710627 MEDEP Great 5274 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8536,44.54364
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>614</name>
+  <description><![CDATA[WBID=6711205 MEDEP Parker 5186 1 ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>602</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02946,44.43636
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>603</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02963,44.43572
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>604</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02908,44.43591
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>605</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01593,44.44135
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>606</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01627,44.44179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>607</name>
+  <description><![CDATA[WBID=6711229 MEDEP Echo 5814 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01612,44.44249
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>470</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39618
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>471</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39613
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>472</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02388,44.3952
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>473</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0247,44.3948
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>469</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0239,44.39519
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>474</name>
+  <description><![CDATA[WBID=6711271 MEDEP Lovejoy Pond 5664 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01941,44.39645
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>234</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05743,44.37414
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>235</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05964,44.36188
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>449</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 DH1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07557,44.32493
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>238</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05804,44.37565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>239</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0582,44.37585
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>448</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07248,44.32254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>237</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05935,44.36246
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>452</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07342,44.32314
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>453</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07468,44.32402
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>240</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05938,44.36212
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>236</name>
+  <description><![CDATA[WBID=6711311 MEDEP Pocasset 3824 1 WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05962,44.36183
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>451</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07187,44.32218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>450</name>
+  <description><![CDATA[WBID=6711311 MEDEP Androscoggin 3836 1 SS3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0714,44.32186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>285</name>
+  <description><![CDATA[WBID=6711483 MEDEP Sabattus 3796 1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>153</name>
+  <description><![CDATA[WBID=6718859 UNH_CFB Highland Lake NA NA WL1 WL2 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -393,8 +1463,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>627</name>
+  <description><![CDATA[WBID=6719937 MEDEP Highland L 3734 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.3586,43.77696
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>094</name>
-  <description><![CDATA[WBID= 6738100 NHDES 24 Lees Pond WL#1 Lees Pond WL#1 WL1]]></description>
+  <description><![CDATA[WBID=6738100 NHDES 24 Lees Pond WL#1 Lees Pond WL#1 WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -403,8 +1483,28 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>098</name>
+  <description><![CDATA[WBID=6738100 NHDES 24 Lees Pond SS#2 Lees Pond SS#2 SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3943667,43.7371333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>097</name>
+  <description><![CDATA[WBID=6738100 NHDES 24 Lees Pond SS#1 Lees Pond SS#1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.40105,43.7366833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>095</name>
-  <description><![CDATA[WBID= 6738100 NHDES 24 Lees Pond WL#2 Lees Pond WL#2 WL2]]></description>
+  <description><![CDATA[WBID=6738100 NHDES 24 Lees Pond WL#2 Lees Pond WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -414,7 +1514,7 @@
 </Placemark>
 <Placemark>
   <name>096</name>
-  <description><![CDATA[WBID= 6738100 NHDES 24 Lees Pond WL#3 Lees Pond WL#3 WL3]]></description>
+  <description><![CDATA[WBID=6738100 NHDES 24 Lees Pond WL#3 Lees Pond WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -423,38 +1523,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>097</name>
-  <description><![CDATA[WBID= 6738100 NHDES 24 Lees Pond SS#1 Lees Pond SS#1 SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.40105,43.7366833
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>098</name>
-  <description><![CDATA[WBID= 6738100 NHDES 24 Lees Pond SS#2 Lees Pond SS#2 SS2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.3943667,43.7371333
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>132</name>
-  <description><![CDATA[WBID= 6738112 NHDES 34 Lake Kanesatka- Beach Other]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.45834,43.727584
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>133</name>
-  <description><![CDATA[WBID= 6738112 NHDES 34 Lake Kanesatka- Dock Other]]></description>
+  <description><![CDATA[WBID=6738112 NHDES 34 Lake Kanesatka- Dock NA Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -463,18 +1533,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>109</name>
-  <description><![CDATA[WBID= 6738192 NHDES 27 WICMERD WICWAS LAKE-DEEP SPOT WL1]]></description>
+  <name>132</name>
+  <description><![CDATA[WBID=6738112 NHDES 34 Lake Kanesatka- Beach NA Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.5519,43.620083
+-71.45834,43.727584
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>110</name>
-  <description><![CDATA[WBID= 6738192 NHDES 27 WICMEREC WICWAS LAKE-EAST COVE WL2]]></description>
+  <description><![CDATA[WBID=6738192 NHDES 27 WICMEREC WICWAS LAKE-EAST COVE WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -483,18 +1553,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>111</name>
-  <description><![CDATA[WBID= 6738192 NHDES 27 WICMERLR WICWAS LAKE-LAUNCH RAMP SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.551283,43.604747
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>112</name>
-  <description><![CDATA[WBID= 6738192 NHDES 27 WICMER2 WICWAS LAKE-WEST COVE WL3]]></description>
+  <description><![CDATA[WBID=6738192 NHDES 27 WICMER2 WICWAS LAKE-WEST COVE WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -503,8 +1563,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>109</name>
+  <description><![CDATA[WBID=6738192 NHDES 27 WICMERD WICWAS LAKE-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5519,43.620083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>113</name>
-  <description><![CDATA[WBID= 6738192 NHDES 27 Wicwas Lake SS#2 SS2]]></description>
+  <description><![CDATA[WBID=6738192 NHDES 27 Wicwas Lake SS#2 NA SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -513,8 +1583,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>156</name>
-  <description><![CDATA[WBID= 6738198 UNH_CFB Wentworth Triggs]]></description>
+  <name>111</name>
+  <description><![CDATA[WBID=6738192 NHDES 27 WICMERLR WICWAS LAKE-LAUNCH RAMP SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.551283,43.604747
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>161</name>
+  <description><![CDATA[WBID=6738198 UNH_CFB Wentworth NA Triggs NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -523,8 +1603,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>157</name>
-  <description><![CDATA[WBID= 6738198 UNH_CFB Wentworth Fullers]]></description>
+  <name>162</name>
+  <description><![CDATA[WBID=6738198 UNH_CFB Wentworth NA Fullers NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -533,8 +1613,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>158</name>
-  <description><![CDATA[WBID= 6738198 UNH_CFB Wentworth Governors]]></description>
+  <name>163</name>
+  <description><![CDATA[WBID=6738198 UNH_CFB Wentworth NA Governors NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -543,8 +1623,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>159</name>
-  <description><![CDATA[WBID= 6738198 UNH_CFB Wentworth]]></description>
+  <name>164</name>
+  <description><![CDATA[WBID=6738198 UNH_CFB Wentworth NA NA NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -553,8 +1633,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>155</name>
-  <description><![CDATA[WBID= 6738206 UNH_CFB Crescent Lake Center]]></description>
+  <name>160</name>
+  <description><![CDATA[WBID=6738206 UNH_CFB Crescent Lake NA Center NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -564,7 +1644,7 @@
 </Placemark>
 <Placemark>
   <name>137</name>
-  <description><![CDATA[WBID= 6738242 NHDES 36 HUNSAND HUNKINS POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6738242 NHDES 36 HUNSAND HUNKINS POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -574,7 +1654,7 @@
 </Placemark>
 <Placemark>
   <name>138</name>
-  <description><![CDATA[WBID= 6738242 NHDES 36 HUNSANN HUNKINS POND-NORTH END SS1]]></description>
+  <description><![CDATA[WBID=6738242 NHDES 36 HUNSANN HUNKINS POND-NORTH END SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -584,7 +1664,7 @@
 </Placemark>
 <Placemark>
   <name>141</name>
-  <description><![CDATA[WBID= 6738922 NHDES 39 BCHLEGFRKLF WEBSTER LAKE LAGACE TB-LEFT Other]]></description>
+  <description><![CDATA[WBID=6738922 NHDES 39 BCHLEGFRKLF WEBSTER LAKE LAGACE TB-LEFT Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -593,28 +1673,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>028</name>
-  <description><![CDATA[WBID= 6739046 NHDES 2 HALALTD HALFMOON LAKE-DEEP SPOT WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.227694,43.391083
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>029</name>
-  <description><![CDATA[WBID= 6739046 NHDES 2 HALALTPUB HALFMOON LAKE-PUBLIC BEACH SS2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.236681,43.39525
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>030</name>
-  <description><![CDATA[WBID= 6739046 NHDES 2 HALALTR HALFMOON LAKE-RUSTIC SHORES SS1]]></description>
+  <description><![CDATA[WBID=6739046 NHDES 2 HALALTR HALFMOON LAKE-RUSTIC SHORES SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -623,8 +1683,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>028</name>
+  <description><![CDATA[WBID=6739046 NHDES 2 HALALTD HALFMOON LAKE-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.227694,43.391083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>031</name>
-  <description><![CDATA[WBID= 6739046 NHDES 2 HALALTHWB HALFMOON POND-HOLLYWOOD BEACH SS3]]></description>
+  <description><![CDATA[WBID=6739046 NHDES 2 HALALTHWB HALFMOON POND-HOLLYWOOD BEACH SS3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -633,8 +1703,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>029</name>
+  <description><![CDATA[WBID=6739046 NHDES 2 HALALTPUB HALFMOON LAKE-PUBLIC BEACH SS2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.236681,43.39525
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>140</name>
-  <description><![CDATA[WBID= 6739518 NHDES 38 TOWCND-GEN TOWER HILL POND-GENERIC Other]]></description>
+  <description><![CDATA[WBID=6739518 NHDES 38 TOWCND-GEN TOWER HILL POND-GENERIC Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -643,8 +1723,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>151</name>
-  <description><![CDATA[WBID= 6742526 UNH_CFB Attitash]]></description>
+  <name>156</name>
+  <description><![CDATA[WBID=6742526 UNH_CFB Attitash NA NA WL1 WL2 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -654,7 +1734,7 @@
 </Placemark>
 <Placemark>
   <name>124</name>
-  <description><![CDATA[WBID= 6742962 NHDES 32 SEBBEDB SEBBINS POND-BACK PD INLET WL2]]></description>
+  <description><![CDATA[WBID=6742962 NHDES 32 SEBBEDB SEBBINS POND-BACK PD INLET WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -663,8 +1743,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>128</name>
+  <description><![CDATA[WBID=6742962 NHDES 32 Sebbins Pond WL#3 Sebbins Pond WL#3 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.479531,42.928521
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>125</name>
-  <description><![CDATA[WBID= 6742962 NHDES 32 SEBBEDD SEBBINS POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6742962 NHDES 32 SEBBEDD SEBBINS POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -674,7 +1764,7 @@
 </Placemark>
 <Placemark>
   <name>126</name>
-  <description><![CDATA[WBID= 6742962 NHDES 32 SEBBEDO SEBBINS POND-OUTLET SS1]]></description>
+  <description><![CDATA[WBID=6742962 NHDES 32 SEBBEDO SEBBINS POND-OUTLET SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -684,7 +1774,7 @@
 </Placemark>
 <Placemark>
   <name>127</name>
-  <description><![CDATA[WBID= 6742962 NHDES 32 SEBBED2 SEBBINS POND-SITE 2 SS2]]></description>
+  <description><![CDATA[WBID=6742962 NHDES 32 SEBBED2 SEBBINS POND-SITE 2 SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -693,18 +1783,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>128</name>
-  <description><![CDATA[WBID= 6742962 NHDES 32 Sebbins Pond WL#3 Sebbins Pond WL#3 WL3]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.479531,42.928521
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>153</name>
-  <description><![CDATA[WBID= 6743032 UNH_CFB Baboosic]]></description>
+  <name>158</name>
+  <description><![CDATA[WBID=6743032 UNH_CFB Baboosic ]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -713,18 +1793,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>091</name>
-  <description><![CDATA[WBID= 6743056 NHDES 23 ISLDERD BIG ISLAND POND-DEEP SPOT WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.211389,42.866
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>092</name>
-  <description><![CDATA[WBID= 6743056 NHDES 23 ISLDERPC BIG ISLAND POND-PERCH (CAMP) COVE WL2]]></description>
+  <description><![CDATA[WBID=6743056 NHDES 23 ISLDERPC BIG ISLAND POND-PERCH (CAMP) COVE WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -734,7 +1804,7 @@
 </Placemark>
 <Placemark>
   <name>093</name>
-  <description><![CDATA[WBID= 6743056 NHDES 23 ISLDERJC BIG ISLAND POND-JOHNSON COVE WL3]]></description>
+  <description><![CDATA[WBID=6743056 NHDES 23 ISLDERJC BIG ISLAND POND-JOHNSON COVE WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -743,8 +1813,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>091</name>
+  <description><![CDATA[WBID=6743056 NHDES 23 ISLDERD BIG ISLAND POND-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.211389,42.866
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>033</name>
-  <description><![CDATA[WBID= 6743164 NHDES 4 BCHTWBHUDCR ROBINSON POND TB-CENTER Other]]></description>
+  <description><![CDATA[WBID=6743164 NHDES 4 BCHTWBHUDCR ROBINSON POND TB-CENTER Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -754,7 +1834,7 @@
 </Placemark>
 <Placemark>
   <name>034</name>
-  <description><![CDATA[WBID= 6743208 NHDES 5 OTTHUDBL OTTERNICK POND-BOAT LAUNCH Other]]></description>
+  <description><![CDATA[WBID=6743208 NHDES 5 OTTHUDBL OTTERNICK POND-BOAT LAUNCH Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -763,18 +1843,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>047</name>
-  <description><![CDATA[WBID= 6743222 NHDES 9 BCHSLSHLSLF SILVER LAKE SP-LEFT Other]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.595639,42.76075
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>048</name>
-  <description><![CDATA[WBID= 6743222 NHDES 9 BCHSLSHLSRT SILVER LAKE SP-RIGHT SS1]]></description>
+  <description><![CDATA[WBID=6743222 NHDES 9 BCHSLSHLSRT SILVER LAKE SP-RIGHT SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -783,8 +1853,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>047</name>
+  <description><![CDATA[WBID=6743222 NHDES 9 BCHSLSHLSLF SILVER LAKE SP-LEFT Other]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.595639,42.76075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>035</name>
-  <description><![CDATA[WBID= 6743322 NHDES 6 LONPELNHD LONG POND-NH DEEP SPOT WL3]]></description>
+  <description><![CDATA[WBID=6743322 NHDES 6 LONPELNHD LONG POND-NH DEEP SPOT WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -794,7 +1874,7 @@
 </Placemark>
 <Placemark>
   <name>036</name>
-  <description><![CDATA[WBID= 6743322 NHDES 6 BCHTWBPELRT LONG POND-RIGHT SS1]]></description>
+  <description><![CDATA[WBID=6743322 NHDES 6 BCHTWBPELRT LONG POND-RIGHT SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -804,7 +1884,7 @@
 </Placemark>
 <Placemark>
   <name>121</name>
-  <description><![CDATA[WBID= 6760634 NHDES 31 CLEHOPD CLEMENT POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6760634 NHDES 31 CLEHOPD CLEMENT POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -814,7 +1894,7 @@
 </Placemark>
 <Placemark>
   <name>122</name>
-  <description><![CDATA[WBID= 6760634 NHDES 31 Clement Pond WL#2 Clement Pond WL#2 WL2]]></description>
+  <description><![CDATA[WBID=6760634 NHDES 31 Clement Pond WL#2 Clement Pond WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -824,7 +1904,7 @@
 </Placemark>
 <Placemark>
   <name>123</name>
-  <description><![CDATA[WBID= 6760634 NHDES 31 Clement Pond WL#3 Clement Pond WL#3 WL3]]></description>
+  <description><![CDATA[WBID=6760634 NHDES 31 Clement Pond WL#3 Clement Pond WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -833,8 +1913,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>040</name>
+  <description><![CDATA[WBID=6760662 NHDES 7 FREHEND2 FREHEND2 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.774862,43.192772
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>037</name>
-  <description><![CDATA[WBID= 6760662 NHDES 7 FREHENCAMP FRENCH POND-CAMPGROUND SWIM AREA SS2]]></description>
+  <description><![CDATA[WBID=6760662 NHDES 7 FREHENCAMP FRENCH POND-CAMPGROUND SWIM AREA SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -844,7 +1934,7 @@
 </Placemark>
 <Placemark>
   <name>038</name>
-  <description><![CDATA[WBID= 6760662 NHDES 7 FREHEND FRENCH POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6760662 NHDES 7 FREHEND FRENCH POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -854,7 +1944,7 @@
 </Placemark>
 <Placemark>
   <name>039</name>
-  <description><![CDATA[WBID= 6760662 NHDES 7 FREHENL FRENCH POND-LAUNCH BROOK SS1]]></description>
+  <description><![CDATA[WBID=6760662 NHDES 7 FREHENL FRENCH POND-LAUNCH BROOK SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -863,18 +1953,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>040</name>
-  <description><![CDATA[WBID= 6760662 NHDES 7 FREHEND2 FREHEND2 WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.774862,43.192772
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>041</name>
-  <description><![CDATA[WBID= 6760662 NHDES 7 FREHEND3 FREHEND3 WL3]]></description>
+  <description><![CDATA[WBID=6760662 NHDES 7 FREHEND3 FREHEND3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -884,7 +1964,7 @@
 </Placemark>
 <Placemark>
   <name>114</name>
-  <description><![CDATA[WBID= 6764368 NHDES 28 SKAHARD LAKE SKATUTAKEE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6764368 NHDES 28 SKAHARD LAKE SKATUTAKEE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -894,7 +1974,7 @@
 </Placemark>
 <Placemark>
   <name>115</name>
-  <description><![CDATA[WBID= 6764368 NHDES 28 SKAHARSP LAKE SKATUTAKEE-SPRING SS1]]></description>
+  <description><![CDATA[WBID=6764368 NHDES 28 SKAHARSP LAKE SKATUTAKEE-SPRING SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -903,18 +1983,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>104</name>
-  <description><![CDATA[WBID= 6764472 NHDES 26 THOJAFD THORNDIKE POND-DEEP SPOT WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.0553,42.859778
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>105</name>
-  <description><![CDATA[WBID= 6764472 NHDES 26 THOJAFNW THORNDIKE POND-NORTH WEST INLET SS2]]></description>
+  <description><![CDATA[WBID=6764472 NHDES 26 THOJAFNW THORNDIKE POND-NORTH WEST INLET SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -923,18 +1993,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>106</name>
-  <description><![CDATA[WBID= 6764472 NHDES 26 THOJAFSW THORNDIKE POND-SOUTH WEST INLET SS1]]></description>
+  <name>104</name>
+  <description><![CDATA[WBID=6764472 NHDES 26 THOJAFD THORNDIKE POND-DEEP SPOT WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--72.0597,42.8504
+-72.0553,42.859778
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>107</name>
-  <description><![CDATA[WBID= 6764472 NHDES 26 Thorndike Pond WL#1 Thorndike Pond WL#1 WL1]]></description>
+  <description><![CDATA[WBID=6764472 NHDES 26 Thorndike Pond WL#1 Thorndike Pond WL#1 WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -944,7 +2014,7 @@
 </Placemark>
 <Placemark>
   <name>108</name>
-  <description><![CDATA[WBID= 6764472 NHDES 26 Thorndike Pond WL#3 Thorndike Pond WL#3 WL3]]></description>
+  <description><![CDATA[WBID=6764472 NHDES 26 Thorndike Pond WL#3 Thorndike Pond WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -953,8 +2023,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>106</name>
+  <description><![CDATA[WBID=6764472 NHDES 26 THOJAFSW THORNDIKE POND-SOUTH WEST INLET SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0597,42.8504
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>117</name>
-  <description><![CDATA[WBID= 6776101 NHDES 30 Sand Pond SS#1 SS1]]></description>
+  <description><![CDATA[WBID=6776101 NHDES 30 Sand Pond SS#1 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -964,7 +2044,7 @@
 </Placemark>
 <Placemark>
   <name>118</name>
-  <description><![CDATA[WBID= 6776101 NHDES 30 Sand Pond SS#2 SS2]]></description>
+  <description><![CDATA[WBID=6776101 NHDES 30 Sand Pond SS#2 NA SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -974,7 +2054,7 @@
 </Placemark>
 <Placemark>
   <name>119</name>
-  <description><![CDATA[WBID= 6776101 NHDES 30 Sand Pond WL#2 WL2]]></description>
+  <description><![CDATA[WBID=6776101 NHDES 30 Sand Pond WL#2 NA WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -984,7 +2064,7 @@
 </Placemark>
 <Placemark>
   <name>120</name>
-  <description><![CDATA[WBID= 6776101 NHDES 30 SANMLWD WL1]]></description>
+  <description><![CDATA[WBID=6776101 NHDES 30 SANMLWD NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -993,18 +2073,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>129</name>
-  <description><![CDATA[WBID= 6776219 NHDES 33 GRASTDD GRANITE LAKE-DEEP SPOT WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.141361,43.020972
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>130</name>
-  <description><![CDATA[WBID= 6776219 NHDES 33 Granite Lake WL#2 Granite Lake WL#2 WL2]]></description>
+  <description><![CDATA[WBID=6776219 NHDES 33 Granite Lake WL#2 Granite Lake WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1013,8 +2083,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>129</name>
+  <description><![CDATA[WBID=6776219 NHDES 33 GRASTDD GRANITE LAKE-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.141361,43.020972
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>131</name>
-  <description><![CDATA[WBID= 6776219 NHDES 33 Granite Lake WL#3 Granite Lake WL#3 WL3]]></description>
+  <description><![CDATA[WBID=6776219 NHDES 33 Granite Lake WL#3 Granite Lake WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1023,8 +2103,28 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>077</name>
+  <description><![CDATA[WBID=6777259 NHDES 17 Silver Lake WL#3 Silver Lake WL#3 WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.13563,42.951554
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>076</name>
+  <description><![CDATA[WBID=6777259 NHDES 17 Silver Lake WL#2 Silver Lake WL#2 WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.139535,42.971089
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>073</name>
-  <description><![CDATA[WBID= 6777259 NHDES 17 SILHARD SILVER LAKE- DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=6777259 NHDES 17 SILHARD SILVER LAKE- DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1034,7 +2134,7 @@
 </Placemark>
 <Placemark>
   <name>074</name>
-  <description><![CDATA[WBID= 6777259 NHDES 17 SILHARO SILVER LAKE-OUTLET IN STREAM SS2]]></description>
+  <description><![CDATA[WBID=6777259 NHDES 17 SILHARO SILVER LAKE-OUTLET IN STREAM SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1044,7 +2144,7 @@
 </Placemark>
 <Placemark>
   <name>075</name>
-  <description><![CDATA[WBID= 6777259 NHDES 17 SILHARSB1 SILVER LAKE-SANDY BCH INLET 1 SS1]]></description>
+  <description><![CDATA[WBID=6777259 NHDES 17 SILHARSB1 SILVER LAKE-SANDY BCH INLET 1 SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1053,28 +2153,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>076</name>
-  <description><![CDATA[WBID= 6777259 NHDES 17 Silver Lake WL#2 Silver Lake WL#2 WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.139535,42.971089
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>077</name>
-  <description><![CDATA[WBID= 6777259 NHDES 17 Silver Lake WL#3 Silver Lake WL#3 WL3]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.13563,42.951554
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>116</name>
-  <description><![CDATA[WBID= 6777319 NHDES 29 DUBDUBDLC DUBLIN POND-DUBLIN LAKE CLUB Other]]></description>
+  <description><![CDATA[WBID=6777319 NHDES 29 DUBDUBDLC DUBLIN POND-DUBLIN LAKE CLUB Other]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1083,8 +2163,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>147</name>
-  <description><![CDATA[WBID= 7701636 CTDEEP Pattaconk Reservoir 18714 at middle of beach SS1]]></description>
+  <name>152</name>
+  <description><![CDATA[WBID=7699880 CTDEEP Lake Beseck 15675 At dam SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.7338,41.5082
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>143</name>
+  <description><![CDATA[WBID=7701636 CTDEEP Pattaconk Reservoir 18714 at middle of beach SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1093,8 +2183,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>144</name>
-  <description><![CDATA[WBID= 7711450 CTDEEP Lake Waramaug 18716 at middle of beach SS1]]></description>
+  <name>150</name>
+  <description><![CDATA[WBID=7711236 CTDEEP Tyler Lake 18742 NA SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.26681,41.8367
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>145</name>
+  <description><![CDATA[WBID=7711450 CTDEEP Lake Waramaug 18716 at middle of beach SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1103,8 +2203,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>146</name>
-  <description><![CDATA[WBID= 7711464 CTDEEP Mount Tom Pond 18715 at middle of beach SS1]]></description>
+  <name>144</name>
+  <description><![CDATA[WBID=7711464 CTDEEP Mount Tom Pond 18715 at middle of beach SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1113,8 +2213,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>143</name>
-  <description><![CDATA[WBID= 7717850 CTDEEP Housatonic River (Kettletown) 18713 at middle of beach SS1]]></description>
+  <name>146</name>
+  <description><![CDATA[WBID=7711770 CTDEEP Squantz Pond 18717 at middle of beach SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.4765,41.512
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>142</name>
+  <description><![CDATA[WBID=7717850 CTDEEP Housatonic River (Kettletown) 18713 at middle of beach SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1123,8 +2233,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>154</name>
-  <description><![CDATA[WBID= 9312481 UNH_CFB Lovell]]></description>
+  <name>630</name>
+  <description><![CDATA[WBID=9312435 MEDEP Great East 3922 3 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.925924,43.576778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>159</name>
+  <description><![CDATA[WBID=9312481 UNH_CFB Lovell NA NA NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1133,58 +2253,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>160</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver East]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.161709,43.865002
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>161</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver N. Island]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.170206,43.884058
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>162</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver North]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.175184,43.88112
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>163</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver 2Deep]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.175356,43.85807
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>164</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver 1South]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.172523,43.851015
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>165</name>
-  <description><![CDATA[WBID= 9315143 UNH_CFB Silver Center]]></description>
+  <name>170</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA Center NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1193,18 +2263,58 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>049</name>
-  <description><![CDATA[WBID= 9315181 NHDES 10 DANLFRED LOWER DANFORTH POND-DEEP SPOT WL1]]></description>
+  <name>166</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA N. Island NA]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.1038,43.820083
+-71.170206,43.884058
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>165</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA East NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.161709,43.865002
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>167</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA North NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.175184,43.88112
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>169</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA 1South NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.172523,43.851015
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>168</name>
+  <description><![CDATA[WBID=9315143 UNH_CFB Silver NA 2Deep NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.175356,43.85807
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>050</name>
-  <description><![CDATA[WBID= 9315181 NHDES 10 Lower Danforth WL#2 Lower Danforth WL#2 WL2]]></description>
+  <description><![CDATA[WBID=9315181 NHDES 10 Lower Danforth WL#2 Lower Danforth WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1213,8 +2323,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>049</name>
+  <description><![CDATA[WBID=9315181 NHDES 10 DANLFRED LOWER DANFORTH POND-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.1038,43.820083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>051</name>
-  <description><![CDATA[WBID= 9315181 NHDES 10 Lower Danforth WL#3 Lower Danforth WL#3 WL3]]></description>
+  <description><![CDATA[WBID=9315181 NHDES 10 Lower Danforth WL#3 Lower Danforth WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1223,18 +2343,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>056</name>
-  <description><![CDATA[WBID= 9315185 NHDES 12 BEASWHBI BEARCAMP POND-BIG ISLAND SWIM WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.369067,43.81665
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>057</name>
-  <description><![CDATA[WBID= 9315185 NHDES 12 BEASWHD BEARCAMP POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9315185 NHDES 12 BEASWHD BEARCAMP POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1243,28 +2353,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>058</name>
-  <description><![CDATA[WBID= 9315185 NHDES 12 BEASWHSWIM BEARCAMP POND-SWIM AREA SS1]]></description>
+  <name>056</name>
+  <description><![CDATA[WBID=9315185 NHDES 12 BEASWHBI BEARCAMP POND-BIG ISLAND SWIM WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.376558,43.813617
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>059</name>
-  <description><![CDATA[WBID= 9315185 NHDES 12 Bear camp WL#3 Bear camp WL#3 WL3]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.373625,43.814835
+-71.369067,43.81665
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>060</name>
-  <description><![CDATA[WBID= 9315185 NHDES 12 Bear camp SS#2 Bear camp SS#2 SS2]]></description>
+  <description><![CDATA[WBID=9315185 NHDES 12 Bear camp SS#2 Bear camp SS#2 SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1273,28 +2373,28 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>052</name>
-  <description><![CDATA[WBID= 9315189 NHDES 11 BROOSSD BROAD BAY-DEEP SPOT WL4]]></description>
+  <name>059</name>
+  <description><![CDATA[WBID=9315185 NHDES 12 Bear camp WL#3 Bear camp WL#3 WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.101078,43.804067
+-71.373625,43.814835
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>053</name>
-  <description><![CDATA[WBID= 9315189 NHDES 11 LEAOSSD LEAVITT BAY-DEEP SPOT WL3]]></description>
+  <name>058</name>
+  <description><![CDATA[WBID=9315185 NHDES 12 BEASWHSWIM BEARCAMP POND-SWIM AREA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.081038,43.79682
+-71.376558,43.813617
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>054</name>
-  <description><![CDATA[WBID= 9315189 NHDES 11 OBB01DL OSSIPEE LAKE-BERRY BAY-1 DEEP SPOT WL2]]></description>
+  <description><![CDATA[WBID=9315189 NHDES 11 OBB01DL OSSIPEE LAKE-BERRY BAY-1 DEEP SPOT WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1303,8 +2403,18 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>053</name>
+  <description><![CDATA[WBID=9315189 NHDES 11 LEAOSSD LEAVITT BAY-DEEP SPOT WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081038,43.79682
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>055</name>
-  <description><![CDATA[WBID= 9315189 NHDES 11 OSSOSSD OSSIPEE LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9315189 NHDES 11 OSSOSSD OSSIPEE LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1313,28 +2423,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>063</name>
-  <description><![CDATA[WBID= 9315253 NHDES 14 BEELTUFD LOWER BEECH POND-DEEP SPOT WL1]]></description>
+  <name>052</name>
+  <description><![CDATA[WBID=9315189 NHDES 11 BROOSSD BROAD BAY-DEEP SPOT WL4]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.207289,43.672189
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>064</name>
-  <description><![CDATA[WBID= 9315253 NHDES 14 Lower Beech Inlet SS#1 Lower Beech Inlet SS#1 SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--71.205826,43.677122
+-71.101078,43.804067
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>065</name>
-  <description><![CDATA[WBID= 9315253 NHDES 14 Lower Beech Outlet SS#2 LowerBeech Outlet SS#2 SS2]]></description>
+  <description><![CDATA[WBID=9315253 NHDES 14 Lower Beech Outlet SS#2 LowerBeech Outlet SS#2 SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1343,8 +2443,28 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>149</name>
-  <description><![CDATA[WBID= 9315263 UNH_CFB Pine River Pond Cooks Cove SS]]></description>
+  <name>064</name>
+  <description><![CDATA[WBID=9315253 NHDES 14 Lower Beech Inlet SS#1 Lower Beech Inlet SS#1 SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.205826,43.677122
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>063</name>
+  <description><![CDATA[WBID=9315253 NHDES 14 BEELTUFD LOWER BEECH POND-DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.207289,43.672189
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>154</name>
+  <description><![CDATA[WBID=9315263 UNH_CFB Pine River Pond NA Cooks Cove SS1 SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1354,7 +2474,7 @@
 </Placemark>
 <Placemark>
   <name>079</name>
-  <description><![CDATA[WBID= 9326256 NHDES 19 TARPIED TARLETON LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9326256 NHDES 19 TARPIED TARLETON LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1364,7 +2484,7 @@
 </Placemark>
 <Placemark>
   <name>078</name>
-  <description><![CDATA[WBID= 9326262 NHDES 18 ARMPIED ARMINGTON LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9326262 NHDES 18 ARMPIED ARMINGTON LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1374,7 +2494,7 @@
 </Placemark>
 <Placemark>
   <name>080</name>
-  <description><![CDATA[WBID= 9326568 NHDES 20 CANCAND CANAAN STREET LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9326568 NHDES 20 CANCAND CANAAN STREET LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1384,7 +2504,7 @@
 </Placemark>
 <Placemark>
   <name>081</name>
-  <description><![CDATA[WBID= 9326568 NHDES 20 Canaan St. Lake WL#2 Canaan St. Lake WL#2 WL2]]></description>
+  <description><![CDATA[WBID=9326568 NHDES 20 Canaan St. Lake WL#2 Canaan St. Lake WL#2 WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1394,7 +2514,7 @@
 </Placemark>
 <Placemark>
   <name>099</name>
-  <description><![CDATA[WBID= 9326606 NHDES 25 Mascoma Lake- Dalton Mascoma Lake- Dalton WL3]]></description>
+  <description><![CDATA[WBID=9326606 NHDES 25 Mascoma Lake- Dalton Mascoma Lake- Dalton WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1403,28 +2523,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>100</name>
-  <description><![CDATA[WBID= 9326606 NHDES 25 Mascoma Lake- Dam End Mascoma Lake- Dam End WL2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.178533,43.648167
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>101</name>
-  <description><![CDATA[WBID= 9326606 NHDES 25 Mascoma Lake- Dartmouth Sail Club Mascoma Lake- Dartmouth Sail Club SS2]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.134333,43.639417
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>102</name>
-  <description><![CDATA[WBID= 9326606 NHDES 25 Mascoma Lake- Shakoma Mascoma Lake- Shakoma SS1]]></description>
+  <description><![CDATA[WBID=9326606 NHDES 25 Mascoma Lake- Shakoma Mascoma Lake- Shakoma SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1434,7 +2534,7 @@
 </Placemark>
 <Placemark>
   <name>103</name>
-  <description><![CDATA[WBID= 9326606 NHDES 25 MASENF1D MASCOMA LAKE-STATION 1 DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9326606 NHDES 25 MASENF1D MASCOMA LAKE-STATION 1 DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1443,38 +2543,28 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>082</name>
-  <description><![CDATA[WBID= 9326688 NHDES 21 Eastman Pond WL#1 WL1]]></description>
+  <name>100</name>
+  <description><![CDATA[WBID=9326606 NHDES 25 Mascoma Lake- Dam End Mascoma Lake- Dam End WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--72.1151,43.518283
+-72.178533,43.648167
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>083</name>
-  <description><![CDATA[WBID= 9326688 NHDES 21 Eastman Pond WL#2 WL2]]></description>
+  <name>101</name>
+  <description><![CDATA[WBID= NA NHDES 25 Mascoma Lake- Dartmouth Sail Club Mascoma Lake- Dartmouth Sail Club SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--72.11845,43.5318
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>084</name>
-  <description><![CDATA[WBID= 9326688 NHDES 21 EASGTM8 EASTMAN POND-NORTH COVE BEACH SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.1125,43.5354
+-72.135036,43.623298
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>085</name>
-  <description><![CDATA[WBID= 9326688 NHDES 21 EASGTMWCB EASTMAN POND-WEST COVE B BEACH SS2]]></description>
+  <description><![CDATA[WBID=9326688 NHDES 21 EASGTMWCB EASTMAN POND-WEST COVE B BEACH SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1483,8 +2573,38 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>083</name>
+  <description><![CDATA[WBID=9326688 NHDES 21 Eastman Pond WL#2 NA WL2]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.11845,43.5318
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>082</name>
+  <description><![CDATA[WBID=9326688 NHDES 21 Eastman Pond WL#1 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1151,43.518283
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>084</name>
+  <description><![CDATA[WBID=9326688 NHDES 21 EASGTM8 EASTMAN POND-NORTH COVE BEACH SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1125,43.5354
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>032</name>
-  <description><![CDATA[WBID= 9328120 NHDES 3 MESNWLD MESSER POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9328120 NHDES 3 MESNWLD MESSER POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1494,7 +2614,7 @@
 </Placemark>
 <Placemark>
   <name>061</name>
-  <description><![CDATA[WBID= 9328402 NHDES 13 ROCCROD ROCKYBOUND POND-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=9328402 NHDES 13 ROCCROD ROCKYBOUND POND-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1504,7 +2624,7 @@
 </Placemark>
 <Placemark>
   <name>062</name>
-  <description><![CDATA[WBID= 9328402 NHDES 13 Rockybound SS1 SS2]]></description>
+  <description><![CDATA[WBID=9328402 NHDES 13 Rockybound SS#1 NA SS1 & SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1513,28 +2633,8 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>069</name>
-  <description><![CDATA[WBID= 9328412 NHDES 16 SUNLNWLD LITTLE SUNAPEE LAKE-DEEP SPOT WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.0118,43.433083
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>070</name>
-  <description><![CDATA[WBID= 9328412 NHDES 16 Little Sunapee SS#1 SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--72.019467,43.435067
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
   <name>071</name>
-  <description><![CDATA[WBID= 9328412 NHDES 16 Little Sunapee WL#2 WL2]]></description>
+  <description><![CDATA[WBID=9328412 NHDES 16 Little Sunapee WL#2 NA WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1544,7 +2644,7 @@
 </Placemark>
 <Placemark>
   <name>072</name>
-  <description><![CDATA[WBID= 9328412 NHDES 16 Little Sunapee WL#3 WL3]]></description>
+  <description><![CDATA[WBID=9328412 NHDES 16 Little Sunapee WL#3 NA WL3]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1553,28 +2653,28 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>024</name>
-  <description><![CDATA[WBID= 9328420 NHDES 1 SUNSUN1D SUNAPEE LAKE-200 STN 1 DEEP SPOT WL1]]></description>
+  <name>070</name>
+  <description><![CDATA[WBID=9328412 NHDES 16 Little Sunapee SS#1 NA SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--72.0426,43.406083
+-72.019467,43.435067
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>025</name>
-  <description><![CDATA[WBID= 9328420 NHDES 1 SUNSUN220D SUNAPEE LAKE-220 DEEP SPOT WL3]]></description>
+  <name>069</name>
+  <description><![CDATA[WBID=9328412 NHDES 16 SUNLNWLD LITTLE SUNAPEE LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--72.055997,43.361911
+-72.0118,43.433083
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>026</name>
-  <description><![CDATA[WBID= 9328420 NHDES 1 SUNSUN2D SUNAPEE LAKE-210 STN 2 DEEP SPOT WL2]]></description>
+  <description><![CDATA[WBID=9328420 NHDES 1 SUNSUN2D SUNAPEE LAKE-210 STN 2 DEEP SPOT WL2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1584,7 +2684,7 @@
 </Placemark>
 <Placemark>
   <name>027</name>
-  <description><![CDATA[WBID= 9328420 NHDES 1 SUNSUN3D SUNAPEE LAKE-230 STN 3 DEEP SPOT WL4]]></description>
+  <description><![CDATA[WBID=9328420 NHDES 1 SUNSUN3D SUNAPEE LAKE-230 STN 3 DEEP SPOT WL4]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1593,8 +2693,28 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>025</name>
+  <description><![CDATA[WBID=9328420 NHDES 1 SUNSUN220D SUNAPEE LAKE-220 DEEP SPOT WL3]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.055997,43.361911
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>024</name>
+  <description><![CDATA[WBID=9328420 NHDES 1 SUNSUN1D SUNAPEE LAKE-200 STN 1 DEEP SPOT WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0426,43.406083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>134</name>
-  <description><![CDATA[WBID= 22287529 NHDES 35 NUBNELD NUBANUSIT LAKE-DEEP SPOT WL1]]></description>
+  <description><![CDATA[WBID=22287529 NHDES 35 NUBNELD NUBANUSIT LAKE-DEEP SPOT WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1604,7 +2724,7 @@
 </Placemark>
 <Placemark>
   <name>135</name>
-  <description><![CDATA[WBID= 22287529 NHDES 35 NUBNELH NUBANUSIT LAKE-HANCOCK LANDING SS1]]></description>
+  <description><![CDATA[WBID=22287529 NHDES 35 NUBNELH NUBANUSIT LAKE-HANCOCK LANDING SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1614,7 +2734,7 @@
 </Placemark>
 <Placemark>
   <name>136</name>
-  <description><![CDATA[WBID= 22287529 NHDES 35 NUBNELO NUBANUSIT LAKE-OUTLET IN STREAM SS2]]></description>
+  <description><![CDATA[WBID=22287529 NHDES 35 NUBNELO NUBANUSIT LAKE-OUTLET IN STREAM SS2]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1623,88 +2743,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>001</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 50 WL1]]></description>
+  <name>019</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA QE BM b NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--73.17383333,45.01333333
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>002</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 51 WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.12966667,45.04166667
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>003</name>
-  <description><![CDATA[WBID= 22302965 VTDEC Rt 78 Access, VT SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.22111667,44.96796667
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>004</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 7 WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.41283333,44.126
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>005</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 34 WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.22683333,44.70816667
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>006</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 40 WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.16216667,44.78533333
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>011</name>
-  <description><![CDATA[WBID= 22302965 VTDEC phillipsburg, QE WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.093994,45.041197
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>012</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 36 WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.355,44.75616667
+-73.078067,45.056267
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>013</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 16 WL1]]></description>
+  <description><![CDATA[WBID=22302965 VTDEC NA 16 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1713,8 +2763,48 @@
   </Point>
 </Placemark>
 <Placemark>
+  <name>018</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA Black Bridge 1 NA SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.151858,44.810706
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>017</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA Highgate Springs NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.11338333,44.99176667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>011</name>
+  <description><![CDATA[WBID=NA VTDEC NA phillipsburg  QE NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.076827,42.359977
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>003</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA Rt 78 Access  VT NA SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.22111667,44.96796667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
   <name>014</name>
-  <description><![CDATA[WBID= 22302965 VTDEC Highgate Cliffs WL1]]></description>
+  <description><![CDATA[WBID=22302965 VTDEC NA Highgate Cliffs NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1724,7 +2814,7 @@
 </Placemark>
 <Placemark>
   <name>015</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 46 WL1]]></description>
+  <description><![CDATA[WBID=22302965 VTDEC NA 46 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1733,48 +2823,18 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>016</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 19 WL1]]></description>
+  <name>012</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 36 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--73.29916667,44.471
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>017</name>
-  <description><![CDATA[WBID= 22302965 VTDEC Highgate Springs WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.11338333,44.99176667
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>018</name>
-  <description><![CDATA[WBID= 22302965 VTDEC Black Bridge 1 SS1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.151858,44.810706
-    </coordinates>
-  </Point>
-</Placemark>
-<Placemark>
-  <name>019</name>
-  <description><![CDATA[WBID= 22302965 VTDEC QE BM b WL1]]></description>
-  <styleUrl>#style1</styleUrl>
-  <Point>
-    <coordinates>
--73.078067,45.056267
+-73.355,44.75616667
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>007</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 25 WL1]]></description>
+  <description><![CDATA[WBID=22302965 VTDEC NA 25 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1783,28 +2843,38 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>008</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 33 WL1]]></description>
+  <name>004</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 7 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--73.41816667,44.70116667
+-73.41283333,44.126
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
-  <name>009</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 4 WL1]]></description>
+  <name>005</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 34 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--73.40783333,43.95166667
+-73.22683333,44.70816667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>001</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 50 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.17383333,45.01333333
     </coordinates>
   </Point>
 </Placemark>
 <Placemark>
   <name>010</name>
-  <description><![CDATA[WBID= 22302965 VTDEC 21 WL1]]></description>
+  <description><![CDATA[WBID=22302965 VTDEC NA 21 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
@@ -1813,12 +2883,62 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>022</name>
-  <description><![CDATA[WBID= NA CRWA Charles River MA72-08 CB SS1]]></description>
+  <name>002</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 51 NA WL1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.073377,42.358755
+-73.12966667,45.04166667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>008</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 33 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.41816667,44.70116667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>006</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 40 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.16216667,44.78533333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>016</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 19 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.29916667,44.471
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>009</name>
+  <description><![CDATA[WBID=22302965 VTDEC NA 4 NA WL1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.40783333,43.95166667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>631</name>
+  <description><![CDATA[WBID=NA MEDEP Fischer 1808 1 DH1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.809076,46.711588
     </coordinates>
   </Point>
 </Placemark>
@@ -1833,12 +2953,12 @@
   </Point>
 </Placemark>
 <Placemark>
-  <name>020</name>
-  <description><![CDATA[WBID= NA CRWA Charles River MA72-08 BROAD SS1]]></description>
+  <name>151</name>
+  <description><![CDATA[WBID=6150229 CTDEEP Mashamoquet 15924-M middle of swimming area SS1]]></description>
   <styleUrl>#style1</styleUrl>
   <Point>
     <coordinates>
--71.081652,42.362866
+-71.97948,41.85735
     </coordinates>
   </Point>
 </Placemark>
@@ -1849,6 +2969,26 @@
   <Point>
     <coordinates>
 -71.061925,42.36936
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>022</name>
+  <description><![CDATA[WBID= NA CRWA Charles River MA72-08 CB SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.073377,42.358755
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>020</name>
+  <description><![CDATA[WBID= NA CRWA Charles River MA72-08 BROAD SS1]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081652,42.362866
     </coordinates>
   </Point>
 </Placemark>
