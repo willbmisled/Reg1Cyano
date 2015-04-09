@@ -1,7 +1,7 @@
 ---
 title: "buildAccessDB"
 author: "Bryan"
-date: "Thursday, April 02, 2015"
+date: "April 09, 2015"
 output: html_document
 ---
 
@@ -61,7 +61,8 @@ Datasteps
 
 ```{r Data, include=FALSE, echo=FALSE, cache=FALSE} 
 #reset working directory
-  setwd("C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Access")
+  setwd("~/PortableApps/R/scripts/Reg1Cyano/Access")
+  #setwd("C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Access")
 #Get the data 
   Data2014<-read.csv("../Data2014/Data2014.csv")
 #Get the locations
@@ -315,7 +316,153 @@ Datasteps
     Data<-merge(Data,a[,c('ID','sampleID')],by='ID')
 ```
 
-table(Data$Fluorometer,useNA='ifany')
+**build tblAnalysis**
+
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - Frozen:frozen
+    - Filtered:filtered
+    
+* Add placeholder fields
+    - analystName
+    - dilution
+    - sampleTemperatureC
+    - photosAnalysis
+    - commentAnalysis
+* Get unique values for c('sampleID','analysisDate','analysisTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosAnalysis','commentAnalysis')
+
+```{r tblAnalysis, include=FALSE, echo=FALSE, cache=FALSE}
+#rename fields
+  names(Data)[which(names(Data)=="Frozen")]<-"frozen"
+  names(Data)[which(names(Data)=="Filtered")]<-"filtered"
+  
+#add placeholder fields
+  Data$analystName<-NA
+  Data$dilution<-NA
+  Data$sampleTemperatureC<-NA
+  Data$photosAnalysis<-NA
+  Data$commentAnalysis<-NA
+
+#create tblAnalysis
+  tblAnalysis<-unique(Data[,c('sampleID','analysisDate','analysisTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosAnalysis','commentAnalysis')]);nrow(tblAnalysis) #2458
+
+#add analysisID
+  analysisID<-1:nrow(tblAnalysis)
+  tblAnalysis<-data.frame(analysisID,tblAnalysis)
+
+#check to make sure the analysisID is unique and consistent
+  #repeated analysisIDs
+      a<-as.data.frame(table(tblAnalysis$analysisID))
+        b<-a[a$Freq>1,]
+          x<-tblAnalysis[tblAnalysis$analysisID%in%b$Var1,]
+          x[order(x$analysisID),]
+
+#add analysisID to df Data
+  #select "by" fields
+    #all
+      nrow(tblAnalysis) #2458
+    #subset
+      nrow(unique(tblAnalysis[,c('sampleID','analysisDate','frozen','filtered')])) #2458
+  #merge to df Data
+    a<-merge(Data,tblAnalysis,by=c('sampleID','analysisDate','frozen','filtered'))
+    Data<-merge(Data,a[,c('ID','analysisID')],by='ID')
+
+```
+
+**build tblFluorometry**
+
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - Parameter:parameter
+    - Value:value
+    - Units:units
+    - Fluorometer:fluorometerType
+    - Rep:rep
+    
+* Add placeholder fields
+     - commentFluorometry
+     
+* Get unique values for c('sampleID','fluorometryDate','fluorometryTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosFluorometry','commentFluorometry')
+
+* number of unique fluorometryID (8456) should equal number of rows in df Data (8400)
+* There are repeated lines-exact duplicates
+  - VTDEC repeated lines for Data$ID==678 and Data$ID==710
+  - VTDEC repeated lines for Data$ID==680 and Data$ID==712
+  - NHDES Order=142 and Order=143 (see temp.csv) have repeated values WHY WHY WHY
+  - other values to check in temp.csv too.
+
+
+
+```{r tblFluorometry, include=FALSE, echo=FALSE, cache=FALSE}
+#rename fields
+  names(Data)[which(names(Data)=="Parameter")]<-"parameter"
+  names(Data)[which(names(Data)=="Value")]<-"Value"
+  names(Data)[which(names(Data)=="Units")]<-"units"
+  names(Data)[which(names(Data)=="Fluorometer")]<-"fluorometerType"
+  names(Data)[which(names(Data)=="Rep")]<-"rep"
+  
+#add placeholder fields
+  Data$commentFluorometry<-NA
+
+#create tblFluorometry
+  tblFluorometry<-unique(Data[,c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")]);nrow(tblFluorometry) #8456
+
+c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")%in%Names()
+
+#add fluorometryID
+  fluorometryID<-1:nrow(tblFluorometry)
+  tblFluorometry<-data.frame(fluorometryID,tblFluorometry)
+
+#add fluorometryID to df Data
+  #select "by" fields
+    #all
+      nrow(tblFluorometry) #8456
+    #subset
+      nrow(unique(tblFluorometry[,c("analysisID","parameter","Value","units","rep","fluorometerType")])) #2458
+  #merge to df Data
+    a<-merge(Data,tblFluorometry,by=c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry"))
+    Data<-merge(Data,a[,c('ID','fluorometryID')],by='ID')
+
+#which samples have multiple fluorometryID
+  x<-as.data.frame(table(Data$fluorometryID))
+  y<-x[x$Freq>1,1]
+  k<-Data$fluorometryID%in%y
+  w<-Data[k,]
+  w[order(w$fluorometryID),]
+
+write.table(w[order(w$fluorometryID),], file='temp.csv',row.names=F,sep=',') #write to csv
+
+
+a<-Data[,c("ID","analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")]
+nrow(a) 
+
+b<-merge(a,tblFluorometry,by=c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry"),all.x=TRUE)
+
+
+x<-as.data.frame(table(b$fluorometryID))
+y<-x[x$Freq>1,1]
+
+length(y)#38
+
+k<-b$fluorometryID%in%y
+
+l<-b[k,]
+
+
+
+l[order(l$fluorometryID),]
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "buildAccessDB"
 author: "Bryan"
-date: "Thursday, April 02, 2015"
+date: "April 09, 2015"
 output: html_document
 ---
 
@@ -119,7 +119,7 @@ Datasteps
 
 
 
-
+table(Data$Fluorometer,useNA='ifany')
 
 
 
