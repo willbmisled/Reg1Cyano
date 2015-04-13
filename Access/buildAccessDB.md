@@ -1,7 +1,7 @@
 ---
 title: "buildAccessDB"
 author: "Bryan"
-date: "April 09, 2015"
+date: "April 13, 2015"
 output: html_document
 ---
 
@@ -48,8 +48,7 @@ Datasteps
     - Lon_LocIDNew:longitudeSta
     - Lat_LocIDNew:latitudeSta
     - GPSType:locationSourceSta
-    - SampleLocation:stationType
-
+    
 
 
 **build tblWaterbody**
@@ -89,7 +88,11 @@ Datasteps
 * stationLocation-varies by organization
     - CRWA,CTDEEP,RIWW,UNH_CFB,NHDES:  siteLocation
     - MEDEP,VTDEC: NA
-* stationType: field "sampleLocation" renamed "stationType" above Okay for now but will need to reassign values to "nearShore" and "offShore"
+* stationType: split Data$SampleLocation into 3 categories based on values-category:values
+    - "nearShore":c("SS1","SS10","SS11","SS2","SS3","SS4","SS5","SS6","SS7","SS8","SS9","SSC")
+    - "offShore":c("DH1","DH3","WL1","WL2","WL3","WL4","WL5","WL6","WL7","WL8","WLC")
+    - "other":c("Other","SC1","SC2","SC3")
+    - NA: there are 118 observations with missing values for this field
 * Get unique values for c("stationID","waterbodyID","otherStationID","stationLocation","stationType","LongitudeSta","LatitudeSta","locationSourceSta","commentSta")
 * check to make sure the waterbodyID is unique and consistent
 
@@ -119,7 +122,55 @@ Datasteps
 
 
 
-table(Data$Fluorometer,useNA='ifany')
+**build tblAnalysis**
+
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - Frozen:frozen
+    - Filtered:filtered
+    
+* Add placeholder fields
+    - analystName
+    - dilution
+    - sampleTemperatureC
+    - photosAnalysis
+    - commentAnalysis
+* Get unique values for c('sampleID','analysisDate','analysisTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosAnalysis','commentAnalysis')
+
+
+
+**build tblFluorometry**
+
+* The ID field will be used at the fluorometryID
+* Delete lines for is.na(Data$Value)==TRUE (1134 observations) so tblFluorometry will have 7635 observations
+* Rename fields to match cyanoMon.mdb (Old:New)
+    - Parameter:parameter
+    - Value:value
+    - Units:units
+    - Fluorometer:fluorometerType
+    - Rep:rep
+    - ID:fluorometryID    
+* Add placeholder fields
+     - commentFluorometry
+* Create tblFluorometry with the following fields: c("fluorometryID","analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")];nrow(tblFluorometry)
+     
+
+
+**Save Data**
+
+* save tables ("tblAnalysis","tblFluorometry","tblSample","tblStation","tblWaterbody") as data.frames
+* export as CSV-change NA to blanks
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 ---
 title: "buildAccessDB"
 author: "Bryan"
-date: "April 09, 2015"
+date: "April 13, 2015"
 output: html_document
 ---
 
@@ -57,8 +57,7 @@ Datasteps
     - Lon_LocIDNew:longitudeSta
     - Lat_LocIDNew:latitudeSta
     - GPSType:locationSourceSta
-    - SampleLocation:stationType
-
+    
 ```{r Data, include=FALSE, echo=FALSE, cache=FALSE} 
 #reset working directory
   setwd("~/PortableApps/R/scripts/Reg1Cyano/Access")
@@ -90,9 +89,6 @@ Datasteps
   names(Data)[which(names(Data)=="Lon_LocIDNew")]<-"longitudeSta"
   names(Data)[which(names(Data)=="Lat_LocIDNew")]<-"latitudeSta"
   names(Data)[which(names(Data)=="GPSType")]<-"locationSourceSta"
-  names(Data)[which(names(Data)=="SampleLocation")]<-"stationType"
-
-  
 ```
 
 **build tblWaterbody**
@@ -202,7 +198,11 @@ Datasteps
 * stationLocation-varies by organization
     - CRWA,CTDEEP,RIWW,UNH_CFB,NHDES:  siteLocation
     - MEDEP,VTDEC: NA
-* stationType: field "sampleLocation" renamed "stationType" above Okay for now but will need to reassign values to "nearShore" and "offShore"
+* stationType: split Data$SampleLocation into 3 categories based on values-category:values
+    - "nearShore":c("SS1","SS10","SS11","SS2","SS3","SS4","SS5","SS6","SS7","SS8","SS9","SSC")
+    - "offShore":c("DH1","DH3","WL1","WL2","WL3","WL4","WL5","WL6","WL7","WL8","WLC")
+    - "other":c("Other","SC1","SC2","SC3")
+    - NA: there are 118 observations with missing values for this field
 * Get unique values for c("stationID","waterbodyID","otherStationID","stationLocation","stationType","LongitudeSta","LatitudeSta","locationSourceSta","commentSta")
 * check to make sure the waterbodyID is unique and consistent
 
@@ -222,6 +222,17 @@ Datasteps
     x<-Data$Organization=='VTDEC'|Data$Organization=='MEDEP'
       Data$stationLocation[x]<-NA
     table(Data$Organization,is.na(Data$stationLocation))
+
+#assign stationType
+  Data$stationType<-NA
+    x<-Data$SampleLocation%in%c("SS1","SS10","SS11","SS2","SS3","SS4","SS5","SS6","SS7","SS8","SS9","SSC")
+      Data$stationType[x]<-"nearShore"
+    x<-Data$SampleLocation%in%c("DH1","DH3","WL1","WL2","WL3","WL4","WL5","WL6","WL7","WL8","WLC")
+      Data$stationType[x]<-"offShore"
+    x<-Data$SampleLocation%in%c("Other","SC1","SC2","SC3")
+      Data$stationType[x]<-"other"
+  table(Data$stationType,useNA='ifany')
+
 
 #Assign stationID
   Data$stationID<-paste(Data$LocIDNew,"_",Data$stationType,sep='')
@@ -370,89 +381,53 @@ Datasteps
 
 **build tblFluorometry**
 
+* The ID field will be used at the fluorometryID
+* Delete lines for is.na(Data$Value)==TRUE (1134 observations) so tblFluorometry will have 7635 observations
 * Rename fields to match cyanoMon.mdb (Old:New)
     - Parameter:parameter
     - Value:value
     - Units:units
     - Fluorometer:fluorometerType
     - Rep:rep
-    
+    - ID:fluorometryID    
 * Add placeholder fields
      - commentFluorometry
+* Create tblFluorometry with the following fields: c("fluorometryID","analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")];nrow(tblFluorometry)
      
-* Get unique values for c('sampleID','fluorometryDate','fluorometryTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosFluorometry','commentFluorometry')
-
-* number of unique fluorometryID (8456) should equal number of rows in df Data (8400)
-* There are repeated lines-exact duplicates
-  - VTDEC repeated lines for Data$ID==678 and Data$ID==710
-  - VTDEC repeated lines for Data$ID==680 and Data$ID==712
-  - NHDES Order=142 and Order=143 (see temp.csv) have repeated values WHY WHY WHY
-  - other values to check in temp.csv too.
-
-
-
 ```{r tblFluorometry, include=FALSE, echo=FALSE, cache=FALSE}
 #rename fields
   names(Data)[which(names(Data)=="Parameter")]<-"parameter"
-  names(Data)[which(names(Data)=="Value")]<-"Value"
+  names(Data)[which(names(Data)=="Value")]<-"reading"
   names(Data)[which(names(Data)=="Units")]<-"units"
   names(Data)[which(names(Data)=="Fluorometer")]<-"fluorometerType"
   names(Data)[which(names(Data)=="Rep")]<-"rep"
+  names(Data)[which(names(Data)=="ID")]<-"fluorometryID"
   
 #add placeholder fields
   Data$commentFluorometry<-NA
 
 #create tblFluorometry
-  tblFluorometry<-unique(Data[,c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")]);nrow(tblFluorometry) #8456
-
-c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")%in%Names()
-
-#add fluorometryID
-  fluorometryID<-1:nrow(tblFluorometry)
-  tblFluorometry<-data.frame(fluorometryID,tblFluorometry)
-
-#add fluorometryID to df Data
-  #select "by" fields
-    #all
-      nrow(tblFluorometry) #8456
-    #subset
-      nrow(unique(tblFluorometry[,c("analysisID","parameter","Value","units","rep","fluorometerType")])) #2458
-  #merge to df Data
-    a<-merge(Data,tblFluorometry,by=c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry"))
-    Data<-merge(Data,a[,c('ID','fluorometryID')],by='ID')
-
-#which samples have multiple fluorometryID
-  x<-as.data.frame(table(Data$fluorometryID))
-  y<-x[x$Freq>1,1]
-  k<-Data$fluorometryID%in%y
-  w<-Data[k,]
-  w[order(w$fluorometryID),]
-
-write.table(w[order(w$fluorometryID),], file='temp.csv',row.names=F,sep=',') #write to csv
-
-
-a<-Data[,c("ID","analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry")]
-nrow(a) 
-
-b<-merge(a,tblFluorometry,by=c("analysisID","parameter","Value","units","rep","fluorometerType","commentFluorometry"),all.x=TRUE)
-
-
-x<-as.data.frame(table(b$fluorometryID))
-y<-x[x$Freq>1,1]
-
-length(y)#38
-
-k<-b$fluorometryID%in%y
-
-l<-b[k,]
-
-
-
-l[order(l$fluorometryID),]
-
+  tblFluorometry<-Data[!is.na(Data$reading),c("fluorometryID","analysisID","parameter","reading","units","rep","fluorometerType","commentFluorometry")];nrow(tblFluorometry) #7635
 
 ```
 
+**Save Data**
+
+* save tables ("tblAnalysis","tblFluorometry","tblSample","tblStation","tblWaterbody") as data.frames
+* export as CSV-change NA to blanks
+
+```{r Save, include=FALSE, echo=FALSE, cache=FALSE}
+#save the data
+  #as r data
+    save("tblAnalysis","tblFluorometry","tblSample","tblStation","tblWaterbody", file="tablesDB.rda")
+  # as csv
+    write.csv(tblAnalysis, file='tblAnalysis.csv',row.names=F,na='')
+    write.csv(tblFluorometry, file='tblFluorometry.csv',row.names=F,na='')
+    write.csv(tblSample, file='tblSample.csv',row.names=F,na='')
+    write.csv(tblStation, file='tblStation.csv',row.names=F,na='')
+    write.csv(tblWaterbody, file='tblWaterbody.csv',row.names=F,na='')
+
+```
 
 
 
