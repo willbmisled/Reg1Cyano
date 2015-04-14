@@ -317,13 +317,7 @@ Datasteps
           x[order(x$sampleID),]
 
 #add sampleID to df Data
-  #select "by" fields
-    #all
-      nrow(unique(tblSample[,c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","weather","photoSample")])) #1102
-    #subset
-      nrow(unique(tblSample[,c("stationID","sampleDate","sampleTime","sampleMethod","sampleDepthM","weather")])) #1102
-  #merge to df Data
-    a<-merge(Data,tblSample,by=c("stationID","sampleDate","sampleTime","sampleMethod","sampleDepthM","weather"))
+    a<-merge(Data,tblSample,by=c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample"))
     Data<-merge(Data,a[,c('ID','sampleID')],by='ID')
 ```
 
@@ -368,20 +362,14 @@ Datasteps
           x[order(x$analysisID),]
 
 #add analysisID to df Data
-  #select "by" fields
-    #all
-      nrow(tblAnalysis) #2458
-    #subset
-      nrow(unique(tblAnalysis[,c('sampleID','analysisDate','frozen','filtered')])) #2458
-  #merge to df Data
-    a<-merge(Data,tblAnalysis,by=c('sampleID','analysisDate','frozen','filtered'))
+    a<-merge(Data,tblAnalysis,by=c('sampleID','analysisDate','analysisTime','analystName','frozen','filtered','dilution','sampleTemperatureC','photosAnalysis','commentAnalysis'))
     Data<-merge(Data,a[,c('ID','analysisID')],by='ID')
 
 ```
 
 **build tblFluorometry**
 
-* The ID field will be used at the fluorometryID
+* The ID field will be used as the fluorometryID
 * Delete lines for is.na(Data$Value)==TRUE (1134 observations) so tblFluorometry will have 7635 observations
 * Rename fields to match cyanoMon.mdb (Old:New)
     - Parameter:parameter

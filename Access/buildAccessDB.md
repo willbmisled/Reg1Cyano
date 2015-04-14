@@ -140,7 +140,7 @@ Datasteps
 
 **build tblFluorometry**
 
-* The ID field will be used at the fluorometryID
+* The ID field will be used as the fluorometryID
 * Delete lines for is.na(Data$Value)==TRUE (1134 observations) so tblFluorometry will have 7635 observations
 * Rename fields to match cyanoMon.mdb (Old:New)
     - Parameter:parameter
