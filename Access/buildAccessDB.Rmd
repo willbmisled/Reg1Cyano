@@ -270,8 +270,8 @@ Datasteps
     - waterTempC
     - surfaceWaterCondition
     - commentSample
+* Create sampleDepthM=as.numeric(Data$Depth);replace Depth=="surface" with Depth=0
 * Get unique values for c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample")
-* replace Depth="Surface" with Depth=0
 * sampleID: create sampleID as 1:nrow(tblSample)
 * add sampleID to df Data so it can used in the next table
 
@@ -292,9 +292,12 @@ Datasteps
   names(Data)[which(names(Data)=="Organization")]<-"organization"
   names(Data)[which(names(Data)=="NameOfSamplers")]<-"fieldCrew"
   names(Data)[which(names(Data)=="SampleMethod")]<-"sampleMethod"
-  names(Data)[which(names(Data)=="Depth")]<-"sampleDepthM"
   names(Data)[which(names(Data)=="WeatherConditions")]<-"weather"
   names(Data)[which(names(Data)=="Photos")]<-"photoSample"
+
+#create sampleDepthM
+  Data$sampleDepthM<-as.numeric(as.character((Data$Depth)))
+  Data$sampleDepthM[is.na(Data$sampleDepthM)]<-0
 
 #add placeholder fields
   Data$waterTempC<-NA
@@ -307,12 +310,6 @@ Datasteps
 #add sampleID
   sampleID<-1:nrow(tblSample)
   tblSample<-data.frame(sampleID,tblSample)
-
-#edit depth
-  table(tblSample$sampleDepthM,useNA='ifany')
-  tblSample$sampleDepthM[tblSample$sampleDepthM=='surface']<-0
-  tblSample$sampleDepthM<-as.numeric(tblSample$sampleDepthM)
-
 
 #add sampleID to df Data
     a<-merge(Data,tblSample,by=c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample"))
@@ -415,11 +412,18 @@ Datasteps
 
 ```
 
+**Build cyanoMon.mdb and compare to raw data**
+
+* tables created above used to created cyanoMon.mdb
+* data read back into R and compared to original data from states
+* CRWA-all good
+
+```{r CompareCRWA, include=FALSE, echo=FALSE, cache=FALSE}
 #read the new data
   con <- odbcConnectAccess("cyanoMon.mdb")
   cyanoMon <- sqlQuery(con, "
-  SELECT tempAll.organization, tempAll.waterbodyName, tempAll.otherWaterbodyID, tempAll.state, tempAll.stationLocation, tempAll.sampleDate, tempAll.fieldCrew, tempAll.weather, tempAll.stationID, tempAll.stationType, tempAll.sampleDepthM, tempAll.latitudeSta, tempAll.longitudeSta, tempAll.sampleTime, tempAll.filtered, tempAll.frozen, tempAll.parameter, tempAll.reading, tempAll.analysisDate, tempAll.analysisTime, tempAll.fluorometerType
-  FROM tempAll;
+  SELECT tempAll.organization, tempAll.waterbodyName, tempAll.otherWaterbodyID, tempAll.state, tempAll.stationLocation, tempAll.sampleDate, tempAll.fieldCrew, tempAll.weather, tempAll.stationID, tempAll.stationType, tempAll.sampleMethod, tempAll.sampleDepthM, tempAll.latitudeSta, tempAll.longitudeSta, tempAll.sampleTime, tempAll.filtered, tempAll.frozen, tempAll.parameter, tempAll.reading, tempAll.analysisDate, tempAll.analysisTime, tempAll.fluorometerType, tempAll.rep, tempAll.units
+FROM tempAll;
   ",stringsAsFactors=FALSE)
   close(con)
   str(cyanoMon)
@@ -432,55 +436,105 @@ Datasteps
       new<-select(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
     #sort by all columns
       new<-arrange(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
-      
+    #reformat columns to match other dataset
+      new$sampleDate<-as.POSIXct(new$sampleDate,format='%Y/%m/%d')
+      new$analysisDate<-as.POSIXct(new$analysisDate,format='%Y/%m/%d')
+      new$sampleTime<-strftime(as.POSIXct(new$sampleTime,format='%H:%M'),format="%H:%M")
+      new$analysisTime<-strftime(as.POSIXct(new$analysisTime,format='%H:%M'),format="%H:%M")
+
   #read the original data
     #read csv
       CRWA<-read.csv("../Data2014/CRWA_RAW.csv",stringsAsFactors=FALSE)
     #select columns
-      new<-select(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
+      old<-select(CRWA,Organization,SiteID,WaterbodyName,State,SiteLocation,SampleDate,TypeOfSample,Depth,Latitude,Longitude,SampleTime,Filtered.,Frozen.,Parameter,Value,AnalysisDate,AnalysisTime,Fluorometer)
     #sort by all columns
-      new<-arrange(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
-  
+      old<-arrange(old,Organization,SiteID,WaterbodyName,State,SiteLocation,SampleDate,TypeOfSample,Depth,Latitude,Longitude,SampleTime,Filtered.,Frozen.,Parameter,Value,AnalysisDate,AnalysisTime,Fluorometer)
+      #reformat columns to match other dataset
+        old$SampleDate<-as.POSIXct(old$SampleDate,format='%m/%d/%y')
+        old$AnalysisDate<-as.POSIXct(old$AnalysisDate,format='%m/%d/%y')
+        old$SampleTime<-strftime(as.POSIXct(old$SampleTime,format='%H:%M'),format="%H:%M")
+        old$AnalysisTime<-strftime(as.POSIXct(old$AnalysisTime,format='%H:%M'),format="%H:%M")
+        old$Frozen.<-ifelse(old$Frozen.=='No',FALSE,TRUE)
+        old$Filtered.<-ifelse(old$Filtered.=='NO',FALSE,TRUE)
+        x<-grep('MA70-02',old$SiteID);old$SiteID[x]<-"MA70-02"
+        
+  #compare
+    out<-c()
+      for(i in c(1:ncol(new))){
+        x<-tryCatch(all.equal(new[,i],old[,i]),error = function(e) NA)
+        a<-data.frame(new=names(new)[i],old=names(old)[i],Equal=x)
+        out<-rbind(out,a)
+      }
+    out      
+      #visually compare old$TypeOfSample and new$stationID
+        unique(data.frame(old$SiteLocation,old$TypeOfSample,new$stationID))
+
+ ```
+
+* VTDEC-compared means after aggregating by combinations of
+    sampleMethod, sampleDate, rep, depth, units, and parameter: all equal
+
+```{r CompareVTDEC, include=FALSE, echo=FALSE, cache=FALSE}
+  #new VT data
+    new<-filter(cyanoMon,organization=='VTDEC')
+
+  #read original data 
+    VT<-read.csv("../Data2014/VTDEC_calibrated.csv",stringsAsFactors=FALSE) #read the calbibrated data 
+    VT1<-read.csv("../Data2014/VTDEC_uncalibrated.csv",stringsAsFactors=FALSE) #read the uncalbrated data
+    old<-rbind(VT,VT1)
+    old<-filter(old,collection.type=='grab'|collection.type=='hose')
+  #Add Units and update parameter
+    old$units<-'ug/l'
+    #change channel 1 to Parameter=Phycocyanin and Units=RFU
+      a<-grep('1',old$parameter)
+        old$parameter[a]<-'Phycocyanin'
+        old$units[a]<-'RFU'
+    #change channel 2 to Parameter=Chlorophyll and Units=RFU
+      a<-grep('2',old$parameter)
+        old$parameter[a]<-'Chlorophyll'
+        old$units[a]<-'RFU'
+    #change spelling
+      old$parameter[old$parameter=='phycocyanin']<-'Phycocyanin'
+      old$parameter[old$parameter=='chlorophyll']<-'Chlorophyll'
+
+  #check means
+    #function to compare means
+      comp<-function(listOld,listNew){
+        a<-aggregate(old$Reading,by=listOld,mean,na.rm=TRUE)
+          a<-arrange(a,x)
+        b<-aggregate(new$reading,by=listNew,mean,na.rm=TRUE)
+          b<-arrange(b,x)
+            Test<-all.equal(a$x, b$x)
+        if(Test==TRUE) print("Means Match")
+        if(Test!=TRUE) print(data.frame(a,b))
+      }
+    #sample method
+      listOld<-list(old$collection.type)
+      listNew<-list(new$sampleMethod)
+      comp(listOld,listNew)
     
-  
-  
-  'Organization','SiteID','WaterbodyName','State','SiteLocation','SampleDate','TypeOfSample','Depth','Latitude','Longitude','SampleTime','Filtered.','Frozen.','Parameter','Value','AnalysisDate','AnalysisTime','Fluorometer'
-  
-  
-  #select CRWA and order by fields
-  
+    #add sampleDate
+      listOld[length(listOld)+1]<-list(old$Sample.Date)
+      listNew[length(listNew)+1]<-list(new$sampleDate)
+      comp(listOld,listNew)
+    #add rep
+      listOld[length(listOld)+1]<-list(old$rep)
+      listNew[length(listNew)+1]<-list(new$rep)
+      comp(listOld,listNew)
+    #add depth
+      listOld[length(listOld)+1]<-list(old$depth..m.)
+      listNew[length(listNew)+1]<-list(new$sampleDepthM)
+      comp(listOld,listNew)
+    #add Units
+      listOld[length(listOld)+1]<-list(old$units)
+      listNew[length(listNew)+1]<-list(new$units)
+      comp(listOld,listNew)
+    #add parameter
+      listOld[length(listOld)+1]<-list(old$parameter)
+      listNew[length(listNew)+1]<-list(new$parameter)
+      comp(listOld,listNew)
 
-
-
-  new<-a[new$organization==CRWA,b]
-  
-
-  
-#pick fields to compare
-  b<-c('organization','otherWaterbodyID','waterbodyName','state','stationLocation','sampleDate','stationID','sampleDepthM','latitudeSta','longitudeSta','sampleTime','filtered','frozen','parameter','reading','analysisDate','analysisTime','fluorometerType')
-  
-#order by fields
-
-
-
-  new<-a[order(a[,b]),b]
-  new<-subset(new,new$organization=='CRWA')
-
-#read the original data
-  CRWA<-read.csv("../Data2014/CRWA_RAW.csv",stringsAsFactors=FALSE) #read the data
-
-#pick fields to compare
-  a<-c('Organization','SiteID','WaterbodyName','State','SiteLocation','SampleDate','TypeOfSample','Depth','Latitude','Longitude','SampleTime','Filtered.','Frozen.','Parameter','Value','AnalysisDate','AnalysisTime','Fluorometer')
-
-#order by fields
-  old<-CRWA[order(a),a]
-
-
-
-nrow(New)  #280
-nrow(Old) #280
-
-head(New)
+```
 
 
 
@@ -489,6 +543,10 @@ head(New)
 
 
 
+
+
+
+```
 
 
 
