@@ -1,7 +1,7 @@
 ---
 title: "cyanoMonDocumentation"
 author: "Bryan"
-date: "Monday, March 30, 2015"
+date: "Monday, April 13, 2015"
 output: html_document
 ---
 <!---
@@ -43,7 +43,7 @@ Database Structure
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**waterbodyID**|AutoNumber|Primary Key for this table. Unique ID for the Waterbody
+**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody
 **waterbodyName**|Short Text|Name of the waterbody
 **state**|Short Text|Combo Box ("CT"; "MA"; "ME"; "NH"; "RI"; "VT"): Two letter state abbreviations
 **town**|Short Text|Text Box: Closest town to the lake
@@ -59,10 +59,10 @@ Field  | Data Type | Description
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**stationID**|AutoNumber|Primary Key for this table. Unique ID for the Station
-**waterbodyID**|AutoNumber|Lookup primary Key from tblWaterbody: which lake?
+**stationID**|Short Text|Primary Key for this table. Unique ID for the Station
+**waterbodyID**|Short Text|Lookup primary Key from tblWaterbody: which lake?
 **otherStationID**|Short Text|Text Box: If the states or the samping organization have a unique identifier for the station it can be added here.
-**stationType**|Short Text|List Box/Radio Button ("NearShore"; "OffShore")| Location of the station in relation to the shore
+**stationType**|Short Text|List Box/Radio Button ("nearShore"; "offShore";"other"): Location of the station in relation to the shore;for special situations choose other and add notes in field "commentStation"
 **longitudeSta**|Double|Text Box: longitude in decimal degrees (WGS84) of the station
 **latitudeSta**|Double|Text Box: latitude in decimal degrees (WGS84) of the station
 **locationSourceSta**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined?
@@ -73,7 +73,7 @@ Field  | Data Type | Description
 Field  | Data Type | Description
 ------------- | ------------- | -------------
 **sampleID**|AutoNumber|Primary Key for this table. Unique ID for the sample event
-**stationID**|AutoNumber|Lookup primary Key from tblStation: where was the sample taken?
+**stationID**|Short Text|Lookup primary Key from tblStation: where was the sample taken?
 **sampleDate**|Short Date|Text Box: Date the sample was taken in format MM/DD/YYYY
 **sampleTime**|Medium|Text Box: Time the sample was taken in format HH:MM AM/PM
 **organization**|Short Text|Combo Box ("CRWA"; "CTDEEP"; "MEDEP"; "NHDES";"RIWW"; "UNH_CFB"; "VTDEC"): Name of the organization in charge of visit; if more than one choose the primary
@@ -108,8 +108,10 @@ Field  | Data Type | Description
 ------------- | ------------- | -------------
 **fluorometryID**|AutoNumber|Primary Key for this table. Unique ID for the fluorometry reading
 **analysisID**|AutoNumber|Lookup primary Key from tblAnalysis: fluorometry reading for which analysis event?
-**parameter**|Short Text|List Box ("Chlorophyll"; "Phycocyanin"): which pigment was analyzed?
-**valueUGL**|Single|Text Box: Fluorometry reading in ug/l
+**parameter**|Short Text|List Box/Radio Button ("nearShore"; "offShore";"other")|
+**reading**|Single|Text Box: Fluorometry reading 
+**units**|Short Text|List Box/Radio Button ("ug/l"; "RFU"): units of the fluorometry reading.
+**rep**|Interger|replicate number for multiple readings from a sample
 **fluorometerType**|Combo Box: ("Beagle"): this should be a Beagle but user can input other choices.
 **commentFluorometry**|Long Text| Text Box: Additional information or comments
 
