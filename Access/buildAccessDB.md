@@ -80,7 +80,7 @@ Datasteps
 
 **build tblStation**
 
-* stationID: unique identifier for tblStation-combination of LocIDNew and stationType 
+* stationID: unique identifier for tblStation-combination of LocIDNew and SampleLocation 
 * Assign otherStationID to each station within each lake. Varies by Organization:
     - CRWA,MEDEP:  SiteLocation
     - CTDEEP,RIWW,UNH_CFB,: NA
@@ -114,11 +114,9 @@ Datasteps
     - surfaceWaterCondition
     - commentSample
 * Get unique values for c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample")
+* replace Depth="Surface" with Depth=0
 * sampleID: create sampleID as 1:nrow(tblSample)
-* check to make sure the sampleID is unique and consistent
 * add sampleID to df Data so it can used in the next table
- 
-
 
 
 

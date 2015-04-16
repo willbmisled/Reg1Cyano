@@ -52,7 +52,7 @@ Database Structure
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**waterbodyID**|AutoNumber|Primary Key for this table. Unique ID for the Waterbody
+**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody
 **waterbodyName**|Short Text|Name of the waterbody
 **state**|Short Text|Combo Box ("CT"; "MA"; "ME"; "NH"; "RI"; "VT"): Two letter state abbreviations
 **town**|Short Text|Text Box: Closest town to the lake
@@ -68,8 +68,8 @@ Field  | Data Type | Description
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**stationID**|AutoNumber|Primary Key for this table. Unique ID for the Station
-**waterbodyID**|AutoNumber|Lookup primary Key from tblWaterbody: which lake?
+**stationID**|Short Text|Primary Key for this table. Unique ID for the Station
+**waterbodyID**|Short Text|Lookup primary Key from tblWaterbody: which lake?
 **otherStationID**|Short Text|Text Box: If the states or the samping organization have a unique identifier for the station it can be added here.
 **stationType**|Short Text|List Box/Radio Button ("nearShore"; "offShore";"other"): Location of the station in relation to the shore;for special situations choose other and add notes in field "commentStation"
 **longitudeSta**|Double|Text Box: longitude in decimal degrees (WGS84) of the station
@@ -82,7 +82,7 @@ Field  | Data Type | Description
 Field  | Data Type | Description
 ------------- | ------------- | -------------
 **sampleID**|AutoNumber|Primary Key for this table. Unique ID for the sample event
-**stationID**|AutoNumber|Lookup primary Key from tblStation: where was the sample taken?
+**stationID**|Short Text|Lookup primary Key from tblStation: where was the sample taken?
 **sampleDate**|Short Date|Text Box: Date the sample was taken in format MM/DD/YYYY
 **sampleTime**|Medium|Text Box: Time the sample was taken in format HH:MM AM/PM
 **organization**|Short Text|Combo Box ("CRWA"; "CTDEEP"; "MEDEP"; "NHDES";"RIWW"; "UNH_CFB"; "VTDEC"): Name of the organization in charge of visit; if more than one choose the primary

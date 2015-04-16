@@ -14,12 +14,13 @@ use these command instead of the knit icon if you want the data and work loaded 
   
 ```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
   #########function to install (if needed) and load R packages by list
-libs<-c("knitr","chron") #list of packages to load
+libs<-c("knitr","chron","RODBC","sp") #list of packages to load
 
-installLoad<-function(pck){ #user defined function
-    if(!pck%in%installed.packages()){install.packages(pck)}
-    require(pck, character.only = TRUE)
-  }
+installLoad<-function(pck)#user defined function
+{
+  if(!pck%in%installed.packages()){install.packages(pck,repos="http://rweb.quant.ku.edu/cran/")}
+  library(pck, character.only = TRUE)
+}
 lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 ```
 
@@ -60,8 +61,8 @@ Datasteps
     
 ```{r Data, include=FALSE, echo=FALSE, cache=FALSE} 
 #reset working directory
-  setwd("~/PortableApps/R/scripts/Reg1Cyano/Access")
-  #setwd("C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Access")
+  #setwd("~/PortableApps/R/scripts/Reg1Cyano/Access")
+  setwd("C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Access")
 #Get the data 
   Data2014<-read.csv("../Data2014/Data2014.csv")
 #Get the locations
@@ -136,7 +137,7 @@ Datasteps
         #remove spaces from one ID
           x<-grep('MA70-02',Data$waterbodyID)
             Data$waterbodyID[x]<-"CRWA_MA70-02"
-            Data$otherWaterbodyID[1]<-"MA70-02"
+            Data$otherWaterbodyID[x]<-"MA70-02"
   unique(Data$waterbodyID)
 
 #waterbodyName consistency check  
@@ -190,7 +191,7 @@ Datasteps
 
 **build tblStation**
 
-* stationID: unique identifier for tblStation-combination of LocIDNew and stationType 
+* stationID: unique identifier for tblStation-combination of LocIDNew and SampleLocation 
 * Assign otherStationID to each station within each lake. Varies by Organization:
     - CRWA,MEDEP:  SiteLocation
     - CTDEEP,RIWW,UNH_CFB,: NA
@@ -235,7 +236,7 @@ Datasteps
 
 
 #Assign stationID
-  Data$stationID<-paste(Data$LocIDNew,"_",Data$stationType,sep='')
+  Data$stationID<-paste(Data$LocIDNew,"_",Data$SampleLocation,sep='')
   #modify stationID for LocIDNew==158
     x<-Data$LocIDNew==158
       Data$stationID[x]<-paste(Data$LocIDNew[x],"_",Data$stationType[x],"_",Data$stationLocation[x],sep='')
@@ -270,11 +271,9 @@ Datasteps
     - surfaceWaterCondition
     - commentSample
 * Get unique values for c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample")
+* replace Depth="Surface" with Depth=0
 * sampleID: create sampleID as 1:nrow(tblSample)
-* check to make sure the sampleID is unique and consistent
 * add sampleID to df Data so it can used in the next table
- 
-
 
 ```{r tblSample, include=FALSE, echo=FALSE, cache=FALSE}
 #add formatted date
@@ -309,12 +308,11 @@ Datasteps
   sampleID<-1:nrow(tblSample)
   tblSample<-data.frame(sampleID,tblSample)
 
-#check to make sure the sampleID is unique and consistent
-  #repeated sampleIDs
-      a<-as.data.frame(table(tblSample$sampleID))
-        b<-a[a$Freq>1,]
-          x<-tblSample[tblSample$sampleID%in%b$Var1,]
-          x[order(x$sampleID),]
+#edit depth
+  table(tblSample$sampleDepthM,useNA='ifany')
+  tblSample$sampleDepthM[tblSample$sampleDepthM=='surface']<-0
+  tblSample$sampleDepthM<-as.numeric(tblSample$sampleDepthM)
+
 
 #add sampleID to df Data
     a<-merge(Data,tblSample,by=c("stationID","sampleDate","sampleTime","organization","fieldCrew","sampleMethod","sampleDepthM","waterTempC","weather","surfaceWaterCondition","photoSample","commentSample"))
@@ -417,9 +415,72 @@ Datasteps
 
 ```
 
+#read the new data
+  con <- odbcConnectAccess("cyanoMon.mdb")
+  cyanoMon <- sqlQuery(con, "
+  SELECT tempAll.organization, tempAll.waterbodyName, tempAll.otherWaterbodyID, tempAll.state, tempAll.stationLocation, tempAll.sampleDate, tempAll.fieldCrew, tempAll.weather, tempAll.stationID, tempAll.stationType, tempAll.sampleDepthM, tempAll.latitudeSta, tempAll.longitudeSta, tempAll.sampleTime, tempAll.filtered, tempAll.frozen, tempAll.parameter, tempAll.reading, tempAll.analysisDate, tempAll.analysisTime, tempAll.fluorometerType
+  FROM tempAll;
+  ",stringsAsFactors=FALSE)
+  close(con)
+  str(cyanoMon)
+  
+#############compare CRWA 
+  #read the cyanMon data
+    #filter for CRWA
+      new<-filter(cyanoMon,organization=='CRWA')
+    #select columns
+      new<-select(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
+    #sort by all columns
+      new<-arrange(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
+      
+  #read the original data
+    #read csv
+      CRWA<-read.csv("../Data2014/CRWA_RAW.csv",stringsAsFactors=FALSE)
+    #select columns
+      new<-select(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
+    #sort by all columns
+      new<-arrange(new,organization,otherWaterbodyID,waterbodyName,state,stationLocation,sampleDate,stationID,sampleDepthM,latitudeSta,longitudeSta,sampleTime,filtered,frozen,parameter,reading,analysisDate,analysisTime,fluorometerType)
+  
+    
+  
+  
+  'Organization','SiteID','WaterbodyName','State','SiteLocation','SampleDate','TypeOfSample','Depth','Latitude','Longitude','SampleTime','Filtered.','Frozen.','Parameter','Value','AnalysisDate','AnalysisTime','Fluorometer'
+  
+  
+  #select CRWA and order by fields
+  
 
 
 
+  new<-a[new$organization==CRWA,b]
+  
+
+  
+#pick fields to compare
+  b<-c('organization','otherWaterbodyID','waterbodyName','state','stationLocation','sampleDate','stationID','sampleDepthM','latitudeSta','longitudeSta','sampleTime','filtered','frozen','parameter','reading','analysisDate','analysisTime','fluorometerType')
+  
+#order by fields
+
+
+
+  new<-a[order(a[,b]),b]
+  new<-subset(new,new$organization=='CRWA')
+
+#read the original data
+  CRWA<-read.csv("../Data2014/CRWA_RAW.csv",stringsAsFactors=FALSE) #read the data
+
+#pick fields to compare
+  a<-c('Organization','SiteID','WaterbodyName','State','SiteLocation','SampleDate','TypeOfSample','Depth','Latitude','Longitude','SampleTime','Filtered.','Frozen.','Parameter','Value','AnalysisDate','AnalysisTime','Fluorometer')
+
+#order by fields
+  old<-CRWA[order(a),a]
+
+
+
+nrow(New)  #280
+nrow(Old) #280
+
+head(New)
 
 
 

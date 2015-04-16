@@ -1,5 +1,5 @@
 "waterbodyID","waterbodyName","state","town","WBID","otherWaterbodyID","longitudeWB","latitudeWB","locationSourceWB","commentWB"
-"CRWA_MA70-02","Charles River","MA",,,"MA70-02 ",-71.07689,42.359291,"GoogleEarth","No WBID; this is the charles river"
+"CRWA_MA70-02","Charles River","MA",,,"MA70-02",-71.07689,42.359291,"GoogleEarth","No WBID; this is the charles river"
 "CRWA_MA72-08","Charles River","MA",,,"MA72-08",-71.07689,42.359291,"GoogleEarth","No WBID; this is the charles river"
 "CTDEEP_14514","Porter Pond","CT",,6139688,"14514",-71.8216728862164,41.6470864313679,"MRB1_WBIDLakes",
 "CTDEEP_15675","Lake Beseck","CT",,7699880,"15675",-72.7319099492782,41.5147113221679,"MRB1_WBIDLakes",
@@ -104,5 +104,4 @@
 "UNH_CFB_WBID_9312481","Lovell","NH",,9312481,,-71.0059779663141,43.5437546989907,"MRB1_WBIDLakes",
 "UNH_CFB_WBID_9315143","Silver","NH",,9315143,,-71.1719371787707,43.8670675009587,"MRB1_WBIDLakes",
 "UNH_CFB_WBID_9315263","Pine River Pond","NH",,9315263,,-71.0253015644013,43.6296293885655,"MRB1_WBIDLakes",
-"VTDEC_WBID_22302965","Lake Champlain","VT",,22302965,"MA70-02",-73.3134670709827,44.5760657763667,"MRB1_WBIDLakes",
 "VTDEC_WBID_22302965","Lake Champlain","VT",,22302965,,-73.3134670709827,44.5760657763667,"MRB1_WBIDLakes",
