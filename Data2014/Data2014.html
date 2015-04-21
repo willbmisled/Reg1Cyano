@@ -10,7 +10,7 @@
 
 <meta name="author" content="Bryan Milstead" />
 
-<meta name="date" content="2015-03-18" />
+<meta name="date" content="2015-03-30" />
 
 <title>Region1CyanoData2014</title>
 
@@ -55,7 +55,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">Region1CyanoData2014</h1>
 <h4 class="author"><em>Bryan Milstead</em></h4>
-<h4 class="date"><em>March 18, 2015</em></h4>
+<h4 class="date"><em>March 30, 2015</em></h4>
 </div>
 
 
@@ -604,16 +604,15 @@ use these command instead of the knit icon if you want the data and work loaded 
 <div id="maine" class="section level3">
 <h3>Maine</h3>
 <ul>
-<li>Data received from Linda Bacon on 3/13/15 as “Cyanotoxin.zip”</li>
+<li>Latest version of data received from Linda Bacon on 3/26/15 as “Cyanotoxin.zip”</li>
 <li>Data extracted and access database “Cyanotoxin.accdb” renamed “MEDEP.accdb”</li>
-<li>Newer version of ME database receieved from Linda Bacon on 3/19/15 also as “Cyanotoxin.zip”</li>
-<li>The 3/13 version renamed MEDEP20150313.accdb</li>
-<li>The 3/19 version renamed MEDEP.accdb</li>
+<li>Earlier version of data received on 3/13/15 and 3/19/15</li>
 </ul>
 <p><strong>Questions for Linda Bacon</strong> * From the “Events” table can you check the MIDAS numbers for eventID=9 and eventID=49? These are listed as (eventID=9 &amp; lake=Sabattus &amp; midas=2796) and (eventID=49 &amp; lake=Threemile &amp; midas=5418). Based on the names and closest cities I believe these should be (eventID=9 &amp; lake=Sabattus &amp; midas=3796) and (eventID=49 &amp; lake=Threemile &amp; midas=5416). They look typos to me. - LB: You are correct; they are either typos or were written on the data sheets wrong. - BM: this was fixed in the 3/19 version * In the “Sample” table what do the following “samplecodes” mean: DH1, DH3, SC1, SC2, &amp; SC3? - LB: DH1 and DH3 refer to Deep Hole Station 1 and Deep Hole Station 3; we paired the regional sampling with our regular sampling regime (taking core sample to the bottom of the epilimnion rather than just to 3 meters). We also collected three samples of Surface Scums (SC1, SC2, SC3), if/when they were found to get at concentrations a dog might encounter drinking from scums at the shoreline. * In the “Sample” table what do type=“C” and type=“G” mean? I“m guessing C is the integrated sampler and G is a grab sample. - LB: Yes, exactly. * In the”Sample&quot; table what do the values of 0-6 mean in the “Flour” column? - LB: That Column is “FluorFrozenDays.” Those should ALL be zero…don’t know how the 1-6 crept in (4 different people entered the data). We didn’t have time to process any frozen samples… - BM: this was fixed in the 3/19 version; all zeros now * In the “Sample” table what are the units for the values in the “result” column? ug/l? or RFU? - LB: Very Good Question! Last summer I thought they were RFUs but in January was told they were not. I tried to get a straight answer from the group in January and was told that the units were ug/L. I was told to ‘trust us’ – which I still do not. What says you??? - BM: the distribution of values is consistent with ug/l. I have asked Linda to check if they have any chlorophyll records for the lakes to verify. * In the “Sample” table do you have the lat/lon values for sampleID=329 &amp; sampleID=330? These correspond to eventid=42. - LB: Yes. They were not on the Cyano Field Sheeet but were on the regular field sheet filled out at the deep hole: 44.3674 -69.607899 (note that all DH1 &amp; WL1 samples were taken at the same location; likewise for DH3 and WL1). - BM: this was fixed in the 3/19 version * In the FluoroResults table what do the codes “FC”, “FP”, “RC”, &amp; “RP” in the “Anal” column mean? - LB: FC=Filtered Chlorophyll; FP= Filtered Phycocyanin; RC=Raw Chlorophyll; FC=Filtered Chlorophyll * Probably related to the question above-where samples frozen or filtered? How can I tell? - LB: None were Frozen (see the answer to the “Fluor’ question) and the answer above.<br />* Also am guessing that codes”FC&quot; &amp; RC&quot; are for Chlorophyll and “FP” &amp; “RP” are for Phycocyanin. Am I right? - LB: Yup; see above. * How were the sample site locations determined (GPS? GoogleEarth? Map?) - LB: Hand-held GPS units using WGS84 projection with accuracy +/- ~9feet.</p>
 <p><strong>Data steps</strong>-View code in Data2014.rmd document to see details.</p>
 <ul>
 <li>SQL query used to read all data into R</li>
+<li>Rep added as the rank of FluoroResultID by SampleID and Anal</li>
 <li>Data reformatted</li>
 </ul>
 </div>
