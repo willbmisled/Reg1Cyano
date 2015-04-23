@@ -10,6 +10,7 @@
 
 <meta name="author" content="Bryan" />
 
+<meta name="date" content="2015-04-23" />
 
 <title>cyanoMonDocumentation</title>
 
@@ -54,7 +55,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <div id="header">
 <h1 class="title">cyanoMonDocumentation</h1>
 <h4 class="author"><em>Bryan</em></h4>
-<h4 class="date"><em>Monday, April 13, 2015</em></h4>
+<h4 class="date"><em>April 23, 2015</em></h4>
 </div>
 
 
@@ -69,10 +70,19 @@ use these command instead of the knit icon if you want the data and work loaded 
 <div id="to-do-list" class="section level2">
 <h2>To Do List</h2>
 <ul>
-<li>Develop a method to assign unique identifiers that works with the phone app</li>
 <li>Build forms</li>
-<li>Add 2014 data</li>
-<li>Develop and test phone app</li>
+<li>Complete 2014 data QA/QC</li>
+<li>Interface for Phone App</li>
+<li>Update for 2015</li>
+</ul>
+</div>
+<div id="considerations-for-2015-database" class="section level2">
+<h2>Considerations for 2015 database</h2>
+<ul>
+<li>Remove Field “analysisTime” from table tblAnalysis</li>
+<li>Remove Field “rep” from table tblFluorometry</li>
+<li>Combine tables tblAnalysis &amp; tblFluorometry</li>
+<li>Do we want to include anytime of replicate analyses or readings?</li>
 </ul>
 </div>
 <div id="background" class="section level2">
@@ -82,9 +92,8 @@ use these command instead of the knit icon if you want the data and work loaded 
 <li>Data collection initiated during the summer of 2014</li>
 <li>2014 data have been collated and standardized</li>
 <li>For future data collection we need a relational database developed for data entry and archiving</li>
-<li>The Database need to work with a Data Collection Phone App under development</li>
+<li>The Database needs to work with a Data Collection Phone App under development</li>
 <li>For now, the database will be created in MSAccess (cyanoMon.mdb)</li>
-<li>This document is available here: <a href="https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMonDocumentation.md">https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMonDocumentation.md</a></li>
 </ul>
 </div>
 <div id="database-structure" class="section level2">
@@ -108,7 +117,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <tr class="odd">
 <td align="left"><strong>waterbodyID</strong></td>
 <td align="left">Short Text</td>
-<td align="left">Primary Key for this table. Unique ID for the Waterbody</td>
+<td align="left">Primary Key for this table. Unique ID for the Waterbody. Can either be entered by the users or will be added later.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>waterbodyName</strong></td>
@@ -138,17 +147,17 @@ use these command instead of the knit icon if you want the data and work loaded 
 <tr class="odd">
 <td align="left"><strong>longitudeWB</strong></td>
 <td align="left">Double</td>
-<td align="left">Text Box: longitude in decimal degrees (WGS84) of the lake centroid</td>
+<td align="left">Text Box: longitude in decimal degrees (WGS84) of the lake centroid. This field will be populated by the database administrator.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>latitudeWB</strong></td>
 <td align="left">Double</td>
-<td align="left">Text Box: latitude in decimal degrees (WGS84) of the lake centroid</td>
+<td align="left">Text Box: latitude in decimal degrees (WGS84) of the lake centroid. This field will be populated by the database administrator.</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>locationSourceWB</strong></td>
 <td align="left">Short Text</td>
-<td align="left">Combo Box (“WaterbodyDatabase”; “GPS”; “GoogleEarth”; “BingMaps”; “topoMap”): How was the location determined?</td>
+<td align="left">Combo Box (“WaterbodyDatabase”; “GPS”; “GoogleEarth”; “BingMaps”; “topoMap”): How was the location determined? This field will be populated by the database administrator.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>commentWB</strong></td>
@@ -177,7 +186,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 <tr class="even">
 <td align="left"><strong>waterbodyID</strong></td>
 <td align="left">Short Text</td>
-<td align="left">Lookup primary Key from tblWaterbody: which lake?</td>
+<td align="left">Lookup primary Key from tblWaterbody</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>otherStationID</strong></td>
@@ -192,12 +201,12 @@ use these command instead of the knit icon if you want the data and work loaded 
 <tr class="odd">
 <td align="left"><strong>longitudeSta</strong></td>
 <td align="left">Double</td>
-<td align="left">Text Box: longitude in decimal degrees (WGS84) of the station</td>
+<td align="left">Text Box: longitude in decimal degrees (WGS84) of the station. Miniumum of 4 decimal places; 6 decimal places prefered.</td>
 </tr>
 <tr class="even">
 <td align="left"><strong>latitudeSta</strong></td>
 <td align="left">Double</td>
-<td align="left">Text Box: latitude in decimal degrees (WGS84) of the station</td>
+<td align="left">Text Box: latitude in decimal degrees (WGS84) of the station. Miniumum of 4 decimal places; 6 decimal places prefered.</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>locationSourceSta</strong></td>
@@ -398,7 +407,7 @@ use these command instead of the knit icon if you want the data and work loaded 
 </tr>
 <tr class="even">
 <td align="left"><strong>rep</strong></td>
-<td align="left">Interger</td>
+<td align="left">Integer</td>
 <td align="left">replicate number for multiple readings from a sample</td>
 </tr>
 <tr class="odd">
