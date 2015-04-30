@@ -1,8 +1,8 @@
 ---
 title: "cyanoMonDocumentation"
 author: "Bryan"
-date: "Monday, April 13, 2015"
-output: html_document
+date: "April 29, 2015"
+output: pdf_document
 ---
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
@@ -15,22 +15,38 @@ use these command instead of the knit icon if you want the data and work loaded 
 To Do List
 -------------------------
 
-* Develop a method to assign unique identifiers that works with the phone app
-* Build forms
-* Add 2014 data
-* Develop and test phone app
+* Build forms-with data validation steps
+* Complete 2014 data QA/QC
+* Interface for Phone App
+* Update for 2015
+
+Considerations for 2015 database
+-------------------------
+* Remove Field "analysisTime" from table tblAnalysis
+* Remove Field "rep" from table tblFluorometry 
+* Combine tables tblAnalysis & tblFluorometry
+* Do we want to include any kind of replicate analyses or readings?
+* What about field duplicate samples?
+* Add text field 'stationDescription' to describe location of the station (e.g., off Bubby's dock)
+* JSON to google docs link
+* use phone app for field data only?
+* add tables for lab results and ancillary data-toxins, nutrients, secchi, etc.
+* eliminate the filtered field?
+* add fields for email and phone number (from phoneApp)
+* add field for data entry method (phoneApp, access, spreadsheet)
+* Do we need to capture information on primary and secondary standards?
+
+
 
 Background
 -------------------------
-
 
 * EPA region 1 is coordinating a Cyanobacteria Monitoring Progam for the six New England States (CT, MA, ME, NH, RI, & VT)
 * Data collection initiated during the summer of 2014
 * 2014 data have been collated and standardized
 * For future data collection we need a relational database developed for data entry and archiving 
-* The Database need to work with a Data Collection Phone App under development
+* The Database needs to work with a Data Collection Phone App under development
 * For now, the database will be created in MSAccess (cyanoMon.mdb)
-* This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMonDocumentation.md
 
 Database Structure
 -------------------------
@@ -43,28 +59,27 @@ Database Structure
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody
+**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody.  Can either be entered by the users or will be added later.
 **waterbodyName**|Short Text|Name of the waterbody
 **state**|Short Text|Combo Box ("CT"; "MA"; "ME"; "NH"; "RI"; "VT"): Two letter state abbreviations
 **town**|Short Text|Text Box: Closest town to the lake
 **WBID**|Long Integer|Text Box: EPA Waterbody Identifier
 **otherWaterbodyID**|Short Text|Text Box: If the states or the samping organization have a unique identifier for the waterbody it can be added here.
-**longitudeWB**|Double|Text Box: longitude in decimal degrees (WGS84) of the lake centroid
-**latitudeWB**|Double|Text Box: latitude in decimal degrees (WGS84) of the lake centroid
-**locationSourceWB**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined?
+**longitudeWB**|Double|Text Box: longitude in decimal degrees (WGS84) of the lake centroid.  This field will be populated by the database administrator.
+**latitudeWB**|Double|Text Box: latitude in decimal degrees (WGS84) of the lake centroid. This field will be populated by the database administrator.
+**locationSourceWB**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined? This field will be populated by the database administrator.
 **commentWB**|Long Text| Text Box: Additional information or comments
-
 
 * **tblStation** within each Waterbody there may be multiple stations. This table provides general information on the station.  There may be multiple samples taken from each station.
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
 **stationID**|Short Text|Primary Key for this table. Unique ID for the Station
-**waterbodyID**|Short Text|Lookup primary Key from tblWaterbody: which lake?
+**waterbodyID**|Short Text|Lookup primary Key from tblWaterbody
 **otherStationID**|Short Text|Text Box: If the states or the samping organization have a unique identifier for the station it can be added here.
 **stationType**|Short Text|List Box/Radio Button ("nearShore"; "offShore";"other"): Location of the station in relation to the shore;for special situations choose other and add notes in field "commentStation"
-**longitudeSta**|Double|Text Box: longitude in decimal degrees (WGS84) of the station
-**latitudeSta**|Double|Text Box: latitude in decimal degrees (WGS84) of the station
+**longitudeSta**|Double|Text Box: longitude in decimal degrees (WGS84) of the station.  Miniumum of 4 decimal places; 6 decimal places prefered.
+**latitudeSta**|Double|Text Box: latitude in decimal degrees (WGS84) of the station.  Miniumum of 4 decimal places; 6 decimal places prefered.
 **locationSourceSta**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined?
 **commentStation**|Long Text| Text Box: Additional information or comments
 
@@ -111,7 +126,7 @@ Field  | Data Type | Description
 **parameter**|Short Text|List Box/Radio Button ("nearShore"; "offShore";"other")|
 **reading**|Single|Text Box: Fluorometry reading 
 **units**|Short Text|List Box/Radio Button ("ug/l"; "RFU"): units of the fluorometry reading.
-**rep**|Interger|replicate number for multiple readings from a sample
+**rep**|Integer|replicate number for multiple readings from a sample
 **fluorometerType**|Combo Box: ("Beagle"): this should be a Beagle but user can input other choices.
 **commentFluorometry**|Long Text| Text Box: Additional information or comments
 

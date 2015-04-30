@@ -1,0 +1,404 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% Set line spacing
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+% Redefine \includegraphics so that, unless explicit options are
+% given, the image width will not exceed the width of the page.
+% Images get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+{%
+ \catcode`\@=11\relax%
+ \gdef\includegraphics{\@ifnextchar[{\Oldincludegraphics}{\Oldincludegraphics[width=\ScaleIfNeeded]}}%
+}%
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Bryan},
+            pdftitle={cyanoMonDocumentation},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{cyanoMonDocumentation}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Bryan}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{April 23, 2015}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\subsection{To Do List}\label{to-do-list}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Build forms
+\item
+  Complete 2014 data QA/QC
+\item
+  Interface for Phone App
+\item
+  Update for 2015
+\end{itemize}
+
+\subsection{Considerations for 2015
+database}\label{considerations-for-2015-database}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Remove Field ``analysisTime'' from table tblAnalysis
+\item
+  Remove Field ``rep'' from table tblFluorometry
+\item
+  Combine tables tblAnalysis \& tblFluorometry
+\item
+  Do we want to include anytime of replicate analyses or readings?
+\item
+  Add text field `stationDescription' to describe location of the
+  station (e.g., off Bubby's dock)
+\item
+  JSON to google docs link
+\item
+  use phone app for field data only?
+\item
+  add tables for lab results and ancillary data-toxins, nutrients,
+  secchi, etc.
+\end{itemize}
+
+\subsection{Background}\label{background}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  EPA region 1 is coordinating a Cyanobacteria Monitoring Progam for the
+  six New England States (CT, MA, ME, NH, RI, \& VT)
+\item
+  Data collection initiated during the summer of 2014
+\item
+  2014 data have been collated and standardized
+\item
+  For future data collection we need a relational database developed for
+  data entry and archiving
+\item
+  The Database needs to work with a Data Collection Phone App under
+  development
+\item
+  For now, the database will be created in MSAccess (cyanoMon.mdb)
+\end{itemize}
+
+\subsection{Database Structure}\label{database-structure}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  The five tables in the access database (cyanoMon.mdb) are described
+  below:
+\end{itemize}
+
+\includegraphics{cyanoMonRelationships.jpg}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{tblWaterbody} provides general information on the waterbody
+  and assigns a unique identifier. Ideally we will have this table
+  populated before the field crews go out so that they can select the
+  correct lake from a list. The reality is that we will also need to be
+  able to add lakes on the fly as new lakes are added to the sampling
+  plan. There may be multiple stations for each waterbody.
+\end{itemize}
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+Field & Data Type & Description
+\\\addlinespace
+\midrule\endhead
+\textbf{waterbodyID} & Short Text & Primary Key for this table. Unique
+ID for the Waterbody. Can either be entered by the users or will be
+added later.
+\\\addlinespace
+\textbf{waterbodyName} & Short Text & Name of the waterbody
+\\\addlinespace
+\textbf{state} & Short Text & Combo Box (``CT''; ``MA''; ``ME''; ``NH'';
+``RI''; ``VT''): Two letter state abbreviations
+\\\addlinespace
+\textbf{town} & Short Text & Text Box: Closest town to the lake
+\\\addlinespace
+\textbf{WBID} & Long Integer & Text Box: EPA Waterbody Identifier
+\\\addlinespace
+\textbf{otherWaterbodyID} & Short Text & Text Box: If the states or the
+samping organization have a unique identifier for the waterbody it can
+be added here.
+\\\addlinespace
+\textbf{longitudeWB} & Double & Text Box: longitude in decimal degrees
+(WGS84) of the lake centroid. This field will be populated by the
+database administrator.
+\\\addlinespace
+\textbf{latitudeWB} & Double & Text Box: latitude in decimal degrees
+(WGS84) of the lake centroid. This field will be populated by the
+database administrator.
+\\\addlinespace
+\textbf{locationSourceWB} & Short Text & Combo Box
+(``WaterbodyDatabase''; ``GPS''; ``GoogleEarth''; ``BingMaps'';
+``topoMap''): How was the location determined? This field will be
+populated by the database administrator.
+\\\addlinespace
+\textbf{commentWB} & Long Text & Text Box: Additional information or
+comments
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{tblStation} within each Waterbody there may be multiple
+  stations. This table provides general information on the station.
+  There may be multiple samples taken from each station.
+\end{itemize}
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+Field & Data Type & Description
+\\\addlinespace
+\midrule\endhead
+\textbf{stationID} & Short Text & Primary Key for this table. Unique ID
+for the Station
+\\\addlinespace
+\textbf{waterbodyID} & Short Text & Lookup primary Key from tblWaterbody
+\\\addlinespace
+\textbf{otherStationID} & Short Text & Text Box: If the states or the
+samping organization have a unique identifier for the station it can be
+added here.
+\\\addlinespace
+\textbf{stationType} & Short Text & List Box/Radio Button
+(``nearShore''; ``offShore'';``other''): Location of the station in
+relation to the shore;for special situations choose other and add notes
+in field ``commentStation''
+\\\addlinespace
+\textbf{longitudeSta} & Double & Text Box: longitude in decimal degrees
+(WGS84) of the station. Miniumum of 4 decimal places; 6 decimal places
+prefered.
+\\\addlinespace
+\textbf{latitudeSta} & Double & Text Box: latitude in decimal degrees
+(WGS84) of the station. Miniumum of 4 decimal places; 6 decimal places
+prefered.
+\\\addlinespace
+\textbf{locationSourceSta} & Short Text & Combo Box
+(``WaterbodyDatabase''; ``GPS''; ``GoogleEarth''; ``BingMaps'';
+``topoMap''): How was the location determined?
+\\\addlinespace
+\textbf{commentStation} & Long Text & Text Box: Additional information
+or comments
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{tblSample} for each station within a waterbody there may be
+  multiple sample events. This table provides general information on
+  each sample event. There may be multiple analysis events for each
+  sample event.
+\end{itemize}
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+Field & Data Type & Description
+\\\addlinespace
+\midrule\endhead
+\textbf{sampleID} & AutoNumber & Primary Key for this table. Unique ID
+for the sample event
+\\\addlinespace
+\textbf{stationID} & Short Text & Lookup primary Key from tblStation:
+where was the sample taken?
+\\\addlinespace
+\textbf{sampleDate} & Short Date & Text Box: Date the sample was taken
+in format MM/DD/YYYY
+\\\addlinespace
+\textbf{sampleTime} & Medium & Text Box: Time the sample was taken in
+format HH:MM AM/PM
+\\\addlinespace
+\textbf{organization} & Short Text & Combo Box (``CRWA''; ``CTDEEP'';
+``MEDEP''; ``NHDES'';``RIWW''; ``UNH\_CFB''; ``VTDEC''): Name of the
+organization in charge of visit; if more than one choose the primary
+\\\addlinespace
+\textbf{fieldCrew} & Short Text & Text Box: Names of the field crew
+separated by commas
+\\\addlinespace
+\textbf{sampleMethod} & Short Text & Combo Box (``Integrated Sampler''):
+should be Integrated Sampler but other values can be added.
+\\\addlinespace
+\textbf{sampleDepthM} & Integer & Combo Box (1; 3): Depth (meters)
+sample was taken. Should be 1 or 3 meters but other values can be added.
+\\\addlinespace
+\textbf{waterTempC} & Single & Text Box: Lake water temperature in
+Celsius
+\\\addlinespace
+\textbf{weather} & Short Text & List Box (``Clear''; ``Partly Cloudy'';
+``Overcast''; ``Rain''): Limited choice descriptor of weather conditions
+\\\addlinespace
+\textbf{surfaceWaterCondition} & Short Text & List Box (``Calm'';
+``Ripples''; ``Choppy''; ``White Caps''): Limited choice descriptor of
+weather conditions
+\\\addlinespace
+\textbf{photoSample} & Yes/No & Check Box: where photos taken during
+sampling?
+\\\addlinespace
+\textbf{commentSample} & Long Text & Text Box: Additional information or
+comments
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{tblAnalysis} for each sample taken there will be one or more
+  analysis events. This table provides general information on each
+  analysis event. There may be multiple fluorometry readings for each
+  analysis event.
+\end{itemize}
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+Field & Data Type & Description
+\\\addlinespace
+\midrule\endhead
+\textbf{analysisID} & AutoNumber & Primary Key for this table. Unique ID
+for the analysis event
+\\\addlinespace
+\textbf{sampleID} & AutoNumber & Lookup primary Key from tblSample:
+analysis for which sample event?
+\\\addlinespace
+\textbf{analysisDate} & Short Date & Text Box: Date the sample was
+analyzed in format MM/DD/YYYY
+\\\addlinespace
+\textbf{analysisTime} & Medium & Text Box: Time the sample was analyzed
+in format HH:MM AM/PM
+\\\addlinespace
+\textbf{analystName} & Short Text & Text Box: Name of primary person in
+charge of the analysis
+\\\addlinespace
+\textbf{frozen} & Yes/No & Check Box: was sample frozen prior to
+analysis?
+\\\addlinespace
+\textbf{filtered} & Yes/No & Check Box: was sample filtered prior to
+analysis?
+\\\addlinespace
+\textbf{dilution} & Short Text & Combo Box (``1:1''; ``1:5''; ``1:10''):
+Default = 1 to 1 (not diluted); other choices are 1 to 5 and 1 to 10;
+other values can also be added.
+\\\addlinespace
+\textbf{sampleTemperatureC} & Single & Text Box: sample temperature in
+Celsius at time of analysis
+\\\addlinespace
+\textbf{photoAnalysis} & Yes/No & Check Box: where photos taken during
+analysis?
+\\\addlinespace
+\textbf{commentAnalysis} & Long Text & Text Box: Additional information
+or comments
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textbf{tblFluorometry} this table provides the fluorometry readings
+  for each analysis. There should be at least one reading each for
+  phycocyanin and chlorophyll a.
+\end{itemize}
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule\addlinespace
+Field & Data Type & Description
+\\\addlinespace
+\midrule\endhead
+\textbf{fluorometryID} & AutoNumber & Primary Key for this table. Unique
+ID for the fluorometry reading
+\\\addlinespace
+\textbf{analysisID} & AutoNumber & Lookup primary Key from tblAnalysis:
+fluorometry reading for which analysis event?
+\\\addlinespace
+\textbf{parameter} & Short Text & List Box/Radio Button (``nearShore'';
+``offShore'';``other'')
+\\\addlinespace
+\textbf{reading} & Single & Text Box: Fluorometry reading
+\\\addlinespace
+\textbf{units} & Short Text & List Box/Radio Button (``ug/l''; ``RFU''):
+units of the fluorometry reading.
+\\\addlinespace
+\textbf{rep} & Integer & replicate number for multiple readings from a
+sample
+\\\addlinespace
+\textbf{fluorometerType} & Combo Box: (``Beagle''): this should be a
+Beagle but user can input other choices.
+\\\addlinespace
+\textbf{commentFluorometry} & Long Text & Text Box: Additional
+information or comments
+\\\addlinespace
+\bottomrule
+\end{longtable}
+
+\end{document}

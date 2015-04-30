@@ -1,7 +1,7 @@
 ---
 title: "cyanoMonDocumentation"
 author: "Bryan"
-date: "April 23, 2015"
+date: "April 29, 2015"
 output: pdf_document
 ---
 <!---
@@ -24,7 +24,7 @@ lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 To Do List
 -------------------------
 
-* Build forms
+* Build forms-with data validation steps
 * Complete 2014 data QA/QC
 * Interface for Phone App
 * Update for 2015
@@ -34,11 +34,18 @@ Considerations for 2015 database
 * Remove Field "analysisTime" from table tblAnalysis
 * Remove Field "rep" from table tblFluorometry 
 * Combine tables tblAnalysis & tblFluorometry
-* Do we want to include anytime of replicate analyses or readings?
+* Do we want to include any kind of replicate analyses or readings?
+* What about field duplicate samples?
 * Add text field 'stationDescription' to describe location of the station (e.g., off Bubby's dock)
 * JSON to google docs link
 * use phone app for field data only?
 * add tables for lab results and ancillary data-toxins, nutrients, secchi, etc.
+* eliminate the filtered field?
+* add fields for email and phone number (from phoneApp)
+* add field for data entry method (phoneApp, access, spreadsheet)
+* Do we need to capture information on primary and secondary standards?
+
+
 
 Background
 -------------------------
