@@ -7,9 +7,7 @@ output: html_document
 <!---
 use these command instead of the knit icon if you want the data and work loaded into the R workspace
   library(knitr)
-      a<-getwd()
-        if(substr(a,nchar(a)-3,nchar(a))=='yano')  {setwd('./json/')
-          } else {if(substr(a,nchar(a)-3,nchar(a))!='json') print('WARNING: Wrong Working Directory')}
+      setwd('json')
   knit('readJSON.rmd')
 -->
 
@@ -19,7 +17,19 @@ This is a
 library(rjson)
 list.files(pattern='.json')
 
-a<-fromJSON(file="Tyui_NAME_submission.json")
+
+
+b<-c("Lake#Champlain#0601#649_WATERBODY.json",
+     "Lake#Champlain#0601#649#ST1_STATION.json",
+     "Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json",
+     "Lake#Champlain#0601#649#ST1#SAMP1_SAMPLE.json",       
+     "Lake#Champlain#0601#649#ST1#SAMP3_SAMPLE.json")    
+
+str(fromJSON(file=b[1]))
+
+
+str(fromJSON(file="Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json"))
+ 
 
 ```
 
