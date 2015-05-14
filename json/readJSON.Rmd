@@ -15,7 +15,7 @@ This is a
 
 ```{readJson, echo=FALSE}
 library(rjson)
-list.files(pattern='.json')
+b<-list.files(pattern='.json')
 
 
 
@@ -23,9 +23,13 @@ b<-c("Lake#Champlain#0601#649_WATERBODY.json",
      "Lake#Champlain#0601#649#ST1_STATION.json",
      "Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json",
      "Lake#Champlain#0601#649#ST1#SAMP1_SAMPLE.json",       
-     "Lake#Champlain#0601#649#ST1#SAMP3_SAMPLE.json")    
+     "Lake#Champlain#0601#649#ST1#SAMP3_SAMPLE.json")   
 
-str(fromJSON(file=b[1]))
+for(i in 1:4) str(fromJSON(file=b[i]))
+
+i=1;str(fromJSON(file=b[i]));fromJSON(file=b[i])
+
+str(fromJSON(file=b["3814_NAME_submission.json"]))
 
 
 str(fromJSON(file="Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json"))
