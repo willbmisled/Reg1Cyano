@@ -1,7 +1,7 @@
 ---
-title: "cyanoMonDocumentation"
+title: "cyanoMon2015Documentation"
 author: "Bryan"
-date: "May 12, 2015"
+date: "May 18, 2015"
 output: html_document
 ---
 <!---
@@ -20,6 +20,11 @@ installLoad<-function(pck){ #user defined function
   }
 lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 ```
+
+Readme
+-------------------------
+
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/CyanoMonDocumentation.md
 
 To Do List
 -------------------------
@@ -41,21 +46,26 @@ Question
 Changes for the 2015 database
 -------------------------
 **tblWaterbody**
+
 * removed field "otherWaterbodyID"
 * changed commentWB to format "Long Text" to allow for multiple comments
 
 **tblStation**
+
 * removed field "otherStationID"
 * changed commentSta to format "Long Text" to allow for multiple comments
 * renamed "stationLocation" to "stationDescription" to match phoneApp
 
 **tblSample**
+
 * added field "sampleRep" to register replicate samples: with default value "primary" and optional value "duplicate" 
 
 **tblFluorometry** 
+
 * table removed and fields added to tblAnalysis
 
 **tblAnalysis**
+
 * added fields from tblFluorometry
     - "parameter"
     - "fluorometerType"
@@ -136,13 +146,25 @@ Database Structure
 
 ![Relationships for cyanoMon2015.mdb](cyanoMon2015Relationships.jpg)
 
-* Each table in the access database (cyanoMon2015.mdb) is described and data definitions are given below
+* Each table in the access database (cyanoMon2015.mdb) is described and data
+definitions are given below
+
+**tblOrganization** provides contact information for each organization contributing to the monitoring.
+
+Field  | Data Type | Description
+------------- | ------------- | -------------
+**orgID**|Short Text|Primary Key for this table. Unique ID for the Organization. Acronym for orgName. 
+**orgName**|Short Text|Combo Box ("EPA Atlantic Ecology Division", "Charles River Watershed Association", "CT Department  of Environmental Protection", "ME Department of Environmental Protection", "NH Department of Environmental Services", "RI Watershed Watch", "University of NH Center for Freshawater Biology", "VT Department of Environmental Conservation")
+**contact**|Short Text|Name of the person in charge of data steward for the organization. Who can be contacted with questions about the data?
+**email**|Short Text|Email address of contact person (data steward).
+**phone**|Short Text|Phone number (xxx-xxx-xxxx) of contact person (data steward).
 
 **tblWaterbody** provides general information on the waterbody and assigns a unique identifier.  Ideally we will have this table populated before the field crews go out so that they can select the correct lake from a list.  The reality is that we will also need to be able to add lakes on the fly as new lakes are added to the sampling plan. There may be multiple stations for each waterbody.
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
-**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody.  Can either be entered by the users or or assigned by the phoneApp.
+**waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody. Can either be entered by the users or or assigned by the phoneApp.
+**orgID**|Short Text|Lookup primary Key from tblOrganization
 **waterbodyName**|Short Text|Name of the waterbody
 **state**|Short Text|Combo Box ("CT"; "MA"; "ME"; "NH"; "RI"; "VT"): Two letter state abbreviations
 **town**|Short Text|Text Box: Closest town to the lake
