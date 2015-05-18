@@ -24,7 +24,7 @@ lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 Readme
 -------------------------
 
-This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/CyanoMon2015Documentation.md
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMon2015Documentation.md
 
 To Do List
 -------------------------
