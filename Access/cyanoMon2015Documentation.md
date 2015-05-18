@@ -10,21 +10,12 @@ use these command instead of the knit icon if you want the data and work loaded 
     setwd("Access")
     knit('cyanoMon2015Documentation.rmd')
   -->
-```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
-  #########function to install (if needed) and load R packages by list
-libs<-c("knitr") #list of packages to load
 
-installLoad<-function(pck){ #user defined function
-    if(!pck%in%installed.packages()){install.packages(pck)}
-    require(pck, character.only = TRUE)
-  }
-lapply(libs,function(x) installLoad(x))  #Load/Install require packages
-```
 
 Readme
 -------------------------
 
-This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/CyanoMon2015Documentation.md
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/CyanoMonDocumentation.md
 
 To Do List
 -------------------------
