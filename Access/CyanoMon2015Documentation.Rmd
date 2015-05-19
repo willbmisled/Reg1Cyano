@@ -32,6 +32,7 @@ To Do List
 * Build forms-with data validation steps
 * Interface for Phone App
     - Make sure ID structure is the same between database and phoneApp
+* Remove field "organization" from tblSample.  This is now in tblOrganization
 
 Question
 -------------------------
@@ -41,6 +42,7 @@ Question
 * Do we want to keep track of which Fluorometers are used (i.e, assign each unit a code)?
 * Do we need to capture information on primary and secondary standards?
 * How can we capture and archive the photos?
+* Who owns the data? Where will it be stored? Are there access restrictions?
 
 
 Changes for the 2015 database
@@ -195,7 +197,6 @@ Field  | Data Type | Description
 **stationID**|Short Text|Lookup primary Key from tblStation: where was the sample taken?
 **sampleDate**|Short Date|Text Box: Date the sample was taken in format MM/DD/YYYY
 **sampleTime**|Medium Time|Text Box: Time the sample was taken in format HH:MM AM/PM
-**organization**|Short Text|Combo Box ("CRWA"; "CTDEEP"; "MEDEP"; "NHDES";"RIWW"; "UNH_CFB"; "VTDEC"): Name of the organization in charge of visit; if more than one choose the primary
 **fieldCrew**|Short Text|Text Box: Names of the field crew separated by commas
 **sampleMethod**|Short Text|Combo Box ("Integrated Sampler"): should be Integrated Sampler but other values can be added.
 **sampleRep**|Short Text|Option to choose between "primary" (default) and "duplicate". Note: a sample rep should be a completely new sample not just a subsample from the original sample.
