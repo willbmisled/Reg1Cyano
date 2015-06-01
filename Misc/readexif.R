@@ -42,14 +42,18 @@ getexifdata <- function(Tool,Photo){
   if (is.na(cameramodel)){cameramodel <- 'UNKNOWN'}
   if (is.na(createdate)){createdate <- 'UNKNOWN'}
   #return values as a vector.
-  return(c(imagewidth,imageheight, gpslatitude, gpslongitude,cameramodel, createdate))
+  print(c(imagewidth,imageheight, gpslatitude, gpslongitude,cameramodel, createdate))
+  return(exifdata)
   
 }
 
 Tool<-'c:/bryan/portableapps/exiftool/exiftool.exe'
 Photo<-'c:/bryan/bryanTemp/a.jpg'
-Photo<-'c:/bryan/bryanTemp/c.jpg'
+Photo<-'c:/bryan/bryanTemp/IMG_0793.JPG'
+Photo<-'c:/bryan/bryanTemp/NL.JPG'
+Photo<-'c:/bryan/bryanTemp/NancyLeland20150527.JPG'
 
-getexifdata(Tool, Photo)
+a<-getexifdata(Tool, Photo)
+a
 
 
