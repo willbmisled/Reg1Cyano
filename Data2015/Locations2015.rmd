@@ -1,0 +1,346 @@
+---
+title: "Locations2015"
+author: "B"
+date: "June 2, 2015"
+output: html_document
+---
+<!---
+use these command instead of the knit icon if you want the data and work loaded into the R workspace
+  library(knitr)
+    setwd("Data2015")
+    knit('Locations2015.rmd')
+  -->
+```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
+  #########function to install (if needed) and load R packages by list
+libs<-c("rgdal","sp","knitr","maptools","rgeos","jsonlite","RODBC") #list of packages to load
+
+installLoad<-function(pck){ #user defined function
+    if(!pck%in%installed.packages()){install.packages(pck)}
+    require(pck, character.only = TRUE)
+  }
+lapply(libs,function(x) installLoad(x))  #Load/Install require packages
+```
+
+To Do List
+-------------------------
+* Map locations and send to contacts for verifications
+
+Introduction
+-------------------------
+This is the second year of the region 1 cyanobacteria monitoring program.  We are using the locations from last year as a starting point to populate the database with a few changes.
+
+*  We received updated waterbodyID and stationdID information for NHDES from Sonya Carlson on 5/21/15. The name of the file is: "2015-Probable-NH-Waterbody-IDs-StationIDs.xlsx"
+*  The prefixes of the following waterbodyIDs were changed as follows
+    - MEDEP:  prefix "MIDAS_" was replaced with "MEDEP_"
+    - UNH: prefix "UNH_CFB_WBID_" was replaced with "UNH_"
+    - VTDEC: prefix "VTDEC_WBID_" was replaced with "VTDEC_"
+    
+
+Data Steps
+-------------------------
+
+* Download the data 
+* For data definitions see: https://github.com/willbmisled/Reg1Cyano/blob/master/Access/cyanoMon2015Documentation.md
+* write data to xlsx file
+
+```{r Data, include=FALSE, echo=FALSE, cache=FALSE} 
+#get locations from the cyanoMon2015.mdb   
+  con <- odbcConnectAccess("C:/Users/WMilstea/SharePoint/Warren, Phil/NLA/cyanoMon2015.mdb")
+    Loc <- sqlQuery(con, "
+SELECT tblWaterbody.waterbodyID, tblWaterbody.waterbodyName, tblStation.stationID, tblStation.stationDescription, tblStation.stationType, tblWaterbody.state, tblWaterbody.town, tblStation.longitudeSta, tblStation.latitudeSta, tblStation.locationSourceSta, tblStation.commentStation
+FROM tblWaterbody LEFT JOIN tblStation ON tblWaterbody.waterbodyID = tblStation.waterbodyID
+ORDER BY tblWaterbody.waterbodyID, tblStation.stationID;
+",stringsAsFactors=FALSE)
+close(con)
+str(Loc)
+head(Loc)
+
+#write xls
+  xlsFile <- odbcConnectExcel("Locations2015.xls", readOnly = FALSE)
+  sqlSave(xlsFile,Loc, append=FALSE,rownames=FALSE)
+  odbcCloseAll()
+```
+
+* Remove missing values
+
+* Convert locations to Spatial Points Dataframe
+
+```{r spdf, include=FALSE, echo=FALSE, cache=FALSE} 
+  #remove missing sites with missing location data
+    a<-Loc[!is.na(Loc$longitudeSta),]
+
+#create spatial points dataframe
+  WGS84<-CRS("+proj=longlat +datum=WGS84")  #ESRI GCS_WGS_1984 
+  Loc1<-SpatialPointsDataFrame(coordinates(a[,c("longitudeSta","latitudeSta")]), a, proj4string=WGS84)
+plot(Loc1)
+```
+
+* create a combined waterbodyID stationID name for KML index
+* create a description from waterbodyName, stationDescription, and commentStation
+* create KML and shapefile of spatial data
+
+```{r KML, include=FALSE, echo=FALSE, cache=FALSE}
+  kmlID<-paste(a$waterbodyID,"_",a$stationID,sep='')
+  kmlDesc<-paste("Name = ",a$waterbodyName,"; Location = ",a$stationDescription, "; Comment = ",a$commentStation,sep='')
+#create KML file of location          
+  kmlPoints(Loc1, 
+            kmlfile='Locations2015.kml', 
+            name=kmlID, 
+            description=kmlDesc,
+            icon="http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png",
+            kmlname="Locations2015",
+            kmldescription="2015 Region 1 CyanoMonitoring Locations")
+#open file in google earth
+  #
+shell.exec('Locations2015.kml')
+
+
+#save shapefile
+writeOGR(Loc1,getwd(),'Locations2015', driver="ESRI Shapefile",overwrite_layer=TRUE)
+  
+```
+
+* create json files of waterbodyIDs and stationIDs for the phone app
+* the structure of waterBodyIDList.json will be:
+    - {“waterBodyID":[“wbid1”,"wbid2”,”wbid3”,”wbid4”,”wbid5”]}
+* the structure of stationIDList.json will be:
+    - {“stations":{“wbid1":[“sta1”,"sta2”,"sta3"]
+    - ,”wbid2":[“sta1”,"sta2”,"sta3”]
+    - ,”wbid3":[“sta1”,"sta2”,"sta3”]
+    - ,”wbid4":[“sta1”,"sta2”,"sta3”]
+    - ,”wbid5":[“sta1”,"sta2”,"sta3”]
+    - }}
+
+
+```{r json, include=FALSE, echo=FALSE, cache=FALSE}
+#waterbodyIDs
+  waterbodyIDList<-toJSON(list(waterbodyID=unique(Loc$waterbodyID)))
+
+#stationIDs
+  #get waterbodyIDs
+    w<-unique(Loc$waterbodyID)
+  #create lists by waterbodyID
+    #start list
+      a<-list(stations=list(NA))
+    #loop through waterbodyIDs to create big list
+      #for(i in 1:length(w)){
+      for(i in 1:length(w)) a$stations[i]<-list(Loc$stationID[Loc$waterbodyID==w[i]])
+    #rename lists
+       names(a$stations)<-w        
+  #create JSON
+    stationIDList<-toJSON(a)
+
+####NOTE: both JSON files validated here:  http://jsonlint.com/
+```
+
+
+
+############
+      aa<-list(stations=list(NA))
+        aa$stations[1]<-list(Loc$stationID[Loc$waterbodyID==w[1]])
+        aa$stations[2]<-list(Loc$stationID[Loc$waterbodyID==w[2]])
+          names(aa$stations)<-w[1:2]
+      toJSON(aa)
+#############
+      
+
+
+#############
+      a<-list(stations=list(NA))
+        a$stations[1]<-list(c("sta1","sta2"))
+        a$stations[2]<-list(c("sta1","sta2","sta3"))
+          names(a$stations)<-c('wbid1','wbid2')
+      toJSON(a)
+#############
+
+#############
+      a<-list(stations=list(NA))
+        a$stations[1]<-list(Loc$stationID[Loc$waterbodyID==w[1]])
+        a$stations[2]<-list(Loc$stationID[Loc$waterbodyID==w[2]])
+          names(a$stations)<-w[1:2]
+      toJSON(a)
+#############
+
+
+
+
+
+for(i in 1:length(w))a$station[i]<-list(Loc$stationID[Loc$waterbodyID==w[i]])
+    #rename lists to waterbodyID
+      names(a$stations)<-w
+
+    
+
+
+
+
+
+
+
+
+
+
+
+#loop through waterbodyIDs to create big list
+      for(i in 1:length(w)){
+        a$station[i]<-list(Loc$stationID[Loc$waterbodyID==w[i]])
+        names(a$station)[i]<-w[i]
+      }
+  #create JSON
+    stationIDList<-toJSON(a)
+    
+
+<-w
+
+
+    
+    i=2
+    a$station[i]<-list(Loc$stationID[Loc$waterbodyID==w[i]])
+    names(a$station)[i]<-'wbid2'
+
+      
+    
+    
+    
+
+
+
+#############
+      a<-list(stations=list(NA))
+        a$stations[1]<-list(c("sta1","sta2"))
+        a$stations[2]<-list(c("sta1","sta2","sta3"))
+          names(a$stations)<-c('wbid1','wbid2')
+      toJSON(a)
+#############
+          names(a$stations)[1]
+
+
+a
+      toJSON(a)
+
+
+i<-2
+    Loc$stationID[Loc$waterbodyID==w[i]]
+
+
+
+
+    #############
+      b<-list(stations=list(wbid1=c("sta1","sta2"),wbid2=c("sta1","sta2","sta3")))
+        b
+          toJSON(b)
+        names(b$station)
+    #############
+
+
+      #############
+      b<-list(stations=list(c("sta1","sta2"),c("sta1","sta2","sta3")))
+        b
+          names(b$stations)<-c('wbid1','wbid2')
+        b
+          toJSON(b)
+    #############
+
+b$station[2]
+
+
+
+  
+
+
+b<-list(stations=list(wbid1=c("sta1","sta2"),wbid2=c("sta1","sta2","sta3")))
+names(b$stations)
+
+
+You can access them with names (but you still need to follow the 
+structure, i.e. x[[df5]] cannot work):
+For df1:
+x$uppermost$medium1$df1                           or       
+x[["uppermost"]][["medium1"]][["df1"]]
+for df5:
+x$uppermost$medium2$lowermost$df5        or       
+x[["uppermost"]][["medium2"]][["lowermost"]][["df5"]]
+
+
+
+i<-2
+as.list(assign(w[i],Loc$stationID[Loc$waterbodyID==w[i]]))
+
+list(w[i]=c("sta1","sta2"))
+
+get("CRWA_MA72-08")
+
+  
+
+b<-list(stations=list(wbid1=c("sta1","sta2"),wbid2=c("sta1","sta2","sta3")))
+b
+toJSON(b)
+
+w[i]
+
+
+
+i<-1
+paste(names(a[[i]]),a[[i]])
+
+
+head(Loc[,c(1,3)],20)
+
+a<-Loc[1:10,c(1,3)]
+
+
+
+
+wbID<-as.character(Loc$waterbodyID[1:10])
+staID<-as.character(Loc$stationID[1:10])
+
+split(staID,)
+
+a<-as.character(Loc[1:10,c(1,3)])
+split(a[,2],a[,1])
+
+
+head(airquality)
+g <- airquality$Month
+l <- split(airquality, g)
+l <- lapply(l, transform, Oz.Z = scale(Ozone))
+aq2 <- unsplit(l, g)
+head(aq2)
+with(aq2, tapply(Oz.Z,  Month, sd, na.rm = TRUE))
+
+
+
+
+
+
+
+
+
+
+
+
+#data.frames must be converted into a list before converting into JSON
+plot(cars, pch=2)
+json_cars <- toJSON(as.list(cars))
+points( data.frame( fromJSON( json_cars ) ), col="red", pch=3 )
+#special R types are encoded as strings
+testString <- c(1,2,3,4,NA,NaN,Inf,8,9);
+toJSON(testString);
+
+
+
+res1<-structure(list(id = c(1, 2, 3, 4, 5), value = structure(1:5, .Label = c("server1", 
+"server2", "server3", "server4", "server5"), class = "factor")), .Names = c("id", 
+"value"), row.names = c(NA, -5L), class = "data.frame")
+
+x <- toJSON(unname(split(res1, 1:nrow(res1))))
+
+
+```
+
+
+
+
+
+
+

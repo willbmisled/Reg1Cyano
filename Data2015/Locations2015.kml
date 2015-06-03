@@ -1,0 +1,4376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+<name>Locations2015</name>
+<description><![CDATA[2015 Region 1 CyanoMonitoring Locations]]></description>
+
+<Style id="style1">
+  <IconStyle>
+    <Icon>
+      <href>http://maps.google.com/mapfiles/kml/paddle/ltblu-stars.png</href>
+    </Icon>
+  </IconStyle>
+</Style>
+
+<Placemark>
+  <name>CRWA_MA70-02_21_SS1</name>
+  <description><![CDATA[Name = Charles River; Location = ND; Comment = No WBID; this is the charles river]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.061925,42.36936
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CRWA_MA72-08_20_SS1</name>
+  <description><![CDATA[Name = Charles River; Location = BROAD; Comment = No WBID; this is the charles river]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081652,42.362866
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CRWA_MA72-08_22_SS1</name>
+  <description><![CDATA[Name = Charles River; Location = CB; Comment = No WBID; this is the charles river]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.073377,42.358755
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CRWA_MA72-08_23_SS1</name>
+  <description><![CDATA[Name = Charles River; Location = SP; Comment = No WBID; this is the charles river]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.087433,42.358519
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_14514_149_SS1</name>
+  <description><![CDATA[Name = Porter Pond; Location = Near outlet dam; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.81883,41.64518
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_15675_152_SS1</name>
+  <description><![CDATA[Name = Lake Beseck; Location = At dam; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.7338,41.5082
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_15924-M_151_SS1</name>
+  <description><![CDATA[Name = Mashamoquet; Location = middle of swimming area; Comment = no WBID; lake exists but not in NHDplus]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.97948,41.85735
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18475_148_SS1</name>
+  <description><![CDATA[Name = Lower Bolton Lake; Location = at boat ramp; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.428591,41.798303
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18713_142_SS1</name>
+  <description><![CDATA[Name = Housatonic River (Kettletown); Location = at middle of beach; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.206937,41.424144
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18714_143_SS1</name>
+  <description><![CDATA[Name = Pattaconk Reservoir; Location = at middle of beach; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.52544,41.409081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18715_144_SS1</name>
+  <description><![CDATA[Name = Mount Tom Pond; Location = at middle of beach; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.28029,41.697709
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18716_145_SS1</name>
+  <description><![CDATA[Name = Lake Waramaug; Location = at middle of beach; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.382964,41.707665
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18717_146_SS1</name>
+  <description><![CDATA[Name = Squantz Pond; Location = at middle of beach; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.4765,41.512
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18718_147_SS1</name>
+  <description><![CDATA[Name = Gardner Lake; Location = at middle of beach; Comment = Lon/Lat off by ~100m]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.221,41.501
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>CTDEEP_18742_150_SS1</name>
+  <description><![CDATA[Name = Tyler Lake; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.26681,41.8367
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_1018_633_DH1</name>
+  <description><![CDATA[Name = Conroy; Location = NA; Comment = Lon/Lat off by ~200m]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.87154,46.289409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_1776_632_DH1</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.005058,46.615817
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_1808_631_DH1</name>
+  <description><![CDATA[Name = Fischer; Location = NA; Comment = no WBID; lake exists but not in NHDplus]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-67.809076,46.711588
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_328_SS2</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23407,44.87186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_330_SS1</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23383,44.87172
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_331_WL3</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23254,44.86781
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_332_WL2</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23267,44.86774
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_333_DH1</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23308,44.86749
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_333_WL1</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.23308,44.86749
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_2264_378_SS3</name>
+  <description><![CDATA[Name = Sebasticook; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.22292,44.84919
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3734_627_DH1</name>
+  <description><![CDATA[Name = Highland L; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.3586,43.77696
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_DH1</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SC1</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SC2</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SC3</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SS1</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SS2</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_SS3</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_WL1</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_WL2</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3796_285_WL3</name>
+  <description><![CDATA[Name = Sabattus; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.10011,44.15814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3814_634_SC1</name>
+  <description><![CDATA[Name = Cochnewagon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.044666,44.23015
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_234_SS1</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05743,44.37414
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_235_DH1</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05964,44.36188
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_236_WL1</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05962,44.36183
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_237_WL3</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05935,44.36246
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_238_SS2</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05804,44.37565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_239_SS3</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0582,44.37585
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3824_240_WL2</name>
+  <description><![CDATA[Name = Pocasset; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.05938,44.36212
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_241_SS1</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03896,44.27537
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_242_WL3</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0433,44.28085
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_243_WL2</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04372,44.28191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_244_SS3</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03967,44.2751
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_245_DH1</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04433,44.28256
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_245_WL1</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.04433,44.28256
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3832_246_SS2</name>
+  <description><![CDATA[Name = Wilson; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0393,44.27525
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_448_SS1</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07248,44.32254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_449_DH1</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07557,44.32493
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_449_WL1</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07557,44.32493
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_450_SS3</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0714,44.32186
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_451_SS2</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07187,44.32218
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_452_WL3</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07342,44.32314
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3836_453_WL2</name>
+  <description><![CDATA[Name = Androscoggin; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.07468,44.32402
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_3922_630_DH1</name>
+  <description><![CDATA[Name = Great East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.925924,43.576778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_4406_629_DH1</name>
+  <description><![CDATA[Name = Georges P; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-68.24401,44.61508
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_DH1</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SC1</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SC2</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SC3</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SS1</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SS2</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_SS3</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_WL1</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_WL2</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5172_282_WL3</name>
+  <description><![CDATA[Name = Unity Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.3368,44.63017
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_DH1</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SC1</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SC2</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SC3</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SS1</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SS2</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_SS3</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_WL1</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_WL2</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5176_490_WL3</name>
+  <description><![CDATA[Name = Lovejoy; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.46951,44.51904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_DH1</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_SS1</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_SS2</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_SS3</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_WL1</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_WL2</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5186_614_WL3</name>
+  <description><![CDATA[Name = Parker; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0237,44.5022
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_563_SS1</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03825,44.5947
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_564_SS3</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03785,44.59427
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_565_SS2</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03819,44.59472
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_566_WL2</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03783,44.59361
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_567_DH1</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03781,44.59347
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_567_WL1</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03781,44.59347
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5200_568_WL3</name>
+  <description><![CDATA[Name = Crowell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.03789,44.59388
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5202_626_DH1</name>
+  <description><![CDATA[Name = Locke; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.11852,44.57793
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_608_SS1</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93504,44.25505
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_609_WL3</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94336,44.25176
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_610_SS2</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93423,44.2565
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_611_DH1</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94338,44.25178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_611_WL1</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94338,44.25178
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_612_WL2</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94344,44.25179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5236_613_SS3</name>
+  <description><![CDATA[Name = Cobbosseecontee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93286,44.25872
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_590_WL3</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94807,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_591_SS1</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19534
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_592_WL2</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.95004,44.19464
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_593_DH1</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9501,44.19467
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_593_WL1</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9501,44.19467
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_594_SS2</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94801,44.19567
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5240_595_SS3</name>
+  <description><![CDATA[Name = Woodbury Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.94836,44.19589
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_620_DH1</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85432,44.54428
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_620_WL1</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85432,44.54428
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_621_SS3</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83668,44.50075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_622_SS2</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83489,44.5008
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_623_SS1</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83392,44.50086
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_624_WL2</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.85392,44.54409
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5274_625_WL3</name>
+  <description><![CDATA[Name = Great; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.8536,44.54364
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_596_SS1</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97516,44.43096
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_597_SS2</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97577,44.43121
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_598_WL3</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97829,44.42917
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_599_WL2</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97881,44.42884
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_600_DH1</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97908,44.4288
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_600_WL1</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97908,44.4288
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5307_601_SS3</name>
+  <description><![CDATA[Name = Torsey; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.97643,44.43168
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_DH1</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SC1</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SC2</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SC3</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SS1</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SS2</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_SS3</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_WL1</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_WL2</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5344_405_WL3</name>
+  <description><![CDATA[Name = North; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.83583,44.62926
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_DH1</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SC1</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SC2</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SC3</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SS1</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SS2</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_SS3</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_WL1</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_WL2</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5349_396_WL3</name>
+  <description><![CDATA[Name = East; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78075,44.61075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_228_DH1</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78409,44.52254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_228_WL1</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78409,44.52254
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_230_WL3</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78375,44.52236
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_231_SS1</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78658,44.52492
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_232_SS2</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78698,44.52454
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_233_SS3</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78908,44.52321
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5352_309_WL2</name>
+  <description><![CDATA[Name = Salmon; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.78249,44.52287
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5382_628_DH1</name>
+  <description><![CDATA[Name = Clary L; Location = NA; Comment = lon/lat changed from -69.33141, 44.12864) to GE Clary Lake ME location]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.555233,44.214243
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_DH1</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_SC1</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_SS1</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_SS2</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_SS3</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_WL1</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_WL2</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5408_525_WL3</name>
+  <description><![CDATA[Name = Webber pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.66599,44.40106
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_DH1</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SC1</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SC2</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SC3</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SS1</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SS2</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_SS3</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_WL1</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_WL2</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5416_510_WL3</name>
+  <description><![CDATA[Name = Threemile; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.60538,44.36787
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_539_WL2</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34744
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_540_SS3</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64027,44.34904
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_541_SS2</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.6403,44.34845
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_542_WL3</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64144,44.34745
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_543_DH1</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64148,44.34729
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_543_WL1</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64148,44.34729
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5424_544_SS1</name>
+  <description><![CDATA[Name = Threecornered; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.64024,44.348
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_454_DH1</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51458,44.28969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_454_WL1</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51458,44.28969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_455_WL2</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51422,44.28987
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_456_WL3</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51384,44.2903
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_457_SS1</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51057,44.29469
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_458_SS2</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51072,44.295
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5444_458_SS3</name>
+  <description><![CDATA[Name = Long Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51072,44.295
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_DH3</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SC1</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SC2</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SC3</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SS1</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SS2</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_SS3</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_WL1</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_WL2</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5448_500_WL3</name>
+  <description><![CDATA[Name = China; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.51414,44.47027
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_526_DH1</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56047,44.53237
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_526_WL1</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56047,44.53237
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_527_SS3</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55753,44.53833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_528_SS2</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55811,44.53827
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_529_SS1</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.55865,44.53814
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_530_WL2</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56042,44.53243
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5458_531_WL3</name>
+  <description><![CDATA[Name = Pattee; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.56019,44.53265
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_469_WL2</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0239,44.39519
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_470_SS3</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39618
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_471_SS2</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01936,44.39613
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_472_WL3</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02388,44.3952
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_473_DH1</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0247,44.3948
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_473_WL1</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.0247,44.3948
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5664_474_SS1</name>
+  <description><![CDATA[Name = Lovejoy Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01941,44.39645
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_602_DH1</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02946,44.43636
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_602_WL1</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02946,44.43636
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_603_WL2</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02963,44.43572
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_604_WL3</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.02908,44.43591
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_605_SS1</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01593,44.44135
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_606_SS2</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01627,44.44179
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_5814_607_SS3</name>
+  <description><![CDATA[Name = Echo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.01612,44.44249
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_584_WL2</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93983,44.31113
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_585_SS3</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.9352,44.31615
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_586_SS2</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93498,44.31607
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_587_WL3</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93976,44.31125
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_588_DH1</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93984,44.31111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_588_WL1</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93984,44.31111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>MEDEP_98_589_SS1</name>
+  <description><![CDATA[Name = Narrows Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-69.93478,44.31595
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020601-01-01_BEASWHBI</name>
+  <description><![CDATA[Name = Bear Camp Pond; Location = BEARCAMP POND-BIG ISLAND SWIM; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.369067,43.81665
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020601-01-01_BEASWHD</name>
+  <description><![CDATA[Name = Bear Camp Pond; Location = BEARCAMP POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3689,43.814583
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020601-01-01_BEASWHSWIM</name>
+  <description><![CDATA[Name = Bear Camp Pond; Location = BEARCAMP POND-SWIM AREA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.376558,43.813617
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020601-01-01_NHLAK600020601-01-01-FS-3</name>
+  <description><![CDATA[Name = Bear Camp Pond; Location = does not exist in EMD; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.373625,43.814835
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020601-01-01_NHLAK600020601-01-01-NS-2</name>
+  <description><![CDATA[Name = Bear Camp Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3712,43.813147
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020701-02_BEELTUFD</name>
+  <description><![CDATA[Name = Lower Beech Pond; Location = TUFTONBORO; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.207289,43.672189
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020701-02_NHLAK600020701-02-NS1</name>
+  <description><![CDATA[Name = Lower Beech Pond; Location = SS#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.205826,43.677122
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020701-02_NHLAK600020701-02-NS2</name>
+  <description><![CDATA[Name = Lower Beech Pond; Location = SS#2; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.205311,43.663277
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020802-04-01_BROOSSD</name>
+  <description><![CDATA[Name = Ossipee Lake; Location = BROAD BAY-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.101078,43.804067
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020802-04-01_LEAOSSD</name>
+  <description><![CDATA[Name = Ossipee Lake; Location = LEAVITT BAY-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081038,43.79682
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020802-04-01_OBB01DL</name>
+  <description><![CDATA[Name = Ossipee Lake; Location = OSSIPEE LAKE-BERRY BAY-1 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.075167,43.804833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020802-04-01_OSSOSSD</name>
+  <description><![CDATA[Name = Ossipee Lake; Location = OSSIPEE LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.1386,43.7795
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020803-01-01_DANLFRED</name>
+  <description><![CDATA[Name = Lower Danforth Pond; Location = LOWER DANFORTH POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.1038,43.820083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020803-01-01_NHLAK600020803-01-01-FS-2</name>
+  <description><![CDATA[Name = Lower Danforth Pond; Location = WL#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.103917,43.821694
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600020803-01-01_NHLAK600020803-01-01-FS-3</name>
+  <description><![CDATA[Name = Lower Danforth Pond; Location = WL#3; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.103694,43.828889
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030607-01_AYEBARD</name>
+  <description><![CDATA[Name = Ayers Lake; Location = AYERS POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.0433,43.256
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030607-01_BCHFIRBRRLF</name>
+  <description><![CDATA[Name = Ayers Lake; Location = CAMP FIRESIDE-LEFT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.033837,43.261517
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030607-01_NHLAK600030607-01-FS-2</name>
+  <description><![CDATA[Name = Ayers Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.048412,43.253455
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030607-01_NHLAK600030607-01-FS-3</name>
+  <description><![CDATA[Name = Ayers Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.038456,43.258643
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030607-01_NHLAK600030607-01-NS-2</name>
+  <description><![CDATA[Name = Ayers Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.040945,43.252955
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_BCHSELSDNRT</name>
+  <description><![CDATA[Name = Phillips Pond; Location = PHILLIPS POND SEELEY PARK-RIGHT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187255,42.923905
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_NHLAK600030802-03-02-FS-2</name>
+  <description><![CDATA[Name = Phillips Pond; Location = WL#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.190441,42.914415
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_NHLAK600030802-03-02-FS-3</name>
+  <description><![CDATA[Name = Phillips Pond; Location = WL#3; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.188273,42.922492
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_NHLAK600030802-03-02-NS-1</name>
+  <description><![CDATA[Name = Phillips Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187617,42.923667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_NHLAK600030802-03-02-NS-2</name>
+  <description><![CDATA[Name = Phillips Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187617,42.923667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-03-02_PHISDND</name>
+  <description><![CDATA[Name = Phillips Pond; Location = PHILLIPS POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.187874,42.918884
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK600030802-04_SHOSDN-GEN</name>
+  <description><![CDATA[Name = Showell Pond; Location = SHOWELL POND-GENERIC; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.176194,42.908
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700010804-02-03_BCHLEGFRKLF</name>
+  <description><![CDATA[Name = Webster Lake; Location = WEBSTER LAKE LAGACE TB-LEFT; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.679558,43.458833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020103-05_NHLAK700020103-05-FS-1</name>
+  <description><![CDATA[Name = Lees Pond; Location = NA; Comment = StationID from NHDES repeated.  OTHER value changed from "NHLAK700020103-05-FS-1" to "NHLAK700020103-05-FS-1-WL1"]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3956667,43.7386667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020103-05_NHLAK700020103-05-FS-1-WL1</name>
+  <description><![CDATA[Name = Lees Pond; Location = WL#1; Comment = StationID from NHDES repeated.  THIS value changed from "NHLAK700020103-05-FS-1" to "NHLAK700020103-05-FS-1-WL1"]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3964667,43.7380667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020103-05_NHLAK700020103-05-FS-3</name>
+  <description><![CDATA[Name = Lees Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.39975,43.73895
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020103-05_NHLAK700020103-05-NS-1</name>
+  <description><![CDATA[Name = Lees Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.40105,43.7366833
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020103-05_NHLAK700020103-05-NS-2</name>
+  <description><![CDATA[Name = Lees Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3943667,43.7371333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020105-02_NHLAK700020105-02-FS-1</name>
+  <description><![CDATA[Name = Lake Kanesatka; Location = WL#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.45834,43.727584
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020105-02_NHLAK700020105-02-NS-1</name>
+  <description><![CDATA[Name = Lake Kanesatka; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.458361,43.727553
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-02_HUNSAND</name>
+  <description><![CDATA[Name = Hunkins Pond; Location = HUNKINS POND-DEEP SPOT; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5595,43.504194
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-02_HUNSANN</name>
+  <description><![CDATA[Name = Hunkins Pond; Location = HUNKINS POND-NORTH END; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.561542,43.504181
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-04_NHLAK700020201-04-FS-3</name>
+  <description><![CDATA[Name = Wicwas Lake; Location = Wicwas Lake WL#3; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5525,43.609778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-04_WICMERD</name>
+  <description><![CDATA[Name = Wicwas Lake; Location = WICWAS LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5519,43.620083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-04_WICMEREC</name>
+  <description><![CDATA[Name = Wicwas Lake; Location = WICWAS LAKE-EAST COVE; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5485,43.609694
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700020201-04_WICMERLR</name>
+  <description><![CDATA[Name = Wicwas Lake; Location = Wicwas Boat Ramp Launch; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.551283,43.604747
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030102-01-01_NHLAK700030102-01-01-FS-1</name>
+  <description><![CDATA[Name = Thorndike Pond; Location = WL#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.055078,42.86461
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030102-01-01_NHLAK700030102-01-01-FS-3</name>
+  <description><![CDATA[Name = Thorndike Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.056494,42.850453
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030102-01-01_THOJAFD</name>
+  <description><![CDATA[Name = Thorndike Pond; Location = THORNDIKE POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0553,42.859778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030102-01-01_THOJAFNW</name>
+  <description><![CDATA[Name = Thorndike Pond; Location = THORNDIKE POND-NORTH WEST INLET; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0573,42.865583
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030102-01-01_THOJAFSW</name>
+  <description><![CDATA[Name = Thorndike Pond; Location = THORNDIKE POND-SOUTH WEST INLET; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0597,42.8504
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030103-07_NUBNELD</name>
+  <description><![CDATA[Name = Nubanusit Lake; Location = NUBANUSIT LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.057692,42.986258
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030103-07_NUBNELH</name>
+  <description><![CDATA[Name = Nubanusit Lake; Location = NUBANUSIT LAKE-HANCOCK LANDING; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0467,42.996
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030103-07_NUBNELO</name>
+  <description><![CDATA[Name = Nubanusit Lake; Location = NUBANUSIT LAKE-OUTLET IN STREAM; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.086,42.973889
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030103-08_SKAHARD</name>
+  <description><![CDATA[Name = Lake Skatutakee; Location = LAKE SKATUTAKEE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.070194,42.936528
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030504-02-01_FREHENCAMP</name>
+  <description><![CDATA[Name = French Pond; Location = FRENCH POND-CAMPGROUND SWIM AREA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7749,43.19
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030504-02-01_FREHEND</name>
+  <description><![CDATA[Name = French Pond; Location = FRENCH POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.775972,43.192722
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030504-02-01_FREHEND2</name>
+  <description><![CDATA[Name = French Pond; Location = WL#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.774862,43.192772
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030504-02-01_FREHEND3</name>
+  <description><![CDATA[Name = French Pond; Location = WL#3; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.77705,43.191035
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030504-02-01_FREHENL</name>
+  <description><![CDATA[Name = French Pond; Location = FRENCH POND-LAUNCH BROOK; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.775083,43.194
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030505-01_CLEHOPD</name>
+  <description><![CDATA[Name = Clement Pond; Location = CLEMENT POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.766389,43.2165
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030505-01_NHLAK700030505-01-FS-2</name>
+  <description><![CDATA[Name = Clement Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.76939,43.215482
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700030505-01_NHLAK700030505-01-FS-3</name>
+  <description><![CDATA[Name = Clement Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.767008,43.220439
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060402-03_HALALTD</name>
+  <description><![CDATA[Name = Halfmoon Lake; Location = HALFMOON LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.227694,43.391083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060402-03_HALALTHWB</name>
+  <description><![CDATA[Name = Halfmoon Lake; Location = HALFMOON POND-HOLLYWOOD BEACH; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.217014,43.389308
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060402-03_HALALTPUB</name>
+  <description><![CDATA[Name = Halfmoon Lake; Location = HALFMOON LAKE-RUSTIC SHORES; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.216344,43.393325
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060402-03_HALALTR</name>
+  <description><![CDATA[Name = Halfmoon Lake; Location = PUBLIC BEACH; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.236681,43.39525
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060701-04_TOWCND-GEN</name>
+  <description><![CDATA[Name = Tower Hill Pond; Location = TOWER HILL POND-GENERIC; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.371778,43.04
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060804-02_SEBBED2</name>
+  <description><![CDATA[Name = Sebbins Pond; Location = SEBBINS POND-SITE 2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.476917,42.928328
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060804-02_SEBBEDB</name>
+  <description><![CDATA[Name = Sebbins Pond; Location = SEBBINS POND-BACK PD INLET; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4805,42.928583
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060804-02_SEBBEDD</name>
+  <description><![CDATA[Name = Sebbins Pond; Location = SEBBINS POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.478278,42.928083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700060804-02_SEBBEDO</name>
+  <description><![CDATA[Name = Sebbins Pond; Location = SEBBINS POND-OUTLET; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.478083,42.925583
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061001-02-02_BCHSLSHLSLF</name>
+  <description><![CDATA[Name = Silver Lake; Location = SILVER LAKE SP-LEFT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.595639,42.76075
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061001-02-02_BCHSLSHLSRT</name>
+  <description><![CDATA[Name = Silver Lake; Location = SILVER LAKE SP-RIGHT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.597028,42.760028
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061101-01-01_ISLDERD</name>
+  <description><![CDATA[Name = Big Island Pond; Location = BIG ISLAND POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.211389,42.866
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061101-01-01_ISLDERJC</name>
+  <description><![CDATA[Name = Big Island Pond; Location = BIG ISLAND POND-JOHNSON COVE; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.203786,42.859475
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061101-01-01_ISLDERPC</name>
+  <description><![CDATA[Name = Big Island Pond; Location = BIG ISLAND POND-PERCH (CAMP) COVE; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.197175,42.880583
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061203-06-02_BCHTWBHUDCR</name>
+  <description><![CDATA[Name = Robinson Pond; Location = ROBINSON POND TB-CENTER; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.381614,42.799945
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061205-02-01_LONPELNHD</name>
+  <description><![CDATA[Name = Long Pond; Location = LONG POND-NH DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.3671,42.698694
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK700061206-02_OTTHUDBL</name>
+  <description><![CDATA[Name = Otternick Pond; Location = OTTERNICK POND-BOAT LAUNCH; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.425831,42.772744
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801030506-01_GARBATD</name>
+  <description><![CDATA[Name = Lake Gardner; Location = GARDNER LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.009,44.1634
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801030506-01_NHLAK801030506-01-NS-1</name>
+  <description><![CDATA[Name = Lake Gardner; Location = SS#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0106,44.1638
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801030506-01_NHLAK801030506-01-NS-2</name>
+  <description><![CDATA[Name = Lake Gardner; Location = SS#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.007627,44.16327
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801040201-01_ARMPIED</name>
+  <description><![CDATA[Name = Armington lake; Location = ARMINGTON LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.9692,43.958389
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801040201-03_TARPIED</name>
+  <description><![CDATA[Name = Tarleton lake; Location = TARLETON LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.963278,43.977
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060101-01-01_CANCAND</name>
+  <description><![CDATA[Name = Canaan Street lake; Location = CANAAN STREET LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0339,43.664194
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060101-01-01_NHLAK801060101-01-01-FS-2</name>
+  <description><![CDATA[Name = Canaan Street lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.035809,43.667996
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060105-04-01_BCHDYCENFLF</name>
+  <description><![CDATA[Name = Mascoma Lake; Location = Mascoma Lake- Dartmouth Sail Club; Comment = Check GPS coord.  (-72.135036, 43.623298) or (-72.134333, 43.639417)]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.134333,43.639417
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060105-04-01_MASENF1D</name>
+  <description><![CDATA[Name = Mascoma Lake; Location = MASCOMA LAKE-STATION 1 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1503,43.627889
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060105-04-01_NHLAK801060105-04-01-FS-1</name>
+  <description><![CDATA[Name = Mascoma Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.178533,43.648167
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060105-04-01_NHLAK801060105-04-01-NS-1</name>
+  <description><![CDATA[Name = Mascoma Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.123167,43.608667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060105-04-01_NHLAK801060105-04-01-NS-2</name>
+  <description><![CDATA[Name = Mascoma Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.157883,43.631433
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060401-06_EASGTM8</name>
+  <description><![CDATA[Name = Eastman Pond; Location = EASTMAN POND-NORTH COVE BEACH; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1125,43.5354
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060401-06_EASGTMWCB</name>
+  <description><![CDATA[Name = Eastman Pond; Location = EASTMAN POND-WEST COVE B BEACH; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.12274,43.526308
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060401-06_NHLAK801060401-06-FS-1</name>
+  <description><![CDATA[Name = Eastman Pond; Location = WL#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1151,43.518283
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060401-06_NHLAK801060401-06FS-2</name>
+  <description><![CDATA[Name = Eastman Pond; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.11845,43.5318
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-04-01_NHLAK801060402-04-01-FS-2</name>
+  <description><![CDATA[Name = Little Sunapee Lake; Location = WL#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.014417,43.435
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-04-01_NHLAK801060402-04-01-FS-3</name>
+  <description><![CDATA[Name = Little Sunapee Lake; Location = WL#3; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.022417,43.4319
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-04-01_NHLAK801060402-04-01-NS-1</name>
+  <description><![CDATA[Name = Little Sunapee Lake; Location = SS#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.019467,43.435067
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-04-01_SUNLNWLD</name>
+  <description><![CDATA[Name = Little Sunapee Lake; Location = LITTLE SUNAPEE LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0118,43.433083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-05-01_SUNSUN1D</name>
+  <description><![CDATA[Name = Sunapee Lake; Location = SUNAPEE LAKE-200 STN 1 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0426,43.406083
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-05-01_SUNSUN220D</name>
+  <description><![CDATA[Name = Sunapee Lake; Location = SUNAPEE LAKE-220 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.055997,43.361911
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-05-01_SUNSUN2D</name>
+  <description><![CDATA[Name = Sunapee Lake; Location = SUNAPEE LAKE-210 STN 2 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0627,43.3836
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060402-05-01_SUNSUN3D</name>
+  <description><![CDATA[Name = Sunapee Lake; Location = SUNAPEE LAKE-230 STN 3 DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.0494,43.342778
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK801060404-01_ROCCROD</name>
+  <description><![CDATA[Name = RockyboundPond; Location = ROCKYBOUND POND-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.145056,43.446417
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010101-08_SANMLWD</name>
+  <description><![CDATA[Name = Sand Pond; Location = WL#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1668,43.1838
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010201-05_GRASTDD</name>
+  <description><![CDATA[Name = Granite Lake; Location = GRANITE LAKE-DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.141361,43.020972
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010201-05_NHLAK802010201-05-FS-2</name>
+  <description><![CDATA[Name = Granite Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.144856,43.02371
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010201-05_NHLAK802010201-05-FS-3</name>
+  <description><![CDATA[Name = Granite Lake; Location = NA; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.135286,43.023977
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-05_DUBDUBDLC</name>
+  <description><![CDATA[Name = Dublin Pond; Location = DUBLIN POND-DUBLIN LAKE CLUB; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.072383,42.904269
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-09_NHLAK802010202-09-FS-2</name>
+  <description><![CDATA[Name = Silver Lake; Location = WL#2; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.139535,42.971089
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-09_NHLAK802010202-09-NS-1</name>
+  <description><![CDATA[Name = Silver Lake; Location = Silver Lake SS#1; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.138703,42.972111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-09_NHLAK802010202-09-NS-2</name>
+  <description><![CDATA[Name = Silver Lake; Location = SILVER LAKE-OUTLET IN STREAM; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.1328,42.949389
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-09_SILHARD</name>
+  <description><![CDATA[Name = Silver Lake; Location = SILVER LAKE- DEEP SPOT; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.14,42.961194
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>NHLAK802010202-09_SILHARSB1</name>
+  <description><![CDATA[Name = Silver Lake; Location = WL#3- Silver Lake; Comment = ]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-72.13563,42.951554
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW05_174_SS1</name>
+  <description><![CDATA[Name = Blackmore Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.445,41.7753
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW05_210_WL1</name>
+  <description><![CDATA[Name = Blackmore Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4467,41.7742
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW183_191_SS1</name>
+  <description><![CDATA[Name = Upper Melville Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.2733,41.5842
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW183_219_WL1</name>
+  <description><![CDATA[Name = Upper Melville Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.2728,41.5838
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW183_219_WL2</name>
+  <description><![CDATA[Name = Upper Melville Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.2728,41.5838
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW183_219_WL3</name>
+  <description><![CDATA[Name = Upper Melville Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.2728,41.5838
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW183_219_WLC</name>
+  <description><![CDATA[Name = Upper Melville Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.2728,41.5838
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_SS1</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_SS2</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_SS3</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_WL1</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_WL2</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_WL3</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW200_202_WLC</name>
+  <description><![CDATA[Name = Chapman Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.7962,41.3796
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_SS1</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_SS2</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_SS3</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_SSC</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_WL1</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_WL2</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_WL3</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW209_201_WLC</name>
+  <description><![CDATA[Name = Asa Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5127,41.459
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_SS1</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_SS2</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_SS3</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_WL1</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_WL2</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW30_182_WL3</name>
+  <description><![CDATA[Name = Pasquisett Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.6314,41.4274
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_SS1</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_SS2</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_SS3</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_WL1</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_WL2</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW36_188_WL3</name>
+  <description><![CDATA[Name = Randall Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4674,41.7877
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW37_171_SS1</name>
+  <description><![CDATA[Name = Roger Williams Park Pond; Location = Cunliff Pond (RWP #7); Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4142,41.7773
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW37_206_WL1</name>
+  <description><![CDATA[Name = Roger Williams Park Pond; Location = Cunliff Pond (RWP #7); Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.413,41.7785
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW37_206_WL2</name>
+  <description><![CDATA[Name = Roger Williams Park Pond; Location = Cunliff Pond (RWP #7); Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.413,41.7785
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW59_192_SS1</name>
+  <description><![CDATA[Name = Warwick Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.4151,41.7249
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW59_220_WL1</name>
+  <description><![CDATA[Name = Warwick Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.411,41.7227
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW59_220_WL2</name>
+  <description><![CDATA[Name = Warwick Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.411,41.7227
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW59_220_WL3</name>
+  <description><![CDATA[Name = Warwick Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.411,41.7227
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_196_SS1</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5764,41.515
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_SS1</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_SS2</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_SS3</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_SSC</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_WL1</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_WL2</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_WL3</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>RIWW_WW68_200_WLC</name>
+  <description><![CDATA[Name = Yawgoo Pond; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.5714,41.5111
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL1</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL2</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL3</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL4</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL5</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL6</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL7</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5843810_157_WL8</name>
+  <description><![CDATA[Name = Williand; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.887625,43.228081
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5846990_155_WL1</name>
+  <description><![CDATA[Name = Nippo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081729,43.222912
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5846990_155_WL2</name>
+  <description><![CDATA[Name = Nippo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081729,43.222912
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_5846990_155_WL3</name>
+  <description><![CDATA[Name = Nippo; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.081729,43.222912
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6718859_153_WL1</name>
+  <description><![CDATA[Name = Highland Lake; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.743766,44.086969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6718859_153_WL2</name>
+  <description><![CDATA[Name = Highland Lake; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.743766,44.086969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6718859_153_WL3</name>
+  <description><![CDATA[Name = Highland Lake; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.743766,44.086969
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6738198_161_NA</name>
+  <description><![CDATA[Name = Wentworth; Location = Triggs; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.153126,43.604283
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6738198_162_NA</name>
+  <description><![CDATA[Name = Wentworth; Location = Fullers; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.172008,43.591914
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6738198_163_NA</name>
+  <description><![CDATA[Name = Wentworth; Location = Governors; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.131411,43.592349
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6738198_164_NA</name>
+  <description><![CDATA[Name = Wentworth; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.157598,43.597897
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6738206_160_NA</name>
+  <description><![CDATA[Name = Crescent Lake; Location = Center; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.195869,43.591914
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6742526_156_WL1</name>
+  <description><![CDATA[Name = Attitash; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.982824,42.849044
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6742526_156_WL2</name>
+  <description><![CDATA[Name = Attitash; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.982824,42.849044
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6742526_156_WL3</name>
+  <description><![CDATA[Name = Attitash; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-70.982824,42.849044
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6743032_158_NA_EastShore</name>
+  <description><![CDATA[Name = Baboosic; Location = East Shore; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.577089,42.883531
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6743032_158_NA_SharksLocation</name>
+  <description><![CDATA[Name = Baboosic; Location = Sharks Location; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.577089,42.883531
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6743032_158_nearShore_EastShore</name>
+  <description><![CDATA[Name = Baboosic; Location = East Shore; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.577089,42.883531
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_6743032_158_nearShore_SharksLocation</name>
+  <description><![CDATA[Name = Baboosic; Location = Sharks Location; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.577089,42.883531
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9312481_159_NA</name>
+  <description><![CDATA[Name = Lovell; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.012252,43.543928
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_165_NA</name>
+  <description><![CDATA[Name = Silver; Location = East; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.161709,43.865002
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_166_NA</name>
+  <description><![CDATA[Name = Silver; Location = N. Island; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.170206,43.884058
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_167_NA</name>
+  <description><![CDATA[Name = Silver; Location = North; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.175184,43.88112
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_168_NA</name>
+  <description><![CDATA[Name = Silver; Location = 2Deep; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.175356,43.85807
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_169_NA</name>
+  <description><![CDATA[Name = Silver; Location = 1South; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.172523,43.851015
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315143_170_NA</name>
+  <description><![CDATA[Name = Silver; Location = Center; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.169434,43.864692
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315263_154_SS1</name>
+  <description><![CDATA[Name = Pine River Pond; Location = Cooks Cove; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.027485,43.628191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315263_154_SS2</name>
+  <description><![CDATA[Name = Pine River Pond; Location = Cooks Cove; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.027485,43.628191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>UNH_9315263_154_SS3</name>
+  <description><![CDATA[Name = Pine River Pond; Location = Cooks Cove; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.027485,43.628191
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_1_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.17383333,45.01333333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_10_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.23166667,44.47483333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_11_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = Lon/Lat changed from -73.078158 / 45.340375; moved to offshore Phillpsburg]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-71.076827,42.359977
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_12_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.355,44.75616667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_13_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.232,44.42583333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_14_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.09961667,45.00823333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_15_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.34,44.94833333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_16_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.29916667,44.471
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_17_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.11338333,44.99176667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_18_SS1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = Distance to NHDlake > 50m but appears okay in GE]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.151858,44.810706
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_19_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = Location in Canada-distance to lake champlain okay]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.078067,45.056267
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_2_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = Location in Canada-distance to lake champlain okay]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.12966667,45.04166667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_3_SS1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.22111667,44.96796667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_4_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.41283333,44.126
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_5_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.22683333,44.70816667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_6_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.16216667,44.78533333
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_7_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.28116667,44.582
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_8_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.41816667,44.70116667
+    </coordinates>
+  </Point>
+</Placemark>
+<Placemark>
+  <name>VTDEC_22302965_9_WL1</name>
+  <description><![CDATA[Name = Lake Champlain; Location = NA; Comment = NA]]></description>
+  <styleUrl>#style1</styleUrl>
+  <Point>
+    <coordinates>
+-73.40783333,43.95166667
+    </coordinates>
+  </Point>
+</Placemark>
+</Document>
+</kml>
