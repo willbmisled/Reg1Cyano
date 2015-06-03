@@ -78,58 +78,6 @@ Changes for the 2015 database
     - commentFluorometry
     - units
 
-Phone App
--------------------------
-* General Questions and Comments
-    - will there be an instruction manual?
-    - no indicator of whether table has been saved (updated or not) except on Station Table; could the text color for "Update DB" change depending on update status (red=unsaved items; green=everything up to date)
-    - no warning if you leave a page without saving (updating)
-    - date and time selector widgets difficult to use.
-    - selection button on drop down list very small.
-    - yes/no dropdowns have phycocyanin and chl. as choices instead of "yes" & "no"; I see what is happening.  Whenever you choose a dropdown it stays on the screen.  When you go to another dropdown it writes over the first but both values are still visible.
-    - dilution dropdown 
-    - if you select "update DB" and there are unfilled fields it returns you to the missing field but erases other fields. 
-    - temperature fields (sample & analysis) auto adds a decimal place so 21 becomes 2.1
-    - How can we capture the email and phone number for data entered by phoneApp?
-
-* Welcome Screen:
-    - how are the name, email, phone, & org saved and linked to the data tables?
-    - can the app remember this info and reuse it?
-    - Organization should be a combo box that allows for new organizations to be added and remembered.
-    - "new lake" & "existing lake" button only visible in portrait mode.  This should be fixed or the app could be locked in portrait.
-    
-* New Lake Screen:
-    - Apparently this will be used to both add new waterbodies and select known waterbodies that are already in the app.  Somewhat confusing.
-    - on screen keyboard blocks view of data entry boxes.
-    - The abbreviation "WBID" (GENERATE WBID button) is a field name in the database.
-    - If you start adding data then cancel when you return the data entered are not erased.  
-    - can "generate WBID" without adding the lake name or date.
-    
-* waterbody screen
-    - Include NY and Ontario in State should be a combo box-allowing other states beside the known 6.  Ontario and NY should be included also.
-    
-* station:
-    - RI out of range on longitude (-71.4)
-    
-* sample screen
-    - add "today" to sampleDate widget
-    - add "now" to sampleTime widget
-    - would be nice to be able to choose a station ID directly from this screen instead of having to pass through waterbody & station pages first.  If a person goes to a lake they will likely want to collect samples from more than 1 station at each visit.  
-    - Add field "fieldCrew" to tblSample
-    - rename field "time" to "sampleTime" in tblSample
-    - Add field "sampleRep" to tblSample: with default value "primary" and optional value "duplicate"
-    
-* Analysis Screen:
-    - text slightly garbled for "Parameter" drop down
-    - Add field "analysisRep" to tblAnalysis: with default value "primary" and optional value "duplicate"
-        
-* submit page
-    - should be able to submit more than one lake at a time- perhaps a checklist of lakeIDs with a status indicator showing whether they have been submitted before or not.
-    - can submit the same data multiple times-data arrives with the same subject line and the same file names.
-    - why are we given so many choices on how to send the data (twitter-facebook-etc)?
-    - email address for submissions can be changed.  Is this a good idea?
-    - does not send "waterbody" table
-
 Background
 -------------------------
 
@@ -165,6 +113,7 @@ Field  | Data Type | Description
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
+**waterbodyID2014**|Short Text|In some cases the waterbodyID was changed between 2014 and 2015.  If they are different the 2014 ID is listed in this table.  This field will not be included in data entry forms.
 **waterbodyID**|Short Text|Primary Key for this table. Unique ID for the Waterbody. Can either be entered by the users or or assigned by the phoneApp.
 **orgID**|Short Text|Lookup primary Key from tblOrganization
 **waterbodyName**|Short Text|Name of the waterbody
@@ -176,10 +125,11 @@ Field  | Data Type | Description
 **locationSourceWB**|Short Text|Combo Box ("WaterbodyDatabase"; "GPS"; "GoogleEarth"; "BingMaps"; "topoMap"): How was the location determined? This field will be populated by the database administrator.
 **commentWB**|Long Text| Text Box: Additional information or comments
 
-**tblStation** within each Waterbody there may be multiple stations. This table provides general information on the station.  There may be multiple samples taken from each station.
+**tblStation** within each Waterbody there may be multiple stations. This table provides general information on the station.  There may be multiple samples taken from each station. Note: this table was first made from tblStation in Data2014.mdb.  A query (qryMaketblStation2015) the table (temp_tblStation2015).  This table is essentially the same except that the field "stationLocation" was renamed "stationDescription" if "stationLocation" was blank the field "otherStationID" was substituted.
 
 Field  | Data Type | Description
 ------------- | ------------- | -------------
+**stationID2014**|Short Text|In some cases the stationID was changed between 2014 and 2015.  If they are different the 2014 ID is listed in this table.  This field will not be included in data entry forms.
 **stationID**|Short Text|Primary Key for this table. Unique ID for the Station
 **waterbodyID**|Short Text|Lookup primary Key from tblWaterbody
 **stationDescription**|Short Text|Text description of the station location
