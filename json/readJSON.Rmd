@@ -32,7 +32,7 @@ i=1;str(fromJSON(file=b[i]));fromJSON(file=b[i])
 str(fromJSON(file=b["3814_NAME_submission.json"]))
 
 
-str(fromJSON(file="Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json"))
+str(fromJSON(file="#ST1_STATION.json"))
  
 
 ```

@@ -1,0 +1,158 @@
+---
+title: "readJSON"
+author: "Bryan Milstead"
+date: "Wednesday, November 05, 2014"
+output: html_document
+---
+<!---
+use these command instead of the knit icon if you want the data and work loaded into the R workspace
+  library(knitr)
+      setwd('Data2015/json')
+  knit('readJSON.rmd')
+-->
+
+To Do List
+-------------------------
+* C
+
+
+Introduction
+-------------------------
+
+This is a
+
+```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
+  #change the working directory
+    tryCatch(setwd('Data2015/json'),error = function(e) NA)
+  #load libraries
+    library(rjson)
+```
+
+
+```{r readJSON, include=FALSE, echo=FALSE, cache=FALSE} 
+options(stringsAsFactors=FALSE)
+#Switch to directory where the JSON files are located
+  list.dirs()
+  Dir<-"NancyLeland/20150806"
+  setwd(Dir)
+
+#get a list of the files and sort by type: crew; waterbody; station; sample; analysis;
+  b<-list.files(pattern='.json');b
+  crew<-b[grep('CREW.json',b)]
+  waterbody<-b[grep('WATERBODY',b)]
+  station<-b[grep('STATION',b)]
+  sample<-b[grep('SAMPLE',b)]
+  analysis<-b[grep('ANALYSIS',b)]
+
+#format org data
+  org<-as.data.frame(fromJSON(file=crew)[c(4,1,2,3)])
+  names(org)<-c('orgID','contact','email','phone')
+
+#format waterbody data
+  wb<-as.data.frame(fromJSON(file=waterbody))
+  rename(wb,commentWB=commentWaterbody)#rename to match database
+  wb$orgID<-org$orgID #add the orgID NOTE: we are assuming that only one orgID is contributing to this directory
+
+#format station data 
+  sta<-c()
+  if(length(station)>0) {
+    for(i in (1:length(station))){
+      b<-cbind(as.data.frame(fromJSON(file=station[i])))
+      sta<-rbind(sta,b)
+    }
+    #add the waterbodyID
+      sta$stationID<-gsub("\\#","_",sta$stationID) #eliminate the special character "x" from the analysis ID
+      sta$waterbodyID<-t(as.data.frame(sapply(sta$stationID,strsplit,"_")))[,1]
+}                    
+                    
+                  
+ 
+
+#format sample data 
+sa<-c()
+if(length(sample)>0) {
+  for(i in (1:length(sample))){
+    b<-cbind(as.data.frame(fromJSON(file=sample[i])))
+    sa<-rbind(sa,b)
+  }
+  #add the stationID
+      sa$sampleID<-gsub("\\#","_",sa$sampleID) #eliminate the special character "x" from the analysis ID
+      q<-t(as.data.frame(sapply(sa$sampleID,strsplit,"_"))) #parse the analysis ID
+      sa$stationID<-paste(q[,1],'_',q[,2],sep='')
+      rename(sa,sampleDate=date)#rename to match database
+}  
+
+#format analysis data 
+  an<-c()
+  if(length(analysis)>0) {
+    for(i in (1:length(analysis))){
+      b<-cbind(as.data.frame(fromJSON(file=analysis[i])))
+      an<-rbind(an,b)
+    }
+  #parse waterbdodyID, stationID and sampleID
+    an$analysisID<-gsub("\\#","_",an$analysisID) #eliminate the special character "x" from the analysis ID
+    q<-as.data.frame(t(as.data.frame(sapply(an$analysisID,strsplit,"_")))) #parse the analysis ID
+    an$stationID<-paste(q[,1],'_',q[,2],sep='')
+    an$sampleID<-paste(an$stationID,'_',q[,3],sep='')
+  #add sampleDate
+    q<-merge(an,sa,by='sampleID',all.x=TRUE)
+    }
+
+
+
+merge(st,sa,by='stationID')
+
+
+
+
+
+```  
+    			
+
+                      
+                      
+                    
+  
+  
+
+
+
+
+grep('ANALYSIS',b)
+
+i<-1;fromJSON(file=b[i])
+
+i<-2
+
+a<-fromJSON(file=b[i])
+Names<-names(a)
+
+
+
+
+a[names(a)[1]]
+
+
+
+
+
+
+
+b<-c("Lake#Champlain#0601#649_WATERBODY.json",
+     "Lake#Champlain#0601#649#ST1_STATION.json",
+     "Lake#Champlain#0601#649#ST1#SAMP1#ANL1_ANALYSIS.json",
+     "Lake#Champlain#0601#649#ST1#SAMP1_SAMPLE.json",       
+     "Lake#Champlain#0601#649#ST1#SAMP3_SAMPLE.json")   
+
+for(i in 1:4) str(fromJSON(file=b[i]))
+
+i=1;str(fromJSON(file=b[i]));fromJSON(file=b[i])
+
+str(fromJSON(file=b["3814_NAME_submission.json"]))
+
+
+str(fromJSON(file="#ST1_STATION.json"))
+ 
+
+```
+

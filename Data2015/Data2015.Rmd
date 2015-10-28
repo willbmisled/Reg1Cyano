@@ -1,0 +1,122 @@
+---
+title: "Data2015"
+author: "B"
+date: "Tuesday, June 02, 2015"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
+#########function to install (if needed) and load R packages by list
+libs<-c("XLConnect","dplyr") #list of packages to load
+
+installLoad<-function(pck){ #user defined function
+    if(!pck%in%installed.packages()){install.packages(pck)}
+    require(pck, character.only = TRUE)
+  }
+lapply(libs,function(x) installLoad(x))  #Load/Install require packages
+```
+
+To Do List
+-------------------------
+* everything
+
+
+Introduction
+-------------------------
+During the summer of 2015 the New England states monitored in lakes.  Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division. 
+
+
+Data Definitions
+-------------------------
+
+Field  | Units | Description
+------------- | ------------- | -------------
+**Order:**|(integer)|Unique Identifier for sample by Organization-disregard this is for house keeping only.
+**YourName:**|(text)|Enter the name of the person entering the data
+**Organization:**|(text)|Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC
+**SiteID:**|(text)|If the location has a site ID from your organization enter it here
+**WaterbodyName:**|(text)|Enter the name of the lake: be consistent with spelling and capitalization
+**State:**|(lookup)|Choose the two letter state code from the drop down list
+**SiteLocation:**|(text)|Some organizations have site names within a lake.  Enter these here.
+**SampleYear:**|(YYYY)|Year sample was collected in format YYYY (e.g., 2014)
+**SampleMonth:**|(MM)|Month sample was collected in integer format (e.g., months 1 to 12 )
+**SampleDay:**|(DD)|Day sample was collected in integer format (e.g., day 1 to 31 )
+**NameOfSamplers:**|(text)|Add the names of the field crew separated by commas.
+**WeatherConditions:**|(text)|General Weather conditions separated by commas.  E.g., Cloudy, Windy, Cold
+**SampleLocation:**|(lookup)|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
+**SampleMethod:**|(lookup)|How was the sample collected? Grab = Grab sample for surface blooms; Composite =Composite; Integrated = Integrated tube sample; Validation = Use this for Blanks and Calibration Standards; Other = give details in the comments section.
+**Depth:**|(integer)|Within Lake samples are at 3m and Shoreside are at 1m.  If samples taken at different depths not the depth here and enter details in the comments section.  Leave blank for standards and blanks.
+**Latitude:**|(decimal)|Latitude in Decimal Degrees with 4 decimal places
+**Longitude:**|(decimal)|Longitude in Decimal Degrees with 4 decimal places
+**SampleHour:**|(HH)|Hour sample was taken in 24 hour format
+**SampleMinutes:**|(MM)|Minute sample was taken in integer format
+**Filtered:**|(TRUE/FALSE)|Was the sample filtered?
+**Frozen:**|(TRUE/FALSE)|Was the sample frozen?
+**Parameter:**|(lookup)|Phycocyanin or Chlorophyll?
+**Value:**|(decimal)|Reading from the fluorometer
+**Units:**|(lookup)|What were the units recorded.  If not "RFU" or "µ/L" flag the entry and add comment with the units used. 
+**Rep:**|(integer)|If you made more than one measurement per sample or took more than one sample per site assign a replicate number to each observations and add notes in the comment field.
+**Fluorometer:**|(lookup)|Type of fluorometer used?
+**AnalysisYear:**|(YYYY)|Year sample was analyzed in format YYYY (e.g., 2014)
+**AnalysisMonth:**|(MM)|Month sample was analyzed in integer format (e.g., months 1 to 12 )
+**AnalysisDay:**|(DD)|Day sample was analyzed in integer format (e.g., day 1 to 31 )
+**AnalysisHour:**|(HH)|Hour sample was analyzed in 24 hour format
+**AnalysisMinutes:**|(MM)|Minute sample was analyzed in integer format
+**GPSType:**|(text)|How was the location determined.  GPS (type), map, or google?
+**Photos:**|(TRUE/FALSE)|Where photos taken?
+**Flag:**|(TRUE/FALSE)|Add a flag for any data line that needs further validation or processing
+**Comments:**|(text)|Add details of flags or any notes about the data line or sample.
+**ID:**|(integer)|Unique Identifier for Sample
+**LocID:**|(integer)|Unique Identifier for the Location based on unique Lon/Lat combinations
+
+Data Sources
+-------------------------
+Information on how the data were provided by the States and Organizations that participated in the monitoring.
+
+
+### CRWA
+
+* Data received from Elisabeth Cianciola on 10/16/2015
+* Original file name: "CRWA_2015_EPA_CyanoData.xls"
+
+**Questions for Elisabeth
+
+**Data steps**
+
+* read the data 
+* One stationID is differenct for field and lab data.  For the field data stationID='BROAD' is listed as stationID=BR in the lab data. So the field data values for stationID were changed to match the lab data.
+*No field data for samples taken 8/20, 8/31, 9/10, 9/17, 9/24, 10/01, & 10/08
+
+```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
+#read field data 
+  Field<-readWorksheetFromFile('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='FieldDataEntry')
+
+#read Lab data 
+  Lab<-readWorksheetFromFile('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='LabDataEntry')
+
+#change Field$stationID=='BROAD' to Field$stationID=='BR'
+  Field$stationID[Field$stationID=='BROAD']<-'BR'
+
+#merge field and lab data
+  CRWA<-full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate'))
+
+#check to make sure the join was successful
+  #print a few columns
+    CRWA[,c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+
+  #print rows where the are no lab data to match the field data
+    CRWA[is.na(CRWA$analysisID),c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    ####all good
+
+  #print rows where the are no field data to match the lab data
+    CRWA[is.na(CRWA$orgID),c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    
+    #No field data for samples taken 8/20, 8/31, 9/10, 9/17, 9/24, 10/01, & 10/08
+      unique(CRWA$sampleDate[is.na(CRWA$orgID)])
+
+
+
+
+nrow(unique(CRWA[,c('waterbodyID','stationID','sampleID','sampleDate')]))
+
+

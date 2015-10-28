@@ -56,4 +56,12 @@ Photo<-'c:/bryan/bryanTemp/NancyLeland20150527.JPG'
 a<-getexifdata(Tool, Photo)
 a
 
+Dir<-'C:/Bryan/PortableApps/R/scripts/Reg1Cyano/Data2015/Photos2015'
+Photos<-paste(Dir,'/',list.files(Dir),sep='')
+
+for(i in c(1:length(Photos))) a<-getexifdata(Tool, Photos[i]);Photos[i]
+
+i<-1
+a<-getexifdata(Tool, Photos[i]);Photos[i]
+
 
