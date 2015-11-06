@@ -1,0 +1,16 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+sp
+rgdal
+knitr
+maptools
+rgeos
+ggplot2
+ggmap
+maps
+mapproj

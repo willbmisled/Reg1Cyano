@@ -1,7 +1,7 @@
 ---
 title: "NALMS2015"
 author: "Bryan Milstead"
-date: "November 2, 2015"
+date: "November 6, 2015"
 output: html_document
 ---
 <!---
@@ -22,14 +22,16 @@ Introduction
 
 This documents contains the analyses and figures for a poster at the 2015 NALMS meeting.
 
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/NALMS2015.md
+
+The details of all data processing steps including notes and rcode are available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/NALMS2015.Rmd
+
 #Data Decisions#
 
 * Only use data from the Beagle Fluorometers
 * Restrict to readings recorded in ug/l
 * Restrict to integrated tube samples
-* For multiple samples for a visit to a lake (includes multiple sites, replicates, and multiple readings) record the min, max, and mean
-* Use only the unfiltered samples
-* Separate analysis for frozen and fresh samples
+* For multiple samples for a visit to a lake (includes multiple sites, replicates, and multiple readings) calculate the mean
 
 #Output#
 
@@ -39,9 +41,9 @@ This documents contains the analyses and figures for a poster at the 2015 NALMS 
     - How many participants? Table Organization by sampleEvent; a sample event is a unique combination of sampleDate and sampleLocation
     - How many lakes? Summary/count information. Lakes by State
     - How many sample dates? Summary/count information. Organization by sample events
-* How do phycocyanin measurements change over the course of the summer? How about chl-a? Perhaps a few example WBs in line graph format, or a map that shows the sizes of dots representing Phy and Chl-A concentrations, with a map for the averages of each month (not sure if Iâ<U+0080><U+0099>m describing this well, could do better over the phone).
+* How do phycocyanin measurements change over the course of the summer? How about chl-a? Perhaps a few example WBs in line graph format, or a map that shows the sizes of dots representing Phy and Chl-A concentrations, with a map for the averages of each month (not sure if I?<U+0080><U+0099>m describing this well, could do better over the phone).
     - Bryan: it will be interesting to see what this look likes.  We will need to address the issues raised at the beginning of the message.  We will also need to consider what to do with outliers.  There are some pretty unreasonable readings in the dataset.
-    - DP: Hm, I would defer to you as the data expert on standard processes for dealing with outliers, but understood that they would really mess things up if weâ<U+0080><U+0099>re doing averages. My uninitiated intuition is to pick a value that we feel is a boundary of reasonable vs unreasonable and remove values above that. Could that be done?
+    - DP: Hm, I would defer to you as the data expert on standard processes for dealing with outliers, but understood that they would really mess things up if we?<U+0080><U+0099>re doing averages. My uninitiated intuition is to pick a value that we feel is a boundary of reasonable vs unreasonable and remove values above that. Could that be done?
 
 Analysis
 -------------------------
@@ -65,9 +67,8 @@ Analysis
     
 
 
-* Sample events aggregated by
-    - Organization
-    - State
+* Number of sample events tabulated by Organization and State
+
 
 
 ```
@@ -82,9 +83,8 @@ Analysis
 ## 67 13 69 64 55 33
 ```
 
-* Lakes sampled aggregated by
-    - Organization
-    - State
+* Number of lakes sampled aggregated by Organization and State
+
 
 
 ```
@@ -158,7 +158,6 @@ table(Raw$Rep,useNA='ifany')
 ```
     
 * What about filtration?
-* Let's just look at the unfiltered
 
 
 ```r
@@ -170,18 +169,8 @@ table(Raw$Filtered,useNA='ifany')
 ## FALSE  TRUE 
 ##  4169  3178
 ```
-
-```r
-Keep<-Raw[Raw$Filtered==FALSE,]
-  nrow(Keep) #4169
-```
-
-```
-## [1] 4169
-```
     
 * What about freezing?
-* Let's 
 
 
 ```r
@@ -196,21 +185,27 @@ table(Raw$Frozen,Raw$Parameter,useNA='ifany')
 ##   <NA>            0           1
 ```
 
+* Let's look at the distrution of values for the four combinations of filtered and frozen
+* assign conditions (cond)
+    - Frozen/Filtered
+    - Fresh/Filtered
+    - Frozen/Unfiltered
+    - Fresh/Unfiltered
+* Get means by Lake
+* Create lakeID
+    - for most lakes this is the WBID
+    - for CRWA this will be 99 (no WBID for the charles river)
+    - for SiteID=='15924-M' lakeID=SiteID (this lake not in NHDplus)
+    - for lake Champlain (WBID==22302965) lakeID=SiteID
+* calculate mean values for beagle readings by c('lakeID','sampleDate','SampleMonth','Organization','State','cond','Parameter')
 
 
-* Look at the summary stats for:
-    - Frozen Chla
 
 
+* create box plots for each parameter by condition, Organization, State, & Month
 
-summary()
-Keep<-Raw[Raw$Filtered==FALSE,]
-  nrow(Keep) #4169
-```    
-  
-  
-  
-    
+
+![plot of chunk boxes2](figure/boxes2-1.png) ![plot of chunk boxes2](figure/boxes2-2.png) ![plot of chunk boxes2](figure/boxes2-3.png) ![plot of chunk boxes2](figure/boxes2-4.png) ![plot of chunk boxes2](figure/boxes2-5.png) ![plot of chunk boxes2](figure/boxes2-6.png) ![plot of chunk boxes2](figure/boxes2-7.png) ![plot of chunk boxes2](figure/boxes2-8.png) 
 
 
 Data Definitions

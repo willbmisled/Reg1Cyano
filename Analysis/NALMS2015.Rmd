@@ -31,6 +31,10 @@ Introduction
 
 This documents contains the analyses and figures for a poster at the 2015 NALMS meeting.
 
+This document is available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/NALMS2015.md
+
+The details of all data processing steps including notes and rcode are available here: https://github.com/willbmisled/Reg1Cyano/blob/master/Analysis/NALMS2015.Rmd
+
 #Data Decisions#
 
 * Only use data from the Beagle Fluorometers
@@ -97,9 +101,8 @@ Analysis
   sampledLakes<-unique(Raw[,c('Organization','State','Lon_WBID')]);nrow(sampledLakes) #104  
 ```
 
-* Sample events aggregated by
-    - Organization
-    - State
+* Number of sample events tabulated by Organization and State
+
 
 ```{r events, include=TRUE, echo=FALSE, cache=FALSE} 
 #aggregate
@@ -107,9 +110,8 @@ Analysis
   table(events$State)
 ```
 
-* Lakes sampled aggregated by
-    - Organization
-    - State
+* Number of lakes sampled aggregated by Organization and State
+
 
 ```{r lakes, include=TRUE, echo=FALSE, cache=FALSE} 
 #aggregate
@@ -164,7 +166,7 @@ Analysis
 ```
 
 
-```{r map, include=TRUE, echo=FALSE, cache=FALSE, message=FALSE} 
+```{r map, include=TRUE, echo=FALSE, cache=FALSE, message=FALSE, warning=FALSE} 
 #create map
   #allLakes
 
