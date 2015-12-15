@@ -191,6 +191,18 @@ gg <- gg + geom_point(data=allLakes@data,aes(x=Lon, y=Lat),color="#1515FF",size=
 gg 
 ```
 
+```{r mapOut, include=FALSE, echo=FALSE, cache=FALSE, message=FALSE, warning=FALSE} 
+#save a high res copy of the figure
+gg1 <- baseMap + geom_map(data=us, map=us,
+                    aes(x=long, y=lat, map_id=region, group=group),
+                    fill=NA, color="#7f7f7f", size=2)
+gg1 <- gg1 + geom_point(data=allLakes@data,aes(x=Lon, y=Lat),color="#1515FF",size=9,shape=17) 
+
+tiff(filename='NalmsMap.tiff',width=1000,height=1500,units='px',pointsize=26)
+gg1
+dev.off()
+```
+
 * Build dataset to evaluate fluorometry readings
 * Filter data  
     - ug/l
@@ -305,6 +317,14 @@ pOrg<-ggplot(means[means$Parameter=='Phycocyanin',], aes(x=Organization, y=mean)
 pSt<-ggplot(means[means$Parameter=='Phycocyanin',], aes(x=State, y=mean)) + geom_boxplot() + scale_y_log10(pLab,breaks=c(1,10,100,1000),limits=c(.01,10000)) + scale_x_discrete('State') 
 
 pMo<-ggplot(means[means$Parameter=='Phycocyanin',], aes(x=as.factor(SampleMonth), y=mean)) + geom_boxplot() + scale_y_log10(pLab,breaks=c(1,10,100,1000),limits=c(.01,10000)) + scale_x_discrete('Month') 
+```
+
+```{r figOut, include=FALSE, echo=FALSE, cache=FALSE, message=FALSE, warning=FALSE} 
+#save a high res copy of the figure
+tiff(filename='NalmsFig.tiff',width=1500,height=1500,units='px',pointsize=26)
+ggplot(means[means$Parameter=='Phycocyanin',], aes(x=as.factor(SampleMonth), y=mean)) + geom_boxplot(outlier.shape=16, outlier.size=4) + theme(axis.text.y=element_text(size=32),axis.text.x=element_text(size=36,face="bold"),axis.title=element_text(size=36,face="bold")) +
+  scale_y_log10(pLab,breaks=c(1,10,100,1000),limits=c(.01,10000)) + scale_x_discrete('',labels=c('June','July','August','September','October')) 
+dev.off()
 ```
 
 ```{r boxes2, include=TRUE, echo=FALSE, cache=FALSE, message=FALSE, warning=FALSE} 

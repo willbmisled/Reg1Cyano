@@ -41,9 +41,9 @@ The details of all data processing steps including notes and rcode are available
     - How many participants? Table Organization by sampleEvent; a sample event is a unique combination of sampleDate and sampleLocation
     - How many lakes? Summary/count information. Lakes by State
     - How many sample dates? Summary/count information. Organization by sample events
-* How do phycocyanin measurements change over the course of the summer? How about chl-a? Perhaps a few example WBs in line graph format, or a map that shows the sizes of dots representing Phy and Chl-A concentrations, with a map for the averages of each month (not sure if I?<U+0080><U+0099>m describing this well, could do better over the phone).
+* How do phycocyanin measurements change over the course of the summer? How about chl-a? Perhaps a few example WBs in line graph format, or a map that shows the sizes of dots representing Phy and Chl-A concentrations, with a map for the averages of each month (not sure if Iâ<U+0080><U+0099>m describing this well, could do better over the phone).
     - Bryan: it will be interesting to see what this look likes.  We will need to address the issues raised at the beginning of the message.  We will also need to consider what to do with outliers.  There are some pretty unreasonable readings in the dataset.
-    - DP: Hm, I would defer to you as the data expert on standard processes for dealing with outliers, but understood that they would really mess things up if we?<U+0080><U+0099>re doing averages. My uninitiated intuition is to pick a value that we feel is a boundary of reasonable vs unreasonable and remove values above that. Could that be done?
+    - DP: Hm, I would defer to you as the data expert on standard processes for dealing with outliers, but understood that they would really mess things up if weâ<U+0080><U+0099>re doing averages. My uninitiated intuition is to pick a value that we feel is a boundary of reasonable vs unreasonable and remove values above that. Could that be done?
 
 Analysis
 -------------------------

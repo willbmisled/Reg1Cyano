@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
 #########function to install (if needed) and load R packages by list
-libs<-c("XLConnect","dplyr") #list of packages to load
+libs<-c("readxl","dplyr") #list of packages to load
 
 installLoad<-function(pck){ #user defined function
     if(!pck%in%installed.packages()){install.packages(pck)}
@@ -18,7 +18,7 @@ lapply(libs,function(x) installLoad(x))  #Load/Install require packages
 
 To Do List
 -------------------------
-* everything
+* Check POSIXct values for Dates and Times
 
 
 Introduction
@@ -76,10 +76,13 @@ Information on how the data were provided by the States and Organizations that p
 
 ### CRWA
 
-* Data received from Elisabeth Cianciola on 10/16/2015
-* Original file name: "CRWA_2015_EPA_CyanoData.xls"
+* Monitoring data received from Elisabeth Cianciola on 10/16/2015 (CRWA_2015_EPA_CyanoData.xls)
+* Secondary standards log received from Elisabeth Cianciola on 11/5/2015 (CRWA_SecondaryStandardsLog2015.xlsx)
 
-**Questions for Elisabeth
+**Questions for Elisabeth sent 12/2/15
+* It looks like one of your stationIDs was entered differently for the lab and the field data.  Can you confirm that stationID="BROAD" for the field data is the same as stationID="BR" for the lab data?
+* It appears that the field data for samples taken during August, September, and October were not entered into the spreadsheet.  I have added the missing observations (highlighted) to the attached spreadsheet.  Could you check these and add the missing information?  
+
 
 **Data steps**
 
@@ -89,10 +92,10 @@ Information on how the data were provided by the States and Organizations that p
 
 ```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
 #read field data 
-  Field<-readWorksheetFromFile('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='FieldDataEntry')
+  Field<-read_excel('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='FieldDataEntry')
 
 #read Lab data 
-  Lab<-readWorksheetFromFile('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='LabDataEntry')
+  Lab<-read_excel('Data2015/rawData/CRWA_2015_EPA_CyanoData.xls',sheet='LabDataEntry')
 
 #change Field$stationID=='BROAD' to Field$stationID=='BR'
   Field$stationID[Field$stationID=='BROAD']<-'BR'
@@ -102,21 +105,230 @@ Information on how the data were provided by the States and Organizations that p
 
 #check to make sure the join was successful
   #print a few columns
-    CRWA[,c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    select(CRWA,waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
 
   #print rows where the are no lab data to match the field data
-    CRWA[is.na(CRWA$analysisID),c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    #CRWA[is.na(CRWA$analysisID),c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    filter(CRWA,is.na(analysisID)) %>%
+      select(waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
+           
+          
     ####all good
 
   #print rows where the are no field data to match the lab data
-    CRWA[is.na(CRWA$orgID),c('orgID','waterbodyID','stationID','sampleID','sampleDate','analysisID','analysisDate')]
+    filter(CRWA,is.na(orgID)) %>%
+      select(orgID,waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
     
     #No field data for samples taken 8/20, 8/31, 9/10, 9/17, 9/24, 10/01, & 10/08
-      unique(CRWA$sampleDate[is.na(CRWA$orgID)])
+      filter(CRWA,is.na(orgID)) %>%
+        select(orgID,sampleDate) %>%
+          distinct()
+```
+
+### MADEP
+
+* Monitoring data received from Joan Beskenis on 11/16/2015 (cyanoMon2015DataEntrynewestjb.xlsx)
+* Secondary standards log received from Joan Beskenis on 11/10/2015 (secondaryStandardsLog2015 jb(2).xlsx)
+    - Note original sheet did not include the "Production lot number" & "set number".  She sent this in a later email and I added it to the spreadsheet. Production lot #="Rhod-1001";"Set #="1001-D""
+
+
+**Data steps**
+
+* read the data 
+* visual inspection of data shows that 3 samples (analysisID == 4, 5, & 6) have fluorometerType=='Beagle' but commentSample=='no Beagle, cyclops probe'; fluorometerType changed to 'Other'
+* unidiluted samples listed as dilution=='n';changed to dilution==NA
+* no lab data for Jamaica Pond and White Pond.  This is noted in the comments
+
+
+```{r MADEP, include=FALSE, echo=FALSE, cache=FALSE} 
+#read field data 
+  Field<-read_excel('Data2015/rawData/cyanoMon2015DataEntrynewestjb.xlsx',sheet='Field Data Entry') #15
+#there are four lines with no data-remove these
+  Field<-Field[!is.na(Field$waterbodyID),] #11
+
+#read Lab data 
+  Lab<-read_excel('Data2015/rawData/cyanoMon2015DataEntrynewestjb.xlsx',sheet='Lab Data Entry') #65541
+#nrow(Lab)==65541; only 28 lines have data.  Keep these
+  Lab<-Lab[!is.na(Lab$waterbodyID),] #28
+
+#merge field and lab data
+  MADEP<-full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate'))
+
+#fluorometerType changes (see above)
+MADEP<-mutate(MADEP,fluorometerType=replace(fluorometerType, analysisID%in%c(4:6), 'Other'))
+
+#dilution changes (see above)
+MADEP<-mutate(MADEP,dilution=replace(dilution, dilution=='n', 'No'))
+
+#check to make sure the join was successful
+  #print a few columns
+    select(MADEP,waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
+
+  #print rows where the are no lab data to match the field data (see above)
+    filter(MADEP,is.na(analysisID)) %>%
+      select(waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
+    View(filter(MADEP,is.na(analysisID)))
+           
+  #print rows where the are no field data to match the lab data (none)
+    filter(MADEP,is.na(orgID)) %>%
+      select(orgID,waterbodyID,stationID,sampleID,sampleDate,analysisID,analysisDate)
+    #View(filter(MADEP,is.na(orgID)))
+    
+```
+
+### NHDES
+
+* Monitoring data received from Sonya Carlson on 10/08/2015 (NH-for-EPA-2015-cyanoMonDataEntry.xlsx)
+* Some additional monitoring data received from Sonya on 10/16/2015 (NH-for-EPA-2015-cyanoMonDataEntry-addenda.xlsx)
+* A few more lines of monitoring data received from Sonya on 10/29/2015 (NH-for-EPA-2015-cyanoMonDataEntry-addenda2.xlsx)
+* Secondary standards log received from Sonya on 11/13/2015 (NH-secondaryStandardsLog2015.xlsx)
+
+**Check**
+* missing lab data for six samples
+* missing field data for 76 lab readings
+
+**Data steps**
+
+* read and combine the 3 sets of monitoring data
+* remove NA rows
+* The field data for 10/16/2015 has only 1 observation and the sampleTimeis missing.  To merge this with the other field records need to convert the sampleTime column to POSIXct
 
 
 
+```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
+#read field data 
+  Field<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry.xlsx',sheet='Field Data Entry') 
+  table(is.na(Field$waterbodyID)) #only 270 lines have data; keep these
+  Field<-Field[!is.na(Field$waterbodyID),];nrow(Field) #270
+#get second set of field data
+  Field2<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry-addenda.xlsx',sheet='Field Data Entry') 
+  table(is.na(Field2$waterbodyID)) #only 1 line have data; keep it
+  Field2<-Field2[!is.na(Field2$waterbodyID),];nrow(Field2) #1
+#the sampleTime for the one Field2 observation is missing.  Need to convert this to POSIXct
+  Field2$sampleTime<-as.POSIXct(Field2$sampleTime, origin = "1960-01-01") 
+#get third set of field data
+  Field3<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry-addenda2.xlsx',sheet='Field Data Entry') 
+  table(is.na(Field3$waterbodyID)) #28 lines have data; keep em
+  Field3<-Field3[!is.na(Field3$waterbodyID),];nrow(Field3) #28
+#combine field,field2 & field3
+  Field<-rbind(Field, Field2,Field3);nrow(Field)
 
-nrow(unique(CRWA[,c('waterbodyID','stationID','sampleID','sampleDate')]))
+#read Lab data 
+  Lab<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry.xlsx',sheet='Lab Data Entry') 
+  names(Lab) #the last two columns were added by Sonya-delete these
+  Lab<-Lab[,1:17]
+  table(is.na(Lab$waterbodyID)) #14 lines have are blank; delete these
+  Lab<-Lab[!is.na(Lab$waterbodyID),];nrow(Lab) #2115
+#read 2nd set of lab data
+  Lab2<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry-addenda.xlsx',sheet='Lab Data Entry')
+  table(is.na(Lab2$waterbodyID)) #all 9 lines have data
+#read 3rd set of lab data
+  Lab3<-read_excel('Data2015/rawData/NH-for-EPA-2015-cyanoMonDataEntry-addenda2.xlsx',sheet='Lab Data Entry')
+  table(is.na(Lab3$waterbodyID)) #all 177 lines have data
+  names(Lab3) #the last two columns were added by Sonya-delete these
+  Lab3<-Lab3[,1:17]
+#combine Lab,Lab2 & Lab3
+  Lab<-rbind(Lab, Lab2,Lab3);nrow(Lab)#2301 (2115+177+9)
 
+#merge field and lab data
+  NHDES<-full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate'))
+
+#check to make sure the join was successful
+  #view rows where the are no lab data to match the field data (see above)
+    View(filter(NHDES,is.na(analysisID)))
+           
+  #view rows where the are no field data to match the lab data (none)
+    View(filter(NHDES,is.na(orgID)))    
+```
+
+
+### LIMTEX
+
+* Monitoring data received from Nancy Leland on 11/15/2015 (Copy of cyanoMon2015DataEntry.xls)
+* Secondary standards log received from Nancy Leland on 11/15/2015 (Copy of secondaryStandardsLog2015.xlsx)
+
+
+**Data steps**
+
+* read the data 
+* complete match between lab and field data
+
+
+```{r LIMTEX, include=FALSE, echo=FALSE, cache=FALSE} 
+#read field data 
+  Field<-read_excel('Data2015/rawData/Copy of cyanoMon2015DataEntry.xls',sheet='Field Data Entry') 
+  table(is.na(Field$waterbodyID)) #there are 3 lines with no data-remove these
+  Field<-Field[!is.na(Field$waterbodyID),];nrow(Field) #10
+
+#read Lab data 
+  Lab<-read_excel('Data2015/rawData/Copy of cyanoMon2015DataEntry.xls',sheet='Lab Data Entry') 
+  table(is.na(Lab$waterbodyID)) #20 lines have data; keep these
+  Lab<-Lab[!is.na(Lab$waterbodyID),];nrow(Lab) #20
+
+#merge field and lab data
+  LIMTEX<-full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate'))
+
+#check to make sure the join was successful
+  #view rows where the are no lab data to match the field data (see above)
+    View(filter(LIMTEX,is.na(analysisID))) #all data match
+           
+  #view rows where the are no field data to match the lab data (none)
+    View(filter(LIMTEX,is.na(orgID)))  #all data match  
+    
+```
+
+### CTDEEP
+
+* Monitoring data received from Tracy Lizotte on 12/10/2015 (cyanoMon2015DataEntry- CT DEEP.xls)
+* A key to photos was received from Tracy Lizotte on 12/10/2015 (Cyanobacteria ID Legend 2015.xlsx)
+    - NOTE: photos have not arrived yet but will
+* Secondary standards log NOT received 
+
+**Check**
+* missing lab data for 68 samples
+* missing field data for 274 lab readings
+
+
+**Data steps**
+
+* read the data 
+* waterbodyID and stationID are the same so I guess there is one station per lake
+* waterbodyID and stationID read as character for the field data and numeric for the Lab data
+* For the 8 occurences of waterbodyID==15916-M read as NA
+* Change Lab$waterbodyID & Lab$sampleID to as.character and replace the missing IDs
+
+
+* Lab data read in with waterbodyID as numeric.  This converted 
+* complete match between lab and field data
+
+
+```{r CTDEEP, include=FALSE, echo=FALSE, cache=FALSE} 
+#read field data 
+  Field<-read_excel('Data2015/rawData/cyanoMon2015DataEntry- CT DEEP.xls',sheet='Field Data Entry') 
+  View(Field)
+  table(is.na(Field$waterbodyID)) #there are 70 lines or data
+
+#read Lab data 
+  Lab<-read_excel('Data2015/rawData/cyanoMon2015DataEntry- CT DEEP.xls',sheet='Lab Data Entry')
+  View(Lab)
+#delete rows with missing data
+  Lab<-Lab[Lab$analysisID<284,]
+#convert waterbodyID and stationID to character & replace missing values
+  Lab$waterbodyID<-as.character(Lab$waterbodyID)
+  Lab$waterbodyID[is.na(Lab$waterbodyID)]<-'15916-M'
+  Lab$stationID<-as.character(Lab$stationID)
+  Lab$stationID[is.na(Lab$stationID)]<-'15916-M'
+
+#merge field and lab data
+  CTDEEP<-full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate'))
+    
+
+#check to make sure the join was successful
+  #view rows where the are no lab data to match the field data (see above)
+    View(filter(CTDEEP,is.na(analysisID))) #all data match
+           
+  #view rows where the are no field data to match the lab data (none)
+    View(filter(CTDEEP,is.na(orgID)))  #all data match  
+    
+```
 
