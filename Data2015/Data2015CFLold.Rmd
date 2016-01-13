@@ -1,0 +1,677 @@
+---
+title: "Data2015"
+author: "B"
+date: "Tuesday, June 02, 2015"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, cache=FALSE} 
+#########function to install (if needed) and load R packages by list
+libs<-c("xlsx","dplyr") #list of packages to load
+
+installLoad<-function(pck){ #user defined function
+    if(!pck%in%installed.packages()){install.packages(pck)}
+    require(pck, character.only = TRUE)
+  }
+lapply(libs,function(x) installLoad(x))  #Load/Install require packages
+
+#load functions
+source('functions/readField2015.r')
+source('functions/readLab2015.r')
+```
+
+To Do List
+-------------------------
+* Check POSIXct values for Dates and Times
+* Convert yes/no to TRUE/FALSE
+* edit Data Definitions to 2015 values
+* CRWA corrections
+* NHDES corrections
+
+
+Introduction
+-------------------------
+During the summer of 2015 the New England states monitored in lakes.  Participants included state and tribal governments, local watershed associations, EPA Region 1, and the EPA Atlantic Ecology Division. 
+
+
+Data Definitions
+-------------------------
+
+Field  | Units | Description
+------------- | ------------- | -------------
+**Order:**|(integer)|Unique Identifier for sample by Organization-disregard this is for house keeping only.
+**YourName:**|(text)|Enter the name of the person entering the data
+**Organization:**|(text)|Enter the name of the organization responsible for collecting the samples-e.g. Vermont DEC
+**SiteID:**|(text)|If the location has a site ID from your organization enter it here
+**WaterbodyName:**|(text)|Enter the name of the lake: be consistent with spelling and capitalization
+**State:**|(lookup)|Choose the two letter state code from the drop down list
+**SiteLocation:**|(text)|Some organizations have site names within a lake.  Enter these here.
+**SampleYear:**|(YYYY)|Year sample was collected in format YYYY (e.g., 2014)
+**SampleMonth:**|(MM)|Month sample was collected in integer format (e.g., months 1 to 12 )
+**SampleDay:**|(DD)|Day sample was collected in integer format (e.g., day 1 to 31 )
+**NameOfSamplers:**|(text)|Add the names of the field crew separated by commas.
+**WeatherConditions:**|(text)|General Weather conditions separated by commas.  E.g., Cloudy, Windy, Cold
+**SampleLocation:**|(lookup)|Where (in the lake) was the sample collected followed by the replicate number? WithinLake=WL1, WL2, or WL3; ShoreSide=SS1, SS2, SS3; Can also add Calibration or Blank for validation readings or Other.
+**SampleMethod:**|(lookup)|How was the sample collected? Grab = Grab sample for surface blooms; Composite =Composite; Integrated = Integrated tube sample; Validation = Use this for Blanks and Calibration Standards; Other = give details in the comments section.
+**Depth:**|(integer)|Within Lake samples are at 3m and Shoreside are at 1m.  If samples taken at different depths not the depth here and enter details in the comments section.  Leave blank for standards and blanks.
+**Latitude:**|(decimal)|Latitude in Decimal Degrees with 4 decimal places
+**Longitude:**|(decimal)|Longitude in Decimal Degrees with 4 decimal places
+**SampleHour:**|(HH)|Hour sample was taken in 24 hour format
+**SampleMinutes:**|(MM)|Minute sample was taken in integer format
+**Filtered:**|(TRUE/FALSE)|Was the sample filtered?
+**Frozen:**|(TRUE/FALSE)|Was the sample frozen?
+**Parameter:**|(lookup)|Phycocyanin or Chlorophyll?
+**Value:**|(decimal)|Reading from the fluorometer
+**Units:**|(lookup)|What were the units recorded.  If not "RFU" or "µ/L" flag the entry and add comment with the units used. 
+**Rep:**|(integer)|If you made more than one measurement per sample or took more than one sample per site assign a replicate number to each observations and add notes in the comment field.
+**Fluorometer:**|(lookup)|Type of fluorometer used?
+**AnalysisYear:**|(YYYY)|Year sample was analyzed in format YYYY (e.g., 2014)
+**AnalysisMonth:**|(MM)|Month sample was analyzed in integer format (e.g., months 1 to 12 )
+**AnalysisDay:**|(DD)|Day sample was analyzed in integer format (e.g., day 1 to 31 )
+**AnalysisHour:**|(HH)|Hour sample was analyzed in 24 hour format
+**AnalysisMinutes:**|(MM)|Minute sample was analyzed in integer format
+**GPSType:**|(text)|How was the location determined.  GPS (type), map, or google?
+**Photos:**|(TRUE/FALSE)|Where photos taken?
+**Flag:**|(TRUE/FALSE)|Add a flag for any data line that needs further validation or processing
+**Comments:**|(text)|Add details of flags or any notes about the data line or sample.
+**ID:**|(integer)|Unique Identifier for Sample
+**LocID:**|(integer)|Unique Identifier for the Location based on unique Lon/Lat combinations
+
+Data Sources
+-------------------------
+Information on how the data were provided by the States and Organizations that participated in the monitoring.
+
+
+### CRWA
+
+* Monitoring data received from Elisabeth Cianciola on 10/16/2015 (CRWA_2015_EPA_CyanoData.xls)
+* Secondary standards log received from Elisabeth Cianciola on 11/5/2015 (CRWA_SecondaryStandardsLog2015.xlsx)
+
+**Questions for Elisabeth sent 12/2/15**
+* It looks like one of your stationIDs was entered differently for the lab and the field data.  Can you confirm that stationID="BROAD" for the field data is the same as stationID="BR" for the lab data?
+* It appears that the field data for samples taken during August, September, and October were not entered into the spreadsheet.  I have added the missing observations (highlighted) to the attached spreadsheet.  Could you check these and add the missing information?  
+
+**Message to Elisabeth sent 01/07/16**
+* Haven't heard back from Elisabeth so I sent new message that included a spreadsheet (CRWAdataToCheck.xls) for her to fill in.
+
+**Data steps**
+
+* read the data 
+* One stationID is differenct for field and lab data.  For the field data stationID='BROAD' is listed as stationID=BR in the lab data. So the field data values for stationID were changed to match the lab data.
+*No field data for samples taken 8/20, 8/31, 9/10, 9/17, 9/24, 10/01, & 10/08
+
+```{r CRWA, include=FALSE, echo=FALSE, cache=FALSE} 
+#set data input and output names
+In<-'CRWA_2015_EPA_CyanoData.xls'
+Out<-'CRWA'
+
+#data log
+dataReceived<-data.frame(Org=Out,monitoring=TRUE,standards=TRUE,Comments='Missing Field Data',stringsAsFactors=FALSE)
+
+#read field data 
+  Field<-readField2015(In)
+  dim(Field) #18 28
+
+#read Lab data 
+  Lab<-readLab2015(In)
+  dim(Lab) #37 17
+
+#change Field$stationID=='BROAD' to Field$stationID=='BR'
+  Field$stationID[Field$stationID=='BROAD']<-'BR'
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID)) 
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}#No field data for samples taken 8/20, 8/31, 9/10, 9/17, 9/24, 10/01, & 10/08
+
+#output file to xls to send back for revisions
+    File<-paste('Data2015/rawData/',Out,'dataToCheck.xls',sep='')
+    write.xlsx(Chk, file=File,row.names=FALSE,showNA=FALSE)
+```
+
+### MADEP
+
+* Monitoring data received from Joan Beskenis on 11/16/2015 (cyanoMon2015DataEntrynewestjb.xlsx)
+* Secondary standards log received from Joan Beskenis on 11/10/2015 (secondaryStandardsLog2015 jb(2).xlsx)
+    - Note original sheet did not include the "Production lot number" & "set number".  She sent this in a later email and I added it to the spreadsheet. Production lot #="Rhod-1001";"Set #="1001-D""
+
+
+**Data steps**
+
+* read the data 
+* visual inspection of data shows that 3 samples (analysisID == 4, 5, & 6) have fluorometerType=='Beagle' but commentSample=='no Beagle, cyclops probe'; fluorometerType changed to 'Other'
+* no lab data for Jamaica Pond and White Pond.  This is noted in the comments
+* Time format needs work.  Used 24hour format with AM/PM
+* The times were manually corrected and the data resaved as: 'cyanoMon2015DataEntrynewestjb_edited.xlsx'
+
+
+```{r MADEP, include=FALSE, echo=FALSE, cache=TRUE} 
+#set data input and output names
+In<-'cyanoMon2015DataEntrynewestjb_edited.xlsx'
+Out<-'MADEP'
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,TRUE,NA)
+
+#read field data 
+  Field<-readField2015(In)
+  dim(Field) #11 28
+
+#read Lab data 
+  Lab<-readLab2015(In)
+  dim(Lab) #37 17
+
+#fluorometerType changes (see above)
+  Lab<-mutate(Lab,fluorometerType=replace(fluorometerType, analysisID%in%c(4:6), 'Other'))
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID)) 
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}#no lab data for Jamaica Pond and White Pond.  This is noted in the comments
+```
+
+### NHDES
+
+* Monitoring data received from Sonya Carlson on 10/08/2015 (NH-for-EPA-2015-cyanoMonDataEntry.xlsx)
+* Some additional monitoring data received from Sonya on 10/16/2015 (NH-for-EPA-2015-cyanoMonDataEntry-addenda.xlsx)
+* A few more lines of monitoring data received from Sonya on 10/29/2015 (NH-for-EPA-2015-cyanoMonDataEntry-addenda2.xlsx)
+* Secondary standards log received from Sonya on 11/13/2015 (NH-secondaryStandardsLog2015.xlsx)
+
+**Message to Sonya sent 1/7/16 asking her to check the following Field and Lab corrections and to supply the missing field data**
+
+* FieldDataEntry corrections
+    * sampleID="BROOSSD02" changed to "BROOSD02" 
+    * stationID="FORWCHEC02" changed to "FORWCHE02"
+    * sampleID="FORWCHECO0201" changed to "FORWCHE0201"
+    * sampleID="HALALTHWD01" changed to "HALALTHWB01"
+    * stationID="SUNLNWL-GEN" changed to "SUNLNW-GEN"
+    * waterbodyID="NHLAK801060402-05-01" changed to "NHLAK801060402-05-03"
+
+* LabDataEntry corrections
+  * sampleID for stationID="KEZSUTPR4" & sampleID="KEZSUTPIV401" changed to "KEZSUTPR401"
+  * waterbodyID="NHLAK801060402-05-01" changed to "NHLAK801060402-05-03"
+
+*missing field data
+  * No field data for visit to waterbodyID="NHLAK700060401-02-02" sampleID="CRYEPA103" on 9/9/15
+  * No field data for visit to waterbodyID="NHLAK700060401-02-02" sampleID="CRYEPA203" on 9/9/15
+  * No field data for visit to waterbodyID="NHLAK700060401-02-02" sampleID="CRYGLMD03" on 9/9/15
+  * No field data for visit to waterbodyID="NHLAK600020802-04-01" sampleID="OSSOSSD01" on 8/18/15
+  * No field data for visit to waterbodyID="NHLAK700010804-02-01" sampleID="WEBEPA103" on 9/23/15
+  * No field data for visit to waterbodyID="NHLAK700010804-02-01" sampleID="WEBEPA303" on 9/23/15
+
+**Data steps**
+
+* read and combine the 3 sets of monitoring data
+* missing data and typos found (see above)
+
+
+
+```{r NHDES, include=FALSE, echo=FALSE, cache=FALSE} 
+#set data input and output names
+
+Out<-'NHDES'
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,TRUE,"Missing Field and Lab Data")
+
+
+
+#first set of data
+In<-'NH-for-EPA-2015-cyanoMonDataEntry.xlsx'
+#read field data 
+  Field1<-readField2015(In)
+  dim(Field1) #270 28
+
+#read Lab data 
+  Lab1<-readLab2015(In)
+  dim(Lab1) #2115 17
+
+#Second set of data
+In<-'NH-for-EPA-2015-cyanoMonDataEntry-addenda.xlsx'
+#read field data 
+  Field2<-readField2015(In)
+  dim(Field2) #1 28
+
+#read Lab data 
+  Lab2<-readLab2015(In)
+  dim(Lab2) #9 17
+
+#Third set of data
+In<-'NH-for-EPA-2015-cyanoMonDataEntry-addenda2.xlsx'
+#read field data 
+  Field3<-readField2015(In)
+  dim(Field3) #28 28
+
+#read Lab data 
+  Lab3<-readLab2015(In)
+  dim(Lab3) #177 17
+
+#combine field,field2 & field3
+  Field<-rbind(Field1, Field2,Field3);nrow(Field) #299 (270+1+28)
+
+#FieldDataEntry correction
+  Field$sampleID[which(Field$sampleID=="BROOSSD02")]<-'BROOSD02' 
+  Field$stationID[which(Field$stationID=="FORWCHEC02")]<-'FORWCHE02'
+  Field$sampleID[which(Field$sampleID=="FORWCHECO0201")]<-'FORWCHE0201'
+  Field$sampleID[which(Field$sampleID=="HALALTHWD01")]<-'HALALTHWB01'
+  Field$stationID[which(Field$stationID=="SUNLNWL-GEN")]<-'SUNLNW-GEN'
+  Field$waterbodyID[which(Field$waterbodyID=="NHLAK801060402-05-01")]<-'NHLAK801060402-05-03'
+
+#combine Lab,Lab2 & Lab3
+  Lab<-rbind(Lab1, Lab2,Lab3);nrow(Lab)#2301 (2115+177+9)
+
+#LabDataEntry correction
+  Lab$sampleID[which(Lab$stationID=="KEZSUTPR4" & Lab$sampleID=="KEZSUTPIV401")]<-'KEZSUTPR401'
+  Lab$waterbodyID[which(Lab$waterbodyID=="NHLAK801060402-05-01")]<-'NHLAK801060402-05-03'
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID)) 
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}#6 rows with missing lab data and 82 rows with missing field data
+
+#output file to xls to send back for revisions
+    File<-paste('Data2015/rawData/',Out,'dataToCheck.xls',sep='')
+    write.xlsx(Chk, file=File,row.names=FALSE,showNA=FALSE)
+#output flat file
+    write.xlsx(NHDES, file='Data2015/rawData/tempNHDES.xls',row.names=FALSE,showNA=FALSE)
+```
+
+
+### LIMTEX
+
+* Monitoring data received from Nancy Leland on 11/15/2015 (Copy of cyanoMon2015DataEntry.xls)
+* Secondary standards log received from Nancy Leland on 11/15/2015 (Copy of secondaryStandardsLog2015.xlsx)
+
+
+**Data steps**
+
+* read the data 
+* sampleDepth entered as "3M"; changed to 3
+* complete match between lab and field data
+
+
+```{r LIMTEX, include=FALSE, echo=FALSE, cache=TRUE} 
+#set data input and output names
+In<-'Copy of cyanoMon2015DataEntry.xls'
+Out<-'LIMTEX'
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,TRUE,NA)
+
+#read field data 
+  Field<-readField2015(In)
+  dim(Field) #10 28
+
+#update sampleDepth
+Field$sampleDepth<-3
+
+#read Lab data 
+  Lab<-readLab2015(In)
+  dim(Lab) #20 17
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID)) 
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}#all good
+```
+
+### CTDEEP
+
+* Monitoring data received from Tracy Lizotte on 12/10/2015 (cyanoMon2015DataEntry- CT DEEP.xls)
+* A key to photos was received from Tracy Lizotte on 12/10/2015 (Cyanobacteria ID Legend 2015.xlsx)
+    - NOTE: photos have not arrived yet but will
+* Secondary standards log NOT received 
+* Message sent to Tracy on 20160107 requesting she confirm the changes below
+* fieldDataEntry corrections:
+    * sampleID="18716-063015" changed to "18717-063015" for waterbodyID="18717
+    * sampleID="18716-070715" changed to "18717-070715" for waterbodyID="18717
+    * sampleID="18717-072115" changed to "18718-072115" for waterbodyID="18718
+    * sampleID="18474-072115" changed to "18475-072115" for waterbodyID="18475
+* labDataEntry Corrections:
+    * sampleID=="18714-0817115" changed to "18714-081715"
+    * sampleIDs: "18717-L-080315", "18717-M-080315", "18717-R-080315" changed to "18717-080315"
+    * sampleDate: "2015-01-01" changed to "2015-08-11"
+* 20160107: Tracy confirmed all changes-good to go.
+
+**Data steps**
+
+* read the data 
+* waterbodyID and stationID are the same so I guess there is one station per lake
+* some typos were corrected (see above)
+
+
+```{r CTDEEP, include=FALSE, echo=FALSE, cache=TRUE} 
+#set data input and output names
+In<-'cyanoMon2015DataEntry- CT DEEP.xls'
+Out<-'CTDEEP'
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,FALSE,"Some Missing Field and Lab Data")
+
+#read field data 
+  Field<-readField2015(In)
+  dim(Field) #70 28
+
+#Field data corrections
+    Field$sampleID[which(Field$sampleID=="18716-063015" & Field$stationID=="18717")]<-"18717-063015"
+    Field$sampleID[which(Field$sampleID=="18716-070715" & Field$stationID=="18717")]<-"18717-070715"
+    Field$sampleID[which(Field$sampleID=="18717-072115" & Field$stationID=="18718")]<-"18718-072115"
+    Field$sampleID[which(Field$sampleID=="18474-072115" & Field$stationID=="18475")]<-"18475-072115"
+
+#read Lab data 
+  Lab<-readLab2015(In)
+  dim(Lab) #282 17
+
+#Lab data corrections
+    Lab$sampleID[which(Lab$sampleID=="18714-0817115")]<-"18714-081715"
+    q<-which(Lab$stationID=="18717" & Lab$sampleDate=="2015-08-03") 
+      Lab$commentAnalysis[q]<-paste("sampleID changed from",Lab$sampleID[q])
+      Lab$sampleID[q]<-"18717-080315"
+    Lab$sampleDate[which(Lab$sampleDate=="2015-01-01")]<-"2015-08-11"
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID))
+    ifelse(nrow(Chk)==0,"All records match",select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID))
+
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}#all good after corrections
+```
+  
+### CFL
+
+* Monitoring data received from Sabina Perkins on 12/29/2015 (CFL_cyanoMon2015DataEntry.xlsx)
+* Secondary standards log not received 
+* Sabina modified the Excel template so that all the data (Field and Lab) are in a single file.
+* CFR used the older template with "parameter" & "valueUGL" instead of "ChlaUGL" & "PhycoUGL".
+
+**Data steps**
+
+* read the data 
+* make sure all fields are included
+* check formatting
+* add "ChlaUGL" & "PhycoUGL" fields
+
+
+```{r CFL, include=FALSE, echo=FALSE, cache=FALSE} 
+#set data input and output names
+In<-'CFL_cyanoMon2015DataEntry.xlsx'
+Out<-'CFL'
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,FALSE,NA)
+
+#read the data
+Data<-paste('Data2015/rawData/',In,sep='') 
+CFL<-read.xlsx(Data,sheetName='Field Data Entry',stringsAsFactors=FALSE)
+
+#eliminate blank rows
+CFL<-CFL[!is.na(CFL$waterbodyID),]
+
+#check to make sure all variables are included
+  #list of names for merged dataset
+Names<-c('orgID','ContactName','Email','Phone','waterbodyID','waterbodyName','state','town','commentWB','stationID','stationDescription','stationType','longitudeSta','latitudeSta','locationSourceSta','commentStation','sampleID','sampleDate','sampleTime','fieldCrew','sampleMethod','sampleRep','sampleDepthM','waterTempC','photoSample','surfaceWaterCondition','weather','commentSample','analysisID','analysisDate','analystName','frozen','filtered','dilution','sampleTemperatureC','ChlaUGL','PhycoUGL','analysisRep','fluorometerType','photosAnalysis','commentAnalysis')
+
+#check names
+a<-names(CFL)%in%Names
+  table(a)                      #FALSE==2 TRUE=#39
+  names(CFL)[which(a==FALSE)]   #names(CFL) not in Names: "parameter" "valueUGL"
+
+a<-Names%in%names(CFL)
+  table(a)                      #FALSE==2 TRUE=#39
+  Names[which(a==FALSE)]        #Names not it names(CFL): "ChlaUGL"  "PhycoUGL"
+
+#add missing fields
+Phyco<-filter(CFL,parameter=="Phycocyanin")
+Phyco<-rename(Phyco,PhycoUGL=valueUGL)
+Phyco<-Phyco[,-36]
+dim(Phyco) #168 40
+
+Chla<-filter(CFL,parameter=="Chlorophyll")
+Chla<-rename(Chla,ChlaUGL=valueUGL)
+Chla<-Chla[,-36]
+dim(Chla) #165 40
+
+names(Chla)%in%names(Phyco)
+
+#merge field and lab data
+assign(Out,full_join(Phyco, Chla))
+  assign(Out,full_join(Phyco, Chla, by=names(Chla)[-36]))
+#reorder
+  CFL<-CFL[,Names]
+
+
+x<-unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate')])
+x$test<-1:166
+nrow(x) #166
+
+q<-full_join(x,Phyco)
+nrow(q) #168
+
+View(q[q$test%in%c(8,35),])
+
+dd<-as.data.frame(table(q$test))
+dd[dd$Freq>1,]
+
+
+
+table(is.na(q$test))
+
+
+
+
+
+sum(q$test)
+
+w<-aggregate(x$test,by=list(x$waterbodyID,x$stationID,x$sampleDate,x$sampleTime,x$analysisID,x$analysisDate),sum)
+w[w$x>1,]
+
+w<-aggregate(x$test,by=list(x$waterbodyID),sum)
+w[w$x>1,]
+
+
+
+x<-unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate')])
+  x$x<-'Phyco'
+    nrow(x)#166
+y<-unique(Chla[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate')])
+  y$y<-'Phyco'
+    nrow(y)#165
+
+q<-full_join(x,y)
+  nrow(q) #166
+
+q[is.na(q$y),]
+q[is.na(q$x),]
+
+x<-unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC')])
+  x$x<-'Phyco'
+    nrow(x)#166
+y<-unique(Chla[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC')])
+  y$y<-'Phyco'
+    nrow(y)#165
+
+q<-full_join(x,y)
+  nrow(q) #166
+
+q[is.na(q$y),]
+q[is.na(q$x),]
+
+x<-unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis')])
+  x$x<-'Phyco'
+    nrow(x)#167
+y<-unique(Chla[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis')])
+  y$y<-'Phyco'
+    nrow(y)#165
+
+q<-full_join(x,y)
+  nrow(q) #166
+
+q[is.na(q$y),]
+q[is.na(q$x),]
+
+x<-unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis','PhycoUGL')])
+  x$x<-'Phyco'
+    nrow(x)#168
+y<-unique(Chla[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis','ChlaUGL')])
+  y$y<-'Phyco'
+    nrow(y)#165
+
+q<-full_join(x,y)
+  nrow(q) #166
+
+q[is.na(q$y),]
+q[is.na(q$x),]
+
+
+
+
+
+nrow(unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis')])) #167
+
+nrow(unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC')])) #166
+
+
+nrow(unique(Phyco[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis','PhycoUGL')])) #168
+
+nrow(unique(Chla[,c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperatureC','commentAnalysis')])) #165
+
+
+c('waterbodyID','stationID','sampleDate','sampleTime','analysisID','analysisDate','sampleTemperature','commentAnalysis')%in%names(Phyco)
+
+
+
+#reformat data
+#character data
+for(i in c(1:12,15:17,20:22,25:29,31:34,38:41)) CFL[,i]<-as.character(CFL[,i])
+#numeric data
+for(i in c(13,14,23,24,35:37)) CFL[,i]<-as.numeric(CFL[,i])
+#date data
+CFL$sampleDate<-as.Date(CFL$sampleDate)
+CFL$analysisDate<-as.Date(CFL$analysisDate)
+#time data (still needs work)
+#CFL$sampleTime<-as.POSIXct(CFL$sampleTime)
+
+
+
+names(Phyco)[-36]%in%names(Chla)[-36]
+
+names(Phyco)%in%names(Chla)
+
+
+names(CRWA)%in%names)
+
+names(CRWA)[c(18,19,30)]
+
+
+c(18,19,30)
+
+
+test<-rbind(CRWA,CFL)
+
+b<-data.frame(Class=unlist(lapply(CFL,class)),stringsAsFactors=FALSE)
+a<-data.frame(Class=unlist(lapply(CRWA,class)),stringsAsFactors=FALSE)
+a<-a[-20,]
+table(a)
+
+a=='character'
+grep('numeric',a)
+which(a)=='character'
+
+row.names(a)
+
+
+
+readField2015<-function(excelFile='CRWA_2015_EPA_CyanoData.xls'){
+#read Field data
+  Data<-paste('Data2015/rawData/',excelFile,sep='') 
+  Error<-"Field Data Not Read"
+  Field<-tryCatch(read.xlsx(Data,sheetName='Field Data Entry',stringsAsFactors=FALSE),error = function(e)   
+      Error)
+      if(!is.data.frame(Field)) stop(Error) 
+
+#Check to make sure all variables were read
+Name<-c('orgID','ContactName','Email','Phone','waterbodyID','waterbodyName','state','town','commentWB','stationID','stationDescription','stationType','longitudeSta','latitudeSta','locationSourceSta','commentStation','sampleID','sampleDate','sampleTime','fieldCrew','sampleMethod','sampleRep','sampleDepthM','waterTempC','photoSample','surfaceWaterCondition','weather','commentSample')
+
+Error<-"Field Data have missing variables"
+Field<-tryCatch(Field[,Name],error = function(e) Error)
+    if(!is.data.frame(Field)) stop(Error)
+
+
+
+
+
+return(Field)
+}
+
+
+
+
+
+
+
+
+#read field data 
+  Field<-readField2015(In)
+  dim(Field) #xx 28
+
+#read Lab data 
+  Lab<-readLab2015(In)
+  dim(Lab) #xx 17
+
+#merge field and lab data
+  assign(Out,full_join(Field, Lab, by=c('waterbodyID','stationID','sampleID','sampleDate')))
+
+#look for rows missing field or lab data 
+    Chk<-filter(get(Out),is.na(orgID)|is.na(analysisID)) 
+    if(nrow(Chk)==0){
+      print("All records match")
+        }else{
+      select(Chk,waterbodyID, stationID,sampleID,sampleDate,analysisID)}
+
+#output file to xls to send back for revisions
+    File<-paste('Data2015/rawData/',Out,'dataToCheck.xls',sep='')
+    #write.xlsx(Chk, file=File,row.names=FALSE,showNA=FALSE)
+
+
+
+### VTDEC
+
+* Monitoring data received from Angela Shambaugh on 12/31/2015 (VTcyanoMon2015.xls)
+* Secondary standards log not received 
+
+#data log
+dataReceived[nrow(dataReceived)+1,]<-c(Out,TRUE,FALSE,NA)
+
+
+###Data saved as Data2015.rda 
+
+```{r saveData, include=FALSE, echo=FALSE, cache=FALSE} 
+save(dataReceived,CRWA,MADEP,CTDEEP,file='Data2015/Data2015.rda')
+```
+
+
